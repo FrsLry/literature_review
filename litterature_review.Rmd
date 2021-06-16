@@ -1,0 +1,37 @@
+--- 
+# title: Litterature review
+coverpage: true
+toc: true
+author: "François Leroy, PhD student at CZU"
+date: "`r Sys.Date()`"
+output: pdf_document
+documentclass: report
+classoption: oneside
+fontsize: 12pt
+linestretch: 1.5
+geometry:
+- left = 2cm
+- right = 2cm
+- top = 2cm
+- bottom = 2cm
+colorlinks: yes
+link-citations: yes
+bibliography:
+ - references.bib
+biblio-style: apa
+# biblio-title:  ## note: the name and label of the bib part is in the template!!!
+---
+
+```{r, echo = F}
+knitr::opts_chunk$set(warning = F,
+                      message = F)
+```
+
+# Introduction
+
+@dornelas_assemblage_2014 
+
+azdjazijdjzi
+
+# References {-}
+\singlespacing

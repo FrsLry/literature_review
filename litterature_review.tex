@@ -1,0 +1,175 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Specify the command that you want into the header of the
+% index.md file
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+%
+\documentclass[
+  12pt,
+  oneside]{report}
+%%\usepackage{lmodern}
+%
+% Set line spacing
+\usepackage{setspace}
+\setstretch{1.5}
+
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdfauthor={François Leroy, PhD student at CZU},
+  colorlinks=true,
+  linkcolor=Maroon,
+  filecolor=Maroon,
+  citecolor=Blue,
+  urlcolor=Blue,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+
+%% Package geometry
+\usepackage[left = 2cm,right = 2cm,top = 2cm,bottom = 2cm]{geometry}
+\usepackage{pdflscape}
+
+
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+%%% Complete the preamble of the LaTeX template
+%%%------------------------------------------------------------------------------
+
+%% Bug de bookdown: ne traite plus la déclaration "otherlangs" dans le préambule
+% Pour charger les langues, écriture ici en dur du produit de bookdown
+% Corrigé le 22/11/2019. A retester régulièrement: supprimer ces lignes si la compilation fonctionne sans elles.
+\usepackage{polyglossia}
+  \setmainlanguage[variant=american]{english}
+  \setotherlanguage[]{french}
+% Bug persistant le 28/02/2020
+
+% Advised with polyglossia and babel
+\usepackage{csquotes}
+
+% Environnement "Essentiel" en début de chapitre
+\usepackage[tikz]{bclogo}
+\newenvironment{Essentiel}
+  {\begin{bclogo}[logo=\bctrombone, noborder=true, couleur=lightgray!50]{L'essentiel}\parindent0pt}
+  {\end{bclogo}}
+
+%% Package fontspec
+\usepackage{fontspec}
+\setmainfont{calibri}[
+  Path           = ./fonts/,
+  Extension      = .ttf,
+  BoldFont       = calibrib,
+  ItalicFont     = calibrili,
+  BoldItalicFont = calibriz]
+
+% Rename chapters
+% Below, scrpit to prevent the "chapter n" and the space use for it to
+% be displayed
+\usepackage{titlesec}
+\titleformat{\chapter}   
+{\Huge}{\thechapter{. }}{0pt}{\Huge}
+%{\thechapter{. }}
+\titlespacing*{\chapter}{0pt}{-50pt}{10pt}
+% -50 is to up the title and 10 is the space with the text below
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{François Leroy, PhD student at CZU}
+\date{2021-06-16}
+
+% to include pdf
+\usepackage{pdfpages}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Start of the documents
+\begin{document}
+
+\includepdf[pages = {1}, fitpaper=true]{_assets/coverpage.pdf}
+
+% Roman numbering for content before toc and toc itself
+\cleardoublepage 
+\pagenumbering{roman}
+
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+}
+\vspace{50mm}
+\setstretch{1.5}
+
+
+% Start the arabic numbering at the 1st chapter
+\cleardoublepage 
+\pagenumbering{arabic}
+
+
+% The mind, the...
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+Dornelas et al. (\protect\hyperlink{ref-dornelas_assemblage_2014}{2014})
+
+azdjazijdjzi
+
+\hypertarget{references}{%
+\chapter*{References}\label{references}}
+\addcontentsline{toc}{chapter}{References}
+
+\singlespacing
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-dornelas_assemblage_2014}{}%
+Dornelas, Maria, Nicholas J. Gotelli, Brian McGill, Hideyasu Shimadzu, Faye Moyes, Caya Sievers, and Anne E. Magurran. 2014. ``Assemblage Time Series Reveal Biodiversity Change but Not Systematic Loss.'' \emph{Science} 344 (6181): 296--99. \url{https://doi.org/10.1126/science.1248484}.
+
+
+\singlespacing % reset the spacing of the bibliography style
+\end{document}

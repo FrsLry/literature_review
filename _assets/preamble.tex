@@ -1,0 +1,40 @@
+%%% Complete the preamble of the LaTeX template
+%%%------------------------------------------------------------------------------
+
+%% Bug de bookdown: ne traite plus la déclaration "otherlangs" dans le préambule
+% Pour charger les langues, écriture ici en dur du produit de bookdown
+% Corrigé le 22/11/2019. A retester régulièrement: supprimer ces lignes si la compilation fonctionne sans elles.
+\usepackage{polyglossia}
+  \setmainlanguage[variant=american]{english}
+  \setotherlanguage[]{french}
+% Bug persistant le 28/02/2020
+
+% Advised with polyglossia and babel
+\usepackage{csquotes}
+
+% Environnement "Essentiel" en début de chapitre
+\usepackage[tikz]{bclogo}
+\newenvironment{Essentiel}
+  {\begin{bclogo}[logo=\bctrombone, noborder=true, couleur=lightgray!50]{L'essentiel}\parindent0pt}
+  {\end{bclogo}}
+
+%% Package fontspec
+\usepackage{fontspec}
+\setmainfont{calibri}[
+  Path           = ./fonts/,
+  Extension      = .ttf,
+  BoldFont       = calibrib,
+  ItalicFont     = calibrili,
+  BoldItalicFont = calibriz]
+
+% Rename chapters
+% Below, scrpit to prevent the "chapter n" and the space use for it to
+% be displayed
+\usepackage{titlesec}
+\titleformat{\chapter}   
+{\Huge}{\thechapter{. }}{0pt}{\Huge}
+%{\thechapter{. }}
+\titlespacing*{\chapter}{0pt}{-50pt}{10pt}
+% -50 is to up the title and 10 is the space with the text below
+
+

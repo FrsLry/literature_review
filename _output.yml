@@ -1,0 +1,10 @@
+
+## Here to create the pdf
+bookdown::pdf_book:
+  toc: true
+  template: _assets/template.tex
+  mainmatter: true
+  includes:
+    in_header: _assets/preamble.tex
+  latex_engine: lualatex
+  keep_tex: yes

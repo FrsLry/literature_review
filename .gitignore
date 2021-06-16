@@ -1,0 +1,12 @@
+# Ignore...
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.rds
+phd.log
+debug.log
+#data/
+
+# Except...
+!rf_*.RDS
