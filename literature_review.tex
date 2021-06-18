@@ -120,7 +120,7 @@
 \fi
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-06-16}
+\date{2021-06-18}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -153,6 +153,16 @@
 
 
 % The mind, the...
+\hypertarget{outline}{%
+\chapter*{Outline}\label{outline}}
+\addcontentsline{toc}{chapter}{Outline}
+
+Literature review about the link between biodiversity facets trends and spatial/temporal scales.
+
+The idea is to take every paper that talk about biodiversity trends (it could be either species richness, species diversity, colonization, extinction\ldots) and to list \textbf{1)} which biodiveristy metric they use \textbf{2)} which taxon/taxa they use, \textbf{3)} the spatial scale, \textbf{4)} the temporal scale and \textbf{5)} what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time).
+
+Make a table of it and \texttt{group\_by(taxa)\ \%\textgreater{}\%\ order\_by(spatial\_scale\ \textbar{}\ temporal\_scale)}. Then see if for each taxa we can find a trend (a bit like in Chase \emph{et al.} 2019 Oikos paper \textbar{} Jarzyna \emph{et al.} 2015 but here I am not making the analysis, just taking the analysis from papers).
+
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
@@ -171,5 +181,4 @@ azdjazijdjzi
 Dornelas, Maria, Nicholas J. Gotelli, Brian McGill, Hideyasu Shimadzu, Faye Moyes, Caya Sievers, and Anne E. Magurran. 2014. ``Assemblage Time Series Reveal Biodiversity Change but Not Systematic Loss.'' \emph{Science} 344 (6181): 296--99. \url{https://doi.org/10.1126/science.1248484}.
 
 
-\singlespacing % reset the spacing of the bibliography style
 \end{document}

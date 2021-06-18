@@ -1,0 +1,45 @@
+--- 
+# title: Literature review
+coverpage: true
+toc: true
+author: "François Leroy, PhD student at CZU"
+date: "`r Sys.Date()`"
+output: pdf_document
+documentclass: report
+classoption: oneside
+fontsize: 12pt
+linestretch: 1.5
+geometry:
+- left = 2cm
+- right = 2cm
+- top = 2cm
+- bottom = 2cm
+colorlinks: yes
+link-citations: yes
+bibliography:
+ - references.bib
+biblio-style: apa
+# biblio-title:  ## note: the name and label of the bib part is in the template!!!
+---
+
+```{r, echo = F}
+knitr::opts_chunk$set(warning = F,
+                      message = F)
+```
+
+# Outline {-}
+
+Literature review about the link between biodiversity facets trends and spatial/temporal scales. 
+
+The idea is to take every paper that talk about biodiversity trends (it could be either species richness, species diversity, colonization, extinction...) and to list **1)** which biodiveristy metric they use **2)** which taxon/taxa they use, **3)** the spatial scale, **4)** the temporal scale and **5)** what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time).
+
+Make a table of it and `group_by(taxa) %>% order_by(spatial_scale | temporal_scale)`. Then see if for each taxa we can find a trend (a bit like in Chase *et al.* 2019 Oikos paper | Jarzyna *et al.* 2015 but here I am not making the analysis, just taking the analysis from papers). 
+
+# Introduction
+
+@dornelas_assemblage_2014 
+
+azdjazijdjzi
+
+# References {-}
+\singlespacing
