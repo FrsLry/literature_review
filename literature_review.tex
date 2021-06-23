@@ -120,7 +120,7 @@
 \fi
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-06-18}
+\date{2021-06-23}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -159,16 +159,24 @@
 
 Literature review about the link between biodiversity facets trends and spatial/temporal scales.
 
-The idea is to take every paper that talk about biodiversity trends (it could be either species richness, species diversity, colonization, extinction\ldots) and to list \textbf{1)} which biodiveristy metric they use \textbf{2)} which taxon/taxa they use, \textbf{3)} the spatial scale, \textbf{4)} the temporal scale and \textbf{5)} what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time).
+The idea is to take every paper that talk about biodiversity trends (so far using just the species richness seems already a lot of paper) and to list \textbf{1)} which biodiversity metric they use \textbf{2)} which taxon/taxa they use, \textbf{3)} the spatial scale, \textbf{4)} the temporal scale and \textbf{5)} what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time/unclear).
 
-Make a table of it and \texttt{group\_by(taxa)\ \%\textgreater{}\%\ order\_by(spatial\_scale\ \textbar{}\ temporal\_scale)}. Then see if for each taxa we can find a trend (a bit like in Chase \emph{et al.} 2019 Oikos paper \textbar{} Jarzyna \emph{et al.} 2015 but here I am not making the analysis, just taking the analysis from papers).
+Make a table of all these papers and \texttt{group\_by(taxa)\ \%\textgreater{}\%\ order\_by(spatial\_scale\ \textbar{}\ temporal\_scale)}. Then see if for each taxa we can find a trend (a bit like in Chase \emph{et al.} 2019 Oikos paper \textbar{} Jarzyna \emph{et al.} 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: Hill \& Hamer 2004 (\url{https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x})
+
+I am using the \enquote{Advanced Research} tab of Web of Science which allows me skim through the entire literature using a convenient syntax. For instance:
+
+\begin{verbatim}
+AB = ((biodiversity OR species richness OR diversity) AND
+(temporal trend* OR dynamic*) AND
+(bird* OR avia*)) 
+\end{verbatim}
+
+From this code, I could change the taxon.
 
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
 Dornelas et al. (\protect\hyperlink{ref-dornelas_assemblage_2014}{2014})
-
-azdjazijdjzi
 
 \hypertarget{references}{%
 \chapter*{References}\label{references}}
