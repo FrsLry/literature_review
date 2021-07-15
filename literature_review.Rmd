@@ -38,7 +38,7 @@ Literature review about the link between biodiversity facets trends and spatial/
 
 The idea is to take every paper that talk about biodiversity trends (so far using just the species richness seems already a lot of paper) and to list **1)** which biodiversity metric they use **2)** which taxon/taxa they use, **3)** the spatial scale, **4)** the temporal scale and **5)** what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time/unclear).
 
-Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale | temporal_scale)`. Then see if for each taxa we can find a trend (a bit like in Chase *et al.* 2019 Oikos paper | Jarzyna *et al.* 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: Hill & Hamer 2004 (https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x)
+Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale | temporal_scale)`. Then see if for each taxa we can find a trend (a bit like in Chase *et al.* 2019 Oikos paper | Jarzyna *et al.* 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: [Hill & Hamer 2004](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x)
 
 I am using the "Advanced Research" tab of Web of Science which allows me skim through the entire literature using a convenient syntax. For instance:
 
@@ -47,13 +47,44 @@ AB = ((biodiversity OR species richness OR diversity) AND
 (temporal trend* OR dynamic*) AND
 (bird* OR avia*)) 
 ```
+And
+
+```
+AB = ((biodiversity change index)  AND (bird*  OR avia*)  AND trend*)
+```
+
+And
+
+```
+AB = ((species richness) AND (bird* OR avia*) AND trend*) 
+```
+
 
 From this code, I could change the taxon.
 
 
+| Article  	| Metric    | Spatial scale	| Temporal scale | Trend 	| Location |  
+|---	|---	|---  |---	|---	|---  |
+|   	|   	|   	|   	|   	|     |
+
+# Dashboard {-}
+
+[Reference paper](https://www.sciencedirect.com/science/article/pii/S1470160X20306658?via%3Dihub)
+
+* 05/07/2021: research wos made with the literature review filter for the first query (stopped at #13) and created the second query (stopped at #2)
+
+* 07/07/2021: questions to Petr: **1)** can the geometric mean of relative abundance + the weighted goodness of fit be used as biodiversity trend index, **2)** can the Farmland Bird Indicator (FBI) be used as biodiversity trend (for me it is more biodiversity health, Chiron et al 2013) **3)** what about the Red List Index trend? **4)** what about Multispecies population indexes?
+
+**The question could be: do I look also to the trend of qualitative index of biodiversity?**
+
+* 08/07/2021: stopped at the article 41 for research #2. 
+
+
 # Introduction
 
-@dornelas_assemblage_2014 
+Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation [@pereira_global_2012]. Some of those ecosystem functions are managed by bird populations such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction [@barnosky_has_2011].
+
+While the loss of global biodiversity is unprecedented, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales [@chase_species_2019]. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition [@blowes_geography_2019; @dornelas_quantifying_2013].
 
 # References {-}
 \singlespacing

@@ -120,7 +120,7 @@
 \fi
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-06-23}
+\date{2021-07-15}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -161,7 +161,7 @@ Literature review about the link between biodiversity facets trends and spatial/
 
 The idea is to take every paper that talk about biodiversity trends (so far using just the species richness seems already a lot of paper) and to list \textbf{1)} which biodiversity metric they use \textbf{2)} which taxon/taxa they use, \textbf{3)} the spatial scale, \textbf{4)} the temporal scale and \textbf{5)} what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time/unclear).
 
-Make a table of all these papers and \texttt{group\_by(taxa)\ \%\textgreater{}\%\ order\_by(spatial\_scale\ \textbar{}\ temporal\_scale)}. Then see if for each taxa we can find a trend (a bit like in Chase \emph{et al.} 2019 Oikos paper \textbar{} Jarzyna \emph{et al.} 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: Hill \& Hamer 2004 (\url{https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x})
+Make a table of all these papers and \texttt{group\_by(taxa)\ \%\textgreater{}\%\ order\_by(spatial\_scale\ \textbar{}\ temporal\_scale)}. Then see if for each taxa we can find a trend (a bit like in Chase \emph{et al.} 2019 Oikos paper \textbar{} Jarzyna \emph{et al.} 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: \href{https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x}{Hill \& Hamer 2004}
 
 I am using the \enquote{Advanced Research} tab of Web of Science which allows me skim through the entire literature using a convenient syntax. For instance:
 
@@ -171,12 +171,56 @@ AB = ((biodiversity OR species richness OR diversity) AND
 (bird* OR avia*)) 
 \end{verbatim}
 
+And
+
+\begin{verbatim}
+AB = ((biodiversity change index)  AND (bird*  OR avia*)  AND trend*)
+\end{verbatim}
+
+And
+
+\begin{verbatim}
+AB = ((species richness) AND (bird* OR avia*) AND trend*) 
+\end{verbatim}
+
 From this code, I could change the taxon.
+
+\begin{longtable}[]{@{}llllll@{}}
+\toprule
+Article & Metric & Spatial scale & Temporal scale & Trend & Location\tabularnewline
+\midrule
+\endhead
+& & & & &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{dashboard}{%
+\chapter*{Dashboard}\label{dashboard}}
+\addcontentsline{toc}{chapter}{Dashboard}
+
+\href{https://www.sciencedirect.com/science/article/pii/S1470160X20306658?via\%3Dihub}{Reference paper}
+
+\begin{itemize}
+\item
+  05/07/2021: research wos made with the literature review filter for the first query (stopped at \#13) and created the second query (stopped at \#2)
+\item
+  07/07/2021: questions to Petr: \textbf{1)} can the geometric mean of relative abundance + the weighted goodness of fit be used as biodiversity trend index, \textbf{2)} can the Farmland Bird Indicator (FBI) be used as biodiversity trend (for me it is more biodiversity health, Chiron et al 2013) \textbf{3)} what about the Red List Index trend? \textbf{4)} what about Multispecies population indexes?
+\end{itemize}
+
+\textbf{The question could be: do I look also to the trend of qualitative index of biodiversity?}
+
+\begin{itemize}
+\tightlist
+\item
+  08/07/2021: stopped at the article 41 for research \#2.
+\end{itemize}
 
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
-Dornelas et al. (\protect\hyperlink{ref-dornelas_assemblage_2014}{2014})
+Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation (Pereira, Navarro, and Martins \protect\hyperlink{ref-pereira_global_2012}{2012}). Some of those ecosystem functions are managed by bird populations such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction (Barnosky et al. \protect\hyperlink{ref-barnosky_has_2011}{2011}).
+
+While the loss of global biodiversity is unprecedented, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales (Chase et al. \protect\hyperlink{ref-chase_species_2019}{2019}). Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition (Blowes et al. \protect\hyperlink{ref-blowes_geography_2019}{2019}; Dornelas et al. \protect\hyperlink{ref-dornelas_quantifying_2013}{2013}).
 
 \hypertarget{references}{%
 \chapter*{References}\label{references}}
@@ -185,8 +229,20 @@ Dornelas et al. (\protect\hyperlink{ref-dornelas_assemblage_2014}{2014})
 \singlespacing
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-dornelas_assemblage_2014}{}%
-Dornelas, Maria, Nicholas J. Gotelli, Brian McGill, Hideyasu Shimadzu, Faye Moyes, Caya Sievers, and Anne E. Magurran. 2014. ``Assemblage Time Series Reveal Biodiversity Change but Not Systematic Loss.'' \emph{Science} 344 (6181): 296--99. \url{https://doi.org/10.1126/science.1248484}.
+\leavevmode\hypertarget{ref-barnosky_has_2011}{}%
+Barnosky, Anthony D., Nicholas Matzke, Susumu Tomiya, Guinevere O. U. Wogan, Brian Swartz, Tiago B. Quental, Charles Marshall, et al. 2011. ``Has the Earth's Sixth Mass Extinction Already Arrived?'' \emph{Nature} 471 (7336): 51--57. \url{https://doi.org/10.1038/nature09678}.
+
+\leavevmode\hypertarget{ref-blowes_geography_2019}{}%
+Blowes, Shane A., Sarah R. Supp, Laura H. Antão, Amanda Bates, Helge Bruelheide, Jonathan M. Chase, Faye Moyes, et al. 2019. ``The Geography of Biodiversity Change in Marine and Terrestrial Assemblages.'' \emph{Science} 366 (6463): 339--45. \url{https://doi.org/10.1126/science.aaw1620}.
+
+\leavevmode\hypertarget{ref-chase_species_2019}{}%
+Chase, Jonathan M., Brian J. McGill, Patrick L. Thompson, Laura H. Antão, Amanda E. Bates, Shane A. Blowes, Maria Dornelas, et al. 2019. ``Species Richness Change Across Spatial Scales.'' \emph{Oikos} 128 (8): 1079--91. \url{https://doi.org/10.1111/oik.05968}.
+
+\leavevmode\hypertarget{ref-dornelas_quantifying_2013}{}%
+Dornelas, Maria, Anne E. Magurran, Stephen T. Buckland, Anne Chao, Robin L. Chazdon, Robert K. Colwell, Tom Curtis, et al. 2013. ``Quantifying Temporal Change in Biodiversity: Challenges and Opportunities.'' \emph{Proceedings of the Royal Society B: Biological Sciences} 280 (1750): 20121931. \url{https://doi.org/10.1098/rspb.2012.1931}.
+
+\leavevmode\hypertarget{ref-pereira_global_2012}{}%
+Pereira, Henrique Miguel, Laetitia Marie Navarro, and Inês Santos Martins. 2012. ``Global Biodiversity Change: The Bad, the Good, and the Unknown.'' \emph{Annual Review of Environment and Resources} 37 (1): 25--50. \url{https://doi.org/10.1146/annurev-environ-042911-093511}.
 
 
 \end{document}
