@@ -82,7 +82,18 @@ From this code, I could change the taxon.
 
 # Introduction
 
-Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation [@pereira_global_2012]. Some of those ecosystem functions are managed by bird populations such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction [@barnosky_has_2011].
+Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation [@pereira_global_2012]. Some of those ecosystem functions are managed by bird biodiversity such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction [@barnosky_has_2011].
+
+Biodiversity erosion is now known from everyone and political decisions has been stated in order to limit it [*e.g.* @the_convention_on_biological_diversity_convention_2021, 2010, 2002]. However, these objectives have been so far not reached due mainly to our confusion and misunderstanding about biodiversity dynamic and how to determine it.
+
+Studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (*e.g.* species, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or $\alpha$ diversity [*i.e.* number of species, @whittaker_vegetation_1960], the Shannon index [@shannon_mathematical_1948] ,the Simpson index [@simpson_measurement_1949] or the Hill number [@hill_diversity_1973]. The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the *quality* of the biodiversity. On an other hand, the spatial and temporal $\beta$ diversity will measure the species turnover and can be measured thanks to Whittaker's [@whittaker_evolution_1972], Sørensen's [@sorensen_method_1948] or Jaccard's [@jaccard_distribution_1912] dissimilarity indexes [*e.g.* @keil_patterns_2012].
+
+However, overall biodiversity (*i.e.* taking into account species of every taxa) may not be relevant for one's case study. Thus, several multi-species indicators have also been created, taking into account the abundances of indicator species giving information on the ecosystem health. The most known ones are the Red List Index [@butchart_improvements_2007; @butchart_using_2005; @butchart_measuring_2004] or the Biodiversity Change Index [@normander_indicator_2012]. 
+
+
+**Add a part about multispecies indicators** Freixedas et al.
+
+**Add a part about the trends of these metrics inspired from just below**
 
 While the loss of global biodiversity is unprecedented, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales [@chase_species_2019]. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition [@blowes_geography_2019; @dornelas_quantifying_2013].
 
