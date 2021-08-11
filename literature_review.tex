@@ -120,7 +120,7 @@
 \fi
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-07-29}
+\date{2021-08-11}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -185,6 +185,8 @@ AB = ((species richness) AND (bird* OR avia*) AND trend*)
 
 From this code, I could change the taxon.
 
+Add temporal and spatial grain / temporal and spatial extent
+
 \begin{longtable}[]{@{}llllll@{}}
 \toprule
 Article & Metric & Spatial scale & Temporal scale & Trend & Location\tabularnewline
@@ -222,15 +224,15 @@ Human life quality is intrinsically linked to ecosystems state that he is living
 
 Biodiversity erosion is now known from everyone and political decisions has been stated in order to limit it (\emph{e.g.} The Convention on Biological Diversity \protect\hyperlink{ref-the_convention_on_biological_diversity_convention_2021}{2021}, 2010, 2002). However, these objectives have been so far not reached due mainly to our confusion and misunderstanding about biodiversity dynamic and how to determine it.
 
-Studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (\emph{e.g.} species, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or \(\alpha\) diversity (\emph{i.e.} number of species, Whittaker \protect\hyperlink{ref-whittaker_vegetation_1960}{1960}), the Shannon index (Shannon \protect\hyperlink{ref-shannon_mathematical_1948}{1948}) ,the Simpson index (Simpson \protect\hyperlink{ref-simpson_measurement_1949}{1949}) or the Hill number (Hill \protect\hyperlink{ref-hill_diversity_1973}{1973}). The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the \emph{quality} of the biodiversity. On an other hand, the spatial and temporal \(\beta\) diversity will measure the species turnover and can be measured thanks to Whittaker's (Whittaker \protect\hyperlink{ref-whittaker_evolution_1972}{1972}), Sørensen's (Sørensen \protect\hyperlink{ref-sorensen_method_1948}{1948}) or Jaccard's (Jaccard \protect\hyperlink{ref-jaccard_distribution_1912}{1912}) dissimilarity indexes (\emph{e.g.} Keil et al. \protect\hyperlink{ref-keil_patterns_2012}{2012}).
+As a matter of fact, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (\emph{e.g.} species, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or \(\alpha\) diversity (\emph{i.e.} number of species, Whittaker \protect\hyperlink{ref-whittaker_vegetation_1960}{1960}), the Shannon index (Shannon \protect\hyperlink{ref-shannon_mathematical_1948}{1948}) ,the Simpson index (Simpson \protect\hyperlink{ref-simpson_measurement_1949}{1949}) or the Hill number (Hill \protect\hyperlink{ref-hill_diversity_1973}{1973}). The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the \emph{quality} of the biodiversity. On an other hand, the spatial and temporal \(\beta\) diversity will measure the species turnover and can be measured thanks to Whittaker's (Whittaker \protect\hyperlink{ref-whittaker_evolution_1972}{1972}), Sørensen's (Sørensen \protect\hyperlink{ref-sorensen_method_1948}{1948}) or Jaccard's (Jaccard \protect\hyperlink{ref-jaccard_distribution_1912}{1912}) dissimilarity indexes (\emph{e.g.} Keil et al. \protect\hyperlink{ref-keil_patterns_2012}{2012}).
 
-However, overall biodiversity (\emph{i.e.} taking into account species of every taxa) may not be relevant for one's case study. Thus, several multi-species indicators have also been created, taking into account the abundances of indicator species giving information on the ecosystem health. The most known ones are the Red List Index (Butchart et al. \protect\hyperlink{ref-butchart_improvements_2007}{2007}, \protect\hyperlink{ref-butchart_using_2005}{2005}, \protect\hyperlink{ref-butchart_measuring_2004}{2004}) or the Biodiversity Change Index (Normander et al. \protect\hyperlink{ref-normander_indicator_2012}{2012}). (talk about the geometric mean and GoF)
+However, overall biodiversity (\emph{i.e.} taking into account species of every taxa) may not be relevant for one's case study. Thus, several multi-species indicators have also been created, taking into account the abundances of indicator species giving information on the ecosystem health. The most known ones are the Red List Index (Butchart et al. \protect\hyperlink{ref-butchart_improvements_2007}{2007}, \protect\hyperlink{ref-butchart_using_2005}{2005}, \protect\hyperlink{ref-butchart_measuring_2004}{2004}) or the Biodiversity Change Index (Normander et al. \protect\hyperlink{ref-normander_indicator_2012}{2012}).
 
-\textbf{Add a part about multispecies indicators} Freixedas et al.
+Using all the metrics cited above, we now know that the loss of global biodiversity is unprecedented. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales (\emph{e.g.} Chase et al. \protect\hyperlink{ref-chase_species_2019}{2019}). Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition (Blowes et al. \protect\hyperlink{ref-blowes_geography_2019}{2019}; Dornelas et al. \protect\hyperlink{ref-dornelas_quantifying_2013}{2013}). Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured.
 
-\textbf{Add a part about the trends of these metrics inspired from just below}
+In order to investigate this link between spatial scales and biodiversity metrics, birds is relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations (Bejček and Stastný \protect\hyperlink{ref-bejcek_velke_2016}{2016}). Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations. For instance, the geometric mean of relative abundances or the goodness-of-fit statistic (Studeny et al. \protect\hyperlink{ref-studeny_goodness_2011}{2011}) are some of the baseline. Other multi-species indicators have also been created specifically for birds, such as the Farmland Bird Indicator (Gregory et al. \protect\hyperlink{ref-gregory_developing_2005}{2005}), the Forest Bird Indicator (Gregory et al. \protect\hyperlink{ref-gregory_population_2007}{2007}) or the Wild Bird Indicator (Gregory and Strien \protect\hyperlink{ref-gregory_wild_2010}{2010}).
 
-While the loss of global biodiversity is unprecedented, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales (Chase et al. \protect\hyperlink{ref-chase_species_2019}{2019}). Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition (Blowes et al. \protect\hyperlink{ref-blowes_geography_2019}{2019}; Dornelas et al. \protect\hyperlink{ref-dornelas_quantifying_2013}{2013}).
+Here, we propose to review articles assessing the trends of different avian biodiversity metrics and to look at which spatial scales these studies have been done. continue this part about the objectives of the paper
 
 \hypertarget{references}{%
 \chapter*{References}\label{references}}
@@ -241,6 +243,9 @@ While the loss of global biodiversity is unprecedented, current scientific liter
 \hypertarget{refs}{}
 \leavevmode\hypertarget{ref-barnosky_has_2011}{}%
 Barnosky, Anthony D., Nicholas Matzke, Susumu Tomiya, Guinevere O. U. Wogan, Brian Swartz, Tiago B. Quental, Charles Marshall, et al. 2011. ``Has the Earth's Sixth Mass Extinction Already Arrived?'' \emph{Nature} 471 (7336): 51--57. \url{https://doi.org/10.1038/nature09678}.
+
+\leavevmode\hypertarget{ref-bejcek_velke_2016}{}%
+Bejček, Vladimír, and Stastný. 2016. ``Velké Ptačí Mapování.'' \emph{Vesmír}. \url{https://vesmir.cz/cz/on-line-clanky/2016/04/velke-ptaci-mapovani.html}.
 
 \leavevmode\hypertarget{ref-blowes_geography_2019}{}%
 Blowes, Shane A., Sarah R. Supp, Laura H. Antão, Amanda Bates, Helge Bruelheide, Jonathan M. Chase, Faye Moyes, et al. 2019. ``The Geography of Biodiversity Change in Marine and Terrestrial Assemblages.'' \emph{Science} 366 (6463): 339--45. \url{https://doi.org/10.1126/science.aaw1620}.
@@ -259,6 +264,15 @@ Chase, Jonathan M., Brian J. McGill, Patrick L. Thompson, Laura H. Antão, Amand
 
 \leavevmode\hypertarget{ref-dornelas_quantifying_2013}{}%
 Dornelas, Maria, Anne E. Magurran, Stephen T. Buckland, Anne Chao, Robin L. Chazdon, Robert K. Colwell, Tom Curtis, et al. 2013. ``Quantifying Temporal Change in Biodiversity: Challenges and Opportunities.'' \emph{Proceedings of the Royal Society B: Biological Sciences} 280 (1750): 20121931. \url{https://doi.org/10.1098/rspb.2012.1931}.
+
+\leavevmode\hypertarget{ref-gregory_wild_2010}{}%
+Gregory, Richard D., and Arco van Strien. 2010. ``Wild Bird Indicators: Using Composite Population Trends of Birds as Measures of Environmental Health.'' \emph{Ornithological Science} 9 (1): 3--22. \url{https://doi.org/10.2326/osj.9.3}.
+
+\leavevmode\hypertarget{ref-gregory_developing_2005}{}%
+Gregory, Richard D, Arco van Strien, Petr Vorisek, Adriaan W Gmelig Meyling, David G Noble, Ruud P. B Foppen, and David W Gibbons. 2005. ``Developing Indicators for European Birds.'' \emph{Philosophical Transactions of the Royal Society B: Biological Sciences} 360 (1454): 269--88. \url{https://doi.org/10.1098/rstb.2004.1602}.
+
+\leavevmode\hypertarget{ref-gregory_population_2007}{}%
+Gregory, Richard D., Petr Vorisek, Arco Van Strien, Adriaan W. Gmelig Meyling, Frédéric Jiguet, Lorenzo Fornasari, Jiri Reif, Przemek Chylarecki, and Ian J. Burfield. 2007. ``Population Trends of Widespread Woodland Birds in Europe.'' \emph{Ibis} 149 (s2): 78--97. \url{https://doi.org/10.1111/j.1474-919X.2007.00698.x}.
 
 \leavevmode\hypertarget{ref-hill_diversity_1973}{}%
 Hill, M. O. 1973. ``Diversity and Evenness: A Unifying Notation and Its Consequences.'' \emph{Ecology} 54 (2): 427--32. \url{https://doi.org/10.2307/1934352}.
@@ -280,6 +294,9 @@ Shannon, C. E. 1948. ``A Mathematical Theory of Communication.'' \emph{The Bell 
 
 \leavevmode\hypertarget{ref-simpson_measurement_1949}{}%
 Simpson, E. H. 1949. ``Measurement of Diversity.'' \emph{Nature} 163 (4148): 688--88. \url{https://doi.org/10.1038/163688a0}.
+
+\leavevmode\hypertarget{ref-studeny_goodness_2011}{}%
+Studeny, A. C., S. T. Buckland, J. B. Illian, A. Johnston, and A. E. Magurran. 2011. ``Goodness of Fit Measures of Evenness: A New Tool for Exploring Changes in Community Structure.'' \emph{Ecosphere} 2 (2): art15. \url{https://doi.org/10.1890/ES10-00074.1}.
 
 \leavevmode\hypertarget{ref-sorensen_method_1948}{}%
 Sørensen, Thorvald Julius. 1948. \emph{A Method of Establishing Groups of Equal Amplitude in Plant Sociology Based on Similarity of Species Content and Its Application to Analyses of the Vegetation on Danish Commons.} København: I kommission hos E. Munksgaard.
