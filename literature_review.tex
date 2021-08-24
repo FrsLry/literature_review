@@ -120,7 +120,7 @@
 \fi
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-08-11}
+\date{2021-08-24}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -183,18 +183,11 @@ And
 AB = ((species richness) AND (bird* OR avia*) AND trend*) 
 \end{verbatim}
 
-From this code, I could change the taxon.
+And
 
-Add temporal and spatial grain / temporal and spatial extent
-
-\begin{longtable}[]{@{}llllll@{}}
-\toprule
-Article & Metric & Spatial scale & Temporal scale & Trend & Location\tabularnewline
-\midrule
-\endhead
-& & & & &\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{verbatim}
+ALL=(birds AND species richness AND temporal trend)
+\end{verbatim}
 
 \hypertarget{dashboard}{%
 \chapter*{Dashboard}\label{dashboard}}
@@ -207,14 +200,20 @@ Article & Metric & Spatial scale & Temporal scale & Trend & Location\tabularnewl
   05/07/2021: research wos made with the literature review filter for the first query (stopped at \#13) and created the second query (stopped at \#2)
 \item
   07/07/2021: questions to Petr: \textbf{1)} can the geometric mean of relative abundance + the weighted goodness of fit be used as biodiversity trend index, \textbf{2)} can the Farmland Bird Indicator (FBI) be used as biodiversity trend (for me it is more biodiversity health, Chiron et al 2013) \textbf{3)} what about the Red List Index trend? \textbf{4)} what about Multispecies population indexes?
-\end{itemize}
-
-\textbf{The question could be: do I look also to the trend of qualitative index of biodiversity?}
-
-\begin{itemize}
-\tightlist
 \item
   08/07/2021: stopped at the article 41 for research \#2.
+\item
+  12/08/2021: stopped at article 4 for research \#4
+\item
+  13/08/2021: stopped at article 8 for research \#4
+\item
+  17/08/2021: stopped at article 15 for research \#4
+\item
+  18/08/2021: stopped at article 30 for research \#4
+\item
+  19/08/2021: stopped at article 46 for research \#4
+\item
+  20/08/2021: stopped at article 64 for research \#4
 \end{itemize}
 
 \hypertarget{introduction}{%
@@ -236,6 +235,20 @@ Here, I propose to review articles assessing the temporal trends of different av
 
 \hypertarget{materials-and-methods}{%
 \chapter{Materials and Methods}\label{materials-and-methods}}
+
+I used the \emph{\enquote{advanced serach}} tool of the ISI Web of Science Core collection database. It allowed me to write these four following queries using key words:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \texttt{AB\ =\ ((biodiversity\ OR\ species\ richness\ OR\ diversity)\ AND\ (temporal\ trend*\ OR\ dynamic*)\ AND\ (bird*\ OR\ avia*))} which resulted in 1346 references.
+\item
+  \texttt{AB\ =\ ((biodiversity\ change\ index)\ \ AND\ (bird*\ \ OR\ avia*)\ \ AND\ trend*)} which resulted in 60 references.
+\item
+  \texttt{AB\ =\ ((species\ richness)\ AND\ (bird*\ OR\ avia*)\ AND\ trend*)} which resulted in 313 references.
+\item
+  \texttt{ALL=(birds\ AND\ species\ richness\ AND\ temporal\ trend)} which resulted in 88 references.
+\end{enumerate}
 
 \hypertarget{references}{%
 \chapter*{References}\label{references}}

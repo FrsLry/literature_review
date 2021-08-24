@@ -59,15 +59,12 @@ And
 AB = ((species richness) AND (bird* OR avia*) AND trend*) 
 ```
 
+And
 
-From this code, I could change the taxon.
+```
+ALL=(birds AND species richness AND temporal trend)
+```
 
-Add temporal and spatial grain / temporal and spatial extent 
-
-
-| Article  	| Metric    | Spatial scale	| Temporal scale | Trend 	| Location |  
-|---	|---	|---  |---	|---	|---  |
-|   	|   	|   	|   	|   	|     |
 
 # Dashboard {-}
 
@@ -77,10 +74,19 @@ Add temporal and spatial grain / temporal and spatial extent
 
 * 07/07/2021: questions to Petr: **1)** can the geometric mean of relative abundance + the weighted goodness of fit be used as biodiversity trend index, **2)** can the Farmland Bird Indicator (FBI) be used as biodiversity trend (for me it is more biodiversity health, Chiron et al 2013) **3)** what about the Red List Index trend? **4)** what about Multispecies population indexes?
 
-**The question could be: do I look also to the trend of qualitative index of biodiversity?**
-
 * 08/07/2021: stopped at the article 41 for research #2. 
 
+* 12/08/2021: stopped at article 4 for research #4
+
+* 13/08/2021: stopped at article 8 for research #4
+
+* 17/08/2021: stopped at article 15 for research #4
+
+* 18/08/2021: stopped at article 30 for research #4
+
+* 19/08/2021: stopped at article 46 for research #4
+
+* 20/08/2021: stopped at article 64 for research #4
 
 # Introduction
 
@@ -99,6 +105,16 @@ In order to investigate this link between spatial scales and biodiversity metric
 Here, I propose to review articles assessing the temporal trends of different avian biodiversity metrics and to look at which spatial scales these studies have been done. Summarizing the trends of these qualitative and/or quantitative avian biodiversity indexes along with their spatial and temporal scales will help to see more clearly how the trends of biodiversity are linked to spatio-temporal scales. It is also important to demonstrate that the information about the sampling plan (*i.e.* spatial scale, time span, temporal scales etc) is not systematically indicated in the scientific literature and can bring confusion to the analysis and comparisons of their trends. I believe that this review can help to have a better overview of the current knowledge on the trend of biodiversity metrics of bird populations.  
 
 # Materials and Methods
+
+I used the *"advanced serach"* tool of the ISI Web of Science Core collection database. It allowed me to write these four following queries using key words:
+
+1. `AB = ((biodiversity OR species richness OR diversity) AND (temporal trend* OR dynamic*) AND (bird* OR avia*))` which resulted in 1346 references.
+
+2. `AB = ((biodiversity change index)  AND (bird*  OR avia*)  AND trend*)` which resulted in 60 references.
+
+3. `AB = ((species richness) AND (bird* OR avia*) AND trend*)` which resulted in 313 references. 
+
+4. `ALL=(birds AND species richness AND temporal trend)` which resulted in 88 references. 
 
 
 # References {-}
