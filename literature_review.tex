@@ -115,12 +115,28 @@
 %{\thechapter{. }}
 \titlespacing*{\chapter}{0pt}{-50pt}{10pt}
 % -50 is to up the title and 10 is the space with the text below
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\usepackage[]{natbib}
+\bibliographystyle{apa}
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-08-24}
+\date{2021-08-25}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -219,17 +235,17 @@ ALL=(birds AND species richness AND temporal trend)
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
-Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation (Pereira, Navarro, and Martins \protect\hyperlink{ref-pereira_global_2012}{2012}). Some of those ecosystem functions are managed by bird biodiversity such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction (Barnosky et al. \protect\hyperlink{ref-barnosky_has_2011}{2011}).
+Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation \citep{pereira_global_2012}. Some of those ecosystem functions are managed by bird biodiversity such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction \citep{barnosky_has_2011}.
 
-Biodiversity erosion is now known from everyone and political decisions has been stated in order to limit it (\emph{e.g.} The Convention on Biological Diversity \protect\hyperlink{ref-the_convention_on_biological_diversity_convention_2021}{2021}, 2010, 2002). However, these objectives have been so far not reached due mainly to our confusion and misunderstanding about biodiversity dynamic and how to determine it.
+Biodiversity erosion is now known from everyone and political decisions has been stated in order to limit it \citep[\emph{e.g.}][2010, 2002]{the_convention_on_biological_diversity_convention_2021}. However, these objectives have been so far not reached due mainly to our confusion and misunderstanding about biodiversity dynamic and how to determine it.
 
-As a matter of fact, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (\emph{e.g.} species, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or \(\alpha\) diversity (\emph{i.e.} number of species, Whittaker \protect\hyperlink{ref-whittaker_vegetation_1960}{1960}), the Shannon index (Shannon \protect\hyperlink{ref-shannon_mathematical_1948}{1948}) ,the Simpson index (Simpson \protect\hyperlink{ref-simpson_measurement_1949}{1949}) or the Hill number (Hill \protect\hyperlink{ref-hill_diversity_1973}{1973}). The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the \emph{quality} of the biodiversity. On an other hand, the spatial and temporal \(\beta\) diversity will measure the species turnover and can be measured thanks to Whittaker's (Whittaker \protect\hyperlink{ref-whittaker_evolution_1972}{1972}), Sørensen's (Sørensen \protect\hyperlink{ref-sorensen_method_1948}{1948}) or Jaccard's (Jaccard \protect\hyperlink{ref-jaccard_distribution_1912}{1912}) dissimilarity indexes (\emph{e.g.} Keil et al. \protect\hyperlink{ref-keil_patterns_2012}{2012}).
+As a matter of fact, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (\emph{e.g.} species, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or \(\alpha\) diversity \citep[\emph{i.e.} number of species,][]{whittaker_vegetation_1960}, the Shannon index \citep{shannon_mathematical_1948} ,the Simpson index \citep{simpson_measurement_1949} or the Hill number \citep{hill_diversity_1973}. The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the \emph{quality} of the biodiversity. On an other hand, the spatial and temporal \(\beta\) diversity will measure the species turnover and can be measured thanks to Whittaker's \citep{whittaker_evolution_1972}, Sørensen's \citep{sorensen_method_1948} or Jaccard's \citep{jaccard_distribution_1912} dissimilarity indexes \citep[\emph{e.g.}][]{keil_patterns_2012}.
 
-However, overall biodiversity (\emph{i.e.} taking into account species of every taxa) may not be relevant for one's case study. Thus, several multi-species indicators have also been created, taking into account the abundances of indicator species giving information on the ecosystem health. The most known ones are the Red List Index (Butchart et al. \protect\hyperlink{ref-butchart_improvements_2007}{2007}, \protect\hyperlink{ref-butchart_using_2005}{2005}, \protect\hyperlink{ref-butchart_measuring_2004}{2004}) or the Biodiversity Change Index (Normander et al. \protect\hyperlink{ref-normander_indicator_2012}{2012}).
+However, overall biodiversity (\emph{i.e.} taking into account species of every taxa) may not be relevant for one's case study. Thus, several multi-species indicators have also been created, taking into account the abundances of indicator species giving information on the ecosystem health. The most known ones are the Red List Index \citep{butchart_improvements_2007, butchart_using_2005, butchart_measuring_2004} or the Biodiversity Change Index \citep{normander_indicator_2012}.
 
-Using all the metrics cited above, we now know that the loss of global biodiversity is unprecedented. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales (\emph{e.g.} Chase et al. \protect\hyperlink{ref-chase_species_2019}{2019}). Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition (Blowes et al. \protect\hyperlink{ref-blowes_geography_2019}{2019}; Dornelas et al. \protect\hyperlink{ref-dornelas_quantifying_2013}{2013}). Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured.
+Using all the metrics cited above, we now know that the loss of global biodiversity is unprecedented. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales \citep[\emph{e.g.}][]{chase_species_2019}. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition \citep{blowes_geography_2019, dornelas_quantifying_2013}. Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured.
 
-In order to investigate this link between spatial scales and biodiversity metrics, birds is a relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations (Bejček and Stastný \protect\hyperlink{ref-bejcek_velke_2016}{2016}). Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations. For instance, the geometric mean of relative abundances or the goodness-of-fit statistic (Studeny et al. \protect\hyperlink{ref-studeny_goodness_2011}{2011}) are some of the baseline. Other multi-species indicators have also been created specifically for birds, such as the Farmland Bird Indicator (Gregory et al. \protect\hyperlink{ref-gregory_developing_2005}{2005}), the Forest Bird Indicator (Gregory et al. \protect\hyperlink{ref-gregory_population_2007}{2007}) or the Wild Bird Indicator (Gregory and Strien \protect\hyperlink{ref-gregory_wild_2010}{2010}).
+In order to investigate this link between spatial scales and biodiversity metrics, birds is a relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations \citep{bejcek_velke_2016}. Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations. For instance, the geometric mean of relative abundances or the goodness-of-fit statistic \citep{studeny_goodness_2011} are some of the baseline. Other multi-species indicators have also been created specifically for birds, such as the Farmland Bird Indicator \citep{gregory_developing_2005}, the Forest Bird Indicator \citep{gregory_population_2007} or the Wild Bird Indicator \citep{gregory_wild_2010}.
 
 Here, I propose to review articles assessing the temporal trends of different avian biodiversity metrics and to look at which spatial scales these studies have been done. Summarizing the trends of these qualitative and/or quantitative avian biodiversity indexes along with their spatial and temporal scales will help to see more clearly how the trends of biodiversity are linked to spatio-temporal scales. It is also important to demonstrate that the information about the sampling plan (\emph{i.e.} spatial scale, time span, temporal scales etc) is not systematically indicated in the scientific literature and can bring confusion to the analysis and comparisons of their trends. I believe that this review can help to have a better overview of the current knowledge on the trend of biodiversity metrics of bird populations.
 
@@ -250,81 +266,173 @@ I used the \emph{\enquote{advanced serach}} tool of the ISI Web of Science Core 
   \texttt{ALL=(birds\ AND\ species\ richness\ AND\ temporal\ trend)} which resulted in 88 references.
 \end{enumerate}
 
+\begingroup\fontsize{10}{12}\selectfont
+
+\begin{longtable}[t]{l}
+\caption{\label{tab:unnamed-chunk-3}SR = species richness, Ab = abundance, Eve = evenness, }\\
+\toprule
+Reference\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:unnamed-chunk-3}SR = species richness, Ab = abundance, Eve = evenness,  \textit{(continued)}}\\
+\toprule
+Reference\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cite{barnagaud_temporal_2017}\\
+\cite{barnagaud_temporal_2017}\\
+\cite{barnagaud_temporal_2017}\\
+\cite{barnagaud_temporal_2017}\\
+\cite{barnagaud_temporal_2017}\\
+\addlinespace
+\cite{barnagaud_temporal_2017}\\
+\cite{roels_recovery_2019}\\
+\cite{roels_recovery_2019}\\
+\cite{wretenberg_changes_2010}\\
+\cite{ram_what_2017}\\
+\addlinespace
+\cite{ram_what_2017}\\
+\cite{ram_what_2017}\\
+\cite{ram_what_2017}\\
+\cite{ram_what_2017}\\
+\cite{harrison_quantifying_2016}\\
+\addlinespace
+\cite{harrison_quantifying_2016}\\
+\cite{harrison_quantifying_2016}\\
+\cite{doxa_low-intensity_2010}\\
+\cite{doxa_low-intensity_2010}\\
+\cite{doxa_low-intensity_2010}\\
+\addlinespace
+\cite{arnold_contrasting_2021}\\
+\cite{arnold_contrasting_2021}\\
+\cite{arnold_contrasting_2021}\\
+\cite{xu_detecting_2018}\\
+\cite{jiguet_french_2012}\\
+\addlinespace
+\cite{jiguet_french_2012}\\
+\cite{jiguet_french_2012}\\
+\cite{keten_temporal_nodate}\\
+\cite{davey_rise_2012}\\
+\cite{davey_rise_2012}\\
+\addlinespace
+\cite{davey_rise_2012}\\
+\cite{siriwardena_how_2019}\\
+\cite{christian_more_2009}\\
+\cite{dittrich_multiyear_2019}\\
+\cite{dittrich_multiyear_2019}\\
+\addlinespace
+\cite{dittrich_multiyear_2019}\\
+\cite{dittrich_multiyear_2019}\\
+\cite{sirami_changes_2012}\\
+\cite{garcia-navas_temporal_2020}\\
+\cite{mcgeoch_global_2010}\\
+\addlinespace
+\cite{ellis_twenty-year_2019}\\
+\cite{ellis_twenty-year_2019}\\
+\cite{ellis_twenty-year_2019}\\
+\cite{ellis_twenty-year_2019}\\
+\cite{ellis_twenty-year_2019}\\
+\addlinespace
+\cite{ellis_twenty-year_2019}\\
+\cite{ellis_twenty-year_2019}\\
+\cite{ellis_twenty-year_2019}\\
+\cite{ellis_twenty-year_2019}\\
+\cite{ellis_twenty-year_2019}\\
+\addlinespace
+\cite{ellis_twenty-year_2019}\\
+\cite{ellis_twenty-year_2019}\\
+\cite{sicurella_effectiveness_2018}\\
+\cite{sicurella_effectiveness_2018}\\
+\cite{sicurella_effectiveness_2018}\\
+\addlinespace
+\cite{nally_monitoring_1997}\\
+\cite{latta_patterns_2011}\\
+\cite{latta_patterns_2011}\\
+\cite{scarton_long-term_2017}\\
+\cite{scarton_long-term_2017}\\
+\addlinespace
+\cite{scarton_long-term_2017}\\
+\cite{scarton_long-term_2017}\\
+\cite{chiron_forecasting_2013}\\
+\cite{chiron_forecasting_2013}\\
+\cite{chiron_forecasting_2013}\\
+\addlinespace
+\cite{chiron_forecasting_2013}\\
+\cite{eglington_disentangling_2012}\\
+\cite{harrison_assessing_2014}\\
+\cite{harrison_assessing_2014}\\
+\cite{harrison_assessing_2014}\\
+\addlinespace
+\cite{harrison_assessing_2014}\\
+\cite{harrison_assessing_2014}\\
+\cite{harrison_assessing_2014}\\
+\cite{juslen_application_2013}\\
+\cite{normander_indicator_2012}\\
+\addlinespace
+\cite{normander_indicator_2012}\\
+\cite{normander_indicator_2012}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\addlinespace
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\addlinespace
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\addlinespace
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\addlinespace
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\addlinespace
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\addlinespace
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\addlinespace
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\
+\addlinespace
+\cite{schipper_contrasting_2016}\\
+\cite{schipper_contrasting_2016}\\*
+\end{longtable}
+\endgroup{}
+
 \hypertarget{references}{%
 \chapter*{References}\label{references}}
 \addcontentsline{toc}{chapter}{References}
 
 \singlespacing
 
-\hypertarget{refs}{}
-\leavevmode\hypertarget{ref-barnosky_has_2011}{}%
-Barnosky, Anthony D., Nicholas Matzke, Susumu Tomiya, Guinevere O. U. Wogan, Brian Swartz, Tiago B. Quental, Charles Marshall, et al. 2011. ``Has the Earth's Sixth Mass Extinction Already Arrived?'' \emph{Nature} 471 (7336): 51--57. \url{https://doi.org/10.1038/nature09678}.
 
-\leavevmode\hypertarget{ref-bejcek_velke_2016}{}%
-Bejček, Vladimír, and Stastný. 2016. ``Velké Ptačí Mapování.'' \emph{Vesmír}. \url{https://vesmir.cz/cz/on-line-clanky/2016/04/velke-ptaci-mapovani.html}.
-
-\leavevmode\hypertarget{ref-blowes_geography_2019}{}%
-Blowes, Shane A., Sarah R. Supp, Laura H. Antão, Amanda Bates, Helge Bruelheide, Jonathan M. Chase, Faye Moyes, et al. 2019. ``The Geography of Biodiversity Change in Marine and Terrestrial Assemblages.'' \emph{Science} 366 (6463): 339--45. \url{https://doi.org/10.1126/science.aaw1620}.
-
-\leavevmode\hypertarget{ref-butchart_using_2005}{}%
-Butchart, S.h.m, A.j Stattersfield, J Baillie, L.a Bennun, S.n Stuart, H.r Akçakaya, C Hilton-Taylor, and G.m Mace. 2005. ``Using Red List Indices to Measure Progress Towards the 2010 Target and Beyond.'' \emph{Philosophical Transactions of the Royal Society B: Biological Sciences} 360 (1454): 255--68. \url{https://doi.org/10.1098/rstb.2004.1583}.
-
-\leavevmode\hypertarget{ref-butchart_improvements_2007}{}%
-Butchart, Stuart H. M., H. Resit Akçakaya, Janice Chanson, Jonathan E. M. Baillie, Ben Collen, Suhel Quader, Will R. Turner, Rajan Amin, Simon N. Stuart, and Craig Hilton-Taylor. 2007. ``Improvements to the Red List Index.'' \emph{PLOS ONE} 2 (1): e140. \url{https://doi.org/10.1371/journal.pone.0000140}.
-
-\leavevmode\hypertarget{ref-butchart_measuring_2004}{}%
-Butchart, Stuart H. M., Alison J. Stattersfield, Leon A. Bennun, Sue M. Shutes, H. Resit Akçakaya, Jonathan E. M. Baillie, Simon N. Stuart, Craig Hilton-Taylor, and Georgina M. Mace. 2004. ``Measuring Global Trends in the Status of Biodiversity: Red List Indices for Birds.'' \emph{PLOS Biology} 2 (12): e383. \url{https://doi.org/10.1371/journal.pbio.0020383}.
-
-\leavevmode\hypertarget{ref-chase_species_2019}{}%
-Chase, Jonathan M., Brian J. McGill, Patrick L. Thompson, Laura H. Antão, Amanda E. Bates, Shane A. Blowes, Maria Dornelas, et al. 2019. ``Species Richness Change Across Spatial Scales.'' \emph{Oikos} 128 (8): 1079--91. \url{https://doi.org/10.1111/oik.05968}.
-
-\leavevmode\hypertarget{ref-dornelas_quantifying_2013}{}%
-Dornelas, Maria, Anne E. Magurran, Stephen T. Buckland, Anne Chao, Robin L. Chazdon, Robert K. Colwell, Tom Curtis, et al. 2013. ``Quantifying Temporal Change in Biodiversity: Challenges and Opportunities.'' \emph{Proceedings of the Royal Society B: Biological Sciences} 280 (1750): 20121931. \url{https://doi.org/10.1098/rspb.2012.1931}.
-
-\leavevmode\hypertarget{ref-gregory_wild_2010}{}%
-Gregory, Richard D., and Arco van Strien. 2010. ``Wild Bird Indicators: Using Composite Population Trends of Birds as Measures of Environmental Health.'' \emph{Ornithological Science} 9 (1): 3--22. \url{https://doi.org/10.2326/osj.9.3}.
-
-\leavevmode\hypertarget{ref-gregory_developing_2005}{}%
-Gregory, Richard D, Arco van Strien, Petr Vorisek, Adriaan W Gmelig Meyling, David G Noble, Ruud P. B Foppen, and David W Gibbons. 2005. ``Developing Indicators for European Birds.'' \emph{Philosophical Transactions of the Royal Society B: Biological Sciences} 360 (1454): 269--88. \url{https://doi.org/10.1098/rstb.2004.1602}.
-
-\leavevmode\hypertarget{ref-gregory_population_2007}{}%
-Gregory, Richard D., Petr Vorisek, Arco Van Strien, Adriaan W. Gmelig Meyling, Frédéric Jiguet, Lorenzo Fornasari, Jiri Reif, Przemek Chylarecki, and Ian J. Burfield. 2007. ``Population Trends of Widespread Woodland Birds in Europe.'' \emph{Ibis} 149 (s2): 78--97. \url{https://doi.org/10.1111/j.1474-919X.2007.00698.x}.
-
-\leavevmode\hypertarget{ref-hill_diversity_1973}{}%
-Hill, M. O. 1973. ``Diversity and Evenness: A Unifying Notation and Its Consequences.'' \emph{Ecology} 54 (2): 427--32. \url{https://doi.org/10.2307/1934352}.
-
-\leavevmode\hypertarget{ref-jaccard_distribution_1912}{}%
-Jaccard, Paul. 1912. ``The Distribution of the Flora in the Alpine Zone.1.'' \emph{New Phytologist} 11 (2): 37--50. \url{https://doi.org/10.1111/j.1469-8137.1912.tb05611.x}.
-
-\leavevmode\hypertarget{ref-keil_patterns_2012}{}%
-Keil, Petr, Oliver Schweiger, Ingolf Kühn, William E. Kunin, Mikko Kuussaari, Josef Settele, Klaus Henle, et al. 2012. ``Patterns of Beta Diversity in Europe: The Role of Climate, Land Cover and Distance Across Scales.'' \emph{Journal of Biogeography} 39 (8): 1473--86. \url{https://doi.org/10.1111/j.1365-2699.2012.02701.x}.
-
-\leavevmode\hypertarget{ref-normander_indicator_2012}{}%
-Normander, Bo, Gregor Levin, Ari-Pekka Auvinen, Harald Bratli, Odd Stabbetorp, Marcus Hedblom, Anders Glimskär, and Gudmundur A. Gudmundsson. 2012. ``Indicator Framework for Measuring Quantity and Quality of Biodiversity---Exemplified in the Nordic Countries.'' \emph{Ecological Indicators} 13 (1): 104--16. \url{https://doi.org/10.1016/j.ecolind.2011.05.017}.
-
-\leavevmode\hypertarget{ref-pereira_global_2012}{}%
-Pereira, Henrique Miguel, Laetitia Marie Navarro, and Inês Santos Martins. 2012. ``Global Biodiversity Change: The Bad, the Good, and the Unknown.'' \emph{Annual Review of Environment and Resources} 37 (1): 25--50. \url{https://doi.org/10.1146/annurev-environ-042911-093511}.
-
-\leavevmode\hypertarget{ref-shannon_mathematical_1948}{}%
-Shannon, C. E. 1948. ``A Mathematical Theory of Communication.'' \emph{The Bell System Technical Journal} 27 (3): 379--423. \url{https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}.
-
-\leavevmode\hypertarget{ref-simpson_measurement_1949}{}%
-Simpson, E. H. 1949. ``Measurement of Diversity.'' \emph{Nature} 163 (4148): 688--88. \url{https://doi.org/10.1038/163688a0}.
-
-\leavevmode\hypertarget{ref-studeny_goodness_2011}{}%
-Studeny, A. C., S. T. Buckland, J. B. Illian, A. Johnston, and A. E. Magurran. 2011. ``Goodness of Fit Measures of Evenness: A New Tool for Exploring Changes in Community Structure.'' \emph{Ecosphere} 2 (2): art15. \url{https://doi.org/10.1890/ES10-00074.1}.
-
-\leavevmode\hypertarget{ref-sorensen_method_1948}{}%
-Sørensen, Thorvald Julius. 1948. \emph{A Method of Establishing Groups of Equal Amplitude in Plant Sociology Based on Similarity of Species Content and Its Application to Analyses of the Vegetation on Danish Commons.} København: I kommission hos E. Munksgaard.
-
-\leavevmode\hypertarget{ref-the_convention_on_biological_diversity_convention_2021}{}%
-The Convention on Biological Diversity, Biosafety. 2021. ``The Convention on Biological Diversity.'' May 21, 2021. \url{https://www.cbd.int/convention/}.
-
-\leavevmode\hypertarget{ref-whittaker_vegetation_1960}{}%
-Whittaker, R. H. 1960. ``Vegetation of the Siskiyou Mountains, Oregon and California.'' \emph{Ecological Monographs} 30 (3): 279--338. \url{https://doi.org/10.2307/1943563}.
-
-\leavevmode\hypertarget{ref-whittaker_evolution_1972}{}%
----------. 1972. ``Evolution and Measurement of Species Diversity.'' \emph{TAXON} 21 (2): 213--51. \url{https://doi.org/10.2307/1218190}.
-
+  \bibliography{references.bib}
 
 \end{document}

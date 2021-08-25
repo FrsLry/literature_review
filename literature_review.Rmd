@@ -29,6 +29,9 @@ knitr::opts_chunk$set(warning = F,
 
 ```{r, echo=F}
 library(bibliometrix)
+library(googlesheets4)
+library(dplyr)
+library(kableExtra)
 ```
 
 
@@ -115,6 +118,20 @@ I used the *"advanced serach"* tool of the ISI Web of Science Core collection da
 3. `AB = ((species richness) AND (bird* OR avia*) AND trend*)` which resulted in 313 references. 
 
 4. `ALL=(birds AND species richness AND temporal trend)` which resulted in 88 references. 
+
+
+```{r, echo=F}
+read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
+  select(Reference) %>%
+  as_tibble() %>% 
+  ## escape = F is very important for the citation
+  kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
+      caption = "SR = species richness, Ab = abundance, Eve = evenness, ") %>% 
+  kableExtra::kable_styling(
+   latex_options = c("hold_position", "repeat_header"),
+   font_size = 10
+   )
+```
 
 
 # References {-}
