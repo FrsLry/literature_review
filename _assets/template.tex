@@ -531,22 +531,22 @@ $endif$
 $endif$
 $endif$
 $if(biblatex)$
-$if(beamer)$
-\begin{frame}[allowframebreaks]{$biblio-title$}
-  \bibliographytrue
-  \printbibliography[heading=none]
-\end{frame}
-$else$
-%%%%%%%%%%%%%% Here is the part that I am using for the bibliography to be displayed in the toc
-%% First step: I define the name and label of the biblio part
-%\chapter{References}\label{references}
-%{
-%% I temporarily redefine the clearpage in order for the bib to not be printed on a new page
-%\renewcommand{\clearpage}{}
-%\printbibliography[heading=none] % I delete the default name of the bib
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$ 
-%}
-$endif$
+%$if(beamer)$
+%\begin{frame}[allowframebreaks]{$biblio-title$}
+%  \bibliographytrue
+%  \printbibliography[heading=none]
+%\end{frame}
+%$else$
+%%%%%%%%%%%%%%% Here is the part that I am using for the bibliography to be displayed in the toc
+%%% First step: I define the name and label of the biblio part
+%%\chapter{References}\label{references}
+%%{
+%%% I temporarily redefine the clearpage in order for the bib to not be printed on a new page
+%%\renewcommand{\clearpage}{}
+%%\printbibliography[heading=none] % I delete the default name of the bib
+%%\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$ 
+%%}
+%$endif$
 
 $endif$
 $for(include-after)$
