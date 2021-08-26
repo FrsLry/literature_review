@@ -123,16 +123,18 @@ I used the *"advanced serach"* tool of the ISI Web of Science Core collection da
 ```{r, echo=F}
 ## Note: problem in the country column
 read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
-  select(Reference, Metric, "Spatial grain", "Temporal grain", "Spatial extent", "Temporal extent", "Years") %>%
+  select(-Note) %>%
   as_tibble() %>% 
   ## escape = F is very important for the citation
   kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
       caption = "SR = species richness, Ab = abundance, Eve = evenness, ") %>% 
   kableExtra::kable_styling(
    latex_options = c("hold_position", "repeat_header"),
-   font_size = 5
+   font_size = 10,
+   full_width = FALSE
    ) %>% 
-  landscape()
+  landscape() %>% 
+  column_spec(1:9, width = "6.5em")
 ```
 
 
