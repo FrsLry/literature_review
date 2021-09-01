@@ -140,7 +140,7 @@
 \bibliographystyle{apa}
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-08-27}
+\date{2021-09-01}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -234,6 +234,8 @@ ALL=(birds AND species richness AND temporal trend)
   19/08/2021: stopped at article 46 for research \#4
 \item
   20/08/2021: stopped at article 64 for research \#4
+\item
+  01/09/2021: verifying spatial scales --\textgreater{} stopped at Dittrich 2019
 \end{itemize}
 
 \hypertarget{introduction}{%
@@ -297,16 +299,16 @@ Reference & Metric & Spatial grain & Temporal grain & Spatial extent & Temporal 
 \cite{roels_recovery_2019} & SR & 0.04 Km² & 1 year & 0.04 Km² & 5 years & NA & Panama & Increase\\
 \cite{roels_recovery_2019} & Bird activity & 0.04 Km² & 1 year & 0.04 Km² & 5 years & NA & Panama & Increase\\
 \cite{wretenberg_changes_2010} & SR & 0.03 Km² & 1 year & 1800 km2 & 11 years & 1994-2004 & Sweden & Decrease\\
-\cite{ram_what_2017} & SR & 1.6 Km2 & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & \vphantom{1} Increase\\
+\cite{ram_what_2017} & SR & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
 \addlinespace
-\cite{ram_what_2017} & SR & 1.6 Km2 & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Stable\\
-\cite{ram_what_2017} & SR & 1.6 Km2 & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
-\cite{ram_what_2017} & Multi-species indicator & 1.6 Km2 & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & \vphantom{1} Increase\\
-\cite{ram_what_2017} & Multi-species indicator & 1.6 Km2 & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
-\cite{harrison_quantifying_2016} & Geometric mean & 10 000 Km2 & 0.5 year & 242 495 km² & 20 years & 1994-2013 & UK & Increase\\
+\cite{ram_what_2017} & SR & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Stable\\
+\cite{ram_what_2017} & SR & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
+\cite{ram_what_2017} & Multi-species indicator & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
+\cite{ram_what_2017} & Multi-species indicator & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
+\cite{harrison_quantifying_2016} & Geometric mean & 10 000 Km² & 0.5 year & 242 495 km² & 20 years & 1994-2013 & UK & Increase\\
 \addlinespace
-\cite{harrison_quantifying_2016} & GoF ( $\lambda$ = -1) & 10 000 Km2 & 0.5 year & 242 495 km² & 20 years & 1994-2013 & UK & Stable\\
-\cite{harrison_quantifying_2016} & GoF ( $\lambda$ = -2) & 10 000 Km2 & 0.5 year & 242 495 km² & 20 years & 1994-2013 & UK & Stable\\
+\cite{harrison_quantifying_2016} & GoF ( $\lambda$ = -1) & 10 000 Km² & 0.5 year & 242 495 km² & 20 years & 1994-2013 & UK & Stable\\
+\cite{harrison_quantifying_2016} & GoF ( $\lambda$ = -2) & 10 000 Km² & 0.5 year & 242 495 km² & 20 years & 1994-2013 & UK & Stable\\
 \cite{doxa_low-intensity_2010} & FBI & 4 Km² & 1 year & 643 801 km² & 8 years & 2001-2008 & France & Increase\\
 \cite{doxa_low-intensity_2010} & FBI & 4 Km² & 1 year & 643 801 km² & 8 years & 2001-2008 & France & Stable\\
 \cite{doxa_low-intensity_2010} & FBI & 4 Km² & 1 year & 643 801 km² & 8 years & 2001-2008 & France & Stable\\
@@ -315,69 +317,93 @@ Reference & Metric & Spatial grain & Temporal grain & Spatial extent & Temporal 
 \cite{arnold_contrasting_2021} & Shannon & 0.02 Km² & 1 year & 1000 km² & 100 years & NA & Trinidad & Stable\\
 \cite{arnold_contrasting_2021} & Simpson & 0.02 Km² & 1 year & 1000 km² & 100 years & NA & Trinidad & Stable\\
 \cite{xu_detecting_2018} & SR & 6.56 Km² & 1 year & 6.56 Km² & 12 years & 2002-2013 & China & Decrease\\
-\cite{jiguet_french_2012} & GBI (Generalist Bird Indicator ) & 643 801 km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
+\cite{jiguet_french_2012} & GBI & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
 \addlinespace
-\cite{jiguet_french_2012} & EU bird directive & 643 801 km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
-\cite{jiguet_french_2012} & RLI (Red list Index) & 643 801 km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Decrease\\
+\cite{jiguet_french_2012} & WBI & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
+\cite{jiguet_french_2012} & UBI & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
+\cite{jiguet_french_2012} & FBI & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
+\cite{jiguet_french_2012} & EU bird directive & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
+\cite{jiguet_french_2012} & RLI (Red list Index) & NA & 1 year & 10 180 000 km² & 22 years & 1989-2009 & France & Decrease\\
+\addlinespace
 \cite{keten_temporal_nodate} & SR & 1.7 Km² & 1 year & 1.7 Km² & 11 years & 2006-2016 & Turkey & Stable\\
 \cite{davey_rise_2012} & Simpson & 1 km² & 1 year & 242 495 km² & 13 years & 1994-2006 & UK & Increase\\
 \cite{davey_rise_2012} & SR & 1 km² & 1 year & 242 495 km² & 13 years & 1994-2006 & UK & Increase\\
-\addlinespace
 \cite{davey_rise_2012} & Evenness & 1 km² & 1 year & 242 495 km² & 13 years & 1994-2006 & UK & Increase\\
-\cite{siriwardena_how_2019} & Diversity profile & 32300 Km² & 5 years & 32300 Km² & 36 years & 1965-2000 & UK & Stable\\
-\cite{christian_more_2009} & SR & 15.4 km2 & NA & 15.4 km2 & 209 ans & 1898-2006 & France & Increase\\
+\cite{christian_more_2009} & SR & 15.4 Km² & NA & 15.4 km2 & 209 ans & 1898-2006 & France & Increase\\
+\addlinespace
 \cite{dittrich_multiyear_2019} & SR & 0.053 km² & 0.33 year & 53 Km² & 3 years & 2010-2012 & Spain & Increase\\
 \cite{dittrich_multiyear_2019} & SR & 0.053 km² & 1 year & 53 Km² & 3 years & 2010-2012 & Spain & Increase\\
-\addlinespace
 \cite{dittrich_multiyear_2019} & SR & 0.083 km² & 0.33 year & 53 Km² & 3 years & 2012-2014 & UK & Stable\\
 \cite{dittrich_multiyear_2019} & SR & 0.083 km² & 1 year & 53 Km² & 3 years & 2012-2014 & UK & Stable\\
 \cite{sirami_changes_2012} & SR & 0.38 km² & 1 year & 430 Km² & 21 years & 1998-2018 & Swaziland & Decrease\\
+\addlinespace
 \cite{garcia-navas_temporal_2020} & spatial beta-diversity & 267 Km² & 1 year & 267 Km² & 20 years & 1999-2018 & Switzerland & Decrease\\
 \cite{mcgeoch_global_2010} & RLI (Red list Index) & NA & 1 year & 148,939,063.133 km² & 11 years & 1998-2008 & Worldwide & Decrease\\
-\addlinespace
 \cite{ellis_twenty-year_2019} & SR & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Stable\\
 \cite{ellis_twenty-year_2019} & SR & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Stable\\
 \cite{ellis_twenty-year_2019} & SR & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
+\addlinespace
 \cite{ellis_twenty-year_2019} & SR & 0.48 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Stable\\
 \cite{ellis_twenty-year_2019} & Shannon & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
-\addlinespace
 \cite{ellis_twenty-year_2019} & Shannon & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Decrease\\
 \cite{ellis_twenty-year_2019} & Shannon & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
 \cite{ellis_twenty-year_2019} & Shannon & 0.48 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
+\addlinespace
 \cite{ellis_twenty-year_2019} & Simpson & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
 \cite{ellis_twenty-year_2019} & Simpson & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Decrease\\
-\addlinespace
 \cite{ellis_twenty-year_2019} & Simpson & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
 \cite{ellis_twenty-year_2019} & Simpson & 0.48 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Decrease\\
 \cite{sicurella_effectiveness_2018} & Occurence (\%) & 17 370.3 Km² & 1 year & 23 844 km² & 22 years & 1992-2013 & Lombardy, Italy & Stable\\
+\addlinespace
 \cite{sicurella_effectiveness_2018} & Occurence (\%) & 1 403.9 Km² & 1 year & 23 844 km² & 22 years & 1992-2013 & Lombardy, Italy & Stable\\
 \cite{sicurella_effectiveness_2018} & Occurence (\%) & 6 461.9 Km² & 1 year & 23 844 km² & 22 years & 1992-2013 & Lombardy, Italy & Increase\\
-\addlinespace
 \cite{nally_monitoring_1997} & SR & 0.49 Km² & 1 day & 10 Km² & 3 years & 1994-1996 & Australia & Increase\\
 \cite{latta_patterns_2011} & SR & 0.000942 Km² & 2 years & NA & 14 years & 1994-2007 & Ecuador & Decrease\\
 \cite{latta_patterns_2011} & SR & 0.000942 Km² & 2 years & NA & 14 years & 1994-2007 & Ecuador & Decrease\\
+\addlinespace
 \cite{scarton_long-term_2017} & SR & 0.55 Km² & 2 years & 0.55 Km² & 25 years & 1990-2014 & Lagoon of Venice, Italy & Increase\\
 \cite{scarton_long-term_2017} & Shannon & 0.55 Km² & 2 years & 0.55 Km² & 25 years & 1990-2014 & Lagoon of Venice, Italy & Increase\\
-\addlinespace
 \cite{scarton_long-term_2017} & Temporal beta-diversity & 0.55 Km² & 2 years & 0.55 Km² & 25 years & 1990-2014 & Lagoon of Venice, Italy & Increase\\
 \cite{scarton_long-term_2017} & Temporal beta-diversity & 0.55 Km² & 2 years & 0.55 Km² & 25 years & 1990-2014 & Lagoon of Venice, Italy & Increase\\
 \cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
-\cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
-\cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
 \addlinespace
+\cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
+\cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
 \cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
 \cite{eglington_disentangling_2012} & FBI & 1 Km² & 1 year & 242 495 km² & 39 years & 1970-2008 & UK & Decrease\\
-\cite{harrison_assessing_2014} & Geometric mean & 10 000 km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Stable\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10 000 km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Decrease\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 10 000 km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Increase\\
+\cite{harrison_assessing_2014} & Geometric mean & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Stable\\
 \addlinespace
-\cite{harrison_assessing_2014} & Geometric mean & 10 000 km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Increase\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10 000 km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Decrease\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 10 000 km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Increase\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Decrease\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Increase\\
+\cite{harrison_assessing_2014} & Geometric mean & 62 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Increase\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 62 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Stable\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 62 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Increase\\
+\addlinespace
+\cite{harrison_assessing_2014} & Geometric mean & 16 000 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 16 000 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 16 000 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
+\cite{harrison_assessing_2014} & Geometric mean & 130 000 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Decrease\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 131 000 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Decrease\\
+\addlinespace
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 132 000 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Stable\\
+\cite{harrison_assessing_2014} & Geometric mean & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Increase\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Stable\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Decrease\\
+\cite{harrison_assessing_2014} & Geometric mean & 14 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Increase\\
+\addlinespace
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 14 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Increase\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 14 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Stable\\
+\cite{harrison_assessing_2014} & Geometric mean & 32 300 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Increase\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 32 300 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Decrease\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 32 300 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Stable\\
+\addlinespace
+\cite{harrison_assessing_2014} & Geometric mean & 3 116 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 3 116 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 3 116 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Increase\\
 \cite{juslen_application_2013} & RLI (Red list Index) & 338 440 km² & 1 year & 338 440 km² & 10 years & 2001-2010 & Finland & Decrease\\
 \cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 84 266 km² & NA & 1 260 663 km² & 16 years & 1990-2005 & Finland, Sweden, Norway, Denmark and Iceland & Decrease\\
 \addlinespace
-\cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 529,831 km² & NA & 1 260 663 km² & 16 years & 1990-2005 & Finland, Sweden, Norway, Denmark and Iceland & Stable\\
+\cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 529 831 km² & NA & 1 260 663 km² & 16 years & 1990-2005 & Finland, Sweden, Norway, Denmark and Iceland & Stable\\
 \cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 163 131 km² & NA & 1 260 663 km² & 16 years & 1990-2005 & Finland, Sweden, Norway, Denmark and Iceland & Decrease\\
 \cite{schipper_contrasting_2016} & Geometric mean & 32 Km² & 5 years & 21 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
 \cite{schipper_contrasting_2016} & Geometric mean & 32 Km² & 5 years & 21 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
@@ -432,15 +458,39 @@ Reference & Metric & Spatial grain & Temporal grain & Spatial extent & Temporal 
 \cite{pilotto_meta-analysis_2020} & Abundance & 1402 Km² & 0.08 year & 1402 Km² & 27 years & 1991-2017 & Belgium & Decrease\\
 \addlinespace
 \cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 1402 Km² & 0.08 year & 1402 Km² & 27 years & 1991-2017 & Belgium & Stable\\
-\cite{pilotto_meta-analysis_2020} & SR & 509 Km² & 1 year & 509 Km² & 43 years & 1976-2017 & Bulgaria & Increase\\
-\cite{pilotto_meta-analysis_2020} & Simpson & 509 Km² & 1 year & 509 Km² & 43 years & 1976-2017 & Bulgaria & Stable\\
-\cite{pilotto_meta-analysis_2020} & Abundance & 509 Km² & 1 year & 509 Km² & 43 years & 1976-2017 & Bulgaria & Increase\\
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 509 Km² & 1 year & 509 Km² & 43 years & 1976-2017 & Bulgaria & Decrease\\
+\cite{pilotto_meta-analysis_2020} & SR & 509 Km² & 1 year & 509 Km² & 42 years & 1976-2017 & Bulgaria & Increase\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 509 Km² & 1 year & 509 Km² & 42 years & 1976-2017 & Bulgaria & Stable\\
+\cite{pilotto_meta-analysis_2020} & Abundance & 509 Km² & 1 year & 509 Km² & 42 years & 1976-2017 & Bulgaria & Increase\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 509 Km² & 1 year & 509 Km² & 42 years & 1976-2017 & Bulgaria & Decrease\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & SR & 10 Km² & 1 year & 10 Km² & 43 years & 1976-2017 & Bulgaria & Increase\\
-\cite{pilotto_meta-analysis_2020} & Simpson & 10 Km² & 1 year & 10 Km² & 43 years & 1976-2017 & Bulgaria & Stable\\
-\cite{pilotto_meta-analysis_2020} & Abundance & 10 Km² & 1 year & 10 Km² & 43 years & 1976-2017 & Bulgaria & Stable\\
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 10 Km² & 1 year & 10 Km² & 43 years & 1976-2017 & Bulgaria & No trend\\*
+\cite{pilotto_meta-analysis_2020} & SR & 10 Km² & 1 year & 10 Km² & 42 years & 1976-2017 & Bulgaria & Increase\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 10 Km² & 1 year & 10 Km² & 42 years & 1976-2017 & Bulgaria & Stable\\
+\cite{pilotto_meta-analysis_2020} & Abundance & 10 Km² & 1 year & 10 Km² & 42 years & 1976-2017 & Bulgaria & Stable\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 10 Km² & 1 year & 10 Km² & 42 years & 1976-2017 & Bulgaria & Stable\\
+\cite{pilotto_meta-analysis_2020} & SR & 9.02 Km² & 1 year & 9.02 Km² & 41 years & 1977-2017 & Bulgaria & Increase\\
+\addlinespace
+\cite{pilotto_meta-analysis_2020} & Simpson & 9.02 Km² & 1 year & 9.02 Km² & 41 years & 1977-2017 & Bulgaria & Increase\\
+\cite{pilotto_meta-analysis_2020} & Abundance & 9.02 Km² & 1 year & 9.02 Km² & 41 years & 1977-2017 & Bulgaria & Stable\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 9.02 Km² & 1 year & 9.02 Km² & 41 years & 1977-2017 & Bulgaria & Stable\\
+\cite{pilotto_meta-analysis_2020} & SR & 32 Km² & 1 year & 32 Km² & 55 years & 1961-2015 & Spain & Increase\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 32 Km² & 1 year & 32 Km² & 55 years & 1961-2015 & Spain & Increase\\
+\addlinespace
+\cite{pilotto_meta-analysis_2020} & Abundance & 32 Km² & 1 year & 32 Km² & 55 years & 1961-2015 & Spain & Increase\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 32 Km² & 1 year & 32 Km² & 55 years & 1961-2015 & Spain & Decrease\\
+\cite{pilotto_meta-analysis_2020} & SR & 52 000 Km² & 1 year & 52 000 Km² & 55 years & 1961-2015 & France & Stable\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 52 000 Km² & 1 year & 52 000 Km² & 55 years & 1961-2015 & France & Stable\\
+\cite{pilotto_meta-analysis_2020} & Abundance & 52 000 Km² & 1 year & 52 000 Km² & 55 years & 1961-2015 & France & Stable\\
+\addlinespace
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 52 000 Km² & 1 year & 52 000 Km² & 55 years & 1961-2015 & France & Stable\\
+\cite{pilotto_meta-analysis_2020} & SR & 6 155 Km² & 0.08 year & 6 155 Km² & 43 years & 1975-2017 & Netherlands & Increase\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 6 155 Km² & 0.08 year & 6 155 Km² & 43 years & 1975-2017 & Netherlands & Increase\\
+\cite{pilotto_meta-analysis_2020} & Abundance & 6 155 Km² & 0.08 year & 6 155 Km² & 43 years & 1975-2017 & Netherlands & Increase\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 6 155 Km² & 0.08 year & 6 155 Km² & 43 years & 1975-2017 & Netherlands & Stable\\
+\addlinespace
+\cite{pilotto_meta-analysis_2020} & SR & 2 180 Km² & 1 year & 2 180 Km² & 45 years & 1974-2018 & Netherlands & Decrease\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 2 180 Km² & 1 year & 2 180 Km² & 45 years & 1974-2018 & Netherlands & Increase\\
+\cite{pilotto_meta-analysis_2020} & Abundance & 2 180 Km² & 1 year & 2 180 Km² & 45 years & 1974-2018 & Netherlands & Stable\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 2 180 Km² & 1 year & 2 180 Km² & 45 years & 1974-2018 & Netherlands & Decrease\\*
 \end{longtable}
 \endgroup{}
 \end{landscape}

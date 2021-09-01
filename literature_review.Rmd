@@ -91,6 +91,8 @@ ALL=(birds AND species richness AND temporal trend)
 
 * 20/08/2021: stopped at article 64 for research #4
 
+* 01/09/2021: verifying spatial scales --> stopped at Dittrich 2019
+
 # Introduction
 
 Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation [@pereira_global_2012]. Some of those ecosystem functions are managed by bird biodiversity such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction [@barnosky_has_2011].
