@@ -111,7 +111,7 @@ Here, I propose to review articles assessing the temporal trends of different av
 
 # Materials and Methods
 
-I used the *"advanced serach"* tool of the ISI Web of Science Core collection database. It allowed me to write these four following queries using key words:
+For this review, articles of interest were the ones assessing temporal trends of the most common indicators (*i.e.* metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the *"advanced search"* tool of the ISI Web of Science Core collection database with these four following queries:
 
 1. `AB = ((biodiversity OR species richness OR diversity) AND (temporal trend* OR dynamic*) AND (bird* OR avia*))` which resulted in 1346 references.
 
@@ -121,9 +121,13 @@ I used the *"advanced serach"* tool of the ISI Web of Science Core collection da
 
 4. `ALL=(birds AND species richness AND temporal trend)` which resulted in 88 references. 
 
+For each query, the title and abstract of the articles were reviewed. When the temporal trend was explicitly specified (either visually or literally), the material and method part was read in order to collect the *spatial grain* of the trend (*i.e.* the area at which the trend is assessed), its *temporal grain* (*i.e.* the time span at which data have been gathered on the field), the *spatial extent* (*i.e.* the entire area at which the study applies), the *temporal extent* and the *beginning and ending years* of the study as well as the *general trend* of the metric (Tab. \@ref(tab:maintable)). 
 
-```{r, echo=F}
-## Note: problem in the country column
+Concerning the trend assessment, some papers contained the *p-value* or directly specified the significant trend of the metric. However, a portion of papers gives only visual representations of the trend. For those, the standard error was used when displayed. For the very few only giving the trend, \textcolor{red}{the rule of thumb was applied}. Information can be found in the column *Note* of the Tab. \@ref(tab:notetable) of the supplementary material. Moreover, the final trend retained (*i.e.* either *Increase*, *Stable* or *Decrease*) doesn't reflect all the fluctuations of the metric through time but rather the difference between the starting and ending points.
+
+Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the [github repository](https://github.com/FrsLry/R-code) of their paper in order to compute the trends of these four metrics for the bird datasets.
+
+```{r maintable, echo=F}
 read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
   select(-Note) %>%
   as_tibble() %>% 
@@ -139,6 +143,25 @@ read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_X
   column_spec(1:9, width = "6.5em")
 ```
 
+# Supplementary materials {-}
 
-<!-- # References {-} -->
-\singlespacing
+```{r notetable, echo=FALSE}
+read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
+  select(Reference, Trend, Note) %>%
+  as_tibble() %>% 
+  ## escape = F is very important for the citation
+  kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
+      caption = "Supplementary informations on each trend") %>% 
+  kableExtra::kable_styling(
+   latex_options = c("hold_position", "repeat_header"),
+   font_size = 10,
+   full_width = FALSE
+   ) %>% 
+  landscape() %>% 
+  column_spec(3, width = "40em")
+```
+
+
+
+\singlespacing <!-- for the bibliography -->
+
