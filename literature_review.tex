@@ -140,7 +140,7 @@
 \bibliographystyle{apa}
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-09-02}
+\date{2021-09-03}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -236,7 +236,11 @@ ALL=(birds AND species richness AND temporal trend)
   20/08/2021: stopped at article 64 for research \#4
 \item
   01/09/2021: verifying spatial scales --\textgreater{} stopped at Dittrich 2019
+\item
+  02/09/2021: \textbf{Question 1:} for the FBI/WBI\ldots*BI indexes, usually they use a GLM/GAM to predict the abundance over the entire spatial extent and then compute the metric. Basically, those metrics are geometric means of predicted species abundances. Which spatial scale to use: the spatial unit of the prediction (i.e.~the plot), or the entire area predicted? (Imo, the second option is correct). \textbf{Question 2:} same question for the Geometric mean but I am realizing while writing this question that *BI are kind of similar to geometric means so answering the first question will answer this one.
 \end{itemize}
+
+\textbf{Papers that are driving me mad:} \citet{doxa_low-intensity_2010}, \citet{jiguet_french_2012}, and \citet{chiron_forecasting_2013}, \citet{eglington_disentangling_2012}
 
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
@@ -280,223 +284,210 @@ Moreover, \citet{pilotto_meta-analysis_2020} conducted a meta-analysis in which 
 
 \begin{landscape}\begingroup\fontsize{10}{12}\selectfont
 
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}}
 \caption{\label{tab:maintable}SR = species richness, Ab = abundance, Eve = evenness, }\\
 \toprule
-Reference & Metric & Spatial grain & Temporal grain & Spatial extent & Temporal extent & Years & Country & Trend\\
+Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial extent (Km²) & Temporal extent (year) & Years & Country & Trend\\
 \midrule
 \endfirsthead
 \caption[]{\label{tab:maintable}SR = species richness, Ab = abundance, Eve = evenness,  \textit{(continued)}}\\
 \toprule
-Reference & Metric & Spatial grain & Temporal grain & Spatial extent & Temporal extent & Years & Country & Trend\\
+Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial extent (Km²) & Temporal extent (year) & Years & Country & Trend\\
 \midrule
 \endhead
 
 \endfoot
 \bottomrule
 \endlastfoot
-\cite{barnagaud_temporal_2017} & SR & 0.5 Km² & 1 year & 9,834 millions km² & 41 years & 1970-2011 & USA & Increase\\
-\cite{barnagaud_temporal_2017} & Abundance & 0.5 Km² & 1 year & 9,834 millions km² & 41 years & 1970-2011 & USA & Decrease\\
-\cite{barnagaud_temporal_2017} & Evenness & 0.5 Km² & 1 year & 9,834 millions km² & 41 years & 1970-2011 & USA & Increase\\
-\cite{barnagaud_temporal_2017} & Functional richness & 0.5 Km² & 1 year & 9,834 millions km² & 41 years & 1970-2011 & USA & Increase\\
-\cite{barnagaud_temporal_2017} & Functional dispersion & 0.5 Km² & 1 year & 9,834 millions km² & 41 years & 1970-2011 & USA & Stable\\
+\cellcolor{gray!6}{\cite{barnagaud_temporal_2017}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.500} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{9834000.00} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1970-2011} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+\cite{barnagaud_temporal_2017} & Abundance & 0.500 & 1.000 & 9834000.00 & 41 & 1970-2011 & USA & Decrease\\
+\cellcolor{gray!6}{\cite{barnagaud_temporal_2017}} & \cellcolor{gray!6}{Evenness} & \cellcolor{gray!6}{0.500} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{9834000.00} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1970-2011} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+\cite{barnagaud_temporal_2017} & Functional richness & 0.500 & 1.000 & 9834000.00 & 41 & 1970-2011 & USA & Increase\\
+\cellcolor{gray!6}{\cite{barnagaud_temporal_2017}} & \cellcolor{gray!6}{Functional dispersion} & \cellcolor{gray!6}{0.500} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{9834000.00} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1970-2011} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Stable}\\
 \addlinespace
-\cite{barnagaud_temporal_2017} & Functional evenness & 0.5 Km² & 1 year & 9,834 millions km² & 41 years & 1970-2011 & USA & Increase\\
-\cite{roels_recovery_2019} & SR & 0.04 Km² & 1 year & 0.04 Km² & 5 years & NA & Panama & Increase\\
-\cite{roels_recovery_2019} & Bird activity & 0.04 Km² & 1 year & 0.04 Km² & 5 years & NA & Panama & Increase\\
-\cite{wretenberg_changes_2010} & SR & 0.03 Km² & 1 year & 1800 km2 & 11 years & 1994-2004 & Sweden & Decrease\\
-\cite{ram_what_2017} & SR & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
+\cite{barnagaud_temporal_2017} & Functional evenness & 0.500 & 1.000 & 9834000.00 & 41 & 1970-2011 & USA & Increase\\
+\cellcolor{gray!6}{\cite{roels_recovery_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.040} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{Panama} & \cellcolor{gray!6}{Increase}\\
+\cite{roels_recovery_2019} & Bird activity & 0.040 & 1.000 & 0.04 & 5 & NA & Panama & Increase\\
+\cellcolor{gray!6}{\cite{wretenberg_changes_2010}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.030} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{1800.00} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{1994-2004} & \cellcolor{gray!6}{Sweden} & \cellcolor{gray!6}{Decrease}\\
+\cite{ram_what_2017} & SR & 1.600 & 1.000 & 350000.00 & 18 & 1998-2015 & Sweden & \vphantom{1} Increase\\
 \addlinespace
-\cite{ram_what_2017} & SR & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Stable\\
-\cite{ram_what_2017} & SR & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
-\cite{ram_what_2017} & Multi-species indicator & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
-\cite{ram_what_2017} & Multi-species indicator & 1.6 Km² & 1 year & 350 000 Km2 & 18 years & 1998-2015 & Sweden & Increase\\
-\cite{harrison_quantifying_2016} & Geometric mean & 10 000 Km² & 0.5 year & 242 495 km² & 20 years & 1994-2013 & UK & Increase\\
+\cellcolor{gray!6}{\cite{ram_what_2017}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1.600} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{350000.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1998-2015} & \cellcolor{gray!6}{Sweden} & \cellcolor{gray!6}{Stable}\\
+\cite{ram_what_2017} & SR & 1.600 & 1.000 & 350000.00 & 18 & 1998-2015 & Sweden & Increase\\
+\cellcolor{gray!6}{\cite{ram_what_2017}} & \cellcolor{gray!6}{Multi-species indicator} & \cellcolor{gray!6}{1.600} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{350000.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1998-2015} & \cellcolor{gray!6}{Sweden} & \cellcolor{gray!6}{\vphantom{1} Increase}\\
+\cite{ram_what_2017} & Multi-species indicator & 1.600 & 1.000 & 350000.00 & 18 & 1998-2015 & Sweden & Increase\\
+\cellcolor{gray!6}{\cite{harrison_quantifying_2016}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{10000.000} & \cellcolor{gray!6}{0.500} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1994-2013} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
-\cite{harrison_quantifying_2016} & GoF ( $\lambda$ = -1) & 10 000 Km² & 0.5 year & 242 495 km² & 20 years & 1994-2013 & UK & Stable\\
-\cite{harrison_quantifying_2016} & GoF ( $\lambda$ = -2) & 10 000 Km² & 0.5 year & 242 495 km² & 20 years & 1994-2013 & UK & Stable\\
-\cite{doxa_low-intensity_2010} & FBI & 4 Km² & 1 year & 643 801 km² & 8 years & 2001-2008 & France & Increase\\
-\cite{doxa_low-intensity_2010} & FBI & 4 Km² & 1 year & 643 801 km² & 8 years & 2001-2008 & France & Stable\\
-\cite{doxa_low-intensity_2010} & FBI & 4 Km² & 1 year & 643 801 km² & 8 years & 2001-2008 & France & Stable\\
+\cite{harrison_quantifying_2016} & GoF ( $\lambda$ = -1) & 10000.000 & 0.500 & NA & 20 & 1994-2013 & UK & Stable\\
+\cellcolor{gray!6}{\cite{harrison_quantifying_2016}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{10000.000} & \cellcolor{gray!6}{0.500} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1994-2013} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Stable}\\
+\cite{doxa_low-intensity_2010} & FBI & 4.000 & 1.000 & 643801.00 & 8 & 2001-2008 & France & Increase\\
+\cellcolor{gray!6}{\cite{doxa_low-intensity_2010}} & \cellcolor{gray!6}{FBI} & \cellcolor{gray!6}{4.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{643801.00} & \cellcolor{gray!6}{8} & \cellcolor{gray!6}{2001-2008} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{\vphantom{1} Stable}\\
+\cite{doxa_low-intensity_2010} & FBI & 4.000 & 1.000 & 643801.00 & 8 & 2001-2008 & France & Stable\\
 \addlinespace
-\cite{arnold_contrasting_2021} & SR & 0.02 Km² & 1 year & 1000 km² & 100 years & NA & Trinidad & Stable\\
-\cite{arnold_contrasting_2021} & Shannon & 0.02 Km² & 1 year & 1000 km² & 100 years & NA & Trinidad & Stable\\
-\cite{arnold_contrasting_2021} & Simpson & 0.02 Km² & 1 year & 1000 km² & 100 years & NA & Trinidad & Stable\\
-\cite{xu_detecting_2018} & SR & 6.56 Km² & 1 year & 6.56 Km² & 12 years & 2002-2013 & China & Decrease\\
-\cite{jiguet_french_2012} & GBI & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
+\cellcolor{gray!6}{\cite{arnold_contrasting_2021}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.020} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{1000.00} & \cellcolor{gray!6}{100} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{Trinidad} & \cellcolor{gray!6}{Stable}\\
+\cite{arnold_contrasting_2021} & Shannon & 0.020 & 1.000 & 1000.00 & 100 & NA & Trinidad & Stable\\
+\cellcolor{gray!6}{\cite{arnold_contrasting_2021}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{0.020} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{1000.00} & \cellcolor{gray!6}{100} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{Trinidad} & \cellcolor{gray!6}{Stable}\\
+\cite{xu_detecting_2018} & SR & 6.560 & 1.000 & 6.56 & 12 & 2002-2013 & China & Decrease\\
+\cellcolor{gray!6}{\cite{jiguet_french_2012}} & \cellcolor{gray!6}{GBI} & \cellcolor{gray!6}{4.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{643801.00} & \cellcolor{gray!6}{22} & \cellcolor{gray!6}{1989-2009} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
-\cite{jiguet_french_2012} & WBI & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
-\cite{jiguet_french_2012} & UBI & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
-\cite{jiguet_french_2012} & FBI & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
-\cite{jiguet_french_2012} & EU bird directive & 4 Km² & 1 year & 643 801 km² & 22 years & 1989-2009 & France & Increase\\
-\cite{jiguet_french_2012} & RLI (Red list Index) & NA & 1 year & 10 180 000 km² & 22 years & 1989-2009 & France & Decrease\\
+\cite{jiguet_french_2012} & WBI & 4.000 & 1.000 & 643801.00 & 22 & 1989-2009 & France & Increase\\
+\cellcolor{gray!6}{\cite{jiguet_french_2012}} & \cellcolor{gray!6}{UBI} & \cellcolor{gray!6}{4.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{643801.00} & \cellcolor{gray!6}{22} & \cellcolor{gray!6}{1989-2009} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{Increase}\\
+\cite{jiguet_french_2012} & FBI & 4.000 & 1.000 & 643801.00 & 22 & 1989-2009 & France & Increase\\
+\cellcolor{gray!6}{\cite{jiguet_french_2012}} & \cellcolor{gray!6}{EU bird directive} & \cellcolor{gray!6}{4.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{643801.00} & \cellcolor{gray!6}{22} & \cellcolor{gray!6}{1989-2009} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{Increase}\\
+\cite{jiguet_french_2012} & RLI (Red list Index) & NA & 1.000 & 10180000.00 & 22 & 1989-2009 & France & Decrease\\
 \addlinespace
-\cite{keten_temporal_nodate} & SR & 1.7 Km² & 1 year & 1.7 Km² & 11 years & 2006-2016 & Turkey & Stable\\
-\cite{davey_rise_2012} & Simpson & 1 km² & 1 year & 242 495 km² & 13 years & 1994-2006 & UK & Increase\\
-\cite{davey_rise_2012} & SR & 1 km² & 1 year & 242 495 km² & 13 years & 1994-2006 & UK & Increase\\
-\cite{davey_rise_2012} & Evenness & 1 km² & 1 year & 242 495 km² & 13 years & 1994-2006 & UK & Increase\\
-\cite{christian_more_2009} & SR & 15.4 Km² & NA & 15.4 km2 & 209 ans & 1898-2006 & France & Increase\\
+\cellcolor{gray!6}{\cite{keten_temporal_nodate}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1.700} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{1.70} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{2006-2016} & \cellcolor{gray!6}{Turkey} & \cellcolor{gray!6}{Stable}\\
+\cite{davey_rise_2012} & Simpson & 1.000 & 1.000 & 242495.00 & 13 & 1994-2006 & UK & Increase\\
+\cellcolor{gray!6}{\cite{davey_rise_2012}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{242495.00} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{1994-2006} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Increase}\\
+\cite{davey_rise_2012} & Evenness & 1.000 & 1.000 & 242495.00 & 13 & 1994-2006 & UK & Increase\\
+\cellcolor{gray!6}{\cite{christian_more_2009}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{15.400} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{15.40} & \cellcolor{gray!6}{209} & \cellcolor{gray!6}{1898-2006} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
-\cite{dittrich_multiyear_2019} & SR & 0.053 km² & 0.33 year & 53 Km² & 3 years & 2010-2012 & Spain & Increase\\
-\cite{dittrich_multiyear_2019} & SR & 0.053 km² & 1 year & 53 Km² & 3 years & 2010-2012 & Spain & Increase\\
-\cite{dittrich_multiyear_2019} & SR & 0.083 km² & 0.33 year & 53 Km² & 3 years & 2012-2014 & UK & Stable\\
-\cite{dittrich_multiyear_2019} & SR & 0.083 km² & 1 year & 53 Km² & 3 years & 2012-2014 & UK & Stable\\
-\cite{sirami_changes_2012} & SR & 0.38 km² & 1 year & 430 Km² & 21 years & 1998-2018 & Swaziland & Decrease\\
+\cite{dittrich_multiyear_2019} & SR & 0.053 & 0.330 & 53.00 & 3 & 2010-2012 & Spain & Increase\\
+\cellcolor{gray!6}{\cite{dittrich_multiyear_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.053} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{53.00} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{2010-2012} & \cellcolor{gray!6}{Spain} & \cellcolor{gray!6}{Increase}\\
+\cite{dittrich_multiyear_2019} & SR & 0.083 & 0.330 & 53.00 & 3 & 2012-2014 & UK & Stable\\
+\cellcolor{gray!6}{\cite{dittrich_multiyear_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.083} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{53.00} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{2012-2014} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Stable}\\
+\cite{sirami_changes_2012} & SR & 0.380 & 1.000 & 430.00 & 21 & 1998-2018 & Swaziland & Decrease\\
 \addlinespace
-\cite{garcia-navas_temporal_2020} & spatial beta-diversity & 267 Km² & 1 year & 267 Km² & 20 years & 1999-2018 & Switzerland & Decrease\\
-\cite{mcgeoch_global_2010} & RLI (Red list Index) & NA & 1 year & 148,939,063.133 km² & 11 years & 1998-2008 & Worldwide & Decrease\\
-\cite{ellis_twenty-year_2019} & SR & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Stable\\
-\cite{ellis_twenty-year_2019} & SR & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Stable\\
-\cite{ellis_twenty-year_2019} & SR & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
+\cellcolor{gray!6}{\cite{garcia-navas_temporal_2020}} & \cellcolor{gray!6}{Spatial beta-diversity} & \cellcolor{gray!6}{267.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{267.00} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1999-2018} & \cellcolor{gray!6}{Switzerland} & \cellcolor{gray!6}{Decrease}\\
+\cite{ellis_twenty-year_2019} & SR & 0.160 & 1.000 & NA & 21 & 1994-2014 & Oregon, USA & \vphantom{1} Stable\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.160} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{1994-2014} & \cellcolor{gray!6}{Oregon, USA} & \cellcolor{gray!6}{Stable}\\
+\cite{ellis_twenty-year_2019} & SR & 0.160 & 1.000 & NA & 21 & 1994-2014 & Oregon, USA & Increase\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.480} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{1994-2014} & \cellcolor{gray!6}{Oregon, USA} & \cellcolor{gray!6}{Stable}\\
 \addlinespace
-\cite{ellis_twenty-year_2019} & SR & 0.48 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Stable\\
-\cite{ellis_twenty-year_2019} & Shannon & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
-\cite{ellis_twenty-year_2019} & Shannon & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Decrease\\
-\cite{ellis_twenty-year_2019} & Shannon & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
-\cite{ellis_twenty-year_2019} & Shannon & 0.48 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
+\cite{ellis_twenty-year_2019} & Shannon & 0.160 & 1.000 & NA & 21 & 1994-2014 & Oregon, USA & \vphantom{1} Increase\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{0.160} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{1994-2014} & \cellcolor{gray!6}{Oregon, USA} & \cellcolor{gray!6}{Decrease}\\
+\cite{ellis_twenty-year_2019} & Shannon & 0.160 & 1.000 & NA & 21 & 1994-2014 & Oregon, USA & Increase\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{0.480} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{1994-2014} & \cellcolor{gray!6}{Oregon, USA} & \cellcolor{gray!6}{Increase}\\
+\cite{ellis_twenty-year_2019} & Simpson & 0.160 & 1.000 & NA & 21 & 1994-2014 & Oregon, USA & \vphantom{1} Increase\\
 \addlinespace
-\cite{ellis_twenty-year_2019} & Simpson & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
-\cite{ellis_twenty-year_2019} & Simpson & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Decrease\\
-\cite{ellis_twenty-year_2019} & Simpson & 0.16 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Increase\\
-\cite{ellis_twenty-year_2019} & Simpson & 0.48 Km² & 1 year & NA & 21 years & 1994-2014 & Oregon, USA & Decrease\\
-\cite{sicurella_effectiveness_2018} & Occurence (\%) & 17 370.3 Km² & 1 year & 23 844 km² & 22 years & 1992-2013 & Lombardy, Italy & Stable\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{0.160} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{1994-2014} & \cellcolor{gray!6}{Oregon, USA} & \cellcolor{gray!6}{Decrease}\\
+\cite{ellis_twenty-year_2019} & Simpson & 0.160 & 1.000 & NA & 21 & 1994-2014 & Oregon, USA & Increase\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{0.480} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{1994-2014} & \cellcolor{gray!6}{Oregon, USA} & \cellcolor{gray!6}{Decrease}\\
+\cite{sicurella_effectiveness_2018} & Occurence (\%) & 17370.300 & 1.000 & 23844.00 & 22 & 1992-2013 & Lombardy, Italy & Stable\\
+\cellcolor{gray!6}{\cite{sicurella_effectiveness_2018}} & \cellcolor{gray!6}{Occurence (\%)} & \cellcolor{gray!6}{1403.900} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{23844.00} & \cellcolor{gray!6}{22} & \cellcolor{gray!6}{1992-2013} & \cellcolor{gray!6}{Lombardy, Italy} & \cellcolor{gray!6}{Stable}\\
 \addlinespace
-\cite{sicurella_effectiveness_2018} & Occurence (\%) & 1 403.9 Km² & 1 year & 23 844 km² & 22 years & 1992-2013 & Lombardy, Italy & Stable\\
-\cite{sicurella_effectiveness_2018} & Occurence (\%) & 6 461.9 Km² & 1 year & 23 844 km² & 22 years & 1992-2013 & Lombardy, Italy & Increase\\
-\cite{nally_monitoring_1997} & SR & 0.49 Km² & 1 day & 10 Km² & 3 years & 1994-1996 & Australia & Increase\\
-\cite{latta_patterns_2011} & SR & 0.000942 Km² & 2 years & NA & 14 years & 1994-2007 & Ecuador & Decrease\\
-\cite{latta_patterns_2011} & SR & 0.000942 Km² & 2 years & NA & 14 years & 1994-2007 & Ecuador & Decrease\\
+\cite{sicurella_effectiveness_2018} & Occurence (\%) & 6461.900 & 1.000 & 23844.00 & 22 & 1992-2013 & Lombardy, Italy & Increase\\
+\cellcolor{gray!6}{\cite{nally_monitoring_1997}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.490} & \cellcolor{gray!6}{0.003} & \cellcolor{gray!6}{10.00} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{1994-1996} & \cellcolor{gray!6}{Australia} & \cellcolor{gray!6}{Increase}\\
+\cite{latta_patterns_2011} & SR & 1.180 & 2.000 & NA & 14 & 1994-2007 & Ecuador & \vphantom{1} Decrease\\
+\cellcolor{gray!6}{\cite{latta_patterns_2011}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1.180} & \cellcolor{gray!6}{2.000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{1994-2007} & \cellcolor{gray!6}{Ecuador} & \cellcolor{gray!6}{Decrease}\\
+\cite{scarton_long-term_2017} & SR & 0.550 & 2.000 & 0.55 & 25 & 1990-2014 & Lagoon of Venice, Italy & Increase\\
 \addlinespace
-\cite{scarton_long-term_2017} & SR & 0.55 Km² & 2 years & 0.55 Km² & 25 years & 1990-2014 & Lagoon of Venice, Italy & Increase\\
-\cite{scarton_long-term_2017} & Shannon & 0.55 Km² & 2 years & 0.55 Km² & 25 years & 1990-2014 & Lagoon of Venice, Italy & Increase\\
-\cite{scarton_long-term_2017} & Temporal beta-diversity & 0.55 Km² & 2 years & 0.55 Km² & 25 years & 1990-2014 & Lagoon of Venice, Italy & Increase\\
-\cite{scarton_long-term_2017} & Temporal beta-diversity & 0.55 Km² & 2 years & 0.55 Km² & 25 years & 1990-2014 & Lagoon of Venice, Italy & Increase\\
-\cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
+\cellcolor{gray!6}{\cite{scarton_long-term_2017}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{0.550} & \cellcolor{gray!6}{2.000} & \cellcolor{gray!6}{0.55} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{1990-2014} & \cellcolor{gray!6}{Lagoon of Venice, Italy} & \cellcolor{gray!6}{Increase}\\
+\cite{scarton_long-term_2017} & Temporal beta-diversity & 0.550 & 2.000 & 0.55 & 25 & 1990-2014 & Lagoon of Venice, Italy & \vphantom{1} Increase\\
+\cellcolor{gray!6}{\cite{scarton_long-term_2017}} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{0.550} & \cellcolor{gray!6}{2.000} & \cellcolor{gray!6}{0.55} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{1990-2014} & \cellcolor{gray!6}{Lagoon of Venice, Italy} & \cellcolor{gray!6}{Increase}\\
+\cite{chiron_forecasting_2013} & FBI & 4.000 & 1.000 & 643801.00 & 14 & 2007-2020 & France & \vphantom{3} Decrease\\
+\cellcolor{gray!6}{\cite{chiron_forecasting_2013}} & \cellcolor{gray!6}{FBI} & \cellcolor{gray!6}{4.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{643801.00} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{2007-2020} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{\vphantom{2} Decrease}\\
 \addlinespace
-\cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
-\cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
-\cite{chiron_forecasting_2013} & FBI & 4 Km² & 1 year & 643 801 Km² & 14 years & 2007-2020 & France & Decrease\\
-\cite{eglington_disentangling_2012} & FBI & 1 Km² & 1 year & 242 495 km² & 39 years & 1970-2008 & UK & Decrease\\
-\cite{harrison_assessing_2014} & Geometric mean & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Stable\\
+\cite{chiron_forecasting_2013} & FBI & 4.000 & 1.000 & 643801.00 & 14 & 2007-2020 & France & \vphantom{1} Decrease\\
+\cellcolor{gray!6}{\cite{chiron_forecasting_2013}} & \cellcolor{gray!6}{FBI} & \cellcolor{gray!6}{4.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{643801.00} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{2007-2020} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{Decrease}\\
+\cite{eglington_disentangling_2012} & FBI & 1.000 & 1.000 & 242495.00 & 39 & 1970-2008 & UK & Decrease\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{10000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{200000.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Great Britain, UK} & \cellcolor{gray!6}{Stable}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10000.000 & 1.000 & 200000.00 & 18 & 1994-2011 & Great Britain, UK & Decrease\\
 \addlinespace
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Decrease\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Increase\\
-\cite{harrison_assessing_2014} & Geometric mean & 62 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Increase\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 62 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Stable\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 62 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Increase\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{10000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{200000.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Great Britain, UK} & \cellcolor{gray!6}{Increase}\\
+\cite{harrison_assessing_2014} & Geometric mean & 62000.000 & 1.000 & 77933.00 & 18 & 1994-2011 & Scotland, UK & Increase\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -1)} & \cellcolor{gray!6}{62000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{77933.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Scotland, UK} & \cellcolor{gray!6}{Stable}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 62000.000 & 1.000 & 77933.00 & 18 & 1994-2011 & Scotland, UK & Increase\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{16000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{20779.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Wales, UK} & \cellcolor{gray!6}{Stable}\\
 \addlinespace
-\cite{harrison_assessing_2014} & Geometric mean & 16 000 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 16 000 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 16 000 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
-\cite{harrison_assessing_2014} & Geometric mean & 130 000 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Decrease\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 131 000 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Decrease\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 16000.000 & 1.000 & 20779.00 & 18 & 1994-2011 & Wales, UK & Stable\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{16000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{20779.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Wales, UK} & \cellcolor{gray!6}{Stable}\\
+\cite{harrison_assessing_2014} & Geometric mean & 130000.000 & 1.000 & 130279.00 & 18 & 1994-2011 & England, UK & Decrease\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -1)} & \cellcolor{gray!6}{130000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{130279.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{England, UK} & \cellcolor{gray!6}{Decrease}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 130000.000 & 1.000 & 130279.00 & 18 & 1994-2011 & England, UK & Stable\\
 \addlinespace
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 132 000 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Stable\\
-\cite{harrison_assessing_2014} & Geometric mean & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Increase\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Stable\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 10 000 Km² & 1 year & 200 000 km² & 18 years & 1994-2011 & Great Britain, UK & Decrease\\
-\cite{harrison_assessing_2014} & Geometric mean & 14 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Increase\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{10000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{200000.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Great Britain, UK} & \cellcolor{gray!6}{Increase}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10000.000 & 1.000 & 200000.00 & 18 & 1994-2011 & Great Britain, UK & Stable\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{10000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{200000.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Great Britain, UK} & \cellcolor{gray!6}{Decrease}\\
+\cite{harrison_assessing_2014} & Geometric mean & 14000.000 & 1.000 & 77933.00 & 18 & 1994-2011 & Scotland, UK & Increase\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -1)} & \cellcolor{gray!6}{14000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{77933.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Scotland, UK} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 14 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Increase\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 14 000 Km² & 1 year & 77 933 Km² & 18 years & 1994-2011 & Scotland, UK & Stable\\
-\cite{harrison_assessing_2014} & Geometric mean & 32 300 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Increase\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 32 300 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Decrease\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 32 300 Km² & 1 year & 130 279 Km² & 18 years & 1994-2011 & England, UK & Stable\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 14000.000 & 1.000 & 77933.00 & 18 & 1994-2011 & Scotland, UK & Stable\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{32300.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{130279.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{England, UK} & \cellcolor{gray!6}{Increase}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 32300.000 & 1.000 & 130279.00 & 18 & 1994-2011 & England, UK & Decrease\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{32300.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{130279.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{England, UK} & \cellcolor{gray!6}{Stable}\\
+\cite{harrison_assessing_2014} & Geometric mean & 3116.000 & 1.000 & 20779.00 & 18 & 1994-2011 & Wales, UK & Stable\\
 \addlinespace
-\cite{harrison_assessing_2014} & Geometric mean & 3 116 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 3 116 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Stable\\
-\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 3 116 Km² & 1 year & 20,779 Km² & 18 years & 1994-2011 & Wales, UK & Increase\\
-\cite{juslen_application_2013} & RLI (Red list Index) & 338 440 km² & 1 year & 338 440 km² & 10 years & 2001-2010 & Finland & Decrease\\
-\cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 84 266 km² & NA & 1 260 663 km² & 16 years & 1990-2005 & Finland, Sweden, Norway, Denmark and Iceland & Decrease\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -1)} & \cellcolor{gray!6}{3116.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{20779.00} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Wales, UK} & \cellcolor{gray!6}{Stable}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 3116.000 & 1.000 & 20779.00 & 18 & 1994-2011 & Wales, UK & Increase\\
+\cellcolor{gray!6}{\cite{juslen_application_2013}} & \cellcolor{gray!6}{RLI (Red list Index)} & \cellcolor{gray!6}{338440.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{338440.00} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{2001-2010} & \cellcolor{gray!6}{Finland} & \cellcolor{gray!6}{Decrease}\\
+\cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 84266.000 & NA & 1260663.00 & 16 & 1990-2005 & Finland, Sweden, Norway, Denmark and Iceland & Decrease\\
+\cellcolor{gray!6}{\cite{normander_indicator_2012}} & \cellcolor{gray!6}{BCI (Biodviersity Change Index)} & \cellcolor{gray!6}{529831.000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{1260663.00} & \cellcolor{gray!6}{16} & \cellcolor{gray!6}{1990-2005} & \cellcolor{gray!6}{Finland, Sweden, Norway, Denmark and Iceland} & \cellcolor{gray!6}{Stable}\\
 \addlinespace
-\cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 529 831 km² & NA & 1 260 663 km² & 16 years & 1990-2005 & Finland, Sweden, Norway, Denmark and Iceland & Stable\\
-\cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 163 131 km² & NA & 1 260 663 km² & 16 years & 1990-2005 & Finland, Sweden, Norway, Denmark and Iceland & Decrease\\
-\cite{schipper_contrasting_2016} & Geometric mean & 32 Km² & 5 years & 21 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Geometric mean & 32 Km² & 5 years & 21 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cite{schipper_contrasting_2016} & Geometric mean & 32 Km² & 5 years & 21 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 163131.000 & NA & 1260663.00 & 16 & 1990-2005 & Finland, Sweden, Norway, Denmark and Iceland & Decrease\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{21792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{\vphantom{1} Increase}\\
+\cite{schipper_contrasting_2016} & Geometric mean & 32.000 & 5.000 & 21792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Decrease\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{21792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
+\cite{schipper_contrasting_2016} & Geometric mean & 32.000 & 5.000 & 22792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Geometric mean & 32 Km² & 5 years & 22 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Geometric mean & 32 Km² & 5 years & 23 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Stable\\
-\cite{schipper_contrasting_2016} & SR & 32 Km² & 5 years & 24 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & SR & 32 Km² & 5 years & 25 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cite{schipper_contrasting_2016} & SR & 32 Km² & 5 years & 26 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{23792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Stable}\\
+\cite{schipper_contrasting_2016} & SR & 32.000 & 5.000 & 24792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{25792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Decrease}\\
+\cite{schipper_contrasting_2016} & SR & 32.000 & 5.000 & 26792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{27792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
-\cite{schipper_contrasting_2016} & SR & 32 Km² & 5 years & 27 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & SR & 32 Km² & 5 years & 28 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Stable\\
-\cite{schipper_contrasting_2016} & Shannon & 32 Km² & 5 years & 29 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Shannon & 32 Km² & 5 years & 30 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cite{schipper_contrasting_2016} & Shannon & 32 Km² & 5 years & 31 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cite{schipper_contrasting_2016} & SR & 32.000 & 5.000 & 28792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Stable\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{29792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
+\cite{schipper_contrasting_2016} & Shannon & 32.000 & 5.000 & 30792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Decrease\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{31792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
+\cite{schipper_contrasting_2016} & Shannon & 32.000 & 5.000 & 32792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Shannon & 32 Km² & 5 years & 32 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Shannon & 32 Km² & 5 years & 33 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Simpson & 32 Km² & 5 years & 34 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Simpson & 32 Km² & 5 years & 35 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Stable\\
-\cite{schipper_contrasting_2016} & Simpson & 32 Km² & 5 years & 36 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{33792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
+\cite{schipper_contrasting_2016} & Simpson & 32.000 & 5.000 & 34792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{35792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Stable}\\
+\cite{schipper_contrasting_2016} & Simpson & 32.000 & 5.000 & 36792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{37792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Simpson & 32 Km² & 5 years & 37 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Simpson & 32 Km² & 5 years & 38 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional richness & 32 Km² & 5 years & 39 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional richness & 32 Km² & 5 years & 40 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cite{schipper_contrasting_2016} & Functional richness & 32 Km² & 5 years & 41 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cite{schipper_contrasting_2016} & Simpson & 32.000 & 5.000 & 38792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{39792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
+\cite{schipper_contrasting_2016} & Functional richness & 32.000 & 5.000 & 40792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Decrease\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{41792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
+\cite{schipper_contrasting_2016} & Functional richness & 32.000 & 5.000 & 42792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Functional richness & 32 Km² & 5 years & 42 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional richness & 32 Km² & 5 years & 43 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cite{schipper_contrasting_2016} & Functional evenness & 32 Km² & 5 years & 44 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional evenness & 32 Km² & 5 years & 45 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional evenness & 32 Km² & 5 years & 46 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{43792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Decrease}\\
+\cite{schipper_contrasting_2016} & Functional evenness & 32.000 & 5.000 & 44792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{45792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
+\cite{schipper_contrasting_2016} & Functional evenness & 32.000 & 5.000 & 46792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Decrease\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{5.000} & \cellcolor{gray!6}{47792000.00} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Functional evenness & 32 Km² & 5 years & 47 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional evenness & 32 Km² & 5 years & 48 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional divergence & 32 Km² & 5 years & 49 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cite{schipper_contrasting_2016} & Functional divergence & 32 Km² & 5 years & 50 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional divergence & 32 Km² & 5 years & 51 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
+\cite{schipper_contrasting_2016} & Functional evenness & 32.000 & 5.000 & 48792000.00 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1402.000} & \cellcolor{gray!6}{0.080} & \cellcolor{gray!6}{1402.00} & \cellcolor{gray!6}{27} & \cellcolor{gray!6}{1991-2017} & \cellcolor{gray!6}{Belgium} & \cellcolor{gray!6}{Decrease}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 1402.000 & 0.080 & 1402.00 & 27 & 1991-2017 & Belgium & Increase\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{1402.000} & \cellcolor{gray!6}{0.080} & \cellcolor{gray!6}{1402.00} & \cellcolor{gray!6}{27} & \cellcolor{gray!6}{1991-2017} & \cellcolor{gray!6}{Belgium} & \cellcolor{gray!6}{Decrease}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 1402.000 & 0.080 & 1402.00 & 27 & 1991-2017 & Belgium & Stable\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Functional divergence & 32 Km² & 5 years & 52 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cite{schipper_contrasting_2016} & Functional divergence & 32 Km² & 5 years & 53 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cite{schipper_contrasting_2016} & Functional dispersion & 32 Km² & 5 years & 54 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional dispersion & 32 Km² & 5 years & 55 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional dispersion & 32 Km² & 5 years & 56 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{509.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{509.00} & \cellcolor{gray!6}{42} & \cellcolor{gray!6}{1976-2017} & \cellcolor{gray!6}{Bulgaria} & \cellcolor{gray!6}{Increase}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 509.000 & 1.000 & 509.00 & 42 & 1976-2017 & Bulgaria & Stable\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{509.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{509.00} & \cellcolor{gray!6}{42} & \cellcolor{gray!6}{1976-2017} & \cellcolor{gray!6}{Bulgaria} & \cellcolor{gray!6}{Increase}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 509.000 & 1.000 & 509.00 & 42 & 1976-2017 & Bulgaria & Decrease\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{10.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{10.00} & \cellcolor{gray!6}{42} & \cellcolor{gray!6}{1976-2017} & \cellcolor{gray!6}{Bulgaria} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Functional dispersion & 32 Km² & 5 years & 57 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cite{schipper_contrasting_2016} & Functional dispersion & 32 Km² & 5 years & 58 792 000 km² & 40 years & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cite{pilotto_meta-analysis_2020} & SR & 1402 Km² & 0.08 year & 1402 Km² & 27 years & 1991-2017 & Belgium & Decrease\\
-\cite{pilotto_meta-analysis_2020} & Simpson & 1402 Km² & 0.08 year & 1402 Km² & 27 years & 1991-2017 & Belgium & Increase\\
-\cite{pilotto_meta-analysis_2020} & Abundance & 1402 Km² & 0.08 year & 1402 Km² & 27 years & 1991-2017 & Belgium & Decrease\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 10.000 & 1.000 & 10.00 & 42 & 1976-2017 & Bulgaria & Stable\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{10.00} & \cellcolor{gray!6}{42} & \cellcolor{gray!6}{1976-2017} & \cellcolor{gray!6}{Bulgaria} & \cellcolor{gray!6}{Stable}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 10.000 & 1.000 & 10.00 & 42 & 1976-2017 & Bulgaria & Stable\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{9.020} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{9.02} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1977-2017} & \cellcolor{gray!6}{Bulgaria} & \cellcolor{gray!6}{Increase}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 9.020 & 1.000 & 9.02 & 41 & 1977-2017 & Bulgaria & Increase\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 1402 Km² & 0.08 year & 1402 Km² & 27 years & 1991-2017 & Belgium & Stable\\
-\cite{pilotto_meta-analysis_2020} & SR & 509 Km² & 1 year & 509 Km² & 42 years & 1976-2017 & Bulgaria & Increase\\
-\cite{pilotto_meta-analysis_2020} & Simpson & 509 Km² & 1 year & 509 Km² & 42 years & 1976-2017 & Bulgaria & Stable\\
-\cite{pilotto_meta-analysis_2020} & Abundance & 509 Km² & 1 year & 509 Km² & 42 years & 1976-2017 & Bulgaria & Increase\\
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 509 Km² & 1 year & 509 Km² & 42 years & 1976-2017 & Bulgaria & Decrease\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{9.020} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{9.02} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1977-2017} & \cellcolor{gray!6}{Bulgaria} & \cellcolor{gray!6}{Stable}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 9.020 & 1.000 & 9.02 & 41 & 1977-2017 & Bulgaria & Stable\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{32.00} & \cellcolor{gray!6}{55} & \cellcolor{gray!6}{1961-2015} & \cellcolor{gray!6}{Spain} & \cellcolor{gray!6}{Increase}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 32.000 & 1.000 & 32.00 & 55 & 1961-2015 & Spain & Increase\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{32.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{32.00} & \cellcolor{gray!6}{55} & \cellcolor{gray!6}{1961-2015} & \cellcolor{gray!6}{Spain} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & SR & 10 Km² & 1 year & 10 Km² & 42 years & 1976-2017 & Bulgaria & Increase\\
-\cite{pilotto_meta-analysis_2020} & Simpson & 10 Km² & 1 year & 10 Km² & 42 years & 1976-2017 & Bulgaria & Stable\\
-\cite{pilotto_meta-analysis_2020} & Abundance & 10 Km² & 1 year & 10 Km² & 42 years & 1976-2017 & Bulgaria & Stable\\
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 10 Km² & 1 year & 10 Km² & 42 years & 1976-2017 & Bulgaria & Stable\\
-\cite{pilotto_meta-analysis_2020} & SR & 9.02 Km² & 1 year & 9.02 Km² & 41 years & 1977-2017 & Bulgaria & Increase\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 32.000 & 1.000 & 32.00 & 55 & 1961-2015 & Spain & Decrease\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{52000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{52000.00} & \cellcolor{gray!6}{55} & \cellcolor{gray!6}{1961-2015} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{Stable}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 52000.000 & 1.000 & 52000.00 & 55 & 1961-2015 & France & Stable\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{52000.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{52000.00} & \cellcolor{gray!6}{55} & \cellcolor{gray!6}{1961-2015} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{Stable}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 52000.000 & 1.000 & 52000.00 & 55 & 1961-2015 & France & Stable\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & Simpson & 9.02 Km² & 1 year & 9.02 Km² & 41 years & 1977-2017 & Bulgaria & Increase\\
-\cite{pilotto_meta-analysis_2020} & Abundance & 9.02 Km² & 1 year & 9.02 Km² & 41 years & 1977-2017 & Bulgaria & Stable\\
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 9.02 Km² & 1 year & 9.02 Km² & 41 years & 1977-2017 & Bulgaria & Stable\\
-\cite{pilotto_meta-analysis_2020} & SR & 32 Km² & 1 year & 32 Km² & 55 years & 1961-2015 & Spain & Increase\\
-\cite{pilotto_meta-analysis_2020} & Simpson & 32 Km² & 1 year & 32 Km² & 55 years & 1961-2015 & Spain & Increase\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{6155.000} & \cellcolor{gray!6}{0.080} & \cellcolor{gray!6}{6155.00} & \cellcolor{gray!6}{43} & \cellcolor{gray!6}{1975-2017} & \cellcolor{gray!6}{Netherlands} & \cellcolor{gray!6}{Increase}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 6155.000 & 0.080 & 6155.00 & 43 & 1975-2017 & Netherlands & Increase\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{6155.000} & \cellcolor{gray!6}{0.080} & \cellcolor{gray!6}{6155.00} & \cellcolor{gray!6}{43} & \cellcolor{gray!6}{1975-2017} & \cellcolor{gray!6}{Netherlands} & \cellcolor{gray!6}{Increase}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 6155.000 & 0.080 & 6155.00 & 43 & 1975-2017 & Netherlands & Stable\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{2180.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{2180.00} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1974-2018} & \cellcolor{gray!6}{Netherlands} & \cellcolor{gray!6}{Decrease}\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & Abundance & 32 Km² & 1 year & 32 Km² & 55 years & 1961-2015 & Spain & Increase\\
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 32 Km² & 1 year & 32 Km² & 55 years & 1961-2015 & Spain & Decrease\\
-\cite{pilotto_meta-analysis_2020} & SR & 52 000 Km² & 1 year & 52 000 Km² & 55 years & 1961-2015 & France & Stable\\
-\cite{pilotto_meta-analysis_2020} & Simpson & 52 000 Km² & 1 year & 52 000 Km² & 55 years & 1961-2015 & France & Stable\\
-\cite{pilotto_meta-analysis_2020} & Abundance & 52 000 Km² & 1 year & 52 000 Km² & 55 years & 1961-2015 & France & Stable\\
-\addlinespace
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 52 000 Km² & 1 year & 52 000 Km² & 55 years & 1961-2015 & France & Stable\\
-\cite{pilotto_meta-analysis_2020} & SR & 6 155 Km² & 0.08 year & 6 155 Km² & 43 years & 1975-2017 & Netherlands & Increase\\
-\cite{pilotto_meta-analysis_2020} & Simpson & 6 155 Km² & 0.08 year & 6 155 Km² & 43 years & 1975-2017 & Netherlands & Increase\\
-\cite{pilotto_meta-analysis_2020} & Abundance & 6 155 Km² & 0.08 year & 6 155 Km² & 43 years & 1975-2017 & Netherlands & Increase\\
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 6 155 Km² & 0.08 year & 6 155 Km² & 43 years & 1975-2017 & Netherlands & Stable\\
-\addlinespace
-\cite{pilotto_meta-analysis_2020} & SR & 2 180 Km² & 1 year & 2 180 Km² & 45 years & 1974-2018 & Netherlands & Decrease\\
-\cite{pilotto_meta-analysis_2020} & Simpson & 2 180 Km² & 1 year & 2 180 Km² & 45 years & 1974-2018 & Netherlands & Increase\\
-\cite{pilotto_meta-analysis_2020} & Abundance & 2 180 Km² & 1 year & 2 180 Km² & 45 years & 1974-2018 & Netherlands & Stable\\
-\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 2 180 Km² & 1 year & 2 180 Km² & 45 years & 1974-2018 & Netherlands & Decrease\\*
+\cite{pilotto_meta-analysis_2020} & Simpson & 2180.000 & 1.000 & 2180.00 & 45 & 1974-2018 & Netherlands & Increase\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{2180.000} & \cellcolor{gray!6}{1.000} & \cellcolor{gray!6}{2180.00} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1974-2018} & \cellcolor{gray!6}{Netherlands} & \cellcolor{gray!6}{Stable}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 2180.000 & 1.000 & 2180.00 & 45 & 1974-2018 & Netherlands & Decrease\\*
 \end{longtable}
 \endgroup{}
 \end{landscape}
@@ -507,223 +498,210 @@ Reference & Metric & Spatial grain & Temporal grain & Spatial extent & Temporal 
 
 \begin{landscape}\begingroup\fontsize{10}{12}\selectfont
 
-\begin{longtable}[t]{ll>{\raggedright\arraybackslash}p{40em}}
+\begin{longtable}[t]{llll>{\raggedright\arraybackslash}p{30em}}
 \caption{\label{tab:notetable}Supplementary informations on each trend}\\
 \toprule
-Reference & Trend & Note\\
+Reference & Metric & Spatial grain (Km²) & Trend & Note\\
 \midrule
 \endfirsthead
 \caption[]{\label{tab:notetable}Supplementary informations on each trend \textit{(continued)}}\\
 \toprule
-Reference & Trend & Note\\
+Reference & Metric & Spatial grain (Km²) & Trend & Note\\
 \midrule
 \endhead
 
 \endfoot
 \bottomrule
 \endlastfoot
-\cite{barnagaud_temporal_2017} & Increase & circle of radius 400 m\\
-\cite{barnagaud_temporal_2017} & Decrease & NA\\
-\cite{barnagaud_temporal_2017} & Increase & \vphantom{2} NA\\
-\cite{barnagaud_temporal_2017} & Increase & \vphantom{1} NA\\
-\cite{barnagaud_temporal_2017} & Stable & NA\\
+\cellcolor{gray!6}{\cite{barnagaud_temporal_2017}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{circle of radius 400 m}\\
+\cite{barnagaud_temporal_2017} & Abundance & 0.5 & Decrease & NA\\
+\cellcolor{gray!6}{\cite{barnagaud_temporal_2017}} & \cellcolor{gray!6}{Evenness} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+\cite{barnagaud_temporal_2017} & Functional richness & 0.5 & Increase & NA\\
+\cellcolor{gray!6}{\cite{barnagaud_temporal_2017}} & \cellcolor{gray!6}{Functional dispersion} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{NA}\\
 \addlinespace
-\cite{barnagaud_temporal_2017} & Increase & NA\\
-\cite{roels_recovery_2019} & Increase & Before/after tree planting (increase 11 times)\\
-\cite{roels_recovery_2019} & Increase & Before/after tree planting (increase  3 times)\\
-\cite{wretenberg_changes_2010} & Decrease & looking at the trend through different environmental policies, " local species richness (i.e. at the scale of sites) decreased significantly probably as a result of an overall reduced abundance of several species. "\\
-\cite{ram_what_2017} & Increase & forest species, road of 8 Km with no limitations so assumed 200m, "species richness (the average number of species seen per route and year) "\\
+\cite{barnagaud_temporal_2017} & Functional evenness & 0.5 & Increase & NA\\
+\cellcolor{gray!6}{\cite{roels_recovery_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.04} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Before/after tree planting (increase 11 times)}\\
+\cite{roels_recovery_2019} & Bird activity & 0.04 & Increase & Before/after tree planting (increase  3 times)\\
+\cellcolor{gray!6}{\cite{wretenberg_changes_2010}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{looking at the trend through different environmental policies, " local species richness (i.e. at the scale of sites) decreased significantly probably as a result of an overall reduced abundance of several species. "}\\
+\cite{ram_what_2017} & SR & 1.6 & Increase & forest species, road of 8 Km with no limitations so assumed 200m, "species richness (the average number of species seen per route and year) "\\
 \addlinespace
-\cite{ram_what_2017} & Stable & forest specialist species, road of 8 Km with no limitations so assumed 200m\\
-\cite{ram_what_2017} & Increase & generalist species, road of 8 Km with no limitations so assumed 200m\\
-\cite{ram_what_2017} & Increase & specialist species, road of 8 Km with no limitations so assumed 200m\\
-\cite{ram_what_2017} & Increase & generalists species, road of 8 Km with no limitations so assumed 200m\\
-\cite{harrison_quantifying_2016} & Increase & "Biodiversity as measured by the geometric mean of relative abundances has generally increased since 1994", Visited twice a year / Increase first half and second second half\\
+\cellcolor{gray!6}{\cite{ram_what_2017}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1.6} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{forest specialist species, road of 8 Km with no limitations so assumed 200m}\\
+\cite{ram_what_2017} & SR & 1.6 & Increase & generalist species, road of 8 Km with no limitations so assumed 200m\\
+\cellcolor{gray!6}{\cite{ram_what_2017}} & \cellcolor{gray!6}{Multi-species indicator} & \cellcolor{gray!6}{1.6} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{specialist species, road of 8 Km with no limitations so assumed 200m}\\
+\cite{ram_what_2017} & Multi-species indicator & 1.6 & Increase & generalists species, road of 8 Km with no limitations so assumed 200m\\
+\cellcolor{gray!6}{\cite{harrison_quantifying_2016}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Spatial scale = plot, "Biodiversity as measured by the geometric mean of relative abundances has generally increased since 1994", Visited twice a year / Increase first half and second second half}\\
 \addlinespace
-\cite{harrison_quantifying_2016} & Stable & " The goodness-of-fit-based measure of biodiversity suggests that both rare and common species made gains through much of Britain in the first half of the time period, and losses in the second half.", Visited twice a year / Increase first half and second second \vphantom{1} half\\
-\cite{harrison_quantifying_2016} & Stable & " The goodness-of-fit-based measure of biodiversity suggests that both rare and common species made gains through much of Britain in the first half of the time period, and losses in the second half.", Visited twice a year / Increase first half and second second half\\
-\cite{doxa_low-intensity_2010} & Increase & Not sure for the spatial scales, HNV +6.5\%\\
-\cite{doxa_low-intensity_2010} & Stable & Not sure for the spatial scales, for HNV +1.1\%, Decrease then come back to the initial value\\
-\cite{doxa_low-intensity_2010} & Stable & Not sure for the spatial scales, national, Decrease then come back to the initial value\\
+\cite{harrison_quantifying_2016} & GoF ( $\lambda$ = -1) & 10000 & Stable & " The goodness-of-fit-based measure of biodiversity suggests that both rare and common species made gains through much of Britain in the first half of the time period, and losses in the second half.", Visited twice a year / Increase first half and second second half\\
+\cellcolor{gray!6}{\cite{harrison_quantifying_2016}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{" The goodness-of-fit-based measure of biodiversity suggests that both rare and common species made gains through much of Britain in the first half of the time period, and losses in the second half.", Visited twice a year / Increase first half and second second half}\\
+\cite{doxa_low-intensity_2010} & FBI & 4 & Increase & Not sure for the spatial scales, HNV +6.5\%\\
+\cellcolor{gray!6}{\cite{doxa_low-intensity_2010}} & \cellcolor{gray!6}{FBI} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Not sure for the spatial scales, for HNV +1.1\%, Decrease then come back to the initial value}\\
+\cite{doxa_low-intensity_2010} & FBI & 4 & Stable & Not sure for the spatial scales, national, Decrease then come back to the initial value\\
 \addlinespace
-\cite{arnold_contrasting_2021} & Stable & Non significant slight \vphantom{2} increase\\
-\cite{arnold_contrasting_2021} & Stable & Non significant slight \vphantom{1} increase\\
-\cite{arnold_contrasting_2021} & Stable & Non significant slight increase\\
-\cite{xu_detecting_2018} & Decrease & Not sure for the spatial scales, Urbanisation of the study area\\
-\cite{jiguet_french_2012} & Increase & Not sure for the spatial scales, Generalist Bird Indicator, +20\%\\
+\cellcolor{gray!6}{\cite{arnold_contrasting_2021}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Non significant slight increase}\\
+\cite{arnold_contrasting_2021} & Shannon & 0.02 & Stable & Non significant slight increase\\
+\cellcolor{gray!6}{\cite{arnold_contrasting_2021}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Non significant slight increase}\\
+\cite{xu_detecting_2018} & SR & 6.56 & Decrease & Urbanisation of the study area\\
+\cellcolor{gray!6}{\cite{jiguet_french_2012}} & \cellcolor{gray!6}{GBI} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Not sure for the spatial scales, Generalist Bird Indicator, +20\%}\\
 \addlinespace
-\cite{jiguet_french_2012} & Increase & Not sure for the spatial scales, Woodland Bird Indicator, -12\%\\
-\cite{jiguet_french_2012} & Increase & Not sure for the spatial scales, Urban Bird Indicator, -21\%\\
-\cite{jiguet_french_2012} & Increase & Not sure for the spatial scales, Farmland Bird Indicator, -12\%\\
-\cite{jiguet_french_2012} & Increase & Not sure for the spatial scales, plus 23\%\\
-\cite{jiguet_french_2012} & Decrease & minus 75\%\\
+\cite{jiguet_french_2012} & WBI & 4 & Increase & Not sure for the spatial scales, Woodland Bird Indicator, -12\%\\
+\cellcolor{gray!6}{\cite{jiguet_french_2012}} & \cellcolor{gray!6}{UBI} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Not sure for the spatial scales, Urban Bird Indicator, -21\%}\\
+\cite{jiguet_french_2012} & FBI & 4 & Increase & Not sure for the spatial scales, Farmland Bird Indicator, -12\%\\
+\cellcolor{gray!6}{\cite{jiguet_french_2012}} & \cellcolor{gray!6}{EU bird directive} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Not sure for the spatial scales, plus 23\%}\\
+\cite{jiguet_french_2012} & RLI (Red list Index) & NA & Decrease & minus 75\%\\
 \addlinespace
-\cite{keten_temporal_nodate} & Stable & NA\\
-\cite{davey_rise_2012} & Increase & \vphantom{2} NA\\
-\cite{davey_rise_2012} & Increase & \vphantom{1} NA\\
-\cite{davey_rise_2012} & Increase & NA\\
-\cite{christian_more_2009} & Increase & Temporal grains varies a lot,significant increase of SR\\
+\cellcolor{gray!6}{\cite{keten_temporal_nodate}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1.7} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{NA}\\
+\cite{davey_rise_2012} & Simpson & 1 & Increase & NA\\
+\cellcolor{gray!6}{\cite{davey_rise_2012}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+\cite{davey_rise_2012} & Evenness & 1 & Increase & NA\\
+\cellcolor{gray!6}{\cite{christian_more_2009}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{15.4} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Temporal grains varies a lot,significant increase of SR}\\
 \addlinespace
-\cite{dittrich_multiyear_2019} & Increase & Spatial grain is the mean area of the orchards, increase sr may be due to increase in sampling effort (2 months for the first period and five for the 2nd and 3rd \vphantom{1} periods)\\
-\cite{dittrich_multiyear_2019} & Increase & Spatial grain is the mean area of the orchards, increase sr may be due to increase in sampling effort (2 months for the first period and five for the 2nd and 3rd periods)\\
-\cite{dittrich_multiyear_2019} & Stable & Increase until April then decrease but overall stable, spatial grain is the mean area of the orchards\\
-\cite{dittrich_multiyear_2019} & Stable & Spatial grain is the mean area of the orchards\\
-\cite{sirami_changes_2012} & Decrease & NA\\
+\cite{dittrich_multiyear_2019} & SR & 0.053 & Increase & Spatial grain is the mean area of the orchards, increase sr may be due to increase in sampling effort (2 months for the first period and five for the 2nd and 3rd \vphantom{1} periods)\\
+\cellcolor{gray!6}{\cite{dittrich_multiyear_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.053} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Spatial grain is the mean area of the orchards, increase sr may be due to increase in sampling effort (2 months for the first period and five for the 2nd and 3rd periods)}\\
+\cite{dittrich_multiyear_2019} & SR & 0.083 & Stable & Increase until April then decrease but overall stable, spatial grain is the mean area of the orchards\\
+\cellcolor{gray!6}{\cite{dittrich_multiyear_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.083} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Spatial grain is the mean area of the orchards}\\
+\cite{sirami_changes_2012} & SR & 0.38 & Decrease & NA\\
 \addlinespace
-\cite{garcia-navas_temporal_2020} & Decrease & sorensen score\\
-\cite{mcgeoch_global_2010} & Decrease & Red list index data, very heterogeneous\\
-\cite{ellis_twenty-year_2019} & Stable & Riparian continuous ecosystem, area = 32 x pi x (40\^2), spatial extent = Bear Valley of southern Grant County and Silvies Valley of northern Harney County in east-central Oregon, slight variations in sr but not exceeding se\\
-\cite{ellis_twenty-year_2019} & Stable & Riparian discontinuous ecosystem, area = 32 x pi x (40\^2)\\
-\cite{ellis_twenty-year_2019} & Increase & Riparian herbaceous ecosystem, area = 32 x pi x \vphantom{1} (40\^2)\\
+\cellcolor{gray!6}{\cite{garcia-navas_temporal_2020}} & \cellcolor{gray!6}{Spatial beta-diversity} & \cellcolor{gray!6}{267} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{sorensen score}\\
+\cite{ellis_twenty-year_2019} & SR & 0.16 & Stable & Riparian continuous ecosystem, area = 32 x pi x (40\^2), spatial extent = Bear Valley of southern Grant County and Silvies Valley of northern Harney County in east-central Oregon, slight variations in sr but not exceeding se\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Riparian discontinuous ecosystem, area = 32 x pi x (40\^2)}\\
+\cite{ellis_twenty-year_2019} & SR & 0.16 & Increase & Riparian herbaceous ecosystem, area = 32 x pi x (40\^2)\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.48} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Riparian total ecosystem, area = 32 x pi x (40\^2) x 3}\\
 \addlinespace
-\cite{ellis_twenty-year_2019} & Stable & Riparian total ecosystem, area = area = 32 x pi x (40\^2)\\
-\cite{ellis_twenty-year_2019} & Increase & Riparian continuous ecosystem, area = 32 x pi x (40\^2), spatial extent = Bear Valley of southern Grant County and Silvies Valley of northern Harney County in east-central Oregon, slight variations in sr but not exceeding se\\
-\cite{ellis_twenty-year_2019} & Decrease & Riparian discontinuous ecosystem, slight decrease, area = 32 x pi x (40\^2)\\
-\cite{ellis_twenty-year_2019} & Increase & Riparian herbaceous ecosystem, area = 32*pi*(40\^2)\\
-\cite{ellis_twenty-year_2019} & Increase & Riparian total ecosystem, area = area = 32 x pi x (40\^2) x 3\\
+\cite{ellis_twenty-year_2019} & Shannon & 0.16 & Increase & Riparian continuous ecosystem, area = 32 x pi x (40\^2), spatial extent = Bear Valley of southern Grant County and Silvies Valley of northern Harney County in east-central Oregon, slight variations in sr but not exceeding se\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Riparian discontinuous ecosystem, slight decrease, area = 32 x pi x (40\^2)}\\
+\cite{ellis_twenty-year_2019} & Shannon & 0.16 & Increase & Riparian herbaceous ecosystem, area = 32*pi*(40\^2)\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{0.48} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Riparian total ecosystem, area = 32 x pi x (40\^2) x 3}\\
+\cite{ellis_twenty-year_2019} & Simpson & 0.16 & Increase & Riparian continuous ecosystem, area =32 x pi x (40\^2), spatial extent = Bear Valley of southern Grant County and Silvies Valley of northern Harney County in east-central Oregon, slight variations in sr but not exceeding se\\
 \addlinespace
-\cite{ellis_twenty-year_2019} & Increase & Riparian continuous ecosystem, area =32 x pi x (40\^2), spatial extent = Bear Valley of southern Grant County and Silvies Valley of northern Harney County in east-central Oregon, slight variations in sr but not exceeding se\\
-\cite{ellis_twenty-year_2019} & Decrease & Riparian discontinuous ecosystem, area = 32 x pi x (40\^2)\\
-\cite{ellis_twenty-year_2019} & Increase & Riparian herbaceous ecosystem, area = 32 x pi x (40\^2)\\
-\cite{ellis_twenty-year_2019} & Decrease & Riparian total ecosystem, slight decrease, area = 32 x pi x (40\^2)\\
-\cite{sicurella_effectiveness_2018} & Stable & NPA non protected area\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{0.16} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Riparian discontinuous ecosystem, area = 32 x pi x (40\^2)}\\
+\cite{ellis_twenty-year_2019} & Simpson & 0.16 & Increase & Riparian herbaceous ecosystem, area = 32 x pi x (40\^2)\\
+\cellcolor{gray!6}{\cite{ellis_twenty-year_2019}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{0.48} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Riparian total ecosystem, slight decrease, area = 32 x pi x (40\^2) x 3}\\
+\cite{sicurella_effectiveness_2018} & Occurence (\%) & 17370.3 & Stable & NPA non protected area, not sure for the spatial scale\\
+\cellcolor{gray!6}{\cite{sicurella_effectiveness_2018}} & \cellcolor{gray!6}{Occurence (\%)} & \cellcolor{gray!6}{1403.9} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{NR nature reserves, not sure for the spatial scale}\\
 \addlinespace
-\cite{sicurella_effectiveness_2018} & Stable & NR nature reserves\\
-\cite{sicurella_effectiveness_2018} & Increase & RP regional parks\\
-\cite{nally_monitoring_1997} & Increase & NA\\
-\cite{latta_patterns_2011} & Decrease & 54 to 31 species, untouched forest\\
-\cite{latta_patterns_2011} & Decrease & 67 to 30 species, introduced tree species in the forest\\
+\cite{sicurella_effectiveness_2018} & Occurence (\%) & 6461.9 & Increase & RP regional parks, not sure for the spatial scale\\
+\cellcolor{gray!6}{\cite{nally_monitoring_1997}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0.49} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Temporal grain = 1 day}\\
+\cite{latta_patterns_2011} & SR & 1.18 & Decrease & 54 to 31 species, untouched forest, from \cite{hill_determining_2004} "assuming a 250-m sampling radius for mist nets", "In each habitat, we sampled birds with 20 mist nets" so area = (pi x 250²) x 6 m²\\
+\cellcolor{gray!6}{\cite{latta_patterns_2011}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1.18} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{67 to 30 species, introduced tree species in the forest}\\
+\cite{scarton_long-term_2017} & SR & 0.55 & Increase & 14 to 25 species\\
 \addlinespace
-\cite{scarton_long-term_2017} & Increase & 14 to 25 species\\
-\cite{scarton_long-term_2017} & Increase & 2.07 to \vphantom{2} 2.38\\
-\cite{scarton_long-term_2017} & Increase & 2.07 to \vphantom{1} 2.38\\
-\cite{scarton_long-term_2017} & Increase & 2.07 to 2.38\\
-\cite{chiron_forecasting_2013} & Decrease & Prediction with baseline scenario\\
+\cellcolor{gray!6}{\cite{scarton_long-term_2017}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{0.55} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{2.07 to 2.38}\\
+\cite{scarton_long-term_2017} & Temporal beta-diversity & 0.55 & Increase & 2.07 to \vphantom{1} 2.38\\
+\cellcolor{gray!6}{\cite{scarton_long-term_2017}} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{0.55} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{2.07 to 2.38}\\
+\cite{chiron_forecasting_2013} & FBI & 4 & Decrease & Concerning the spatial scale, predictions are made using the spatial unit of 4 Km², Prediction with baseline scenario\\
+\cellcolor{gray!6}{\cite{chiron_forecasting_2013}} & \cellcolor{gray!6}{FBI} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Prediction with CAP greening cenario}\\
 \addlinespace
-\cite{chiron_forecasting_2013} & Decrease & Prediction with CAP greening cenario\\
-\cite{chiron_forecasting_2013} & Decrease & Prediction with No Pillar I scenario\\
-\cite{chiron_forecasting_2013} & Decrease & Prediction with biofuel scenario\\
-\cite{eglington_disentangling_2012} & Decrease & From 1 to 0.5\\
-\cite{harrison_assessing_2014} & Stable & Farmland \vphantom{1} communities\\
+\cite{chiron_forecasting_2013} & FBI & 4 & Decrease & Prediction with No Pillar I scenario\\
+\cellcolor{gray!6}{\cite{chiron_forecasting_2013}} & \cellcolor{gray!6}{FBI} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Prediction with biofuel scenario}\\
+\cite{eglington_disentangling_2012} & FBI & 1 & Decrease & From 1 to 0.5\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Farmland communities}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10000 & Decrease & Farmland communities, GoF weighted towards the rare species\\
 \addlinespace
-\cite{harrison_assessing_2014} & Decrease & Farmland communities, GoF weighted towards the rare \vphantom{1} species\\
-\cite{harrison_assessing_2014} & Increase & Farmland communities, GoF weighted towards the common \vphantom{1} species\\
-\cite{harrison_assessing_2014} & Increase & Farmland communities\\
-\cite{harrison_assessing_2014} & Stable & Farmland communities, GoF weighted towards the rare \vphantom{1} species\\
-\cite{harrison_assessing_2014} & Increase & Farmland communities, GoF weighted towards the common species\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Farmland communities, GoF weighted towards the common species}\\
+\cite{harrison_assessing_2014} & Geometric mean & 62000 & Increase & Farmland communities\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -1)} & \cellcolor{gray!6}{62000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Farmland communities, GoF weighted towards the rare species}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 62000 & Increase & Farmland communities, GoF weighted towards the common species\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{16000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Farmland communities}\\
 \addlinespace
-\cite{harrison_assessing_2014} & Stable & Farmland communities\\
-\cite{harrison_assessing_2014} & Stable & Farmland communities, GoF weighted towards the rare species\\
-\cite{harrison_assessing_2014} & Stable & Farmland communities, GoF weighted towards the common \vphantom{1} species\\
-\cite{harrison_assessing_2014} & Decrease & Farmland communities\\
-\cite{harrison_assessing_2014} & Decrease & Farmland communities, GoF weighted towards the rare species\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 16000 & Stable & Farmland communities, GoF weighted towards the rare species\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{16000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Farmland communities, GoF weighted towards the common species}\\
+\cite{harrison_assessing_2014} & Geometric mean & 130000 & Decrease & Farmland communities\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -1)} & \cellcolor{gray!6}{130000} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Farmland communities, GoF weighted towards the rare species}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 130000 & Stable & Farmland communities, GoF weighted towards the common species\\
 \addlinespace
-\cite{harrison_assessing_2014} & Stable & Farmland communities, GoF weighted towards the common species\\
-\cite{harrison_assessing_2014} & Increase & Woodland communities, supplemtary material\\
-\cite{harrison_assessing_2014} & Stable & Woodland communities, supplemtary material\\
-\cite{harrison_assessing_2014} & Decrease & Woodland communities, supplemtary material\\
-\cite{harrison_assessing_2014} & Increase & Woodland \vphantom{2} communities\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Woodland communities, supplemtary material}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 10000 & Stable & Woodland communities, supplemtary material\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Woodland communities, supplemtary material}\\
+\cite{harrison_assessing_2014} & Geometric mean & 14000 & Increase & Woodland communities\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -1)} & \cellcolor{gray!6}{14000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Woodland communities}\\
 \addlinespace
-\cite{harrison_assessing_2014} & Increase & Woodland \vphantom{1} communities\\
-\cite{harrison_assessing_2014} & Stable & not sure for the trend, Woodland communities\\
-\cite{harrison_assessing_2014} & Increase & Woodland communities\\
-\cite{harrison_assessing_2014} & Decrease & Not sure for the trend, Woodland communities\\
-\cite{harrison_assessing_2014} & Stable & Not sure for the trend, Woodland \vphantom{2} communities\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 14000 & Stable & not sure for the trend, Woodland communities\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{32300} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Woodland communities}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -1) & 32300 & Decrease & Not sure for the trend, Woodland communities\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2)} & \cellcolor{gray!6}{32300} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Not sure for the trend, Woodland communities}\\
+\cite{harrison_assessing_2014} & Geometric mean & 3116 & Stable & Not sure for the trend, Woodland communities\\
 \addlinespace
-\cite{harrison_assessing_2014} & Stable & Not sure for the trend, Woodland \vphantom{1} communities\\
-\cite{harrison_assessing_2014} & Stable & Not sure for the trend, Woodland communities\\
-\cite{harrison_assessing_2014} & Increase & Not sure for the trend, Woodland communities\\
-\cite{juslen_application_2013} & Decrease & NA\\
-\cite{normander_indicator_2012} & Decrease & Farmland\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{GoF ( $\lambda$ = -1)} & \cellcolor{gray!6}{3116} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Not sure for the trend, Woodland communities}\\
+\cite{harrison_assessing_2014} & GoF ( $\lambda$ = -2) & 3116 & Increase & Not sure for the trend, Woodland communities\\
+\cellcolor{gray!6}{\cite{juslen_application_2013}} & \cellcolor{gray!6}{RLI (Red list Index)} & \cellcolor{gray!6}{338440} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{NA}\\
+\cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 84266 & Decrease & Farmland\\
+\cellcolor{gray!6}{\cite{normander_indicator_2012}} & \cellcolor{gray!6}{BCI (Biodviersity Change Index)} & \cellcolor{gray!6}{529831} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Forest}\\
 \addlinespace
-\cite{normander_indicator_2012} & Stable & Forest\\
-\cite{normander_indicator_2012} & Decrease & Mires\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{6} All\\
-\cite{schipper_contrasting_2016} & Decrease & \vphantom{3} Grassland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{5} Woodland\\
+\cite{normander_indicator_2012} & BCI (Biodviersity Change Index) & 163131 & Decrease & Mires\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{All}\\
+\cite{schipper_contrasting_2016} & Geometric mean & 32 & Decrease & Grassland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Woodland}\\
+\cite{schipper_contrasting_2016} & Geometric mean & 32 & Increase & Wetland\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Increase & \vphantom{6} Wetland\\
-\cite{schipper_contrasting_2016} & Stable & \vphantom{1} Shrubland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{5} All\\
-\cite{schipper_contrasting_2016} & Decrease & \vphantom{2} Grassland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{4} Woodland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Geometric mean} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Shrubland}\\
+\cite{schipper_contrasting_2016} & SR & 32 & Increase & All\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Grassland}\\
+\cite{schipper_contrasting_2016} & SR & 32 & Increase & Woodland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Wetland}\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Increase & \vphantom{5} Wetland\\
-\cite{schipper_contrasting_2016} & Stable & Shrubland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{4} All\\
-\cite{schipper_contrasting_2016} & Decrease & \vphantom{1} Grassland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{3} Woodland\\
+\cite{schipper_contrasting_2016} & SR & 32 & Stable & Shrubland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{All}\\
+\cite{schipper_contrasting_2016} & Shannon & 32 & Decrease & Grassland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Woodland}\\
+\cite{schipper_contrasting_2016} & Shannon & 32 & Increase & Wetland\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Increase & \vphantom{4} Wetland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{2} Shrubland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{3} All\\
-\cite{schipper_contrasting_2016} & Stable & Grassland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{2} Woodland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Shannon} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Shrubland}\\
+\cite{schipper_contrasting_2016} & Simpson & 32 & Increase & All\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Grassland}\\
+\cite{schipper_contrasting_2016} & Simpson & 32 & Increase & Woodland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Wetland}\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Increase & \vphantom{3} Wetland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{1} Shrubland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{2} All\\
-\cite{schipper_contrasting_2016} & Decrease & Grassland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{1} Woodland\\
+\cite{schipper_contrasting_2016} & Simpson & 32 & Increase & Shrubland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{All}\\
+\cite{schipper_contrasting_2016} & Functional richness & 32 & Decrease & Grassland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Woodland}\\
+\cite{schipper_contrasting_2016} & Functional richness & 32 & Increase & Wetland\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Increase & \vphantom{2} Wetland\\
-\cite{schipper_contrasting_2016} & Decrease & \vphantom{2} Shrubland\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{1} All\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{2} Grassland\\
-\cite{schipper_contrasting_2016} & Decrease & \vphantom{1} Woodland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Shrubland}\\
+\cite{schipper_contrasting_2016} & Functional evenness & 32 & Increase & All\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Grassland}\\
+\cite{schipper_contrasting_2016} & Functional evenness & 32 & Decrease & Woodland\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Wetland}\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Increase & \vphantom{1} Wetland\\
-\cite{schipper_contrasting_2016} & Increase & Shrubland\\
-\cite{schipper_contrasting_2016} & Decrease & All\\
-\cite{schipper_contrasting_2016} & Increase & \vphantom{1} Grassland\\
-\cite{schipper_contrasting_2016} & Decrease & Woodland\\
+\cite{schipper_contrasting_2016} & Functional evenness & 32 & Increase & Shrubland\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{1402} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Dataset S004, temporal grain = 1 month}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 1402 & Increase & Dataset S004, temporal grain = 1 month\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{1402} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Dataset S004, temporal grain = 1 month}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 1402 & Stable & Dataset S004, temporal grain = 1 month, p-val = 0.8\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Decrease & Wetland\\
-\cite{schipper_contrasting_2016} & Decrease & \vphantom{1} Shrubland\\
-\cite{schipper_contrasting_2016} & Increase & All\\
-\cite{schipper_contrasting_2016} & Increase & Grassland\\
-\cite{schipper_contrasting_2016} & Increase & Woodland\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{509} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Dataset S011}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 509 & Stable & Dataset S011, p-val = 0.8\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{509} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Dataset S011}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 509 & Decrease & Dataset S011\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Dataset S012}\\
 \addlinespace
-\cite{schipper_contrasting_2016} & Increase & Wetland\\
-\cite{schipper_contrasting_2016} & Decrease & Shrubland\\
-\cite{pilotto_meta-analysis_2020} & Decrease & Dataset S004, temporal grain = 1 \vphantom{1} month\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset S004, temporal grain = 1 month\\
-\cite{pilotto_meta-analysis_2020} & Decrease & Dataset S004, temporal grain = 1 month\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 10 & Stable & Dataset S012, p-val = 0.1\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Dataset S012, p-val = 0.22}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 10 & Stable & Dataset S012, p-val = 0.9\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{9.02} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Dataset S013}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 9.02 & Increase & Dataset S013\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset S004, temporal grain = 1 month, p-val = 0.8\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset \vphantom{1} S011\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset S011, p-val = 0.8\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset S011\\
-\cite{pilotto_meta-analysis_2020} & Decrease & Dataset S011\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{9.02} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Dataset S013}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 9.02 & Stable & Dataset S013\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Dataset S047}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 32 & Increase & Dataset S047\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Dataset S047}\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset S012\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset S012, p-val = 0.1\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset S012, p-val = 0.22\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset S012, p-val = 0.9\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset \vphantom{1} S013\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 32 & Decrease & Dataset S047\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{52000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Dataset S076}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 52000 & Stable & Dataset S076\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{52000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Dataset S076}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 52000 & Stable & Dataset S076\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset S013\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset \vphantom{1} S013\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset S013\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset \vphantom{2} S047\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset \vphantom{1} S047\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{6155} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Dataset S094}\\
+\cite{pilotto_meta-analysis_2020} & Simpson & 6155 & Increase & Dataset S094\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{6155} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Dataset S094}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 6155 & Stable & Dataset S094\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{2180} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Dataset S095}\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset S047\\
-\cite{pilotto_meta-analysis_2020} & Decrease & Dataset S047\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset \vphantom{3} S076\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset \vphantom{2} S076\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset \vphantom{1} S076\\
-\addlinespace
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset S076\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset \vphantom{2} S094\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset \vphantom{1} S094\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset S094\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset S094\\
-\addlinespace
-\cite{pilotto_meta-analysis_2020} & Decrease & Dataset \vphantom{1} S095\\
-\cite{pilotto_meta-analysis_2020} & Increase & Dataset S095\\
-\cite{pilotto_meta-analysis_2020} & Stable & Dataset S095, p-val = 0.056\\
-\cite{pilotto_meta-analysis_2020} & Decrease & Dataset S095\\*
+\cite{pilotto_meta-analysis_2020} & Simpson & 2180 & Increase & Dataset S095\\
+\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{2180} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Dataset S095, p-val = 0.056}\\
+\cite{pilotto_meta-analysis_2020} & Temporal beta-diversity & 2180 & Decrease & Dataset S095\\*
 \end{longtable}
 \endgroup{}
 \end{landscape}

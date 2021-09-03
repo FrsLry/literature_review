@@ -32,6 +32,7 @@ library(bibliometrix)
 library(googlesheets4)
 library(dplyr)
 library(kableExtra)
+library(ggplot2)
 ```
 
 
@@ -93,6 +94,10 @@ ALL=(birds AND species richness AND temporal trend)
 
 * 01/09/2021: verifying spatial scales --> stopped at Dittrich 2019
 
+* 02/09/2021: **Question 1:** for the FBI/WBI...\*BI indexes, usually they use a GLM/GAM to predict the abundance over the entire spatial extent and then compute the metric. Basically, those metrics are geometric means of predicted species abundances. Which spatial scale to use: the spatial unit of the prediction (i.e. the plot), or the entire area predicted? (Imo, the second option is correct). **Question 2:** same question for the Geometric mean but I am realizing while writing this question that \*BI are kind of similar to geometric means so answering the first question will answer this one. 
+
+**Papers that are driving me mad:** @doxa_low-intensity_2010, @jiguet_french_2012, and @chiron_forecasting_2013, @eglington_disentangling_2012
+
 # Introduction
 
 Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation [@pereira_global_2012]. Some of those ecosystem functions are managed by bird biodiversity such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction [@barnosky_has_2011].
@@ -127,15 +132,23 @@ Concerning the trend assessment, some papers contained the *p-value* or directly
 
 Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the [github repository](https://github.com/FrsLry/R-code) of their paper in order to compute the trends of these four metrics for the bird datasets.
 
+<!-- # Results -->
+
+<!-- \renewcommand{\clearpage}{} -->
+
 ```{r maintable, echo=F}
 read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
+  mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
+         `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
+         `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
+         `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%   
   select(-Note) %>%
   as_tibble() %>% 
   ## escape = F is very important for the citation
   kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
       caption = "SR = species richness, Ab = abundance, Eve = evenness, ") %>% 
   kableExtra::kable_styling(
-   latex_options = c("hold_position", "repeat_header"),
+   latex_options = c("hold_position", "repeat_header", "striped"),
    font_size = 10,
    full_width = FALSE
    ) %>% 
@@ -143,22 +156,45 @@ read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_X
   column_spec(1:9, width = "6.5em")
 ```
 
+
+```{r, echo=FALSE}
+tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
+  mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
+         `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
+         `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
+         `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%   
+  select(-Note) %>%
+  as_tibble()
+
+# tab %>% 
+#   select(`Spatial grain (Km²)`, Trend, Metric) %>% 
+#   # filter( Metric == c("SR")) %>% 
+#   group_by(`Spatial grain (Km²)`) %>% 
+#   count(Trend) %>% 
+#   ggplot(aes(`Spatial grain (Km²)`, n))+
+#   scale_x_log10()+
+#   geom_point()+
+#   facet_grid(Trend ~ .)+
+#   theme_bw()
+```
+
+
 # Supplementary materials {-}
 
 ```{r notetable, echo=FALSE}
 read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
-  select(Reference, Trend, Note) %>%
+  select(Reference, Metric, `Spatial grain (Km²)`, Trend, Note) %>%
   as_tibble() %>% 
   ## escape = F is very important for the citation
   kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
       caption = "Supplementary informations on each trend") %>% 
   kableExtra::kable_styling(
-   latex_options = c("hold_position", "repeat_header"),
+   latex_options = c("hold_position", "repeat_header", "striped"),
    font_size = 10,
    full_width = FALSE
    ) %>% 
   landscape() %>% 
-  column_spec(3, width = "40em")
+  column_spec(5, width = "30em")
 ```
 
 
