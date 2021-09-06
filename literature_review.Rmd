@@ -25,6 +25,8 @@ biblio-title: References
 ```{r, echo = F}
 knitr::opts_chunk$set(warning = F,
                       message = F)
+## To put blank isntead of NA in the table
+# options(knitr.kable.NA = '')
 ```
 
 ```{r, echo=F}
@@ -137,13 +139,29 @@ Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they co
 <!-- \renewcommand{\clearpage}{} -->
 
 ```{r maintable, echo=F}
+## Function to collapse the reference column
+collapse_rows_df <- function(df, variable){
+
+  group_var <- enquo(variable)
+
+  df %>%
+    group_by(!! group_var) %>%
+    mutate(groupRow = 1:n()) %>%
+    ungroup() %>%
+    mutate(!!quo_name(group_var) := ifelse(groupRow == 1, as.character(!! group_var), "")) %>%
+    select(-c(groupRow))
+}
+
+
 read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
   mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
          `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
          `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
-         `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%   
+         `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>% 
   select(-Note) %>%
   as_tibble() %>% 
+  group_by(Reference) %>% 
+  collapse_rows_df(Reference) %>% 
   ## escape = F is very important for the citation
   kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
       caption = "SR = species richness, Ab = abundance, Eve = evenness, ") %>% 
@@ -152,8 +170,8 @@ read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_X
    font_size = 10,
    full_width = FALSE
    ) %>% 
-  landscape() %>% 
-  column_spec(1:9, width = "6.5em")
+  column_spec(1:9, width = "6.5em") %>% 
+  landscape()
 ```
 
 
