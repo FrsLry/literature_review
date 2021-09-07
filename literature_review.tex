@@ -119,6 +119,9 @@
 
 % When using the natbib biblio package, includes "References" in the table of contents
 \usepackage[nottoc]{tocbibind}
+
+% To make the table caption full page width
+\usepackage{caption}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -140,7 +143,7 @@
 \bibliographystyle{apa}
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-09-06}
+\date{2021-09-07}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -284,13 +287,13 @@ Moreover, \citet{pilotto_meta-analysis_2020} conducted a meta-analysis in which 
 
 \begin{landscape}\begingroup\fontsize{10}{12}\selectfont
 
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}}
-\caption{\label{tab:maintable}SR = species richness, Ab = abundance, Eve = evenness, }\\
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}}
+\caption{\label{tab:maintable}Trends of different metrics of biodiversity at various spatial and temporal scales}\\
 \toprule
 Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial extent (Km²) & Temporal extent (year) & Years & Country & Trend\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:maintable}SR = species richness, Ab = abundance, Eve = evenness,  \textit{(continued)}}\\
+\caption[]{\label{tab:maintable}Trends of different metrics of biodiversity at various spatial and temporal scales \textit{(continued)}}\\
 \toprule
 Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial extent (Km²) & Temporal extent (year) & Years & Country & Trend\\
 \midrule
@@ -299,57 +302,68 @@ Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial exte
 \endfoot
 \bottomrule
 \endlastfoot
-\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{1.0000e+04} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{200000} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Great Britain, UK} & \cellcolor{gray!6}{Increase}\\
- & Abundance & 1.0000e+04 & 1.0 & 200000 & 18 & 1994-2011 & Great Britain, UK & \vphantom{1} Stable\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{1.0000e+04} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{200000} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Great Britain, UK} & \cellcolor{gray!6}{Stable}\\
-\cite{pilotto_meta-analysis_2020} & SR & NA & NA & 10180000 & NA & NA & Europe & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{10180000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{Europe} & \cellcolor{gray!6}{Increase}\\
+\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{200000} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Great Britain, UK} & \cellcolor{gray!6}{Increase}\\
+ & Abundance & 10000 & 1.0 & 200000 & 18 & 1994-2011 & Great Britain, UK & \vphantom{1} Stable\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{200000} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Great Britain, UK} & \cellcolor{gray!6}{Stable}\\
+\cite{pilotto_meta-analysis_2020} & SR & Local & NA & 10180000 & NA & NA & Europe & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{10180000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{Europe} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
- & Abundance & NA & NA & 10180000 & NA & NA & Europe & Stable\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{10180000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{Europe} & \cellcolor{gray!6}{Stable}\\
-\cite{barnagaud_temporal_2017} & SR & 2.5000e+01 & 1.0 & 9834000 & 41 & 1970-2011 & USA & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{2.5000e+01} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1970-2011} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Decrease}\\
- & Evenness & 2.5000e+01 & 1.0 & 9834000 & 41 & 1970-2011 & USA & Increase\\
+ & Abundance & Local & NA & 10180000 & NA & NA & Europe & Stable\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{10180000} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{Europe} & \cellcolor{gray!6}{Stable}\\
+\cite{barnagaud_temporal_2017} & SR & 25 & 1.0 & 9834000 & 41 & 1970-2011 & USA & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1970-2011} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Decrease}\\
+ & Evenness & 25 & 1.0 & 9834000 & 41 & 1970-2011 & USA & Increase\\
 \addlinespace
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{2.5000e+01} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1970-2011} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
- & Functional dispersion & 2.5000e+01 & 1.0 & 9834000 & 41 & 1970-2011 & USA & Stable\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{2.5000e+01} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1970-2011} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
-\cite{reif_changes_2013} & SR & 2.5000e+00 & 1.0 & 79000 & 23 & 1982-2004 & Czech Rep. & Stable\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{7.9000e+04} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{79000} & \cellcolor{gray!6}{23} & \cellcolor{gray!6}{1982-2004} & \cellcolor{gray!6}{Czech Rep.} & \cellcolor{gray!6}{Stable}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1970-2011} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+ & Functional dispersion & 25 & 1.0 & 9834000 & 41 & 1970-2011 & USA & Stable\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{1970-2011} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+\cite{reif_changes_2013} & SR & 2.5 & 1.0 & 79000 & 23 & 1982-2004 & Czech Rep. & Stable\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{79000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{79000} & \cellcolor{gray!6}{23} & \cellcolor{gray!6}{1982-2004} & \cellcolor{gray!6}{Czech Rep.} & \cellcolor{gray!6}{Stable}\\
 \addlinespace
- & Spatial beta-diversity & 2.5000e+00 & 1.0 & 79000 & 23 & 1982-2004 & Czech Rep. & Stable\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{CSI} & \cellcolor{gray!6}{7.9000e+04} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{79000} & \cellcolor{gray!6}{23} & \cellcolor{gray!6}{1982-2004} & \cellcolor{gray!6}{Czech Rep.} & \cellcolor{gray!6}{Decrease}\\
-\cite{schipper_contrasting_2016} & Abundance & 2.5000e+01 & 5.0 & 24710000 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{2.5000e+01} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{24710000} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
- & Diversity & 2.5000e+01 & 5.0 & 24710000 & 40 & 1971-2010 & Canada, USA, Mexico & \vphantom{1} Increase\\
+ & Spatial beta-diversity & 2.5 & 1.0 & 79000 & 23 & 1982-2004 & Czech Rep. & Stable\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{24710000} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
+ & SR & 25 & 5.0 & 24710000 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Diversity} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{24710000} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{\vphantom{1} Increase}\\
+ & Diversity & 25 & 5.0 & 24710000 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
 \addlinespace
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Diversity} & \cellcolor{gray!6}{2.5000e+01} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{24710000} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
- & Functional richness & 2.5000e+01 & 5.0 & 24710000 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{2.5000e+01} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{24710000} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
- & Functional diversity & 2.5000e+01 & 5.0 & 24710000 & 40 & 1971-2010 & Canada, USA, Mexico & Decrease\\
-\cellcolor{gray!6}{\cite{sorte_changes_2005}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{2.5000e+01} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{36} & \cellcolor{gray!6}{1968-2003} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{24710000} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Increase}\\
+ & Functional evenness & 25 & 5.0 & 24710000 & 40 & 1971-2010 & Canada, USA, Mexico & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional diversity} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{24710000} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{1971-2010} & \cellcolor{gray!6}{Canada, USA, Mexico} & \cellcolor{gray!6}{Decrease}\\
+\cite{sorte_changes_2005} & SR & 25 & 1.0 & 9834000 & 36 & 1968-2003 & USA & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{36} & \cellcolor{gray!6}{1968-2003} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Decrease}\\
 \addlinespace
- & Abundance & 2.5000e+01 & 1.0 & 9834000 & 36 & 1968-2003 & USA & Decrease\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Diversity} & \cellcolor{gray!6}{2.5000e+01} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{36} & \cellcolor{gray!6}{1968-2003} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Decrease}\\
-\cite{wretenberg_changes_2010} & SR & NA & 1.0 & 1800 & 11 & 1994-2004 & Sweden & Decrease\\
-\cellcolor{gray!6}{\cite{ram_what_2017}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{350000} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1998-2015} & \cellcolor{gray!6}{Sweden} & \cellcolor{gray!6}{Increase}\\
- & Abundance & 1.6000e+00 & 1.0 & 350000 & 18 & 1998-2015 & Sweden & Increase\\
+ & Diversity & 25 & 1.0 & 9834000 & 36 & 1968-2003 & USA & Decrease\\
+\cellcolor{gray!6}{\cite{wretenberg_changes_2010}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0,03} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{1800} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{1994-2004} & \cellcolor{gray!6}{Sweden} & \cellcolor{gray!6}{Decrease}\\
+\cite{ram_what_2017} & SR & 3,2 & 1.0 & 350000 & 18 & 1998-2015 & Sweden & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{1.6} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{350000} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1998-2015} & \cellcolor{gray!6}{Sweden} & \cellcolor{gray!6}{Increase}\\
+\cite{harrison_quantifying_2016} & Abundance & 10000 & 0.5 & NA & 20 & 1994-2013 & UK & Increase\\
 \addlinespace
-\cellcolor{gray!6}{\cite{harrison_quantifying_2016}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{1.0000e+04} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1994-2013} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Increase}\\
- & Abundance & 1.0000e+04 & 0.5 & NA & 20 & 1994-2013 & UK & \vphantom{1} Stable\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{1.0000e+04} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1994-2013} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Stable}\\
-\cite{jarzyna_taxonomic_2018} & SR & 2.5000e+03 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{4.0000e+04} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1994-2013} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{\vphantom{1} Stable}\\
+ & Abundance & 10000 & 0.5 & NA & 20 & 1994-2013 & UK & Stable\\
+\cellcolor{gray!6}{\cite{jarzyna_taxonomic_2018}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{2500} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+ & SR & 40000 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{640000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
- & SR & 6.4000e+05 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{9.8340e+06} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
- & SR & 1.4894e+08 & 1.0 & 148940000 & 45 & 1969-2013 & Wolrd & Decrease\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{2.5000e+03} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
- & Temporal beta-diversity & 4.0000e+04 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
+ & SR & 9834000 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{Wolrd} & \cellcolor{gray!6}{Decrease}\\
+ & Temporal beta-diversity & 2500 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{40000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+ & Temporal beta-diversity & 640000 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
 \addlinespace
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{6.4000e+05} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
- & Temporal beta-diversity & 9.8340e+06 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{1.4894e+08} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{Wolrd} & \cellcolor{gray!6}{Stable}\\*
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+ & Temporal beta-diversity & 148940000 & 1.0 & 148940000 & 45 & 1969-2013 & Wolrd & Stable\\
+\cellcolor{gray!6}{\cite{davey_rise_2012}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{242495} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{1994-2006} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Increase}\\
+ & SR & 1 & 1.0 & 242495 & 13 & 1994-2006 & UK & Increase\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Evenness} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{242495} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{1994-2006} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Increase}\\
+\addlinespace
+\cite{chiron_forecasting_2013}\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{Regional} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{643801} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{2007-2020} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{\vphantom{2} Decrease}\\
+ & Abundance & Regional & 1.0 & 643801 & 14 & 2007-2020 & France & \vphantom{1} Decrease\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{Regional} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{643801} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{2007-2020} & \cellcolor{gray!6}{France} & \cellcolor{gray!6}{Decrease}\\
+ & Abundance & Regional & 1.0 & 643801 & 14 & 2007-2020 & France & Decrease\\
+\cite{van_turnhout_scale-dependent_2007} & SR & Regional & 4.0 & 41543 & 28 & 1973-2000 & Netherlands & Increase\\
+\addlinespace
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{4.0} & \cellcolor{gray!6}{41543} & \cellcolor{gray!6}{28} & \cellcolor{gray!6}{1973-2000} & \cellcolor{gray!6}{Netherlands} & \cellcolor{gray!6}{Increase}\\
+ & SR & 41543 & 4.0 & 41543 & 28 & 1973-2000 & Netherlands & Increase\\*
 \end{longtable}
 \endgroup{}
 \end{landscape}
@@ -376,56 +390,67 @@ Reference & Metric & Spatial grain (Km²) & Trend & Note\\
 \bottomrule
 \endlastfoot
 \cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{To assess the metric, they use a GAM to predict the abundance over the entire area of interest (spatial resolution = 1 Km²) and then compute the geometric mean of species abundance = Multi Species Index (as in \cite{studeny_fine-tuning_2013}) from the prediction. Data used to learn the GAM are sampled from plots of 1 Km². Farmland communities}\\
-\cite{harrison_assessing_2014} & Abundance & 10000 & Stable & Farmland communities, GoF ($\lambda$ = -1) =  weighted towards the rare species\\
-\cellcolor{gray!6}{\cite{harrison_assessing_2014}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Farmland communities, GoF ( $\lambda$ = -2) weighted towards the common species}\\
+ & Abundance & 10000 & Stable & Farmland communities, GoF ($\lambda$ = -1) =  weighted towards the rare species\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{Farmland communities, GoF ( $\lambda$ = -2) weighted towards the common species}\\
 \cite{pilotto_meta-analysis_2020} & SR & Local & Increase & "Analyses of the trends in local biodiversity over large spatial scales"\\
-\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{"Analyses of the trends in local biodiversity over large spatial scales"}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{"Analyses of the trends in local biodiversity over large spatial scales"}\\
 \addlinespace
-\cite{pilotto_meta-analysis_2020} & Abundance & Local & Stable & "Analyses of the trends in local biodiversity over large spatial scales"\\
-\cellcolor{gray!6}{\cite{pilotto_meta-analysis_2020}} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{"Analyses of the trends in local biodiversity over large spatial scales"}\\
+ & Abundance & Local & Stable & "Analyses of the trends in local biodiversity over large spatial scales"\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{"Analyses of the trends in local biodiversity over large spatial scales"}\\
 \cite{barnagaud_temporal_2017} & SR & 25 & Increase & They model the trend of the metrics using GAMM at the road scales. Area of the road = (40/0.8)*(pi*400\^2) with a road of 40 Km with point counts spaced by 0.8 Km and a census radius of 400m\\
-\cellcolor{gray!6}{\cite{barnagaud_temporal_2017}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{NA}\\
-\cite{barnagaud_temporal_2017} & Evenness & 25 & Increase & NA\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{\vphantom{1} NA}\\
+ & Evenness & 25 & Increase & NA\\
 \addlinespace
-\cellcolor{gray!6}{\cite{barnagaud_temporal_2017}} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
-\cite{barnagaud_temporal_2017} & Functional dispersion & 25 & Stable & NA\\
-\cellcolor{gray!6}{\cite{barnagaud_temporal_2017}} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{\vphantom{1} NA}\\
+ & Functional dispersion & 25 & Stable & NA\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{\vphantom{1} NA}\\
 \cite{reif_changes_2013} & SR & 2.5 & Stable & JPSP data, transect scale\\
-\cellcolor{gray!6}{\cite{reif_changes_2013}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{79000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{JPSP data, national scale}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{79000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{JPSP data, national scale}\\
 \addlinespace
-\cite{reif_changes_2013} & Spatial beta-diversity & 2.5 & Stable & Jaccard index, pairwise comparisions between transects\\
-\cellcolor{gray!6}{\cite{reif_changes_2013}} & \cellcolor{gray!6}{CSI} & \cellcolor{gray!6}{79000} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Metric = Community Specialization Index, i.e. functional diveristy index}\\
-\cite{schipper_contrasting_2016} & Abundance & 25 & Increase & The metric (i.e. geometric mean) is meaned over each road. Area of the road = 50*(pi*400\^2) with 50 census point per road and a census radius of 400m\\
-\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
-\cite{schipper_contrasting_2016} & Diversity & 25 & Increase & Metric = Shannon\\
+ & Spatial beta-diversity & 2.5 & Stable & Jaccard index, pairwise comparisions between transects\\
+\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{The metric (i.e. geometric mean) is meaned over each road. Area of the road = 50*(pi*400\^2) with 50 census point per road and a census radius of 400m}\\
+ & SR & 25 & Increase & NA\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Diversity} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Metric = Shannon}\\
+ & Diversity & 25 & Increase & Metric = Simpson\\
 \addlinespace
-\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Diversity} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Metric = Simpson}\\
-\cite{schipper_contrasting_2016} & Functional richness & 25 & Increase & NA\\
-\cellcolor{gray!6}{\cite{schipper_contrasting_2016}} & \cellcolor{gray!6}{Functional evenness} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
-\cite{schipper_contrasting_2016} & Functional diversity & 25 & Decrease & NA\\
-\cellcolor{gray!6}{\cite{sorte_changes_2005}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{The metric is meaned over each road. Area of the road = 50*(pi*400\^2) with 50 census point per road and a census radius of 400m}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional richness} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+ & Functional evenness & 25 & Increase & NA\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Functional diversity} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{NA}\\
+\cite{sorte_changes_2005} & SR & 25 & Increase & The metric is meaned over each road. Area of the road = 50*(pi*400\^2) with 50 census point per road and a census radius of 400m\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{NA}\\
 \addlinespace
-\cite{sorte_changes_2005} & Abundance & 25 & Decrease & NA\\
-\cellcolor{gray!6}{\cite{sorte_changes_2005}} & \cellcolor{gray!6}{Diversity} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{Metric = evenness}\\
-\cite{wretenberg_changes_2010} & SR & 0,03 & Decrease & looking at the trend through different environmental policies, " local species richness (i.e. at the scale of sites = 3 hectares) decreased significantly probably as a result of an overall reduced abundance of several species. "\\
-\cellcolor{gray!6}{\cite{ram_what_2017}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{3,2} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{SR for forest species meaned over roads, spatial grain = 8* .4 with road of 8 Km and census radius no limitations so assumed 200m}\\
-\cite{ram_what_2017} & Abundance & 1.6 & Increase & MSI for forest species, road of 8 Km with no limitations so assumed 200m\\
+ & Diversity & 25 & Decrease & Metric = evenness\\
+\cellcolor{gray!6}{\cite{wretenberg_changes_2010}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0,03} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{looking at the trend through different environmental policies, " local species richness (i.e. at the scale of sites = 3 hectares) decreased significantly probably as a result of an overall reduced abundance of several species. "}\\
+\cite{ram_what_2017} & SR & 3,2 & Increase & SR for forest species meaned over roads, spatial grain = 8* .4 with road of 8 Km and census radius no limitations so assumed 200m\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{1.6} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{MSI for forest species, road of 8 Km with no limitations so assumed 200m}\\
+\cite{harrison_quantifying_2016} & Abundance & 10000 & Increase & Geomteric mean of species abundance, they predict the abundance with resolution of 1 Km² and then computed the metric for each 10000 Km² cell across Great Britain, Visited twice a year\\
 \addlinespace
-\cellcolor{gray!6}{\cite{harrison_quantifying_2016}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Geomteric mean of species abundance, they predict the abundance with resolution of 1 Km² and then computed the metric for each 10000 Km² cell across Great Britain, Visited twice a year}\\
-\cite{harrison_quantifying_2016} & Abundance & 10000 & Stable & GoF ( $\lambda$ = -1) = toward rare species" The goodness-of-fit-based measure of biodiversity suggests that both rare and common species made gains through much of Britain in the first half of the time period, and losses in the second half.", Visited twice a year / Increase first half and second second halfGoF ( $\lambda$ = -1)\\
-\cellcolor{gray!6}{\cite{harrison_quantifying_2016}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{GoF ( $\lambda$ = -2) = toward common species " The goodness-of-fit-based measure of biodiversity suggests that both rare and common species made gains through much of Britain in the first half of the time period, and losses in the second half.", Visited twice a year / Increase first half and second second half}\\
-\cite{jarzyna_taxonomic_2018} & SR & 2500 & Increase & NA\\
-\cellcolor{gray!6}{\cite{jarzyna_taxonomic_2018}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{40000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{10000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{GoF ( $\lambda$ = -1) = toward rare species" The goodness-of-fit-based measure of biodiversity suggests that both rare and common species made gains through much of Britain in the first half of the time period, and losses in the second half.", Visited twice a year / Increase first half and second second halfGoF ( $\lambda$ = -1)}\\
+ & Abundance & 10000 & Stable & GoF ( $\lambda$ = -2) = toward common species " The goodness-of-fit-based measure of biodiversity suggests that both rare and common species made gains through much of Britain in the first half of the time period, and losses in the second half.", Visited twice a year / Increase first half and second second half\\
+\cellcolor{gray!6}{\cite{jarzyna_taxonomic_2018}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{2500} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+ & SR & 40000 & Increase & NA\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{640000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
 \addlinespace
-\cite{jarzyna_taxonomic_2018} & SR & 640000 & Increase & NA\\
-\cellcolor{gray!6}{\cite{jarzyna_taxonomic_2018}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
-\cite{jarzyna_taxonomic_2018} & SR & 148940000 & Decrease & NA\\
-\cellcolor{gray!6}{\cite{jarzyna_taxonomic_2018}} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{2500} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
-\cite{jarzyna_taxonomic_2018} & Temporal beta-diversity & 40000 & Increase & NA\\
+ & SR & 9834000 & Increase & NA\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{NA}\\
+ & Temporal beta-diversity & 2500 & Increase & NA\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{40000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+ & Temporal beta-diversity & 640000 & Increase & NA\\
 \addlinespace
-\cellcolor{gray!6}{\cite{jarzyna_taxonomic_2018}} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{640000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
-\cite{jarzyna_taxonomic_2018} & Temporal beta-diversity & 9834000 & Increase & NA\\
-\cellcolor{gray!6}{\cite{jarzyna_taxonomic_2018}} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{NA}\\*
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+ & Temporal beta-diversity & 148940000 & Stable & NA\\
+\cellcolor{gray!6}{\cite{davey_rise_2012}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{They predict the metric using a GAM with spatial resolution of 1 Km². Then they show the trend for the mean value of the metric per year}\\
+ & SR & 1 & Increase & NA\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Evenness} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+\addlinespace
+\cite{chiron_forecasting_2013} & Abundance & Regional & Decrease & Concerning the spatial scale, predictions are made using the spatial unit of 4 Km² and the FBI is computed for each region of France, then meanned. Prediction with baseline scenario\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{Regional} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{FBI prediction with CAP greening cenario}\\
+ & Abundance & Regional & Decrease & FBI prediction with No Pillar I scenario\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{Regional} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{FBI prediction with biofuel scenario}\\
+\cite{van_turnhout_scale-dependent_2007} & SR & Regional & Increase & For each region, the trend is computed\\
+\addlinespace
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{Mainly increase of SR but the proportion of negative trend were higher than for the regional scale}\\
+ & SR & 41543 & Increase & National scale\\*
 \end{longtable}
 \endgroup{}
 \end{landscape}

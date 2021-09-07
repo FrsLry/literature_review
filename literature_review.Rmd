@@ -25,8 +25,6 @@ biblio-title: References
 ```{r, echo = F}
 knitr::opts_chunk$set(warning = F,
                       message = F)
-## To put blank isntead of NA in the table
-# options(knitr.kable.NA = '')
 ```
 
 ```{r, echo=F}
@@ -154,7 +152,8 @@ collapse_rows_df <- function(df, variable){
 
 
 read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
-  mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
+  # mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
+  mutate(
          `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
          `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
          `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>% 
@@ -164,7 +163,7 @@ read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_X
   collapse_rows_df(Reference) %>% 
   ## escape = F is very important for the citation
   kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
-      caption = "SR = species richness, Ab = abundance, Eve = evenness, ") %>% 
+      caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>% 
   kableExtra::kable_styling(
    latex_options = c("hold_position", "repeat_header", "striped"),
    font_size = 10,
@@ -203,6 +202,8 @@ tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxS
 read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
   select(Reference, Metric, `Spatial grain (Km²)`, Trend, Note) %>%
   as_tibble() %>% 
+  group_by(Reference) %>% 
+  collapse_rows_df(Reference) %>% 
   ## escape = F is very important for the citation
   kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
       caption = "Supplementary informations on each trend") %>% 
