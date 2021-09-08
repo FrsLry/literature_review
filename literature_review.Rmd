@@ -137,7 +137,7 @@ Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they co
 <!-- \renewcommand{\clearpage}{} -->
 
 ```{r maintable, echo=F}
-## Function to collapse the reference column
+# Function to collapse the reference column
 collapse_rows_df <- function(df, variable){
 
   group_var <- enquo(variable)
@@ -156,20 +156,20 @@ read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_X
   mutate(
          `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
          `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
-         `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>% 
+         `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%
   select(-Note) %>%
-  as_tibble() %>% 
-  group_by(Reference) %>% 
-  collapse_rows_df(Reference) %>% 
+  as_tibble() %>%
+  group_by(Reference) %>%
+  collapse_rows_df(Reference) %>%
   ## escape = F is very important for the citation
-  kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
-      caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>% 
+  kbl(booktabs = T, escape = F, format = "latex", longtable = T,
+      caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>%
   kableExtra::kable_styling(
    latex_options = c("hold_position", "repeat_header", "striped"),
    font_size = 10,
    full_width = FALSE
-   ) %>% 
-  column_spec(1:9, width = "6.5em") %>% 
+   ) %>%
+  column_spec(1:9, width = "6.5em") %>%
   landscape()
 ```
 
@@ -200,20 +200,26 @@ tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxS
 
 ```{r notetable, echo=FALSE}
 read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
-  select(Reference, Metric, `Spatial grain (Km²)`, Trend, Note) %>%
-  as_tibble() %>% 
-  group_by(Reference) %>% 
-  collapse_rows_df(Reference) %>% 
+  # mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
+  # mutate(
+  #        `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
+  #        `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
+  #        `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%
+  select(Reference, `Spatial grain (Km²)`, Trend, Note) %>%
+  as_tibble() %>%
+  group_by(Reference) %>%
+  collapse_rows_df(Reference) %>%
   ## escape = F is very important for the citation
-  kbl(booktabs = T, escape = F, format = "latex", longtable = T, 
-      caption = "Supplementary informations on each trend") %>% 
+  kbl(booktabs = T, escape = F, format = "latex", longtable = T,
+      caption = "Supplementary informations about each article") %>%
   kableExtra::kable_styling(
    latex_options = c("hold_position", "repeat_header", "striped"),
    font_size = 10,
    full_width = FALSE
-   ) %>% 
-  landscape() %>% 
-  column_spec(5, width = "30em")
+   ) %>%
+  column_spec(1:3, width = "6.5em") %>%
+  column_spec(4, width = "40em") %>% 
+  landscape()
 ```
 
 

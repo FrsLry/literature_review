@@ -1,67 +1,36 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2021.9.7)  7 SEP 2021 15:17
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.8)  8 SEP 2021 15:27
  restricted system commands enabled.
 **literature_review.tex
 (./literature_review.tex
-LaTeX2e <2020-10-01>
-Lua module: luaotfload-main 2020-09-02 3.15 luaotfload entry point
-Lua module: luaotfload-init 2020-09-02 3.15 luaotfload submodule / initializatio
-n
-Lua module: lualibs 2020-08-31 2.72 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2020-08-31 2.72 ConTeXt Lua libraries -- extended c
+LaTeX2e <2021-06-01> patch level 1
+Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
+Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2021-05-20 2.74 ConTeXt Lua libraries -- extended c
 ollection.
-Lua module: luaotfload-log 2020-09-02 3.15 luaotfload submodule / logging
-Lua module: luaotfload-parsers 2020-09-02 3.15 luaotfload submodule / parsers
-Lua module: luaotfload-configuration 2020-09-02 3.15 luaotfload submodule / conf
-ig file reader
 luaotfload | conf : Root cache directory is "C:/Users/leroy/AppData/Local/MiKTeX
 /luatex-cache/generic/names".
-luaotfload | init : Loading fontloader "fontloader-2020-08-31.lua" from kpse-res
+luaotfload | init : Loading fontloader "fontloader-2021-05-20.lua" from kpse-res
 olved path "C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/f
-ontloader-2020-08-31.lua".
+ontloader-2021-05-20.lua".
 Lua-only attribute luaotfload@noligature = 1
 Lua-only attribute luaotfload@syllabe = 2
-luaotfload | init : Context OpenType loader version 0x1.8e353f7ced917p+1
-Lua module: luaotfload-fallback 2020-09-02 3.15 luaotfload submodule / fallback
-Lua module: luaotfload-multiscript 2020-09-02 3.15 luaotfload submodule / multis
-cript
-Lua module: luaotfload-script 2020-09-02 3.15 luaotfload submodule / Script help
-ers
+luaotfload | init : Context OpenType loader version 3.116
 Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
 Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
 Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
-Lua module: luaotfload-loaders 2020-09-02 3.15 luaotfload submodule / callback h
-andling
 Inserting `luaotfload.define_font' at position 1 in `define_font'.
-Lua module: luaotfload-database 2020-09-02 3.15 luaotfload submodule / database
-Lua module: luaotfload-unicode 2020-09-02 3.15 luaotfload submodule / Unicode he
-lpers
-Lua module: luaotfload-colors 2020-09-02 3.15 luaotfload submodule / color
 Lua-only attribute luaotfload_color_attribute = 3
-Lua module: luaotfload-resolvers 2020-09-02 3.15 luaotfload submodule / resolver
-s
 luaotfload | conf : Root cache directory is "C:/Users/leroy/AppData/Local/MiKTeX
 /luatex-cache/generic/names".
-Lua module: luaotfload-features 2020-09-02 3.15 luaotfload submodule / features
-Lua module: luaotfload-harf-define 2020-09-02 3.15 luaotfload submodule / HarfBu
-zz font loading
 Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
 Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
-Lua module: luaotfload-harf-plug 2020-09-02 3.15 luaotfload submodule / HarfBuzz
- shaping
-Inserting `Harf pre_output_filter callback' at position 1 in `pre_output_filter'
-.
-Inserting `Harf wrapup_run callback' at position 1 in `wrapup_run'.
-Inserting `Harf finish_pdffile callback' at position 1 in `finish_pdffile'.
-Inserting `Harf glyph_info callback' at position 1 in `glyph_info'.
-Lua module: luaotfload-letterspace 2020-09-02 3.15 luaotfload submodule / letter
-spacing
-Lua module: luaotfload-embolden 2020-09-02 3.15 luaotfload submodule / embolden
-Lua module: luaotfload-notdef 2020-09-02 3.15 luaotfload submodule / notdef
-Lua module: luaotfload-suppress 2020-09-02 3.15 luaotfload submodule / suppress
-Lua module: luaotfload-szss 2020-09-02 3.15 luaotfload submodule / Special featu
-re handling
-Lua module: luaotfload-auxiliary 2020-09-02 3.15 luaotfload submodule / auxiliar
-y functions
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 4
 Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
 font'.
 Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
@@ -73,25 +42,24 @@ t_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
-Lua module: luaotfload-tounicode 2020-09-02 3.15 luaotfload submodule / tounicod
-e
 Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
-. L3 programming layer <2020-09-24> xparse <2020-03-03> (C:/Users/leroy/AppData
-/Local/Programs/MiKTeX/tex/latex/base/report.cls
-Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
+. L3 programming layer <2021-08-27>
+Inserting `tracingstacklevels' at position 1 in `input_level_string'. (C:/Users
+/leroy/AppData/Local/Programs/MiKTeX/tex/latex/base/report.cls
+Document Class: report 2021/02/12 v1.4n Standard LaTeX document class
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo
-File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+File: size12.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 luaotfload | db : Font names database loaded from C:/Users/leroy/AppData/Local/M
 iKTeX/luatex-cache/generic/names/luaotfload-names.luc)
-\c@part=\count171
-\c@chapter=\count172
-\c@section=\count173
-\c@subsection=\count174
-\c@subsubsection=\count175
-\c@paragraph=\count176
-\c@subparagraph=\count177
-\c@figure=\count178
-\c@table=\count179
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
@@ -101,21 +69,21 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks15
+\@emptytoks=\toks16
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/09/23 v2.17i AMS math features
+Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
+\@emptytoks=\toks17
 \ex@=\dimen139
 )) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -123,41 +91,41 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count180
+\inf@bad=\count188
 LaTeX Info: Redefining \frac on input line 236.
-\uproot@=\count181
-\leftroot@=\count182
+\uproot@=\count189
+\leftroot@=\count190
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count183
-\DOTSCASE@=\count184
+\classnum@=\count191
+\DOTSCASE@=\count192
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
+\Mathstrutbox@=\box50
+\strutbox@=\box51
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count185
-\c@MaxMatrixCols=\count186
+\macc@depth=\count193
+\c@MaxMatrixCols=\count194
 \dotsspace@=\muskip16
-\c@parentequation=\count187
-\dspbrk@lvl=\count188
-\tag@help=\toks17
-\row@=\count189
-\column@=\count190
-\maxfields@=\count191
-\andhelp@=\toks18
+\c@parentequation=\count195
+\dspbrk@lvl=\count196
+\tag@help=\toks18
+\row@=\count197
+\column@=\count198
+\maxfields@=\count199
+\andhelp@=\toks19
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
 \tagshift@=\dimen144
 \tagwidth@=\dimen145
 \totwidth@=\dimen146
 \lineht@=\dimen147
-\@envbody=\toks19
+\@envbody=\toks20
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifxetex.sty
@@ -170,113 +138,112 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-ma
 th.sty (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.s
 ty
-Package: expl3 2020-09-24 L3 programming layer (loader) 
+Package: expl3 2021-08-27 L3 programming layer (loader) 
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
 tex.def
-File: l3backend-luatex.def 2020-09-24 L3 backend support: PDF output (LuaTeX)
-\l__kernel_color_stack_int=\count192
-\l__pdf_internal_box=\box49
+File: l3backend-luatex.def 2021-08-04 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count266
+\l__pdf_internal_box=\box52
 ))
 Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-ma
 th-luatex.sty
-Package: unicode-math-luatex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLa
-TeX
+Package: unicode-math-luatex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaL
+aTeX
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
 e.sty
-Package: xparse 2020-05-15 L3 Experimental document command parser
-
-(C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
-e-generic.tex))
+Package: xparse 2021-08-27 L3 Experimental document command parser
+)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l3k
 eys2e.sty
-Package: l3keys2e 2020-05-15 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2021-08-27 LaTeX2e option processing using LaTeX3 keys
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 Lua module: fontspec 2020/02/21 2.7i Font selection for XeLaTeX and LuaLaTeX
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luate
 x.sty
-Package: fontspec-luatex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
-X
-\l__fontspec_script_int=\count193
-\l__fontspec_language_int=\count194
-\l__fontspec_strnum_int=\count195
-\l__fontspec_tmp_int=\count196
-\l__fontspec_tmpa_int=\count197
-\l__fontspec_tmpb_int=\count198
-\l__fontspec_tmpc_int=\count199
-\l__fontspec_em_int=\count266
-\l__fontspec_emdef_int=\count267
-\l__fontspec_strong_int=\count268
-\l__fontspec_strongdef_int=\count269
+Package: fontspec-luatex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaT
+eX
+\l__fontspec_script_int=\count267
+\l__fontspec_language_int=\count268
+\l__fontspec_strnum_int=\count269
+\l__fontspec_tmp_int=\count270
+\l__fontspec_tmpa_int=\count271
+\l__fontspec_tmpb_int=\count272
+\l__fontspec_tmpc_int=\count273
+\l__fontspec_em_int=\count274
+\l__fontspec_emdef_int=\count275
+\l__fontspec_strong_int=\count276
+\l__fontspec_strongdef_int=\count277
 \l__fontspec_tmpa_dim=\dimen148
 \l__fontspec_tmpb_dim=\dimen149
 \l__fontspec_tmpc_dim=\dimen150
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg
 ))) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/base/fix-cm.sty
-Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/lualatex/lualatex-math/lualat
 ex-math.sty
-Package: lualatex-math 2020/09/25 v1.9 Patches for mathematics typesetting with 
-LuaLaTeX
+Package: lualatex-math 2021/07/05 v1.11 Patches for mathematics typesetting wit
+h LuaLaTeX
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count270
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count278
 )
 Lua module: lualatex-math 2013/08/03 1.3 Patches for mathematics typesetting wit
 h LuaLaTeX)
-\g__um_fam_int=\count271
-\g__um_fonts_used_int=\count272
-\l__um_primecount_int=\count273
+\g__um_fam_int=\count279
+\g__um_fonts_used_int=\count280
+\l__um_primecount_int=\count281
 \g__um_primekern_muskip=\muskip17
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-ma
 th-table.tex))) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/upquote
 /upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
-im
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.sty
-Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+Package: microtype 2021/03/14 v2.8c Micro-typographical refinements (RS)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks21
+\KV@toks@=\toks22
 )
-\MT@toks=\toks22
-\MT@count=\count274
+\MT@toks=\toks23
+\MT@count=\count282
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen151
-LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count275
+LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
+\MT@listname@count=\count283
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype-lua
 tex.def
-File: microtype-luatex.def 2019/11/18 v2.7d Definitions specific to luatex (RS)
-Module microtype Info: overwriting function `keepligature' on input line 59
-LaTeX Info: Redefining \lsstyle on input line 695.
-LaTeX Info: Redefining \lslig on input line 695.
+File: microtype-luatex.def 2021/03/14 v2.8c Definitions specific to luatex (RS)
+
+Module microtype Info: overwriting function `keepligature' on input line 62
+LaTeX Info: Redefining \lsstyle on input line 710.
+LaTeX Info: Redefining \lslig on input line 710.
 \MT@outer@space=\skip52
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 )) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/parskip/parskip.sty
-Package: parskip 2020-06-15 v2.0f non-zero parskip adjustments
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
@@ -291,7 +258,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package xcolor Info: Driver file: luatex.def on input line 225.
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
-File: luatex.def 2020/08/26 v1.2 Graphics/color driver for luatex
+File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
@@ -309,20 +276,20 @@ File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/x11nam.def
 File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
 )) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty
-Package: xurl 2020/01/24 v 0.09 modify URL breaks
+Package: xurl 2020/12/30 v 0.09a modify URL breaks
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bookmark.st
 y
-Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
 .sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
-
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
 ty
@@ -331,7 +298,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks23
+\pdftexcmds@toks=\toks24
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
 keys.sty
@@ -350,76 +317,80 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen152
-\Hy@linkcounter=\count276
-\Hy@pagecounter=\count277
+\Hy@linkcounter=\count284
+\Hy@pagecounter=\count285
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+)
+(C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref-langp
+atches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count278
-Package hyperref Info: Option `unicode' set `true' on input line 4338.
+\Hy@SavedSpaceFactor=\count286
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def
-File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Hyper figures OFF on input line 4464.
-Package hyperref Info: Link nesting OFF on input line 4469.
-Package hyperref Info: Hyper index ON on input line 4472.
-Package hyperref Info: Plain pages OFF on input line 4479.
-Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count279
-LaTeX Info: Redefining \url on input line 5076.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count287
+LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen153
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc
 .sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
-
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
-\Fld@menulength=\count280
+\Fld@menulength=\count288
 \Field@Width=\dimen154
 \Fld@charsize=\dimen155
-Package hyperref Info: Hyper figures OFF on input line 6347.
-Package hyperref Info: Link nesting OFF on input line 6352.
-Package hyperref Info: Hyper index ON on input line 6355.
-Package hyperref Info: backreferencing OFF on input line 6362.
-Package hyperref Info: Link coloring OFF on input line 6367.
-Package hyperref Info: Link coloring with OCG OFF on input line 6372.
-Package hyperref Info: PDF/A mode OFF on input line 6377.
-LaTeX Info: Redefining \ref on input line 6417.
-LaTeX Info: Redefining \pageref on input line 6421.
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/base/atbegshi-ltx.sty
-Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packag
-e
-with kernel methods
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
 )
-\Hy@abspage=\count281
-\c@Item=\count282
-\c@Hfootnote=\count283
+\Hy@abspage=\count289
+\c@Item=\count290
+\c@Hfootnote=\count291
 )
 Package hyperref Info: Driver (autodetected): hluatex.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
-File: hluatex.def 2020-05-15 v7.00e Hyperref driver for luaTeX
+File: hluatex.def 2021-06-07 v7.00m Hyperref driver for luaTeX
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.s
 ty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
-
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/base/atveryend-ltx.st
 y
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
-
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
 with kernel methods
 )
-\Fld@listcount=\count284
-\c@bookmark@seq@number=\count285
+\Fld@listcount=\count292
+\c@bookmark@seq@number=\count293
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfil
 echeck.sty
@@ -429,14 +400,14 @@ Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
-6.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
 )
 \Hy@SectionHShift=\skip53
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bkm-pdftex.def
-File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
-\BKM@id=\count286
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count294
 ))
 Package hyperref Info: Option `colorlinks' set `true' on input line 59.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
@@ -444,9 +415,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count287
-\Gm@cntv=\count288
-\c@Gm@tempcnt=\count289
+\Gm@cnth=\count295
+\Gm@cntv=\count296
+\c@Gm@tempcnt=\count297
 \Gm@bindingoffset=\dimen156
 \Gm@wd@mp=\dimen157
 \Gm@odd@mp=\dimen158
@@ -455,14 +426,14 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen161
 \Gm@layouthoffset=\dimen162
 \Gm@layoutvoffset=\dimen163
-\Gm@dimlist=\toks24
+\Gm@dimlist=\toks25
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
@@ -470,26 +441,27 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: luatex.def on input line 105.
+Package graphics Info: Driver file: luatex.def on input line 107.
 ))
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty
-Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LTleft=\skip54
 \LTright=\skip55
 \LTpre=\skip56
 \LTpost=\skip57
-\LTchunksize=\count290
+\LTchunksize=\count298
 \LTcapwidth=\dimen164
-\LT@head=\box50
-\LT@firsthead=\box51
-\LT@foot=\box52
-\LT@lastfoot=\box53
-\LT@cols=\count291
-\LT@rows=\count292
-\c@LT@tables=\count293
-\c@LT@chunks=\count294
-\LT@p@ftn=\toks25
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@gbox=\box57
+\LT@cols=\count299
+\LT@rows=\count300
+\c@LT@tables=\count301
+\c@LT@chunks=\count302
+\LT@p@ftn=\toks26
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen165
@@ -502,41 +474,35 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen172
 \cmidrulekern=\dimen173
 \defaultaddspace=\dimen174
-\@cmidla=\count295
-\@cmidlb=\count296
+\@cmidla=\count303
+\@cmidlb=\count304
 \@aboverulesep=\dimen175
 \@belowrulesep=\dimen176
-\@thisruleclass=\count297
-\@lastruleclass=\count298
+\@thisruleclass=\count305
+\@lastruleclass=\count306
 \@thisrulewidth=\dimen177
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/footnotehyper/footnoteh
 yper.sty
-Package: footnotehyper 2019/11/07 v1.1a hyperref aware footnote.sty (JFB)
-\FNH@notes=\box54
+Package: footnotehyper 2021/08/13 v1.1e hyperref aware footnote.sty (JFB)
+\FNH@notes=\box58
 \FNH@width=\dimen178
+\FNH@toks=\toks27
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/polyglossia
 .sty
-Package: polyglossia 2020/04/08 v1.49 Modern multilingual typesetting with XeLaT
-eX and LuaLaTeX
+Package: polyglossia 2021/04/12 v1.53 Modern multilingual typesetting with XeLa
+TeX and LuaLaTeX
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/makecmds/makecmds.sty
 Package: makecmds 2009/09/03 v1.0a extra command making commands
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkeyval.tex (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks26
-\XKV@tempa@toks=\toks27
+\XKV@toks=\toks28
+\XKV@tempa@toks=\toks29
 )
-\XKV@depth=\count299
+\XKV@depth=\count307
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/filehook/filehook.st
-y
-Package: filehook 2020/09/29 v0.8a Hooks for input files
-
-(C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/filehook/filehook-2020.
-sty
-Package: filehook-2020 2020/09/29 v0.8a Hooks for input files
 ))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbase.
 sty
@@ -545,7 +511,7 @@ Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/luatex/ctablestack/ctablestac
 k.sty
 Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
-\@catcodetablestackcnt=\count300
+\@catcodetablestackcnt=\count308
 )
 \CatcodeTableOther=\catcodetable12
 \CatcodeTableExpl=\catcodetable13
@@ -574,6 +540,7 @@ braces):
 >  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 )
 Package polyglossia Info: Default language is latex.
+Package polyglossia Info: Setting LuaTeX font renderer to Harfbuzz.
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-engli
 sh.ldf
@@ -673,27 +640,27 @@ braces):
 >  {french/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {french/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for french
-(polyglossia)            patterns	hyph-fr.pat.txt
 (polyglossia)            hyphenation	
-(polyglossia)            synonyms	patois,francais
+(polyglossia)            loader	loadhyph-fr.tex
+(polyglossia)            patterns	hyph-fr.pat.txt
 (polyglossia)            righthyphenmin	2
 (polyglossia)            lefthyphenmin	2
-(polyglossia)            loader	loadhyph-fr.tex on input line 12
+(polyglossia)            synonyms	patois,francais on input line 12
 Module polyglossia Info: Language french was not yet loaded; created with id 2 o
 n input line 12
-Lua-only attribute polyglossia_punct = 4
+Lua-only attribute polyglossia_punct = 5
 Package polyglossia Info: Option: French, variant=french.
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.sty
-Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
-\csq@reset=\count301
-\csq@gtype=\count302
-\csq@glevel=\count303
-\csq@qlevel=\count304
-\csq@maxlvl=\count305
-\csq@tshold=\count306
-\csq@ltx@everypar=\toks28
+Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
+\csq@reset=\count309
+\csq@gtype=\count310
+\csq@glevel=\count311
+\csq@qlevel=\count312
+\csq@maxlvl=\count313
+\csq@tshold=\count314
+\csq@ltx@everypar=\toks30
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.def
-File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
@@ -702,9 +669,9 @@ File: csquotes.cfg
 )) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/bclogo/bclogo.sty
 Package: bclogo 2016/01/10 v3.1
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen179
 \Gin@req@width=\dimen180
 )
@@ -720,7 +687,7 @@ sty
 y
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
 -common.tex
-\pgfutil@everybye=\toks29
+\pgfutil@everybye=\toks31
 \pgfutil@tempdima=\dimen181
 \pgfutil@tempdimb=\dimen182
 
@@ -728,14 +695,14 @@ y
 -common-lists.tex))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
 -latex.def
-\pgfutil@abb=\box55
+\pgfutil@abb=\box59
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfrcs.
 code.tex (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/pgf.revi
 sion.tex)
-Package: pgfrcs 2020/10/01 v3.1.6a (3.1.6a)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
-Package: pgf 2020/10/01 v3.1.6a (3.1.6a)
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.
 sty
@@ -743,16 +710,16 @@ sty
 sty
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
 s.code.tex
-Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
 .code.tex
-\pgfkeys@pathtoks=\toks30
-\pgfkeys@temptoks=\toks31
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
 filtered.code.tex
-\pgfkeys@tmptoks=\toks32
+\pgfkeys@tmptoks=\toks34
 ))
 \pgf@x=\dimen183
 \pgf@y=\dimen184
@@ -766,42 +733,42 @@ filtered.code.tex
 \pgf@yd=\dimen192
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count307
-\c@pgf@countb=\count308
-\c@pgf@countc=\count309
-\c@pgf@countd=\count310
-\t@pgf@toka=\toks33
-\t@pgf@tokb=\toks34
-\t@pgf@tokc=\toks35
-\pgf@sys@id@count=\count311
+\c@pgf@counta=\count315
+\c@pgf@countb=\count316
+\c@pgf@countc=\count317
+\c@pgf@countd=\count318
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count319
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf.c
 fg
-File: pgf.cfg 2020/10/01 v3.1.6a (3.1.6a)
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
 Driver file for pgf: pgfsys-luatex.def
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
 s-luatex.def
-File: pgfsys-luatex.def 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfsys-luatex.def 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
 s-common-pdf.def
-File: pgfsys-common-pdf.def 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
 ssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfsyssoftpath@smallbuffer@items=\count312
-\pgfsyssoftpath@bigbuffer@items=\count313
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count320
+\pgfsyssoftpath@bigbuffer@items=\count321
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
 sprotocol.code.tex
-File: pgfsysprotocol.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 e.code.tex
-Package: pgfcore 2020/10/01 v3.1.6a (3.1.6a)
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
 .tex
@@ -812,11 +779,11 @@ code.tex)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathparse
 r.code.tex
 \pgfmath@dimen=\dimen193
-\pgfmath@count=\count314
-\pgfmath@box=\box56
-\pgfmath@toks=\toks36
-\pgfmath@stack@operand=\toks37
-\pgfmath@stack@operation=\toks38
+\pgfmath@count=\count322
+\pgfmath@box=\box60
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
 ions.code.tex
@@ -838,13 +805,13 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count315
+\c@pgfmathroundto@lastzeros=\count323
 ))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code.
 tex)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 epoints.code.tex
-File: pgfcorepoints.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@picminx=\dimen194
 \pgf@picmaxx=\dimen195
 \pgf@picminy=\dimen196
@@ -862,103 +829,103 @@ File: pgfcorepoints.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 epathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@path@lastx=\dimen264
 \pgf@path@lasty=\dimen265
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 epathusage.code.tex
-File: pgfcorepathusage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@shorten@end@additional=\dimen266
 \pgf@shorten@start@additional=\dimen267
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 escopes.code.tex
-File: pgfcorescopes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfpic=\box57
-\pgf@hbox=\box58
-\pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count316
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count324
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 egraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgflinewidth=\dimen268
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 etransformations.code.tex
-File: pgfcoretransformations.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@pt@x=\dimen269
 \pgf@pt@y=\dimen270
 \pgf@pt@temp=\dimen271
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 equick.code.tex
-File: pgfcorequick.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 eobjects.code.tex
-File: pgfcoreobjects.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 epathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 earrows.code.tex
-File: pgfcorearrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfarrowsep=\dimen272
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 eshade.code.tex
-File: pgfcoreshade.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen273
-\pgf@sys@shading@range@num=\count317
-\pgf@shadingcount=\count318
+\pgf@sys@shading@range@num=\count325
+\pgf@shadingcount=\count326
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 eimage.code.tex
-File: pgfcoreimage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 eexternal.code.tex
-File: pgfcoreexternal.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfexternal@startupbox=\box60
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box64
 ))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 elayers.code.tex
-File: pgfcorelayers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 etransparency.code.tex
-File: pgfcoretransparency.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 epatterns.code.tex
-File: pgfcorepatterns.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 erdf.code.tex
-File: pgfcorerdf.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
 shapes.code.tex
-File: pgfmoduleshapes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfnodeparttextbox=\box61
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box65
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
 plot.code.tex
-File: pgfmoduleplot.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
 mp-version-0-65.sty
-Package: pgfcomp-version-0-65 2020/10/01 v3.1.6a (3.1.6a)
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@nodesepstart=\dimen274
 \pgf@nodesepend=\dimen275
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
 mp-version-1-18.sty
-Package: pgfcomp-version-1-18 2020/10/01 v3.1.6a (3.1.6a)
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 ))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.st
 y
@@ -971,23 +938,23 @@ fmath.sty
 .tex))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgffor.
 code.tex
-Package: pgffor 2020/10/01 v3.1.6a (3.1.6a)
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
 .tex)
 \pgffor@iter=\dimen276
 \pgffor@skip=\dimen277
-\pgffor@stack=\toks39
-\pgffor@toks=\toks40
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
 ))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
 z/tikz.code.tex
-Package: tikz 2020/10/01 v3.1.6a (3.1.6a)
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
 aryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@plot@mark@count=\count319
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count327
 \pgfplotmarksize=\dimen278
 )
 \tikz@lastx=\dimen279
@@ -998,46 +965,46 @@ File: pgflibraryplothandlers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \tikz@lastmovetoy=\dimen284
 \tikzleveldistance=\dimen285
 \tikzsiblingdistance=\dimen286
-\tikz@figbox=\box62
-\tikz@figbox@bg=\box63
-\tikz@tempbox=\box64
-\tikz@tempbox@bg=\box65
-\tikztreelevel=\count320
-\tikznumberofchildren=\count321
-\tikznumberofcurrentchild=\count322
-\tikz@fig@count=\count323
+\tikz@figbox=\box66
+\tikz@figbox@bg=\box67
+\tikz@tempbox=\box68
+\tikz@tempbox@bg=\box69
+\tikztreelevel=\count328
+\tikznumberofchildren=\count329
+\tikznumberofcurrentchild=\count330
+\tikz@fig@count=\count331
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
 matrix.code.tex
-File: pgfmodulematrix.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfmatrixcurrentrow=\count324
-\pgfmatrixcurrentcolumn=\count325
-\pgf@matrix@numberofcolumns=\count326
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count332
+\pgfmatrixcurrentcolumn=\count333
+\pgf@matrix@numberofcolumns=\count334
 )
-\tikz@expandcount=\count327
+\tikz@expandcount=\count335
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
 z/libraries/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/mdframed/mdframed.s
 ty
 Package: mdframed 2013/07/01 1.9b: mdframed
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty
-Package: zref-abspage 2020-05-28 v2.31 Module abspage for zref (HO)
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty
-Package: zref-base 2020-05-28 v2.31 Module base for zref (HO)
-Package zref Info: New property list: main on input line 763.
-Package zref Info: New property: default on input line 764.
-Package zref Info: New property: page on input line 765.
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
 )
-\c@abspage=\count328
+\c@abspage=\count336
 Package zref Info: New property: abspage on input line 66.
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip62
-\c@mdf@globalstyle@cnt=\count329
+\c@mdf@globalstyle@cnt=\count337
 \mdf@skipabove@length=\skip63
 \mdf@skipbelow@length=\skip64
 \mdf@leftmargin@length=\skip65
@@ -1081,11 +1048,11 @@ Package: needspace 2010/09/12 v1.3d reserve vertical space
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/mdframed/md-frame-1.mdf
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 )
-\mdf@frametitlebox=\box66
-\mdf@footnotebox=\box67
-\mdf@splitbox@one=\box68
-\mdf@splitbox@two=\box69
-\mdf@splitbox@save=\box70
+\mdf@frametitlebox=\box70
+\mdf@footnotebox=\box71
+\mdf@splitbox@one=\box72
+\mdf@splitbox@two=\box73
+\mdf@splitbox@save=\box74
 \mdfsplitboxwidth=\skip102
 \mdfsplitboxtotalwidth=\skip103
 \mdfsplitboxheight=\skip104
@@ -1113,29 +1080,29 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \mdf@horizontalspaceofbox=\skip126
 \mdfsubtitleheight=\skip127
 \mdfsubsubtitleheight=\skip128
-\c@mdfcountframes=\count330
+\c@mdfcountframes=\count338
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count331
-\c@mdf@env@i=\count332
-\c@mdf@env@ii=\count333
-\c@mdf@zref@counter=\count334
+\mdf@envdepth=\count339
+\c@mdf@env@i=\count340
+\c@mdf@env@ii=\count341
+\c@mdf@zref@counter=\count342
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
 z/libraries/tikzlibraryshadows.code.tex
-File: tikzlibraryshadows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: tikzlibraryshadows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
 z/libraries/tikzlibraryfadings.code.tex
-File: tikzlibraryfadings.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
 aryfadings.code.tex
-File: pgflibraryfadings.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
 z/libraries/tikzlibrarydecorations.pathmorphing.code.tex
@@ -1148,57 +1115,30 @@ decorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen289
 \pgfdecoratedinputsegmentremainingdistance=\dimen290
 \pgf@decorate@distancetomove=\dimen291
-\pgf@decorate@repeatstate=\count335
+\pgf@decorate@repeatstate=\count343
 \pgfdecorationsegmentamplitude=\dimen292
 \pgfdecorationsegmentlength=\dimen293
 )
-\tikz@lib@dec@box=\box71
+\tikz@lib@dec@box=\box75
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
 ions/pgflibrarydecorations.pathmorphing.code.tex)) (C:/Users/leroy/AppData/Loca
 l/Programs/MiKTeX/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 )
-\c@bclogocompteur=\count336
+\c@bclogocompteur=\count344
 \bcval@epBarre=\skip129
 \bcval@framesep=\skip130
 \bcval@tailleOndu=\skip131
 \bcval@borderWidth=\skip132
 \bcval@margeG=\skip133
 \bcval@margeD=\skip134
-\bc@envbox=\box72
+\bc@envbox=\box76
 )
-
-Package fontspec Info: calibri scale = 0.9281651765543492.
-
-
-Package fontspec Info: calibri scale = 0.9281651765543492.
-
-
-Package fontspec Info: calibri scale = 0.9281651765543492.
-
-
-Package fontspec Info: calibrib scale = 0.9194636516285493.
-
-
-Package fontspec Info: calibrib scale = 0.9194636516285493.
-
-
-Package fontspec Info: calibrili scale = 0.9281651765543492.
-
-
-Package fontspec Info: calibrili scale = 0.9281651765543492.
-
-
-Package fontspec Info: calibriz scale = 0.9194636516285493.
-
-
-Package fontspec Info: calibriz scale = 0.9194636516285493.
-
 
 Package fontspec Info: Font family 'calibri(0)' created for font 'calibri'
 (fontspec)             with options
-(fontspec)             [Scale=MatchLowercase,Ligatures=TeX,Scale=1,Path =
+(fontspec)             [Renderer=Harfbuzz,Ligatures=TeX,Scale=1,Path =
 (fontspec)             ./fonts/,Extension = .ttf,BoldFont =
 (fontspec)             calibrib,ItalicFont = calibrili,BoldItalicFont =
 (fontspec)             calibriz].
@@ -1207,63 +1147,34 @@ Package fontspec Info: Font family 'calibri(0)' created for font 'calibri'
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[./fonts/calibri.ttf]:mode=node;script=latn;lang
-uage=dflt;+tlig;"
+(fontspec)             <->s*[1]"[./fonts/calibri.ttf]:mode=harf;script=latn;lan
+guage=dflt;+tlig;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[./fonts/calibri.ttf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+smcp;"
+(fontspec)             <->s*[1]"[./fonts/calibri.ttf]:mode=harf;script=latn;lan
+guage=dflt;+tlig;+smcp;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[./fonts/calibrib.ttf]:mode=node;script=latn;lan
-guage=dflt;+tlig;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[./fonts/calibrib.ttf]:mode=node;script=latn;lan
-guage=dflt;+tlig;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[./fonts/calibrili.ttf]:mode=node;script=latn;la
+(fontspec)             <->s*[1]"[./fonts/calibrib.ttf]:mode=harf;script=latn;la
 nguage=dflt;+tlig;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[./fonts/calibrili.ttf]:mode=node;script=latn;la
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[./fonts/calibrib.ttf]:mode=harf;script=latn;la
 nguage=dflt;+tlig;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[./fonts/calibrili.ttf]:mode=harf;script=latn;l
+anguage=dflt;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[./fonts/calibrili.ttf]:mode=harf;script=latn;l
+anguage=dflt;+tlig;+smcp;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[./fonts/calibriz.ttf]:mode=node;script=latn;lan
-guage=dflt;+tlig;"
+(fontspec)             <->s*[1]"[./fonts/calibriz.ttf]:mode=harf;script=latn;la
+nguage=dflt;+tlig;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[./fonts/calibriz.ttf]:mode=node;script=latn;lan
-guage=dflt;+tlig;+smcp;"
-
-LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 107.
-
-Package fontspec Info: calibri scale = 0.9999972616618975.
-
-
-Package fontspec Info: calibri scale = 0.9999972616618975.
-
-
-Package fontspec Info: calibri scale = 0.9999972616618975.
-
-
-Package fontspec Info: calibrib scale = 0.9906223127649937.
-
-
-Package fontspec Info: calibrib scale = 0.9906223127649937.
-
-
-Package fontspec Info: calibrili scale = 0.9999972616618975.
-
-
-Package fontspec Info: calibrili scale = 0.9999972616618975.
-
-
-Package fontspec Info: calibriz scale = 0.9906223127649937.
-
-
-Package fontspec Info: calibriz scale = 0.9906223127649937.
+(fontspec)             <->s*[1]"[./fonts/calibriz.ttf]:mode=harf;script=latn;la
+nguage=dflt;+tlig;+smcp;"
 
 
 Package fontspec Info: Font family 'calibri(1)' created for font 'calibri'
-(fontspec)             with options [Scale=MatchLowercase,Renderer=Basic,Path
-(fontspec)             = ./fonts/,Extension = .ttf,BoldFont =
+(fontspec)             with options [Renderer=Harfbuzz,Renderer=Basic,Path =
+(fontspec)             ./fonts/,Extension = .ttf,BoldFont =
 (fontspec)             calibrib,ItalicFont = calibrili,BoldItalicFont =
 (fontspec)             calibriz].
 (fontspec)              
@@ -1271,29 +1182,29 @@ Package fontspec Info: Font family 'calibri(1)' created for font 'calibri'
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999972616618975]"[./fonts/calibri.ttf]:mode=base
-;script=latn;language=dflt;"
+(fontspec)             <->"[./fonts/calibri.ttf]:mode=base;script=latn;language
+=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9999972616618975]"[./fonts/calibri.ttf]:mode=base
-;script=latn;language=dflt;+smcp;"
+(fontspec)             <->"[./fonts/calibri.ttf]:mode=base;script=latn;language
+=dflt;+smcp;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9906223127649937]"[./fonts/calibrib.ttf]:mode=bas
-e;script=latn;language=dflt;"
+(fontspec)             <->"[./fonts/calibrib.ttf]:mode=base;script=latn;languag
+e=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9906223127649937]"[./fonts/calibrib.ttf]:mode=bas
-e;script=latn;language=dflt;+smcp;"
+(fontspec)             <->"[./fonts/calibrib.ttf]:mode=base;script=latn;languag
+e=dflt;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999972616618975]"[./fonts/calibrili.ttf]:mode=ba
-se;script=latn;language=dflt;"
+(fontspec)             <->"[./fonts/calibrili.ttf]:mode=base;script=latn;langua
+ge=dflt;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9999972616618975]"[./fonts/calibrili.ttf]:mode=ba
-se;script=latn;language=dflt;+smcp;"
+(fontspec)             <->"[./fonts/calibrili.ttf]:mode=base;script=latn;langua
+ge=dflt;+smcp;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9906223127649937]"[./fonts/calibriz.ttf]:mode=bas
-e;script=latn;language=dflt;"
+(fontspec)             <->"[./fonts/calibriz.ttf]:mode=base;script=latn;languag
+e=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9906223127649937]"[./fonts/calibriz.ttf]:mode=bas
-e;script=latn;language=dflt;+smcp;"
+(fontspec)             <->"[./fonts/calibriz.ttf]:mode=base;script=latn;languag
+e=dflt;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/calibri(1)/m/n on input line 107.
@@ -1301,14 +1212,16 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/calibri(1)/m/it on input line 107.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/calibri(1)/b/n on input line 107.
+LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 107.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty
-Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box73
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box77
 \beforetitleunit=\skip135
 \aftertitleunit=\skip136
 \ttl@plus=\dimen294
 \ttl@minus=\dimen295
-\ttl@toksa=\toks41
+\ttl@toksa=\toks43
 \titlewidth=\dimen296
 \titlewidthlast=\dimen297
 \titlewidthfirst=\dimen298
@@ -1332,60 +1245,60 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen305
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count337
-\c@continuedfloat=\count338
+\c@caption@flags=\count345
+\c@continuedfloat=\count346
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \col@sep=\dimen306
-\ar@mcellbox=\box74
+\ar@mcellbox=\box78
 \extrarowheight=\dimen307
-\NC@list=\toks42
+\NC@list=\toks44
 \extratabsurround=\skip137
 \backup@length=\skip138
-\ar@cellbox=\box75
+\ar@cellbox=\box79
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/multirow/multirow.sty
-Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip139
-\multirow@cntb=\count339
+\multirow@cntb=\count347
 \multirow@dima=\skip140
 \bigstrutjot=\dimen308
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen309
 \WF@size=\dimen310
-\c@WF@wrappedlines=\count340
-\WF@box=\box76
-\WF@everypar=\toks43
+\c@WF@wrappedlines=\count348
+\WF@box=\box80
+\WF@everypar=\toks45
 Package: wrapfig 2003/01/31  v 3.6
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count341
-\float@exts=\toks44
-\float@box=\box77
-\@float@everytoks=\toks45
-\@floatcapt=\box78
+\c@float@type=\count349
+\float@exts=\toks46
+\float@box=\box81
+\@float@everytoks=\toks47
+\@floatcapt=\box82
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
-\everycr=\toks46
+\everycr=\toks48
 \minrowclearance=\skip141
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/tabu/tabu.sty
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box79
-\sift@deathcycles=\count342
+\@vwid@box=\box83
+\sift@deathcycles=\count350
 \@vwid@loff=\dimen311
 \@vwid@roff=\dimen312
 )
-\c@taburow=\count343
-\tabu@nbcols=\count344
-\tabu@cnt=\count345
-\tabu@Xcol=\count346
-\tabu@alloc=\count347
-\tabu@nested=\count348
+\c@taburow=\count351
+\tabu@nbcols=\count352
+\tabu@cnt=\count353
+\tabu@Xcol=\count354
+\tabu@alloc=\count355
+\tabu@nested=\count356
 \tabu@target=\dimen313
 \tabu@spreadtarget=\dimen314
 \tabu@naturalX=\dimen315
@@ -1395,18 +1308,18 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \abovetabulinesep=\dimen319
 \belowtabulinesep=\dimen320
 \tabustrutrule=\dimen321
-\tabu@thebody=\toks47
-\tabu@footnotes=\toks48
-\tabu@box=\box80
-\tabu@arstrutbox=\box81
-\tabu@hleads=\box82
-\tabu@vleads=\box83
+\tabu@thebody=\toks49
+\tabu@footnotes=\toks50
+\tabu@box=\box84
+\tabu@arstrutbox=\box85
+\tabu@hleads=\box86
+\tabu@vleads=\box87
 \tabu@cellskip=\skip142
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/threeparttable/threepar
 ttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box84
+\@tempboxb=\box88
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/threeparttablex/threepa
 rttablex.sty
@@ -1420,21 +1333,21 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \TPTL@width=\skip143
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/ulem/ulem.sty
-\UL@box=\box85
-\UL@hyphenbox=\box86
+\UL@box=\box89
+\UL@hyphenbox=\box90
 \UL@skip=\skip144
-\UL@hook=\toks49
+\UL@hook=\toks51
 \UL@height=\dimen322
-\UL@pe=\count349
+\UL@pe=\count357
 \UL@pixel=\dimen323
-\ULC@box=\box87
+\ULC@box=\box91
 Package: ulem 2019/11/18
 \ULdepth=\dimen324
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen325
-\c@nlinenum=\count350
-\TeXr@lab=\toks50
+\c@nlinenum=\count358
+\TeXr@lab=\toks52
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/lualatex/selnolig/selnolig.st
 y
@@ -1446,20 +1359,20 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip145
 \bibsep=\skip146
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count351
+\c@NAT@ctr=\count359
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count352
-\calc@Bcount=\count353
+\calc@Acount=\count360
+\calc@Bcount=\count361
 \calc@Adimen=\dimen326
 \calc@Bdimen=\dimen327
 \calc@Askip=\skip147
 \calc@Bskip=\skip148
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count354
+\calc@Ccount=\count362
 \calc@Cskip=\skip149
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
@@ -1472,13 +1385,13 @@ Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/pdfpages/ppluatex.def
 File: ppluatex.def 2021/03/06 v0.5t Pdfpages driver for LuaTeX (AM)
 )
-\pdfpages@includegraphics@status=\count355
-\AM@pagebox=\box88
-\AM@global@opts=\toks51
-\AM@pagecnt=\count356
-\AM@toc@title=\toks52
-\c@AM@survey=\count357
-\AM@templatesizebox=\box89
+\pdfpages@includegraphics@status=\count363
+\AM@pagebox=\box92
+\AM@global@opts=\toks53
+\AM@pagecnt=\count364
+\AM@toc@title=\toks54
+\c@AM@survey=\count365
+\AM@templatesizebox=\box93
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'polyglossia' package.
@@ -1490,19 +1403,13 @@ Package polyglossia Info: Option: English, variant=american.
 LaTeX Info: Redefining \rmfamily on input line 22.
 LaTeX Info: Redefining \sffamily on input line 22.
 LaTeX Info: Redefining \ttfamily on input line 22.
-luaotfload | aux : font no 35 (nil) defines no feature for script latn with lang
-uage eng
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
 
 LaTeX Warning: Label `tab:maintable' multiply defined.
 
 
 LaTeX Warning: Label `tab:maintable' multiply defined.
-
-
-LaTeX Warning: Label `tab:maintable' multiply defined.
-
-
-LaTeX Warning: Label `tab:notetable' multiply defined.
 
 
 LaTeX Warning: Label `tab:notetable' multiply defined.
@@ -1542,61 +1449,35 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 155.
 
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
 Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             'latinmodern-math.otf' with options
-(fontspec)             [Scale=MatchLowercase,Renderer=Basic,BoldItalicFont={},It
-alicFont={},SmallCapsFont={},Script=Math,FontAdjustment={\__um_luatex_copy_fontd
-imens:
+(fontspec)             [Renderer=Harfbuzz,Renderer=Basic,BoldItalicFont={},Ital
+icFont={},SmallCapsFont={},Script=Math,FontAdjustment={\__um_luatex_copy_fontdi
+mens:
 (fontspec)             },BoldFont={latinmodern-math.otf}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1.077388310473724]"[latinmodern-math.otf]:mode=base
-;script=math;language=dflt;"
+(fontspec)             <->"[latinmodern-math.otf]:mode=base;script=math;languag
+e=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.077388310473724]"[latinmodern-math.otf]:mode=base
-;script=math;language=dflt;"
+(fontspec)             <->"[latinmodern-math.otf]:mode=base;script=math;languag
+e=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: 
-
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 12.92871pt on input line 155.
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             'latinmodern-math.otf' with options
-(fontspec)             [Scale=MatchLowercase,Renderer=Basic,BoldItalicFont={},It
-alicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10
-.2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.
+(fontspec)             [Renderer=Harfbuzz,Renderer=Basic,BoldItalicFont={},Ital
+icFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.
+2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.
 otf,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
 (fontspec)             },BoldFont={latinmodern-math.otf}].
 (fontspec)              
@@ -1604,235 +1485,200 @@ otf,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.2->s*[1.077388310473724]"[latinmodern-math.otf]:mode=
-base;script=math;language=dflt;"<7.2-10.2>s*[1.077388310473724]"[latinmodern-mat
-h.otf]:mode=base;script=math;language=dflt;+ssty=0;"<-7.2>s*[1.077388310473724]"
-[latinmodern-math.otf]:mode=base;script=math;language=dflt;+ssty=1;"
+(fontspec)             <10.2->"[latinmodern-math.otf]:mode=base;script=math;lan
+guage=dflt;"<7.2-10.2>"[latinmodern-math.otf]:mode=base;script=math;language=df
+lt;+ssty=0;"<-7.2>"[latinmodern-math.otf]:mode=base;script=math;language=dflt;+
+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.077388310473724]"[latinmodern-math.otf]:mode=base
-;script=math;language=dflt;"
+(fontspec)             <->"[latinmodern-math.otf]:mode=base;script=math;languag
+e=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.92871pt on input line 155.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 155.
+
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input 
-line 155.
+(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
+ line 155.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `bold' on input line 155.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input
- line 155.
+(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
+t line 155.
 
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077496049304771.
+Package fontspec Info: latinmodern-math scale = 1.0001.
 
 
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
+Package fontspec Info: latinmodern-math scale = 1.0001.
 
 
-Package fontspec Info: latinmodern-math scale = 1.077496049304771.
+Package fontspec Info: latinmodern-math scale = 1.0001.
 
 
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
+Package fontspec Info: latinmodern-math scale = 1.0001.
 
 
-Package fontspec Info: latinmodern-math scale = 1.077496049304771.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077496049304771.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077496049304771.
+Package fontspec Info: latinmodern-math scale = 1.0001.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             'latinmodern-math.otf' with options
-(fontspec)             [Scale=MatchLowercase,Renderer=Basic,BoldItalicFont={},It
-alicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10
-.2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.
+(fontspec)             [Renderer=Harfbuzz,Renderer=Basic,BoldItalicFont={},Ital
+icFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.
+2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.
 otf,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
-(fontspec)             },BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontA
-djustment={\fontdimen
-(fontspec)             8\font =8.75273pt\relax \fontdimen 9\font
-(fontspec)             =5.0939pt\relax \fontdimen 10\font =5.74034pt\relax
-(fontspec)             \fontdimen 11\font =8.8691pt\relax \fontdimen 12\font
-(fontspec)             =4.4604pt\relax \fontdimen 13\font =4.69312pt\relax
-(fontspec)             \fontdimen 14\font =4.69312pt\relax \fontdimen 15\font
-(fontspec)             =3.73639pt\relax \fontdimen 16\font =3.19339pt\relax
-(fontspec)             \fontdimen 17\font =3.19339pt\relax \fontdimen 18\font
-(fontspec)             =3.23218pt\relax \fontdimen 19\font =2.58574pt\relax
-(fontspec)             \fontdimen 22\font =3.23218pt\relax \fontdimen 20\font
-(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)             },BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,Font
+Adjustment={\fontdimen
+(fontspec)             8\font =8.124pt\relax \fontdimen 9\font =4.728pt\relax
+(fontspec)             \fontdimen 10\font =5.32799pt\relax \fontdimen 11\font
+(fontspec)             =8.232pt\relax \fontdimen 12\font =4.14pt\relax
+(fontspec)             \fontdimen 13\font =4.35599pt\relax \fontdimen 14\font
+(fontspec)             =4.35599pt\relax \fontdimen 15\font =3.46799pt\relax
+(fontspec)             \fontdimen 16\font =2.96399pt\relax \fontdimen 17\font
+(fontspec)             =2.96399pt\relax \fontdimen 18\font =3.0pt\relax
+(fontspec)             \fontdimen 19\font =2.4pt\relax \fontdimen 22\font
+(fontspec)             =3.0pt\relax \fontdimen 20\font =0pt\relax \fontdimen
+(fontspec)             21\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.2->s*[1.077496049304771]"[latinmodern-math.otf]:mode=
-base;script=math;language=dflt;"<7.2-10.2>s*[1.077496049304771]"[latinmodern-mat
-h.otf]:mode=base;script=math;language=dflt;+ssty=0;"<-7.2>s*[1.077496049304771]"
-[latinmodern-math.otf]:mode=base;script=math;language=dflt;+ssty=1;"
+(fontspec)             <10.2->s*[1.0001]"[latinmodern-math.otf]:mode=base;scrip
+t=math;language=dflt;"<7.2-10.2>s*[1.0001]"[latinmodern-math.otf]:mode=base;scr
+ipt=math;language=dflt;+ssty=0;"<-7.2>s*[1.0001]"[latinmodern-math.otf]:mode=ba
+se;script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
-(fontspec)             =8.75273pt\relax \fontdimen 9\font =5.0939pt\relax
-(fontspec)             \fontdimen 10\font =5.74034pt\relax \fontdimen 11\font
-(fontspec)             =8.8691pt\relax \fontdimen 12\font =4.4604pt\relax
-(fontspec)             \fontdimen 13\font =4.69312pt\relax \fontdimen 14\font
-(fontspec)             =4.69312pt\relax \fontdimen 15\font =3.73639pt\relax
-(fontspec)             \fontdimen 16\font =3.19339pt\relax \fontdimen 17\font
-(fontspec)             =3.19339pt\relax \fontdimen 18\font =3.23218pt\relax
-(fontspec)             \fontdimen 19\font =2.58574pt\relax \fontdimen 22\font
-(fontspec)             =3.23218pt\relax \fontdimen 20\font =0pt\relax
-(fontspec)             \fontdimen 21\font =0pt\relax 
+(fontspec)             =8.124pt\relax \fontdimen 9\font =4.728pt\relax
+(fontspec)             \fontdimen 10\font =5.32799pt\relax \fontdimen 11\font
+(fontspec)             =8.232pt\relax \fontdimen 12\font =4.14pt\relax
+(fontspec)             \fontdimen 13\font =4.35599pt\relax \fontdimen 14\font
+(fontspec)             =4.35599pt\relax \fontdimen 15\font =3.46799pt\relax
+(fontspec)             \fontdimen 16\font =2.96399pt\relax \fontdimen 17\font
+(fontspec)             =2.96399pt\relax \fontdimen 18\font =3.0pt\relax
+(fontspec)             \fontdimen 19\font =2.4pt\relax \fontdimen 22\font
+(fontspec)             =3.0pt\relax \fontdimen 20\font =0pt\relax \fontdimen
+(fontspec)             21\font =0pt\relax 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.077496049304771]"[latinmodern-math.otf]:mode=base
-;script=math;language=dflt;"
+(fontspec)             <->s*[1.0001]"[latinmodern-math.otf]:mode=base;script=ma
+th;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
-(fontspec)             =8.75273pt\relax \fontdimen 9\font =5.0939pt\relax
-(fontspec)             \fontdimen 10\font =5.74034pt\relax \fontdimen 11\font
-(fontspec)             =8.8691pt\relax \fontdimen 12\font =4.4604pt\relax
-(fontspec)             \fontdimen 13\font =4.69312pt\relax \fontdimen 14\font
-(fontspec)             =4.69312pt\relax \fontdimen 15\font =3.73639pt\relax
-(fontspec)             \fontdimen 16\font =3.19339pt\relax \fontdimen 17\font
-(fontspec)             =3.19339pt\relax \fontdimen 18\font =3.23218pt\relax
-(fontspec)             \fontdimen 19\font =2.58574pt\relax \fontdimen 22\font
-(fontspec)             =3.23218pt\relax \fontdimen 20\font =0pt\relax
-(fontspec)             \fontdimen 21\font =0pt\relax 
+(fontspec)             =8.124pt\relax \fontdimen 9\font =4.728pt\relax
+(fontspec)             \fontdimen 10\font =5.32799pt\relax \fontdimen 11\font
+(fontspec)             =8.232pt\relax \fontdimen 12\font =4.14pt\relax
+(fontspec)             \fontdimen 13\font =4.35599pt\relax \fontdimen 14\font
+(fontspec)             =4.35599pt\relax \fontdimen 15\font =3.46799pt\relax
+(fontspec)             \fontdimen 16\font =2.96399pt\relax \fontdimen 17\font
+(fontspec)             =2.96399pt\relax \fontdimen 18\font =3.0pt\relax
+(fontspec)             \fontdimen 19\font =2.4pt\relax \fontdimen 22\font
+(fontspec)             =3.0pt\relax \fontdimen 20\font =0pt\relax \fontdimen
+(fontspec)             21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
 (Font)              `symbols' in the math version `normal' on input line 155.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input
- line 155.
+(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
+t line 155.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
 (Font)              `symbols' in the math version `bold' on input line 155.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input
- line 155.
+(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
+t line 155.
 
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077280571642677.
+Package fontspec Info: latinmodern-math scale = 0.9999.
 
 
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
+Package fontspec Info: latinmodern-math scale = 0.9999.
 
 
-Package fontspec Info: latinmodern-math scale = 1.077280571642677.
+Package fontspec Info: latinmodern-math scale = 0.9999.
 
 
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
+Package fontspec Info: latinmodern-math scale = 0.9999.
 
 
-Package fontspec Info: latinmodern-math scale = 1.077280571642677.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077280571642677.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077388310473724.
-
-
-Package fontspec Info: latinmodern-math scale = 1.077280571642677.
+Package fontspec Info: latinmodern-math scale = 0.9999.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             'latinmodern-math.otf' with options
-(fontspec)             [Scale=MatchLowercase,Renderer=Basic,BoldItalicFont={},It
-alicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10
-.2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.
+(fontspec)             [Renderer=Harfbuzz,Renderer=Basic,BoldItalicFont={},Ital
+icFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.
+2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.
 otf,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
-(fontspec)             },BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontA
-djustment={\fontdimen
-(fontspec)             8\font =0.51714pt\relax \fontdimen 9\font
-(fontspec)             =2.58574pt\relax \fontdimen 10\font =2.15909pt\relax
-(fontspec)             \fontdimen 11\font =1.43507pt\relax \fontdimen 12\font
-(fontspec)             =7.75722pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)             },BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,Font
+Adjustment={\fontdimen
+(fontspec)             8\font =0.48pt\relax \fontdimen 9\font =2.4pt\relax
+(fontspec)             \fontdimen 10\font =2.004pt\relax \fontdimen 11\font
+(fontspec)             =1.33199pt\relax \fontdimen 12\font =7.2pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.2->s*[1.077280571642677]"[latinmodern-math.otf]:mode=
-base;script=math;language=dflt;"<7.2-10.2>s*[1.077280571642677]"[latinmodern-mat
-h.otf]:mode=base;script=math;language=dflt;+ssty=0;"<-7.2>s*[1.077280571642677]"
-[latinmodern-math.otf]:mode=base;script=math;language=dflt;+ssty=1;"
+(fontspec)             <10.2->s*[0.9999]"[latinmodern-math.otf]:mode=base;scrip
+t=math;language=dflt;"<7.2-10.2>s*[0.9999]"[latinmodern-math.otf]:mode=base;scr
+ipt=math;language=dflt;+ssty=0;"<-7.2>s*[0.9999]"[latinmodern-math.otf]:mode=ba
+se;script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
-(fontspec)             =0.51714pt\relax \fontdimen 9\font =2.58574pt\relax
-(fontspec)             \fontdimen 10\font =2.15909pt\relax \fontdimen 11\font
-(fontspec)             =1.43507pt\relax \fontdimen 12\font =7.75722pt\relax
+(fontspec)             =0.48pt\relax \fontdimen 9\font =2.4pt\relax \fontdimen
+(fontspec)             10\font =2.004pt\relax \fontdimen 11\font
+(fontspec)             =1.33199pt\relax \fontdimen 12\font =7.2pt\relax
 (fontspec)             \fontdimen 13\font =0pt\relax 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.077280571642677]"[latinmodern-math.otf]:mode=base
-;script=math;language=dflt;"
+(fontspec)             <->s*[0.9999]"[latinmodern-math.otf]:mode=base;script=ma
+th;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
-(fontspec)             =0.51714pt\relax \fontdimen 9\font =2.58574pt\relax
-(fontspec)             \fontdimen 10\font =2.15909pt\relax \fontdimen 11\font
-(fontspec)             =1.43507pt\relax \fontdimen 12\font =7.75722pt\relax
+(fontspec)             =0.48pt\relax \fontdimen 9\font =2.4pt\relax \fontdimen
+(fontspec)             10\font =2.004pt\relax \fontdimen 11\font
+(fontspec)             =1.33199pt\relax \fontdimen 12\font =7.2pt\relax
 (fontspec)             \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 15
-5.
+(Font)              `largesymbols' in the math version `normal' on input line 1
+55.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input
- line 155.
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
+t line 155.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 155.
-
+(Font)              `largesymbols' in the math version `bold' on input line 155
+.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input
- line 155.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.05008pt on input line 155.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.46436pt on input line 155.
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
+t line 155.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.93pt on input line 155.
+(Font)              scaled to size 12.00128pt on input line 155.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.05098pt on input line 155.
+(Font)              scaled to size 8.40088pt on input line 155.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.465pt on input line 155.
+(Font)              scaled to size 6.00064pt on input line 155.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.92743pt on input line 155.
+(Font)              scaled to size 11.99872pt on input line 155.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.04918pt on input line 155.
+(Font)              scaled to size 8.3991pt on input line 155.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.46371pt on input line 155.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 155.
-
+(Font)              scaled to size 5.99936pt on input line 155.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 155
+.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 155.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 155
+.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1842,7 +1688,7 @@ Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: Using default expansion set `alltext-nott'.
 LaTeX Info: Redefining \showhyphens on input line 155.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
@@ -1855,27 +1701,31 @@ Package microtype Info: Loading generic protrusion settings for font family
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count358
+\scratchcounter=\count366
 \scratchdimen=\dimen333
-\scratchbox=\box90
-\nofMPsegments=\count359
-\nofMParguments=\count360
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count361
+\scratchbox=\box94
+\nofMPsegments=\count367
+\nofMParguments=\count368
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count369
 \MPscratchDim=\dimen334
-\MPnumerator=\count362
-\makeMPintoPDFobject=\count363
-\everyMPtoPDFconversion=\toks54
+\MPnumerator=\count370
+\makeMPintoPDFobject=\count371
+\everyMPtoPDFconversion=\toks56
 )
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
 ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
-5.
-)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
 Package hyperref Info: Link coloring ON on input line 155.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
-Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
@@ -1883,7 +1733,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count364
+\c@section@level=\count372
 )
 LaTeX Info: Redefining \ref on input line 155.
 LaTeX Info: Redefining \pageref on input line 155.
@@ -1932,17 +1782,29 @@ Package polyglossia Info: Option: English, variant=american.
 LaTeX Info: Redefining \rmfamily on input line 155.
 LaTeX Info: Redefining \sffamily on input line 155.
 LaTeX Info: Redefining \ttfamily on input line 155.
-luaotfload | aux : font no 35 (nil) defines no feature for script latn with lang
-uage eng
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
+
+warning  (file _assets/coverpage.pdf) (pdf inclusion): PDF inclusion: found PDF 
+version '1.6', but at most version '1.5' allowed
 <_assets/coverpage.pdf, id=30, 614.295pt x 794.97pt>
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf>
 Package luatex.def Info: _assets/coverpage.pdf  used on input line 157.
 (luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+warning  (file _assets/coverpage.pdf) (pdf inclusion): PDF inclusion: found PDF 
+version '1.6', but at most version '1.5' allowed
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf>
 Package luatex.def Info: _assets/coverpage.pdf  used on input line 157.
 (luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+warning  (file _assets/coverpage.pdf) (pdf inclusion): PDF inclusion: found PDF 
+version '1.6', but at most version '1.5' allowed
+
+warning  (file _assets/coverpage.pdf) (pdf inclusion): PDF inclusion: found PDF 
+version '1.6', but at most version '1.5' allowed
 <_assets/coverpage.pdf, id=33, page=1, 614.295pt x 794.97pt>
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf, page 1>
@@ -1975,8 +1837,8 @@ Package polyglossia Info: Option: English, variant=american.
 LaTeX Info: Redefining \rmfamily on input line 1.
 LaTeX Info: Redefining \sffamily on input line 1.
 LaTeX Info: Redefining \ttfamily on input line 1.
-luaotfload | aux : font no 35 (nil) defines no feature for script latn with lang
-uage eng
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
 LaTeX Font Info:    Font shape `TU/calibri(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 2.
 )
@@ -2040,44 +1902,28 @@ Overfull \hbox (11.84102pt too wide) in alignment at lines 302--304
  []
 
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 304--328
- [][][][][][][][][] 
- []
-
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 328--352
+Overfull \hbox (11.84102pt too wide) in alignment at lines 304--362
  [][][][][][][][][] 
  []
 
 [7
 
-]
-Overfull \hbox (11.84102pt too wide) in alignment at lines 352--367
- [][][][][][][][][] 
- []
-
-[8] [9] [10] [11
+] [8] [9] [10] [11
 
 
 ]
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.77393pt on input line 393.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.54175pt on input line 393.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.38696pt on input line 393.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.775pt on input line 393.
+(Font)              scaled to size 10.00107pt on input line 388.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.5425pt on input line 393.
+(Font)              scaled to size 7.00075pt on input line 388.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.3875pt on input line 393.
+(Font)              scaled to size 5.00053pt on input line 388.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.77286pt on input line 393.
+(Font)              scaled to size 9.99893pt on input line 388.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.541pt on input line 393.
+(Font)              scaled to size 6.99925pt on input line 388.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.38643pt on input line 393.
+(Font)              scaled to size 4.99947pt on input line 388.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msb.cfg
@@ -2144,33 +1990,34 @@ Package polyglossia Info: Option: English, variant=american.
 LaTeX Info: Redefining \rmfamily on input line 22.
 LaTeX Info: Redefining \sffamily on input line 22.
 LaTeX Info: Redefining \ttfamily on input line 22.
-luaotfload | aux : font no 35 (nil) defines no feature for script latn with lang
-uage eng)
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
+)
 
 LaTeX Warning: There were multiply-defined labels.
 
 )
 
 Here is how much of LuaTeX's memory you used:
- 37914 strings out of 479058
- 156366,1373583 words of node,token memory allocated
- 1372 words of node memory still in use:
-   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 64 attribute,
- 106 glue_spec, 64 attribute_list, 2 write, 1 user_defined, 16 pdf_literal, 6 pd
+ 37689 strings out of 478146
+ 244332,1373583 words of node,token memory allocated
+ 1392 words of node memory still in use:
+   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 66 attribute,
+ 106 glue_spec, 66 attribute_list, 2 write, 1 user_defined, 16 pdf_literal, 8 pd
 f_action, 16 pdf_colorstack nodes
-   avail lists: 1:6,2:4175,3:1159,4:589,5:1185,6:536,7:8502,8:49,9:4289,10:17,11
-:517
- 55649 multiletter control sequences out of 65536+200000
- 84 fonts using 38244251 bytes
- 89i,17n,121p,1304b,595s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/leroy/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm-math/lati
-nmodern-math.otf><C:/Users/leroy/AppData/Local/Programs/MiKTeX/fonts/opentype/pu
-blic/lm-math/latinmodern-math.otf><./fonts/calibrili.ttf><//?/c:/users/leroy/app
-data/local/programs/miktex/fonts/opentype/public/lm/lmmono12-regular.otf><./font
-s/calibrib.ttf><./fonts/calibri.ttf>
-Output written on literature_review.pdf (21 pages, 1486802 bytes).
+   avail lists: 1:6,2:6739,3:1895,4:966,5:2330,6:895,7:12899,8:50,9:6990,10:22,1
+1:638
+ 56353 multiletter control sequences out of 65536+600000
+ 82 fonts using 43631119 bytes
+ 99i,17n,115p,1304b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
+<//?/c:/users/leroy/appdata/local/programs/miktex/fonts/opentype/public/lm-math/
+latinmodern-math.otf><//?/c:/users/leroy/appdata/local/programs/miktex/fonts/ope
+ntype/public/lm-math/latinmodern-math.otf><./fonts/calibrili.ttf><//?/c:/users/l
+eroy/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-regular.otf
+><./fonts/calibrib.ttf><./fonts/calibri.ttf>
+Output written on literature_review.pdf (21 pages, 1486351 bytes).
 
-PDF statistics: 401 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 402 PDF objects out of 1000 (max. 8388607)
  79 named destinations out of 1000 (max. 131072)
  224 words of extra memory for PDF output out of 10000 (max. 100000000)
 
