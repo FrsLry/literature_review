@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.8)  8 SEP 2021 15:27
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.8)  8 SEP 2021 16:38
  restricted system commands enabled.
 **literature_review.tex
 (./literature_review.tex
@@ -640,12 +640,12 @@ braces):
 >  {french/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {french/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for french
-(polyglossia)            hyphenation	
 (polyglossia)            loader	loadhyph-fr.tex
 (polyglossia)            patterns	hyph-fr.pat.txt
-(polyglossia)            righthyphenmin	2
 (polyglossia)            lefthyphenmin	2
-(polyglossia)            synonyms	patois,francais on input line 12
+(polyglossia)            righthyphenmin	2
+(polyglossia)            synonyms	patois,francais
+(polyglossia)            hyphenation	 on input line 12
 Module polyglossia Info: Language french was not yet loaded; created with id 2 o
 n input line 12
 Lua-only attribute polyglossia_punct = 5
@@ -1412,6 +1412,12 @@ LaTeX Warning: Label `tab:maintable' multiply defined.
 LaTeX Warning: Label `tab:maintable' multiply defined.
 
 
+LaTeX Warning: Label `tab:maintable' multiply defined.
+
+
+LaTeX Warning: Label `tab:notetable' multiply defined.
+
+
 LaTeX Warning: Label `tab:notetable' multiply defined.
 
 
@@ -1871,7 +1877,7 @@ Chapter 1.
 ] [4]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
 []\TU/lmtt/m/n/12 AB = ((biodiversity OR species richness OR diversity) AND (tem
 poral trend*
  []
@@ -1880,19 +1886,14 @@ poral trend*
 
 ] [6]
 LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 288.
+(Font)              scaled to size 10.0pt on input line 290.
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 290--295
+Overfull \hbox (11.84102pt too wide) in alignment at lines 292--297
  [][][][][][][][][] 
  []
 
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 295--300
- [][][][][][][][][] 
- []
-
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 300--302
+Overfull \hbox (11.84102pt too wide) in alignment at lines 297--302
  [][][][][][][][][] 
  []
 
@@ -1902,7 +1903,12 @@ Overfull \hbox (11.84102pt too wide) in alignment at lines 302--304
  []
 
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 304--362
+Overfull \hbox (11.84102pt too wide) in alignment at lines 304--306
+ [][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.84102pt too wide) in alignment at lines 306--370
  [][][][][][][][][] 
  []
 
@@ -1913,17 +1919,17 @@ Overfull \hbox (11.84102pt too wide) in alignment at lines 304--362
 
 ]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 388.
+(Font)              scaled to size 10.00107pt on input line 396.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 388.
+(Font)              scaled to size 7.00075pt on input line 396.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 388.
+(Font)              scaled to size 5.00053pt on input line 396.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 388.
+(Font)              scaled to size 9.99893pt on input line 396.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 388.
+(Font)              scaled to size 6.99925pt on input line 396.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 388.
+(Font)              scaled to size 4.99947pt on input line 396.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msb.cfg
@@ -2000,24 +2006,24 @@ LaTeX Warning: There were multiply-defined labels.
 
 Here is how much of LuaTeX's memory you used:
  37689 strings out of 478146
- 244332,1373583 words of node,token memory allocated
+ 244337,1373583 words of node,token memory allocated
  1392 words of node memory still in use:
    22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 66 attribute,
  106 glue_spec, 66 attribute_list, 2 write, 1 user_defined, 16 pdf_literal, 8 pd
 f_action, 16 pdf_colorstack nodes
-   avail lists: 1:6,2:6739,3:1895,4:966,5:2330,6:895,7:12899,8:50,9:6990,10:22,1
-1:638
+   avail lists: 1:10,2:7407,3:2079,4:1078,5:2560,6:986,7:14077,8:51,9:7694,10:22
+,11:648
  56353 multiletter control sequences out of 65536+600000
- 82 fonts using 43631119 bytes
+ 82 fonts using 43630967 bytes
  99i,17n,115p,1304b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
 <//?/c:/users/leroy/appdata/local/programs/miktex/fonts/opentype/public/lm-math/
 latinmodern-math.otf><//?/c:/users/leroy/appdata/local/programs/miktex/fonts/ope
 ntype/public/lm-math/latinmodern-math.otf><./fonts/calibrili.ttf><//?/c:/users/l
 eroy/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-regular.otf
 ><./fonts/calibrib.ttf><./fonts/calibri.ttf>
-Output written on literature_review.pdf (21 pages, 1486351 bytes).
+Output written on literature_review.pdf (21 pages, 1487781 bytes).
 
-PDF statistics: 402 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 406 PDF objects out of 1000 (max. 8388607)
  79 named destinations out of 1000 (max. 131072)
  224 words of extra memory for PDF output out of 10000 (max. 100000000)
 
