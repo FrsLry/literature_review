@@ -64,7 +64,7 @@
 \usepackage{pdflscape}
 
 
-\usepackage{longtable,booktabs}
+\usepackage{booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
 \makeatletter
@@ -186,7 +186,7 @@ The idea is to take every paper that talk about biodiversity trends (so far usin
 
 Make a table of all these papers and \texttt{group\_by(taxa)\ \%\textgreater{}\%\ order\_by(spatial\_scale\ \textbar{}\ temporal\_scale)}. Then see if for each taxa we can find a trend (a bit like in Chase \emph{et al.} 2019 Oikos paper \textbar{} Jarzyna \emph{et al.} 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: \href{https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x}{Hill \& Hamer 2004}
 
-I am using the \enquote{Advanced Research} tab of Web of Science which allows me skim through the entire literature using a convenient syntax. For instance:
+I am using the ``Advanced Research'' tab of Web of Science which allows me skim through the entire literature using a convenient syntax. For instance:
 
 \begin{verbatim}
 AB = ((biodiversity OR species richness OR diversity) AND
@@ -267,7 +267,7 @@ Here, I propose to review articles assessing the temporal trends of different av
 \hypertarget{materials-and-methods}{%
 \chapter{Materials and Methods}\label{materials-and-methods}}
 
-For this review, articles of interest were the ones assessing temporal trends of the most common indicators (\emph{i.e.} metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the \emph{\enquote{advanced search}} tool of the ISI Web of Science Core collection database with these four following queries:
+For this review, articles of interest were the ones assessing temporal trends of the most common indicators (\emph{i.e.} metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the \emph{``advanced search''} tool of the ISI Web of Science Core collection database with these four following queries:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -329,7 +329,7 @@ Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial exte
 \cite{sorte_changes_2005} & SR & 25 & 1.0 & 9834000 & 36 & 1968-2003 & USA & Increase\\
 \addlinespace
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{36} & \cellcolor{gray!6}{1968-2003} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Decrease}\\
- & Evenness & 25 & 1.0 & 9834000 & 36 & 1968-2003 & USA & Decrease\\
+ & Evenness & 25 & 1.0 & 9834000 & 36 & - & USA & Decrease\\
 \cellcolor{gray!6}{\cite{wretenberg_changes_2010}} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{0,03} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{1800} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{1994-2004} & \cellcolor{gray!6}{Sweden} & \cellcolor{gray!6}{Decrease}\\
 \cite{ram_what_2017} & SR & 3,2 & 1.0 & 350000 & 18 & 1998-2015 & Sweden & Increase\\
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{1.6} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{350000} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1998-2015} & \cellcolor{gray!6}{Sweden} & \cellcolor{gray!6}{Increase}\\
@@ -366,7 +366,8 @@ Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial exte
 \addlinespace
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{800} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{2800000} & \cellcolor{gray!6}{30} & \cellcolor{gray!6}{1982–2011} & \cellcolor{gray!6}{USA, Canada} & \cellcolor{gray!6}{Stable}\\
  & SR & 1350 & 5.0 & 2800000 & 30 & 1982–2011 & USA, Canada & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{11000} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{2800000} & \cellcolor{gray!6}{30} & \cellcolor{gray!6}{1982–2011} & \cellcolor{gray!6}{USA, Canada} & \cellcolor{gray!6}{Increase}\\*
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{11000} & \cellcolor{gray!6}{5.0} & \cellcolor{gray!6}{2800000} & \cellcolor{gray!6}{30} & \cellcolor{gray!6}{1982–2011} & \cellcolor{gray!6}{USA, Canada} & \cellcolor{gray!6}{Increase}\\
+\cite{bowler_geographic_2021} & Abundance & National unit & 1.0 & 520475 & 27 & 1990-2016 & Czech Rep., Switzerland, Denmark, Germany & Stable\\*
 \end{longtable}
 \endgroup{}
 \end{landscape}
@@ -454,12 +455,13 @@ Reference & Spatial grain (Km²) & Trend & Note\\
 \addlinespace
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{800} & \cellcolor{gray!6}{Stable} & \cellcolor{gray!6}{NA}\\
  & 1350 & Increase & NA\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{11000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\*
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{11000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+\cite{bowler_geographic_2021} & National unit & Stable & Metric = MSI, as many and as intense increase (i.e. Czech Rep. and Switzerland) than decrease (i.e. Germany and Denmarl)\\*
 \end{longtable}
 \endgroup{}
 \end{landscape}
 
-\singlespacing
+\singlespacing 
 
 
 \renewcommand\bibname{References}
