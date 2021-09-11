@@ -33,6 +33,7 @@ library(googlesheets4)
 library(dplyr)
 library(kableExtra)
 library(ggplot2)
+library(kableExtra)
 ```
 
 
@@ -46,17 +47,17 @@ Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale 
 
 **Meeting with Petr**
 
-1) How is the trend of biodiversity metrics linked to spatial grain/spatial extent.
+1) How is the trend of biodiversity metrics linked to spatial grain/spatial extent and temporal grain/temporal extent.
 
 * Talk about papers which does compare (Jarzyna Jetz)
 
-* The inconsistence of reporting scales (especially for models, and for MSI metrics)
+* The inconsistency of reporting scales (especially for models as in Jiguet et al.or Chiron et al., and for MSI metrics)
 
 2) Data heterogeneity
 
-* Lack of spatial replication
+* Lack of spatial replication. That's why this review is important
 
-* The inconsistence of reporting scales (especially for models, and for MSI metrics)
+* The inconsistency of reporting scales (especially for models, and for MSI metrics)
 
 * Lack in other than western countries
 
@@ -137,7 +138,23 @@ Concerning the trend assessment, some papers contained the *p-value* or directly
 
 Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the [github repository](https://github.com/FrsLry/R-code) of their paper in order to compute the trends of these four metrics for the bird datasets.
 
-<!-- # Results -->
+# Results
+
+```{r, echo=FALSE}
+## Load the table
+tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0")
+```
+
+
+* First of all: there was `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* computed trends across the literature.
+
+* For each metric, the proportion of trend directions are:
+
+```{r, echo=FALSE}
+cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% 
+  as_tibble(rownames = "rownames")
+```
+
 
 <!-- \renewcommand{\clearpage}{} -->
 
@@ -156,7 +173,7 @@ collapse_rows_df <- function(df, variable){
 }
 
 
-read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
+tab %>%
   # mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
   mutate(
          `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
@@ -179,32 +196,10 @@ read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_X
 ```
 
 
-```{r, echo=FALSE}
-tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
-  mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
-         `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
-         `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
-         `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%   
-  select(-Note) %>%
-  as_tibble()
-
-# tab %>% 
-#   select(`Spatial grain (Km²)`, Trend, Metric) %>% 
-#   # filter( Metric == c("SR")) %>% 
-#   group_by(`Spatial grain (Km²)`) %>% 
-#   count(Trend) %>% 
-#   ggplot(aes(`Spatial grain (Km²)`, n))+
-#   scale_x_log10()+
-#   geom_point()+
-#   facet_grid(Trend ~ .)+
-#   theme_bw()
-```
-
-
 # Supplementary materials {-}
 
 ```{r notetable, echo=FALSE}
-read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") %>%
+tab %>%
   select(Reference, `Spatial grain (Km²)`, Trend, Note) %>%
   as_tibble() %>%
   group_by(Reference) %>%

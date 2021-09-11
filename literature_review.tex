@@ -193,14 +193,14 @@ Make a table of all these papers and \texttt{group\_by(taxa)\ \%\textgreater{}\%
 \def\labelenumi{\arabic{enumi})}
 \tightlist
 \item
-  How is the trend of biodiversity metrics linked to spatial grain/spatial extent.
+  How is the trend of biodiversity metrics linked to spatial grain/spatial extent and temporal grain/temporal extent.
 \end{enumerate}
 
 \begin{itemize}
 \item
   Talk about papers which does compare (Jarzyna Jetz)
 \item
-  The inconsistence of reporting scales (especially for models, and for MSI metrics)
+  The inconsistency of reporting scales (especially for models as in Jiguet et al.or Chiron et al., and for MSI metrics)
 \end{itemize}
 
 \begin{enumerate}
@@ -213,9 +213,9 @@ Make a table of all these papers and \texttt{group\_by(taxa)\ \%\textgreater{}\%
 
 \begin{itemize}
 \item
-  Lack of spatial replication
+  Lack of spatial replication. That's why this review is important
 \item
-  The inconsistence of reporting scales (especially for models, and for MSI metrics)
+  The inconsistency of reporting scales (especially for models, and for MSI metrics)
 \item
   Lack in other than western countries
 \item
@@ -315,6 +315,32 @@ Concerning the trend assessment, some papers contained the \emph{p-value} or dir
 
 Moreover, \citet{pilotto_meta-analysis_2020} conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the \href{https://github.com/FrsLry/R-code}{github repository} of their paper in order to compute the trends of these four metrics for the bird datasets.
 
+\hypertarget{results}{%
+\chapter{Results}\label{results}}
+
+\begin{itemize}
+\item
+  First of all: there was 9 \emph{Decrease}, 31 \emph{Increase} and 14 \emph{Stable} computed trends across the literature.
+\item
+  For each metric, the proportion of trend directions are:
+\end{itemize}
+
+\begin{verbatim}
+## # A tibble: 10 x 5
+##    rownames                Decrease Increase Stable     n
+##    <chr>                      <dbl>    <dbl>  <dbl> <dbl>
+##  1 Abundance                 0.333     0.267  0.4      15
+##  2 Diversity                 0         1      0         2
+##  3 Evenness                  0.333     0.667  0         3
+##  4 Functional diversity      1         0      0         1
+##  5 Functional evenness       0         1      0         1
+##  6 Functional richness       0         1      0         1
+##  7 Simpson                   0         1      0         2
+##  8 Spatial beta-diversity    0         0      1         1
+##  9 SR                        0.0909    0.682  0.227    22
+## 10 Temporal beta-diversity   0         0.667  0.333     6
+\end{verbatim}
+
 \begin{landscape}\begingroup\fontsize{10}{12}\selectfont
 
 \begin{longtable}[t]{>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}}
@@ -370,13 +396,13 @@ Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial exte
 \addlinespace
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{640000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
  & SR & 9834000 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{Wolrd} & \cellcolor{gray!6}{Decrease}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{World} & \cellcolor{gray!6}{Decrease}\\
  & Temporal beta-diversity & 2500 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{40000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
  & Temporal beta-diversity & 640000 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
- & Temporal beta-diversity & 148940000 & 1.0 & 148940000 & 45 & 1969-2013 & Wolrd & Stable\\
+ & Temporal beta-diversity & 148940000 & 1.0 & 148940000 & 45 & 1969-2013 & World & Stable\\
 \cellcolor{gray!6}{\cite{davey_rise_2012}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{242495} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{1994-2006} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Increase}\\
  & SR & 1 & 1.0 & 242495 & 13 & 1994-2006 & UK & Increase\\
 \addlinespace
