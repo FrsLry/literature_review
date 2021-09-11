@@ -44,30 +44,33 @@ The idea is to take every paper that talk about biodiversity trends (so far usin
 
 Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale | temporal_scale)`. Then see if for each taxa we can find a trend (a bit like in Chase *et al.* 2019 Oikos paper | Jarzyna *et al.* 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: [Hill & Hamer 2004](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x)
 
-I am using the "Advanced Research" tab of Web of Science which allows me skim through the entire literature using a convenient syntax. For instance:
+**Meeting with Petr**
 
-```
-AB = ((biodiversity OR species richness OR diversity) AND
-(temporal trend* OR dynamic*) AND
-(bird* OR avia*)) 
-```
-And
+1) How is the trend of biodiversity metrics linked to spatial grain/spatial extent.
 
-```
-AB = ((biodiversity change index)  AND (bird*  OR avia*)  AND trend*)
-```
+* Talk about papers which does compare (Jarzyna Jetz)
 
-And
+* The inconsistence of reporting scales (especially for models, and for MSI metrics)
 
-```
-AB = ((species richness) AND (bird* OR avia*) AND trend*) 
-```
+2) Data heterogeneity
 
-And
+* Lack of spatial replication
 
-```
-ALL=(birds AND species richness AND temporal trend)
-```
+* The inconsistence of reporting scales (especially for models, and for MSI metrics)
+
+* Lack in other than western countries
+
+* Metric heterogeneity (Freixedas 2001 but they don't mention the macroecological ones as McGill, my struggle because of the time for space substitution as Hill  & Hammer). Some metrics takes into account temporal dynamic but some papers don't look at the trend of these metrics (Jarzyna et al. 2015)
+
+* Can we use space for time substitution as an actual substitution (Hill & Hammer)
+
+* Pop trends are usually stronger (cf. all the abundance metrics)
+
+3) Future directions
+
+* Lack of data for other thsn western cvountries: important to harvest data in other countries 
+
+
 
 
 # Dashboard {-}
