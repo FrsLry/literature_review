@@ -151,8 +151,9 @@ tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxS
 * For each metric, the proportion of trend directions are:
 
 ```{r, echo=FALSE}
-cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% 
-  as_tibble(rownames = "rownames")
+tmp <- cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% as_tibble(rownames = "rownames")
+
+kable(tmp) %>% column_spec(1, width = "20em")
 ```
 
 
