@@ -295,7 +295,7 @@ Here, I propose to review articles assessing the temporal trends of different av
 \hypertarget{materials-and-methods}{%
 \chapter{Materials and Methods}\label{materials-and-methods}}
 
-For this review, articles of interest were the ones assessing temporal trends of the most common indicators (\emph{i.e.} metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the \emph{\enquote{advanced search}} tool of the ISI Web of Science Core collection database with these four following queries:
+For this review, articles of interest were the ones assessing temporal trends of the most common indicators (\emph{i.e.} metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the \emph{``advanced search''} tool of the ISI Web of Science Core collection database with these four following queries:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -309,14 +309,16 @@ For this review, articles of interest were the ones assessing temporal trends of
   \texttt{ALL=(birds\ AND\ species\ richness\ AND\ temporal\ trend)} which resulted in 88 references.
 \end{enumerate}
 
-For each query, the title and abstract of the articles were reviewed. When the temporal trend was explicitly specified (either visually or literally), the material and method part was read in order to collect the \emph{spatial grain} of the trend (\emph{i.e.} the area at which the trend is assessed), its \emph{temporal grain} (\emph{i.e.} the time span at which data have been gathered on the field), the \emph{spatial extent} (\emph{i.e.} the entire area at which the study applies), the \emph{temporal extent} and the \emph{beginning and ending years} of the study as well as the \emph{general trend} of the metric (Tab. \ref{tab:maintable}).
+Alternatively, the articles which were often referred to in the relevant articles were also explored.
 
-Concerning the trend assessment, some papers contained the \emph{p-value} or directly specified the significant trend of the metric. However, a portion of papers gives only visual representations of the trend. For those, the standard error was used when displayed. For the very few only giving the trend, \textcolor{red}{the rule of thumb was applied}. Information can be found in the column \emph{Note} of the Tab. \ref{tab:notetable} of the supplementary material. Moreover, the final trend retained (\emph{i.e.} either \emph{Increase}, \emph{Stable} or \emph{Decrease}) doesn't reflect all the fluctuations of the metric through time but rather the difference between the starting and ending points.
+I decided to take into account only the articles for which there was spatial replicates, \emph{i.e.} where the trend of the metric was assessed at several locations with the same spatial grain. With this replications, the trend reported is more reliable. For each query, the title and abstract of the articles were reviewed. When the temporal trend was explicitly specified (either visually or literally), the material and method part was read in order to collect the \emph{spatial grain} of the trend (\emph{i.e.} the area at which the trend is assessed), its \emph{temporal grain} (\emph{i.e.} the time span at which data have been gathered on the field), the \emph{spatial extent} (\emph{i.e.} the entire area at which the study applies), the \emph{temporal extent} and the \emph{beginning and ending years} of the study as well as the \emph{general trend} of the metric (Tab. \ref{tab:maintable}).
 
-Moreover, \citet{pilotto_meta-analysis_2020} conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the \href{https://github.com/FrsLry/R-code}{github repository} of their paper in order to compute the trends of these four metrics for the bird datasets.
+Concerning the trend assessment, different papers contain the \emph{p-value} or directly specify the significant trend of the metric. However, a portion of papers gives only visual representations of the trend. For those, the standard error was used when displayed. For the very few only giving the trend, \textcolor{red}{the rule of thumb was applied}. Information can be found in the column \emph{Note} of the Tab. \ref{tab:notetable} of the supplementary material. Moreover, the final trend retained (\emph{i.e.} either \emph{Increase}, \emph{Stable} or \emph{Decrease}) doesn't reflect all the fluctuations of the metric through time but rather the difference between the starting and ending points.
 
 \hypertarget{results}{%
 \chapter{Results}\label{results}}
+
+Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys \citep[\emph{e.g.}][]{sauer_north_2013, kamp_population_2021} follow standardized sampling plan with spatial replications (\emph{i.e.} census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (\emph{i.e.} the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend \citep[\emph{e.g.}][]{jiguet_modeling_2005, jiguet_french_2012, eglington_disentangling_2012, doxa_low-intensity_2010, sauer_first_2017}.
 
 \begin{itemize}
 \item
@@ -354,18 +356,20 @@ Temporal beta-diversity & 0.00 & 0.67 & 0.33 & 6\\
 \begin{itemize}
 \tightlist
 \item
-  Reducing the spatial scales to fewer levels: so far, Local \textless= 25 Km², Regional \textgreater{} 25 Km² and Continental for the sizes of USA and worldwide.
+  Reducing the spatial scales to fewer levels: so far, Local \textless= 25 Km², Regional \textgreater{} 25 Km² National for EUropean size countries and Continental for the sizes of USA and worldwide.
 \end{itemize}
 
 \begin{tabular}{l|r|r|r|r}
 \hline
-Spatial grain (Km²) & Decrease & Increase & Stable & n\\
+Spatial grain (Km²) & Decrease & Stable & Increase & n\\
 \hline
-Continental & 0.25 & 0.50 & 0.25 & 4\\
+Global & 0.50 & 0.50 & NA & 2\\
 \hline
-Local & 0.12 & 0.61 & 0.27 & 33\\
+Local & 0.12 & 0.27 & 0.61 & 33\\
 \hline
-Regional & 0.24 & 0.53 & 0.24 & 17\\
+National & NA & 0.40 & 0.60 & 5\\
+\hline
+Regional & 0.29 & 0.14 & 0.57 & 14\\
 \hline
 \end{tabular}
 
@@ -408,9 +412,9 @@ Temporal beta-diversity & NA & NA & 1.00 & 1\\
 \hline
 Metric & Decrease & Increase & Stable & n\\
 \hline
-Abundance & 0.8 & NA & 0.20 & 5\\
+Abundance & 1 & NA & NA & 4\\
 \hline
-SR & NA & 0.67 & 0.33 & 9\\
+SR & NA & 0.71 & 0.29 & 7\\
 \hline
 Temporal beta-diversity & NA & 1.00 & NA & 3\\
 \hline
@@ -419,15 +423,32 @@ Temporal beta-diversity & NA & 1.00 & NA & 3\\
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-6}Continental}
+\caption{\label{tab:unnamed-chunk-6}National}
 \centering
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{6.5em}|>{\raggedleft\arraybackslash}p{6.5em}|>{\raggedleft\arraybackslash}p{6.5em}|>{\raggedleft\arraybackslash}p{6.5em}|r}
 \hline
 Metric & Decrease & Increase & Stable & n\\
 \hline
-SR & 0.5 & 0.5 & NA & 2\\
+Abundance & NA & NA & 1.00 & 1\\
 \hline
-Temporal beta-diversity & NA & 0.5 & 0.5 & 2\\
+SR & NA & 0.67 & 0.33 & 3\\
+\hline
+Temporal beta-diversity & NA & 1.00 & NA & 1\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-6}Global}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{6.5em}|>{\raggedleft\arraybackslash}p{6.5em}|>{\raggedleft\arraybackslash}p{6.5em}|>{\raggedleft\arraybackslash}p{6.5em}|r}
+\hline
+Metric & Decrease & Increase & Stable & n\\
+\hline
+SR & 1 & NA & NA & 1\\
+\hline
+Temporal beta-diversity & NA & NA & 1 & 1\\
 \hline
 \end{tabular}
 \end{table}
@@ -486,13 +507,13 @@ Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial exte
  & SR & 40000 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
 \addlinespace
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{640000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
- & SR & Continental & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
+ & SR & National & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{World} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{148940000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{World} & \cellcolor{gray!6}{Decrease}\\
  & Temporal beta-diversity & 2500 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{40000} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
 \addlinespace
  & Temporal beta-diversity & 640000 & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{Continental} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Temporal beta-diversity} & \cellcolor{gray!6}{National} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{Increase}\\
  & Temporal beta-diversity & World & 1.0 & 148940000 & 45 & 1969-2013 & World & Stable\\
 \cellcolor{gray!6}{\cite{davey_rise_2012}} & \cellcolor{gray!6}{Simpson} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{242495} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{1994-2006} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Increase}\\
  & SR & 1 & 1.0 & 242495 & 13 & 1994-2006 & UK & Increase\\
@@ -575,13 +596,13 @@ Reference & Spatial grain (Km²) & Trend & Note\\
  & 40000 & Increase & \vphantom{1} NA\\
 \addlinespace
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{640000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{\vphantom{1} NA}\\
- & Continental & Increase & \vphantom{1} NA\\
+ & National & Increase & \vphantom{1} NA\\
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{World} & \cellcolor{gray!6}{Decrease} & \cellcolor{gray!6}{NA}\\
  & 2500 & Increase & NA\\
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{40000} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
 \addlinespace
  & 640000 & Increase & NA\\
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Continental} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{National} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{NA}\\
  & World & Stable & NA\\
 \cellcolor{gray!6}{\cite{davey_rise_2012}} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{Increase} & \cellcolor{gray!6}{They predict the metric using a GAM with spatial resolution of 1 Km². Then they show the trend for the mean value of the metric per year}\\
  & 1 & Increase & \vphantom{1} NA\\
@@ -606,7 +627,7 @@ Reference & Spatial grain (Km²) & Trend & Note\\
 \endgroup{}
 \end{landscape}
 
-\singlespacing
+\singlespacing 
 
 
 \renewcommand\bibname{References}

@@ -1,4 +1,4 @@
---- 
+---
 # title: Literature review
 coverpage: true
 toc: true
@@ -38,69 +38,65 @@ library(kableExtra)
 library(tidyr)
 ```
 
+# Outline {.unnumbered}
 
-# Outline {-}
-
-Literature review about the link between biodiversity facets trends and spatial/temporal scales. 
+Literature review about the link between biodiversity facets trends and spatial/temporal scales.
 
 The idea is to take every paper that talk about biodiversity trends (so far using just the species richness seems already a lot of paper) and to list **1)** which biodiversity metric they use **2)** which taxon/taxa they use, **3)** the spatial scale, **4)** the temporal scale and **5)** what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time/unclear).
 
-Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale | temporal_scale)`. Then see if for each taxa we can find a trend (a bit like in Chase *et al.* 2019 Oikos paper | Jarzyna *et al.* 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: [Hill & Hamer 2004](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x)
+Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale | temporal_scale)`. Then see if for each taxa we can find a trend (a bit like in Chase *et al.* 2019 Oikos paper \| Jarzyna *et al.* 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: [Hill & Hamer 2004](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x)
 
 **Meeting with Petr**
 
-1) How is the trend of biodiversity metrics linked to spatial grain/spatial extent and temporal grain/temporal extent.
+1)  How is the trend of biodiversity metrics linked to spatial grain/spatial extent and temporal grain/temporal extent.
 
-* Talk about papers which does compare (Jarzyna Jetz)
+-   Talk about papers which does compare (Jarzyna Jetz)
 
-* The inconsistency of reporting scales (especially for models as in Jiguet et al.or Chiron et al., and for MSI metrics)
+-   The inconsistency of reporting scales (especially for models as in Jiguet et al.or Chiron et al., and for MSI metrics)
 
-2) Data heterogeneity
+2)  Data heterogeneity
 
-* Lack of spatial replication. That's why this review is important
+-   Lack of spatial replication. That's why this review is important
 
-* The inconsistency of reporting scales (especially for models, and for MSI metrics)
+-   The inconsistency of reporting scales (especially for models, and for MSI metrics)
 
-* Lack in other than western countries
+-   Lack in other than western countries
 
-* Metric heterogeneity (Freixedas 2001 but they don't mention the macroecological ones as McGill, my struggle because of the time for space substitution as Hill  & Hammer). Some metrics takes into account temporal dynamic but some papers don't look at the trend of these metrics (Jarzyna et al. 2015)
+-   Metric heterogeneity (Freixedas 2001 but they don't mention the macroecological ones as McGill, my struggle because of the time for space substitution as Hill & Hammer). Some metrics takes into account temporal dynamic but some papers don't look at the trend of these metrics (Jarzyna et al. 2015)
 
-* Can we use space for time substitution as an actual substitution (Hill & Hammer)
+-   Can we use space for time substitution as an actual substitution (Hill & Hammer)
 
-* Pop trends are usually stronger (cf. all the abundance metrics)
+-   Pop trends are usually stronger (cf. all the abundance metrics)
 
-3) Future directions
+3)  Future directions
 
-* Lack of data for other thsn western cvountries: important to harvest data in other countries 
+-   Lack of data for other thsn western cvountries: important to harvest data in other countries
 
-
-
-
-# Dashboard {-}
+# Dashboard {.unnumbered}
 
 [Reference paper](https://www.sciencedirect.com/science/article/pii/S1470160X20306658?via%3Dihub)
 
-* 05/07/2021: research wos made with the literature review filter for the first query (stopped at #13) and created the second query (stopped at #2)
+-   05/07/2021: research wos made with the literature review filter for the first query (stopped at \#13) and created the second query (stopped at \#2)
 
-* 07/07/2021: questions to Petr: **1)** can the geometric mean of relative abundance + the weighted goodness of fit be used as biodiversity trend index, **2)** can the Farmland Bird Indicator (FBI) be used as biodiversity trend (for me it is more biodiversity health, Chiron et al 2013) **3)** what about the Red List Index trend? **4)** what about Multispecies population indexes?
+-   07/07/2021: questions to Petr: **1)** can the geometric mean of relative abundance + the weighted goodness of fit be used as biodiversity trend index, **2)** can the Farmland Bird Indicator (FBI) be used as biodiversity trend (for me it is more biodiversity health, Chiron et al 2013) **3)** what about the Red List Index trend? **4)** what about Multispecies population indexes?
 
-* 08/07/2021: stopped at the article 41 for research #2. 
+-   08/07/2021: stopped at the article 41 for research \#2.
 
-* 12/08/2021: stopped at article 4 for research #4
+-   12/08/2021: stopped at article 4 for research \#4
 
-* 13/08/2021: stopped at article 8 for research #4
+-   13/08/2021: stopped at article 8 for research \#4
 
-* 17/08/2021: stopped at article 15 for research #4
+-   17/08/2021: stopped at article 15 for research \#4
 
-* 18/08/2021: stopped at article 30 for research #4
+-   18/08/2021: stopped at article 30 for research \#4
 
-* 19/08/2021: stopped at article 46 for research #4
+-   19/08/2021: stopped at article 46 for research \#4
 
-* 20/08/2021: stopped at article 64 for research #4
+-   20/08/2021: stopped at article 64 for research \#4
 
-* 01/09/2021: verifying spatial scales --> stopped at Dittrich 2019
+-   01/09/2021: verifying spatial scales --\> stopped at Dittrich 2019
 
-* 02/09/2021: **Question 1:** for the FBI/WBI...\*BI indexes, usually they use a GLM/GAM to predict the abundance over the entire spatial extent and then compute the metric. Basically, those metrics are geometric means of predicted species abundances. Which spatial scale to use: the spatial unit of the prediction (i.e. the plot), or the entire area predicted? (Imo, the second option is correct). **Question 2:** same question for the Geometric mean but I am realizing while writing this question that \*BI are kind of similar to geometric means so answering the first question will answer this one. 
+-   02/09/2021: **Question 1:** for the FBI/WBI...\*BI indexes, usually they use a GLM/GAM to predict the abundance over the entire spatial extent and then compute the metric. Basically, those metrics are geometric means of predicted species abundances. Which spatial scale to use: the spatial unit of the prediction (i.e. the plot), or the entire area predicted? (Imo, the second option is correct). **Question 2:** same question for the Geometric mean but I am realizing while writing this question that \*BI are kind of similar to geometric means so answering the first question will answer this one.
 
 **Papers that are driving me mad:** @doxa_low-intensity_2010, @jiguet_french_2012, and @chiron_forecasting_2013, @eglington_disentangling_2012
 
@@ -110,15 +106,15 @@ Human life quality is intrinsically linked to ecosystems state that he is living
 
 Biodiversity erosion is now known from everyone and political decisions has been stated in order to limit it [*e.g.* @the_convention_on_biological_diversity_convention_2021, 2010, 2002]. However, these objectives have been so far not reached due mainly to our confusion and misunderstanding about biodiversity dynamic and how to determine it.
 
-As a matter of fact, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (*e.g.* species, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or $\alpha$ diversity [*i.e.* number of species, @whittaker_vegetation_1960], the Shannon index [@shannon_mathematical_1948] ,the Simpson index [@simpson_measurement_1949] or the Hill number [@hill_diversity_1973]. The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the *quality* of the biodiversity. On an other hand, the spatial and temporal $\beta$ diversity will measure the species turnover and can be measured thanks to Whittaker's [@whittaker_evolution_1972], Sørensen's [@sorensen_method_1948] or Jaccard's [@jaccard_distribution_1912] dissimilarity indexes [*e.g.* @keil_patterns_2012]. 
+As a matter of fact, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (*e.g.* species, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or $\alpha$ diversity [*i.e.* number of species, @whittaker_vegetation_1960], the Shannon index [@shannon_mathematical_1948] ,the Simpson index [@simpson_measurement_1949] or the Hill number [@hill_diversity_1973]. The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the *quality* of the biodiversity. On an other hand, the spatial and temporal $\beta$ diversity will measure the species turnover and can be measured thanks to Whittaker's [@whittaker_evolution_1972], Sørensen's [@sorensen_method_1948] or Jaccard's [@jaccard_distribution_1912] dissimilarity indexes [*e.g.* @keil_patterns_2012].
 
 However, overall biodiversity (*i.e.* taking into account species of every taxa) may not be relevant for one's case study. Thus, several multi-species indicators have also been created, taking into account the abundances of indicator species giving information on the ecosystem health. The most known ones are the Red List Index [@butchart_improvements_2007; @butchart_using_2005; @butchart_measuring_2004] or the Biodiversity Change Index [@normander_indicator_2012].
 
-Using all the metrics cited above, we now know that the loss of global biodiversity is unprecedented. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales [*e.g.* @chase_species_2019]. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition [@blowes_geography_2019; @dornelas_quantifying_2013]. Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured. 
+Using all the metrics cited above, we now know that the loss of global biodiversity is unprecedented. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales [*e.g.* @chase_species_2019]. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition [@blowes_geography_2019; @dornelas_quantifying_2013]. Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured.
 
 In order to investigate this link between spatial scales and biodiversity metrics, birds is a relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations [@bejcek_velke_2016]. Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations. For instance, the geometric mean of relative abundances or the goodness-of-fit statistic [@studeny_goodness_2011] are some of the baseline. Other multi-species indicators have also been created specifically for birds, such as the Farmland Bird Indicator [@gregory_developing_2005], the Forest Bird Indicator [@gregory_population_2007] or the Wild Bird Indicator [@gregory_wild_2010].
 
-Here, I propose to review articles assessing the temporal trends of different avian biodiversity metrics and to look at which spatial scales these studies have been done. Summarizing the trends of these qualitative and/or quantitative avian biodiversity indexes along with their spatial and temporal scales will help to see more clearly how the trends of biodiversity are linked to spatio-temporal scales. It is also important to demonstrate that the information about the sampling plan (*i.e.* spatial scale, time span, temporal scales etc) is not systematically indicated in the scientific literature and can bring confusion to the analysis and comparisons of their trends. I believe that this review can help to have a better overview of the current knowledge on the trend of biodiversity metrics of bird populations.  
+Here, I propose to review articles assessing the temporal trends of different avian biodiversity metrics and to look at which spatial scales these studies have been done. Summarizing the trends of these qualitative and/or quantitative avian biodiversity indexes along with their spatial and temporal scales will help to see more clearly how the trends of biodiversity are linked to spatio-temporal scales. It is also important to demonstrate that the information about the sampling plan (*i.e.* spatial scale, time span, temporal scales etc) is not systematically indicated in the scientific literature and can bring confusion to the analysis and comparisons of their trends. I believe that this review can help to have a better overview of the current knowledge on the trend of biodiversity metrics of bird populations.
 
 \textcolor{red}{specify that it is mainly for continental/coastal birds but no look at  islandic communities}
 
@@ -126,19 +122,21 @@ Here, I propose to review articles assessing the temporal trends of different av
 
 For this review, articles of interest were the ones assessing temporal trends of the most common indicators (*i.e.* metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the *"advanced search"* tool of the ISI Web of Science Core collection database with these four following queries:
 
-1. `AB = ((biodiversity OR species richness OR diversity) AND (temporal trend* OR dynamic*) AND (bird* OR avia*))` which resulted in 1346 references.
+1.  `AB = ((biodiversity OR species richness OR diversity) AND (temporal trend* OR dynamic*) AND (bird* OR avia*))` which resulted in 1346 references.
 
-2. `AB = ((biodiversity change index)  AND (bird*  OR avia*)  AND trend*)` which resulted in 60 references.
+2.  `AB = ((biodiversity change index)  AND (bird*  OR avia*)  AND trend*)` which resulted in 60 references.
 
-3. `AB = ((species richness) AND (bird* OR avia*) AND trend*)` which resulted in 313 references. 
+3.  `AB = ((species richness) AND (bird* OR avia*) AND trend*)` which resulted in 313 references.
 
-4. `ALL=(birds AND species richness AND temporal trend)` which resulted in 88 references. 
+4.  `ALL=(birds AND species richness AND temporal trend)` which resulted in 88 references.
 
-For each query, the title and abstract of the articles were reviewed. When the temporal trend was explicitly specified (either visually or literally), the material and method part was read in order to collect the *spatial grain* of the trend (*i.e.* the area at which the trend is assessed), its *temporal grain* (*i.e.* the time span at which data have been gathered on the field), the *spatial extent* (*i.e.* the entire area at which the study applies), the *temporal extent* and the *beginning and ending years* of the study as well as the *general trend* of the metric (Tab. \@ref(tab:maintable)). 
+Alternatively, the articles which were often referred to in the relevant articles were also explored.
 
-Concerning the trend assessment, some papers contained the *p-value* or directly specified the significant trend of the metric. However, a portion of papers gives only visual representations of the trend. For those, the standard error was used when displayed. For the very few only giving the trend, \textcolor{red}{the rule of thumb was applied}. Information can be found in the column *Note* of the Tab. \@ref(tab:notetable) of the supplementary material. Moreover, the final trend retained (*i.e.* either *Increase*, *Stable* or *Decrease*) doesn't reflect all the fluctuations of the metric through time but rather the difference between the starting and ending points.
+I decided to take into account only the articles for which there was spatial replicates, *i.e.* where the trend of the metric was assessed at several locations with the same spatial grain. With this replications, the trend reported is more reliable. For each query, the title and abstract of the articles were reviewed. When the temporal trend was explicitly specified (either visually or literally), the material and method part was read in order to collect the *spatial grain* of the trend (*i.e.* the area at which the trend is assessed), its *temporal grain* (*i.e.* the time span at which data have been gathered on the field), the *spatial extent* (*i.e.* the entire area at which the study applies), the *temporal extent* and the *beginning and ending years* of the study as well as the *general trend* of the metric (Tab. \@ref(tab:maintable)).
 
-Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the [github repository](https://github.com/FrsLry/R-code) of their paper in order to compute the trends of these four metrics for the bird datasets.
+Concerning the trend assessment, different papers contain the *p-value* or directly specify the significant trend of the metric. However, a portion of papers gives only visual representations of the trend. For those, the standard error was used when displayed. For the very few only giving the trend, \textcolor{red}{the rule of thumb was applied}. Information can be found in the column *Note* of the Tab. \@ref(tab:notetable) of the supplementary material. Moreover, the final trend retained (*i.e.* either *Increase*, *Stable* or *Decrease*) doesn't reflect all the fluctuations of the metric through time but rather the difference between the starting and ending points.
+
+<!-- Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the [github repository](https://github.com/FrsLry/R-code) of their paper in order to compute the trends of these four metrics for the bird datasets. -->
 
 # Results
 
@@ -147,10 +145,11 @@ Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they co
 tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0")
 ```
 
+Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys [*e.g.* @sauer_north_2013; @kamp_population_2021] follow standardized sampling plan with spatial replications (*i.e.* census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (*i.e.* the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend [*e.g.* @jiguet_modeling_2005; @jiguet_french_2012; @eglington_disentangling_2012; @doxa_low-intensity_2010; @sauer_first_2017].
 
-* First of all: there was `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* computed trends across the literature.
+-   First of all: there was `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* computed trends across the literature.
 
-* For each metric, the proportion of trend directions are:
+-   For each metric, the proportion of trend directions are:
 
 ```{r, echo=FALSE}
 tmp <- cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% as_tibble(rownames = "rownames")
@@ -160,18 +159,20 @@ kable(tmp %>%
   column_spec(1, width = "20em")
 ```
 
-
-* Reducing the spatial scales to fewer levels: so far, Local <= 25 Km², Regional > 25 Km² and Continental for the sizes of USA and worldwide. 
+-   Reducing the spatial scales to fewer levels: so far, Local \<= 25 Km², Regional \> 25 Km² National for EUropean size countries and Continental for the sizes of USA and worldwide.
 
 ```{r}
-# tmp <-
+tmp <-
   tab %>%
     mutate(`Spatial grain (Km²)` = as.character(`Spatial grain (Km²)`)) %>% 
     mutate(`Spatial grain (Km²)` = case_when(
       `Spatial grain (Km²)` <= 25 | `Spatial grain (Km²)` == "Local" ~ "Local",
-      (`Spatial grain (Km²)` > 25 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") ~ "Regional",
-      TRUE ~ "Continental"
-    )) %>% 
+      (`Spatial grain (Km²)` > 25 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") ~ "Regional",
+      (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") ~ "National",
+      TRUE ~ "Global"
+    )) 
+
+tmp %>% 
     select(Metric, `Spatial grain (Km²)`, Trend) %>% 
     group_by(`Spatial grain (Km²)`) %>% 
     count(Trend) %>% 
@@ -184,16 +185,9 @@ kable(tmp %>%
  
 ```
 
-
 ```{r, echo=FALSE}
-  tmp <-
-  tab %>%
-    mutate(`Spatial grain (Km²)` = as.character(`Spatial grain (Km²)`)) %>% 
-    mutate(`Spatial grain (Km²)` = case_when(
-      `Spatial grain (Km²)` <= 25 | `Spatial grain (Km²)` == "Local" ~ "Local",
-      (`Spatial grain (Km²)` > 25 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") ~ "Regional",
-      TRUE ~ "Continental"
-    )) %>% 
+tmp <- 
+  tmp %>% 
     select(Metric, `Spatial grain (Km²)`, Trend) %>% 
     group_by(Metric, `Spatial grain (Km²)`) %>% 
     count(Trend) %>% 
@@ -219,13 +213,19 @@ kable(tmp %>%
     column_spec(1:4, width = "6.5em")
   
   knitr::kable(tmp %>% 
-                 filter(`Spatial grain (Km²)` == "Continental") %>% 
+                 filter(`Spatial grain (Km²)` == "National") %>% 
                  # ungroup() %>%
                  select(-2),
-               caption = "Continental") %>% 
+               caption = "National") %>% 
     column_spec(1:4, width = "6.5em")
+  
+  knitr::kable(tmp %>% 
+                 filter(`Spatial grain (Km²)` == "Global") %>% 
+                 # ungroup() %>%
+                 select(-2),
+               caption = "Global") %>% 
+    column_spec(1:4, width = "6.5em")  
 ```
-
 
 <!-- \renewcommand{\clearpage}{} -->
 
@@ -266,8 +266,7 @@ tab %>%
   landscape()
 ```
 
-
-# Supplementary materials {-}
+# Supplementary materials {.unnumbered}
 
 ```{r notetable, echo=FALSE}
 tab %>%
@@ -288,7 +287,4 @@ tab %>%
   landscape()
 ```
 
-
-
 \singlespacing <!-- for the bibliography -->
-
