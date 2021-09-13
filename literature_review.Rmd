@@ -24,7 +24,8 @@ biblio-title: References
 
 ```{r, echo = F}
 knitr::opts_chunk$set(warning = F,
-                      message = F)
+                      message = F,
+                      echo = F)
 ```
 
 ```{r, echo=F}
@@ -34,6 +35,7 @@ library(dplyr)
 library(kableExtra)
 library(ggplot2)
 library(kableExtra)
+library(tidyr)
 ```
 
 
@@ -153,7 +155,75 @@ tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxS
 ```{r, echo=FALSE}
 tmp <- cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% as_tibble(rownames = "rownames")
 
-kable(tmp) %>% column_spec(1, width = "20em")
+kable(tmp %>% 
+        mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2)))) %>% 
+  column_spec(1, width = "20em")
+```
+
+
+* Reducing the spatial scales to fewer levels: so far, Local <= 25 Km², Regional > 25 Km² and Continental for the sizes of USA and worldwide. 
+
+```{r}
+# tmp <-
+  tab %>%
+    mutate(`Spatial grain (Km²)` = as.character(`Spatial grain (Km²)`)) %>% 
+    mutate(`Spatial grain (Km²)` = case_when(
+      `Spatial grain (Km²)` <= 25 | `Spatial grain (Km²)` == "Local" ~ "Local",
+      (`Spatial grain (Km²)` > 25 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") ~ "Regional",
+      TRUE ~ "Continental"
+    )) %>% 
+    select(Metric, `Spatial grain (Km²)`, Trend) %>% 
+    group_by(`Spatial grain (Km²)`) %>% 
+    count(Trend) %>% 
+    pivot_wider(1:3, names_from = Trend, values_from = n) %>% 
+    mutate(n = sum(c(Decrease, Increase, Stable), na.rm = T)) %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), funs(./n)) %>% ungroup() %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2))) %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), as.numeric) %>% 
+  kable()
+ 
+```
+
+
+```{r, echo=FALSE}
+  tmp <-
+  tab %>%
+    mutate(`Spatial grain (Km²)` = as.character(`Spatial grain (Km²)`)) %>% 
+    mutate(`Spatial grain (Km²)` = case_when(
+      `Spatial grain (Km²)` <= 25 | `Spatial grain (Km²)` == "Local" ~ "Local",
+      (`Spatial grain (Km²)` > 25 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") ~ "Regional",
+      TRUE ~ "Continental"
+    )) %>% 
+    select(Metric, `Spatial grain (Km²)`, Trend) %>% 
+    group_by(Metric, `Spatial grain (Km²)`) %>% 
+    count(Trend) %>% 
+    pivot_wider(1:4, names_from = Trend, values_from = n) %>% 
+    mutate(n = sum(c(Decrease, Increase, Stable), na.rm = T)) %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), funs(./n)) %>% ungroup() %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2))) %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), as.numeric)
+    
+  
+  knitr::kable(tmp %>% 
+                 filter(`Spatial grain (Km²)` == "Local") %>% 
+                 # ungroup() %>%
+                 select(-2),
+               caption = "Local") %>% 
+    column_spec(1:4, width = "6.5em") 
+  
+  knitr::kable(tmp %>% 
+                 filter(`Spatial grain (Km²)` == "Regional") %>% 
+                 # ungroup() %>%
+                 select(-2),
+               caption = "Regional") %>% 
+    column_spec(1:4, width = "6.5em")
+  
+  knitr::kable(tmp %>% 
+                 filter(`Spatial grain (Km²)` == "Continental") %>% 
+                 # ungroup() %>%
+                 select(-2),
+               caption = "Continental") %>% 
+    column_spec(1:4, width = "6.5em")
 ```
 
 
