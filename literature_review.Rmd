@@ -240,6 +240,12 @@ The oldest study started in `r min(as.numeric(unlist(unique(tab$Years) %>% strsp
 
 Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys [*e.g.* @sauer_north_2013; @kamp_population_2021] follow standardized sampling plan with spatial replications (*i.e.* census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (*i.e.* the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend [*e.g.* @jiguet_modeling_2005; @jiguet_french_2012; @eglington_disentangling_2012; @doxa_low-intensity_2010; @sauer_first_2017].
 
+**Concerning temporal grain:** Often, the temporal grain of the sampling is specified. However, the metric computed is often summed over a certain temporal extent (e.g. 6 months or 1 year) or make a model out of the data and in the end, the final temporal grain of the metric is not specified. Qnd there is no concensus on the final temporal grain of the metric. So they are hard to find because no convention or simply not cited or because the temporal replication is not sufficient (i.e. the time between the censuses varies too much).
+
+
+
+
+
 3)  Future directions
 
 -   Lack of data for other than western countries: important to harvest data in other countries. Here, out of the `r length(unique(tab$Reference))` papers, 5 were located in north america and 10 in Europe.
