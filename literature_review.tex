@@ -156,8 +156,8 @@
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\usepackage[]{natbib}
-\bibliographystyle{apa}
+\usepackage[style=authoryear,]{biblatex}
+\addbibresource{references.bib}
 
 \author{François Leroy, PhD student at CZU}
 \date{2021-09-15}
@@ -259,21 +259,21 @@ Make a table of all these papers and \texttt{group\_by(taxa)\ \%\textgreater{}\%
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
-Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation \citep{pereira_global_2012}. Some of those ecosystem functions are managed by bird biodiversity such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction \citep{barnosky_has_2011}.
+Human life quality is intrinsically linked to ecosystems state that he is living in. Indeed, ecosystems services extend in a large spectrum of mechanisms including nutrient cycle, food production, or climate and water cycle regulation \autocite{pereira_global_2012}. Some of those ecosystem functions are managed by bird biodiversity such as seed dispersal, controls pests or pollinate plant. Unfortunately, anthropogenic stressors like habitat loss, over exploitation, pollution or introduction of invasive species could lead biodiversity to its sixth mass extinction \autocite{barnosky_has_2011}.
 
-We now know that the loss of global biodiversity is unprecedented and political decisions has been stated in order to limit it \citep[\emph{e.g.}][2010, 2002]{the_convention_on_biological_diversity_convention_2021}. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales \citep[\emph{e.g.}][]{chase_species_2019}. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition \citep{blowes_geography_2019, dornelas_quantifying_2013}. Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured.
+We now know that the loss of global biodiversity is unprecedented and political decisions has been stated in order to limit it \autocite[\emph{e.g.}][2010, 2002]{secretariat_of_the_convention_on_biological_diversity_global_2006}. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales \autocite[\emph{e.g.}][]{chase_species_2019}. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition \autocite{blowes_geography_2019,dornelas_quantifying_2013}. Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured.
 
-In order to investigate this link between spatio-temporal scales and biodiversity metrics, birds is a relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations \citep{bejcek_velke_2016, sauer_north_2013, kamp_population_2021}. Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations.
+In order to investigate this link between spatio-temporal scales and biodiversity metrics, birds is a relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations \autocites{bejcek_velke_2016,sauer_north_2013,kamp_population_2021}. Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations.
 
-However, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (\emph{e.g.} taxonomic, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or \(\alpha\) diversity \citep[\emph{i.e.} number of species,][]{whittaker_vegetation_1960}, the Shannon index \citep{shannon_mathematical_1948} ,the Simpson index \citep{simpson_measurement_1949} or the Hill number \citep{hill_diversity_1973}. The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the \emph{quality} of the biodiversity. On an other hand, the spatial and temporal \(\beta\) diversity will measure the species turnover and can be measured thanks to Whittaker's \citep{whittaker_evolution_1972}, Sørensen's \citep{sorensen_method_1948} or Jaccard's \citep{jaccard_distribution_1912} dissimilarity indexes \citep[\emph{e.g.}][]{keil_patterns_2012}. All these metrics assess the taxonomic diversity, \emph{i.e.} they use the species as unit. However, it has also been shown that functional and phylogenetic diversity can provide supplementary information on the community structure and its dynamic \citep[\emph{e.g.}][]{mcgill_rebuilding_2006, mouquet_ecophylogenetics_2012, webb_phylogenies_2002}.
+However, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (\emph{e.g.} taxonomic, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or \(\alpha\) diversity \autocite[\emph{i.e.} number of species,][]{whittaker_vegetation_1960}, the Shannon index \autocite{shannon_mathematical_1948} ,the Simpson index \autocite{simpson_measurement_1949} or the Hill number \autocite{hill_diversity_1973}. The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the \emph{quality} of the biodiversity. On an other hand, the spatial and temporal \(\beta\) diversity will measure the species turnover and can be measured thanks to Whittaker's \autocite{whittaker_evolution_1972}, Sørensen's \autocite{sorensen_method_1948} or Jaccard's \autocite{jaccard_distribution_1912} dissimilarity indexes \autocite[\emph{e.g.}][]{keil_patterns_2012}. All these metrics assess the taxonomic diversity, \emph{i.e.} they use the species as unit. However, it has also been shown that functional and phylogenetic diversity can provide supplementary information on the community structure and its dynamic \autocites[\emph{e.g.}][]{mcgill_rebuilding_2006,mouquet_ecophylogenetics_2012,webb_phylogenies_2002}.
 
-An other measure of biodiversity of great interest is the abundance of the populations. As a matter of fact, as individuals react to disturbances of ecosystems by disappearing, the population trends are considered as resulting of the ecosystems health. Overall populations are impossible to assess, but determining the abundance of few indicator species can give a relevant summary on how is going the entire ecosystem \citep{gregory_developing_2005}. These family of metrics are called the multi-species indicators (MSI) and we have seen the emergence of several of them according to the ecosystem considered. We can cite here the farmland bird indicator, woodland bird indicator or one of the most informative, which summarizes these two previous metrics: the Wildland Bird Indicator \citep{gregory_generation_1999, gregory_wild_2010}. The main idea of these metrics is to compute the geometric mean of abundance of few key species over time.
+An other measure of biodiversity of great interest is the abundance of the populations. As a matter of fact, as individuals react to disturbances of ecosystems by disappearing, the population trends are considered as resulting of the ecosystems health. Overall populations are impossible to assess, but determining the abundance of few indicator species can give a relevant summary on how is going the entire ecosystem \autocite{gregory_developing_2005}. These family of metrics are called the multi-species indicators (MSI) and we have seen the emergence of several of them according to the ecosystem considered. We can cite here the farmland bird indicator, woodland bird indicator or one of the most informative, which summarizes these two previous metrics: the Wildland Bird Indicator \autocite{gregory_generation_1999,gregory_wild_2010}. The main idea of these metrics is to compute the geometric mean of abundance of few key species over time.
 
-Finally a last class of indicators, not considered here, take into account both species and ecosystems feature into a summarizing index. The most known ones are the Red List Index \citep{butchart_improvements_2007, butchart_using_2005, butchart_measuring_2004} or the Biodiversity Change Index \citep{normander_indicator_2012}.
+Finally a last class of indicators, not considered here, take into account both species and ecosystems feature into a summarizing index. The most known ones are the Red List Index \autocite{butchart_improvements_2007,butchart_using_2005,butchart_measuring_2004} or the Biodiversity Change Index \autocite{normander_indicator_2012}.
 
 Here, I propose to review articles assessing the temporal trends of different avian biodiversity metrics and to look at which spatial scales these studies have been done. I decided to consider the most common indicators used to assess biodiversity, such as the diversity indexes (\emph{e.g.} species richness, functional diversity\ldots) or the abundance indexes. Summarizing the trends of these qualitative and/or quantitative avian biodiversity indexes along with their spatial and temporal scales will help to see more clearly how the trends of biodiversity are linked to spatio-temporal scales. It is also important to demonstrate that the information about the sampling plan (\emph{i.e.} spatial scale, time span, temporal scales etc) is not systematically indicated in the scientific literature and can bring confusion to the analysis and comparisons of their trends. I believe that this review can help to have a better overview of the current knowledge on the trend of biodiversity metrics of bird populations.
 
-\textcolor{red}{specify that it is mainly for continental/coastal birds but no look at  islandic communities}
+\textcolor{red}{specify that it is mainly for continental/coastal birds but no look at  islandic communities and change *Stable* to *No trend*}
 
 \hypertarget{materials-and-methods}{%
 \chapter{Materials and Methods}\label{materials-and-methods}}
@@ -300,7 +300,7 @@ Spatial grain sizes are discretized into four levels: \emph{local} \(<= 25\) \(K
 
 Concerning the trend assessment, different papers contain the \emph{p-value} or directly specify the significant trend of the metric. However, a portion of papers gives only visual representations of the trend. For those, the standard error was used when displayed. For the very few only giving the trend, \textcolor{red}{the rule of thumb was applied}. Information can be found in the column \emph{Note} of the Tab. \ref{tab:notetable} of the supplementary material. Moreover, the final trend retained (\emph{i.e.} either \emph{Increase}, \emph{Stable} or \emph{Decrease}) doesn't reflect all the fluctuations of the metric through time but rather the difference between the starting and ending points.
 
-I have found 27 references in which authors were both determining the temporal trend of a metric of interest and explicitly defining the grain size. However, only 15 of them are using spatial replicates and are thus relevant for this study (Tab. \ref{tab:maintable}). The classes of metric are: \emph{Species richness, Evenness, Abundance, Diversity, Temporal beta-diversity, Spatial beta-diversity, Functional diversity, Functional evenness, Functional richness}. Some of this classes contain several different indexes. This is the case for instance for the class \emph{Diversity}, which can be defined by either the Shannon or the Simpson index, or for the class \emph{Abundance} which contains various multi-species indicators.
+I have found 33 references in which authors were both determining the temporal trend of a metric of interest and explicitly defining the grain size. However, only 15 of them are using spatial replicates and are thus relevant for this study (Tab. \ref{tab:maintable}). The classes of metric are: \emph{Species richness, Evenness, Abundance, Diversity, Temporal beta-diversity, Spatial beta-diversity, Functional diversity, Functional evenness, Functional richness}. Some of this classes contain several different indexes. This is the case for instance for the class \emph{Diversity}, which can be defined by either the Shannon or the Simpson index, or for the class \emph{Abundance} which contains various multi-species indicators.
 
 \hypertarget{results}{%
 \chapter{Results}\label{results}}
@@ -308,15 +308,9 @@ I have found 27 references in which authors were both determining the temporal t
 \hypertarget{on-the-spatial-scale}{%
 \section{On the spatial scale}\label{on-the-spatial-scale}}
 
-Out of 15 papers, 5 were located in north america and 10 in Europe. Overall, there were 9 \emph{Decrease}, 31 \emph{Increase} and 14 \emph{Stable} reliable trends across the literature, without consideration of any metric or spatial scales. Figure \ref{fig:barmetrics} shows the distribution of these trends for each metric. We can see that the species richness and abundance are highly represented.
+Out of 15 papers, 5 were located in North America and 10 in Europe. The median spatial extent of the data is \ensuremath{5.20475\times 10^{5}} \(Km^2\), with the smallest area of 1800 \(Km^2\) and the greatest representing the global emerged surface (\emph{i.e.} \ensuremath{1.4894\times 10^{8}} \(Km^2\)). Overall, there were 9 \emph{Decrease}, 31 \emph{Increase} and 14 \emph{Stable} reliable trends across the literature, without consideration of any metric or spatial scales.
 
-\begin{figure}
-\centering
-\includegraphics{literature_review_files/figure-latex/barmetrics-1.pdf}
-\caption{\label{fig:barmetrics}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each of the metric}
-\end{figure}
-
-Figure \ref{fig:barspatscale} shows that local scales are more represented than the others and that the number of papers decreases with the increasing spatial scale. This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. It is also clear that the \emph{Increase} of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of \emph{Decrease} is more important at regional scales than at local scales. At national scale, no \emph{Decrease} is witnessed, with almost as \emph{Increase} as \emph{Stable} trends. At the global scale, no \emph{Increase} were found.
+Local scales are more represented than the others and the number of papers decreases with the increasing spatial scale (Figure \ref{fig:barspatscale}). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The \emph{Increase} of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of \emph{Decrease} is more important at regional scales than at local scales. At national scale, no \emph{Decrease} is witnessed, with almost as \emph{Increase} as \emph{Stable} trends. At the global scale, no \emph{Increase} were found.
 
 \begin{figure}
 \centering
@@ -324,7 +318,15 @@ Figure \ref{fig:barspatscale} shows that local scales are more represented than 
 \caption{\label{fig:barspatscale}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each spatial scale}
 \end{figure}
 
-\textbf{At local scales}, we can see that species richness experiences mostly increases (Figure \ref{fig:barmetricsperspatscale}). Taxonomic and functional diversity indexes are exclusively increasing. Evenness indexes, \emph{i.e.} taxonomic and functional evenness, mainly increase over time. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, \textbf{at regional scale}, abundance metrics always decrease, whilst temporal \(\beta\)-diversity always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning \textbf{national and regional scales}, for birds, one have to keep in mind that spatial replicates are less frequent and that general trends are less reliable. However, no clear decrease seems observed in the scientific literature. For instance, \citet{bowler_geographic_2021} showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale.
+Species richness and abundance metrics are very represented in the scientific literature (Figure \ref{fig:barmetrics}). Distribution of trends is rather equal for the abundance indexes but the \emph{Increase} is clearly dominant for the species richness. Diversity indexes (\emph{i.e.} Sørensen and Jaccard) were always found increasing and temporal \(\beta\)-diversity was found most of the time increasing and never decreasing. The small frequency of the other metrics doesn't allow one to discuss the trend proportions.
+
+\begin{figure}
+\centering
+\includegraphics{literature_review_files/figure-latex/barmetrics-1.pdf}
+\caption{\label{fig:barmetrics}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each of the metric}
+\end{figure}
+
+\textbf{At local scales}, species richness experiences dominantly increases (Figure \ref{fig:barmetricsperspatscale}). Evenness indexes, \emph{i.e.} taxonomic and functional evenness, are mainly found increasing. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, \textbf{at regional scale}, abundance metrics always decrease, whilst temporal \(\beta\)-diversity always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning \textbf{national and global scales}, one have to keep in mind that spatial replicates are less frequent and that most of the trends reported here for these two spatial scales are not replicated. Exception is made by \textcite{bowler_geographic_2021}, who showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale (here referred as \emph{Stable}). Global trends only come from \textcite{jarzyna_taxonomic_2018}.
 
 \begin{figure}
 \centering
@@ -335,10 +337,12 @@ Figure \ref{fig:barspatscale} shows that local scales are more represented than 
 \hypertarget{on-the-temporal-scale}{%
 \section{On the temporal scale}\label{on-the-temporal-scale}}
 
-\hypertarget{discusion}{%
-\chapter{Discusion}\label{discusion}}
+The oldest study started in 1968 and the median duration is 27 years, with a minimum time span of 11 years and a maximum of 45.
 
-Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys \citep[\emph{e.g.}][]{sauer_north_2013, kamp_population_2021} follow standardized sampling plan with spatial replications (\emph{i.e.} census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (\emph{i.e.} the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend \citep[\emph{e.g.}][]{jiguet_modeling_2005, jiguet_french_2012, eglington_disentangling_2012, doxa_low-intensity_2010, sauer_first_2017}.
+\hypertarget{discussion}{%
+\chapter{Discussion}\label{discussion}}
+
+Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys \autocites[\emph{e.g.}][]{sauer_north_2013,kamp_population_2021} follow standardized sampling plan with spatial replications (\emph{i.e.} census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (\emph{i.e.} the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend \autocites[\emph{e.g.}][]{jiguet_modeling_2005,jiguet_french_2012,eglington_disentangling_2012,doxa_low-intensity_2010,sauer_first_2017}.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
@@ -392,10 +396,10 @@ Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial exte
 \cite{harrison_assessing_2014} & Abundance & Local & 1.0 & 200000 & 18 & 1994-2011 & Great Britain, UK & Increase\\
 \cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{200000} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{1994-2011} & \cellcolor{gray!6}{Great Britain, UK} & \cellcolor{gray!6}{\vphantom{1} Stable}\\
  & Abundance & Local & 1.0 & 200000 & 18 & 1994-2011 & Great Britain, UK & Stable\\
-\cellcolor{gray!6}{\cite{harrison_quantifying_2016}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1994-2013} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Increase}\\
- & Abundance & Local & 0.5 & NA & 20 & 1994-2013 & UK & \vphantom{1} Stable\\
+\cellcolor{gray!6}{\cite{harrison_quantifying_2016}} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{242495} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1994-2013} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Increase}\\
+ & Abundance & Local & 0.5 & 242495 & 20 & 1994-2013 & UK & \vphantom{1} Stable\\
 \addlinespace
-\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{NA} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1994-2013} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Stable}\\
+\cellcolor{gray!6}{} & \cellcolor{gray!6}{Abundance} & \cellcolor{gray!6}{Local} & \cellcolor{gray!6}{0.5} & \cellcolor{gray!6}{242495} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{1994-2013} & \cellcolor{gray!6}{UK} & \cellcolor{gray!6}{Stable}\\
 \cite{jarzyna_taxonomic_2018}\cellcolor{gray!6}{} & \cellcolor{gray!6}{SR} & \cellcolor{gray!6}{Regional} & \cellcolor{gray!6}{1.0} & \cellcolor{gray!6}{9834000} & \cellcolor{gray!6}{45} & \cellcolor{gray!6}{1969-2013} & \cellcolor{gray!6}{USA} & \cellcolor{gray!6}{\vphantom{1} Increase}\\
  & SR & Regional & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
  & SR & Regional & 1.0 & 9834000 & 45 & 1969-2013 & USA & Increase\\
@@ -531,7 +535,14 @@ Reference & Spatial grain (Km²) & Trend & Note\\
 \singlespacing 
 
 
-\renewcommand\bibname{References}
-  \bibliography{references.bib}
-
+%%%%%%%%%%%%%%%% Here is the part that I am using for the bibliography to be displayed in the toc
+%%% First step: I define the name and label of the biblio part
+%%\chapter{References}\label{references}
+%%{
+%%% I temporarily redefine the clearpage in order for the bib to not be printed on a new page
+%%\renewcommand{\clearpage}{}
+%%\printbibliography[heading=none] % I delete the default name of the bib
+%%\printbibliography[title=References] 
+%%}
+%
 \end{document}

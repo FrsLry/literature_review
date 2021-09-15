@@ -4,7 +4,7 @@ coverpage: true
 toc: true
 author: "François Leroy, PhD student at CZU"
 date: "`r Sys.Date()`"
-#output: see _output.yml
+output: pdf_document
 documentclass: report
 classoption: oneside
 fontsize: 12pt
@@ -18,7 +18,7 @@ colorlinks: yes
 link-citations: yes
 bibliography:
  - references.bib
-biblio-style: apa
+biblio-style: authoryear
 biblio-title: References
 ---
 
@@ -50,10 +50,12 @@ Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale 
 **Meeting with Petr**
 
 1)  How is the trend of biodiversity metrics linked to spatial grain/spatial extent and temporal grain/temporal extent.
+
 -   Talk about papers which does compare (Jarzyna Jetz)
 -   The inconsistency of reporting scales (especially for models as in Jiguet et al.or Chiron et al., and for MSI metrics)
 
 2)  Data heterogeneity
+
 -   Lack of spatial replication. That's why this review is important
 -   The inconsistency of reporting scales (especially for models, and for MSI metrics)
 -   Lack in other than western countries
@@ -62,6 +64,7 @@ Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale 
 -   Pop trends are usually stronger (cf. all the abundance metrics)
 
 3)  Future directions
+
 -   Lack of data for other thsn western cvountries: important to harvest data in other countries
 
 <!-- # Dashboard {.unnumbered} -->
@@ -98,9 +101,9 @@ Human life quality is intrinsically linked to ecosystems state that he is living
 
 <!-- Biodiversity erosion is now known from everyone and political decisions has been stated in order to limit it [*e.g.* @the_convention_on_biological_diversity_convention_2021, 2010, 2002]. However, these objectives have been so far not reached due mainly to our confusion and misunderstanding about biodiversity dynamic and how to determine it. -->
 
-We now know that the loss of global biodiversity is unprecedented and political decisions has been stated in order to limit it [*e.g.* @the_convention_on_biological_diversity_convention_2021, 2010, 2002]. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales [*e.g.* @chase_species_2019]. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition [@blowes_geography_2019; @dornelas_quantifying_2013]. Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured.
+We now know that the loss of global biodiversity is unprecedented and political decisions has been stated in order to limit it [*e.g.* @secretariat_of_the_convention_on_biological_diversity_global_2006, 2010, 2002]. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales [*e.g.* @chase_species_2019]. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition [@blowes_geography_2019; @dornelas_quantifying_2013]. Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured.
 
-In order to investigate this link between spatio-temporal scales and biodiversity metrics, birds is a relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations [@bejcek_velke_2016;@sauer_north_2013; @kamp_population_2021...]. Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations. 
+In order to investigate this link between spatio-temporal scales and biodiversity metrics, birds is a relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations [@bejcek_velke_2016; @sauer_north_2013; @kamp_population_2021...]. Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations.
 
 However, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (*e.g.* taxonomic, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or $\alpha$ diversity [*i.e.* number of species, @whittaker_vegetation_1960], the Shannon index [@shannon_mathematical_1948] ,the Simpson index [@simpson_measurement_1949] or the Hill number [@hill_diversity_1973]. The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the *quality* of the biodiversity. On an other hand, the spatial and temporal $\beta$ diversity will measure the species turnover and can be measured thanks to Whittaker's [@whittaker_evolution_1972], Sørensen's [@sorensen_method_1948] or Jaccard's [@jaccard_distribution_1912] dissimilarity indexes [*e.g.* @keil_patterns_2012]. All these metrics assess the taxonomic diversity, *i.e.* they use the species as unit. However, it has also been shown that functional and phylogenetic diversity can provide supplementary information on the community structure and its dynamic [*e.g.* @mcgill_rebuilding_2006; @mouquet_ecophylogenetics_2012; @webb_phylogenies_2002].
 
@@ -112,7 +115,7 @@ Finally a last class of indicators, not considered here, take into account both 
 
 Here, I propose to review articles assessing the temporal trends of different avian biodiversity metrics and to look at which spatial scales these studies have been done. I decided to consider the most common indicators used to assess biodiversity, such as the diversity indexes (*e.g.* species richness, functional diversity...) or the abundance indexes. Summarizing the trends of these qualitative and/or quantitative avian biodiversity indexes along with their spatial and temporal scales will help to see more clearly how the trends of biodiversity are linked to spatio-temporal scales. It is also important to demonstrate that the information about the sampling plan (*i.e.* spatial scale, time span, temporal scales etc) is not systematically indicated in the scientific literature and can bring confusion to the analysis and comparisons of their trends. I believe that this review can help to have a better overview of the current knowledge on the trend of biodiversity metrics of bird populations.
 
-\textcolor{red}{specify that it is mainly for continental/coastal birds but no look at  islandic communities}
+\textcolor{red}{specify that it is mainly for continental/coastal birds but no look at  islandic communities and change *Stable* to *No trend*}
 
 # Materials and Methods
 
@@ -150,7 +153,7 @@ Spatial grain sizes are discretized into four levels: *local* $<= 25$ $Km^2$, *r
 
 Concerning the trend assessment, different papers contain the *p-value* or directly specify the significant trend of the metric. However, a portion of papers gives only visual representations of the trend. For those, the standard error was used when displayed. For the very few only giving the trend, \textcolor{red}{the rule of thumb was applied}. Information can be found in the column *Note* of the Tab. \@ref(tab:notetable) of the supplementary material. Moreover, the final trend retained (*i.e.* either *Increase*, *Stable* or *Decrease*) doesn't reflect all the fluctuations of the metric through time but rather the difference between the starting and ending points.
 
-I have found 27 references in which authors were both determining the temporal trend of a metric of interest and explicitly defining the grain size. However, only `r length(unique(tab$Reference))` of them are using spatial replicates and are thus relevant for this study (Tab. \@ref(tab:maintable)). The classes of metric are: *Species richness, `r paste(as.vector(unique(tab$Metric)[-2]), collapse = ", ")`*. Some of this classes contain several different indexes. This is the case for instance for the class *Diversity*, which can be defined by either the Shannon or the Simpson index, or for the class *Abundance* which contains various multi-species indicators. 
+I have found `r nrow(unique(read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0", sheet = 2)[,1]))` references in which authors were both determining the temporal trend of a metric of interest and explicitly defining the grain size. However, only `r length(unique(tab$Reference))` of them are using spatial replicates and are thus relevant for this study (Tab. \@ref(tab:maintable)). The classes of metric are: *Species richness, `r paste(as.vector(unique(tab$Metric)[-2]), collapse = ", ")`*. Some of this classes contain several different indexes. This is the case for instance for the class *Diversity*, which can be defined by either the Shannon or the Simpson index, or for the class *Abundance* which contains various multi-species indicators.
 
 <!-- Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the [github repository](https://github.com/FrsLry/R-code) of their paper in order to compute the trends of these four metrics for the bird datasets. -->
 
@@ -158,29 +161,9 @@ I have found 27 references in which authors were both determining the temporal t
 
 ## On the spatial scale
 
-Out of `r length(unique(tab$Reference))` papers, 5 were located in north america and 10 in Europe. Overall, there were `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* reliable trends across the literature, without consideration of any metric or spatial scales. Figure \ref{fig:barmetrics} shows the distribution of these trends for each metric. We can see that the species richness and abundance are highly represented. 
+Out of `r length(unique(tab$Reference))` papers, 5 were located in North America and 10 in Europe. The median spatial extent of the data is `r round(median(as.numeric(unique(unlist(tab[,5])))))` $Km^2$, with the smallest area of `r min(as.numeric(unlist(tab[,5])))` $Km^2$ and the greatest representing the global emerged surface (*i.e.* `r round(max(as.numeric(unlist(tab[,5]))))` $Km^2$). Overall, there were `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* reliable trends across the literature, without consideration of any metric or spatial scales. 
 
-```{r barmetrics, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each of the metric", fig.pos = "!H", }
-
-table(tab %>% select(Metric, Trend)) %>% 
-  as.data.frame() %>% 
-  rename("Frequency" = Freq) %>% 
-  ggplot(aes(fill = Trend, y = `Frequency`, x = Metric))+
-  geom_bar(position = "stack", stat = "identity")+
-  theme_light()+
-  theme(axis.text.x = element_text(angle = 45, hjust=1),
-        axis.title.x=element_blank())+
-  scale_fill_grey()
-
-# tmp <- cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% as_tibble(rownames = "rownames")
-# 
-# 
-# kable(tmp %>%
-#         mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2)))) %>%
-#   column_spec(1, width = "20em")
-```
-
-Figure \ref{fig:barspatscale} shows that local scales are more represented than the others and that the number of papers decreases with the increasing spatial scale. This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. It is also clear that the *Increase* of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of *Decrease* is more important at regional scales than at local scales. At national scale, no *Decrease* is witnessed, with almost as *Increase* as *Stable* trends. At the global scale, no *Increase* were found.
+Local scales are more represented than the others and the number of papers decreases with the increasing spatial scale (Figure \ref{fig:barspatscale}). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The *Increase* of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of *Decrease* is more important at regional scales than at local scales. At national scale, no *Decrease* is witnessed, with almost as *Increase* as *Stable* trends. At the global scale, no *Increase* were found.
 
 ```{r barspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each spatial scale", fig.pos = "!H"}
 
@@ -205,7 +188,32 @@ table(tab$`Spatial grain (Km²)`, tab$Trend) %>%
 #   column_spec(1, width = "20em")
 ```
 
-**At local scales**, we can see that species richness experiences mostly increases (Figure \ref{fig:barmetricsperspatscale}). Taxonomic and functional diversity indexes are exclusively increasing. Evenness indexes, *i.e.* taxonomic and functional evenness, mainly increase over time. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, **at regional scale**, abundance metrics always decrease, whilst temporal $\beta$-diversity  always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning **national and regional scales**, for birds, one have to keep in mind that spatial replicates are less frequent and that general trends are less reliable. However, no clear decrease seems observed in the scientific literature. For instance, @bowler_geographic_2021 showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale.  
+
+Species richness and abundance metrics are very represented in the scientific literature (Figure \ref{fig:barmetrics}). Distribution of trends is rather equal for the abundance indexes but the *Increase* is clearly dominant for the species richness. Diversity indexes (*i.e.* Sørensen and Jaccard) were always found increasing and temporal $\beta$-diversity was found most of the time increasing and never decreasing. The small frequency of the other metrics doesn't allow one to discuss the trend proportions.
+
+```{r barmetrics, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each of the metric", fig.pos = "!H", }
+
+table(tab %>% select(Metric, Trend)) %>% 
+  as.data.frame() %>% 
+  rename("Frequency" = Freq) %>% 
+  ggplot(aes(fill = Trend, y = `Frequency`, x = Metric))+
+  geom_bar(position = "stack", stat = "identity")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 45, hjust=1),
+        axis.title.x=element_blank())+
+  scale_fill_grey()
+
+# tmp <- cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% as_tibble(rownames = "rownames")
+# 
+# 
+# kable(tmp %>%
+#         mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2)))) %>%
+#   column_spec(1, width = "20em")
+```
+
+
+
+**At local scales**, species richness experiences dominantly increases (Figure \ref{fig:barmetricsperspatscale}). Evenness indexes, *i.e.* taxonomic and functional evenness, are mainly found increasing. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, **at regional scale**, abundance metrics always decrease, whilst temporal $\beta$-diversity always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning **national and global scales**, one have to keep in mind that spatial replicates are less frequent and that most of the trends reported here for these two spatial scales are not replicated. Exception is made by @bowler_geographic_2021, who showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale (here referred as *Stable*). Global trends only come from @jarzyna_taxonomic_2018.
 
 ```{r barmetricsperspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each metric. Each panel represent one spatial scale", fig.pos = "!H"}
 table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>% 
@@ -226,71 +234,15 @@ table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>%
 
 ## On the temporal scale
 
-```{r, eval=F}
-tab %>% 
-    select(Metric, `Spatial grain (Km²)`, Trend) %>% 
-    group_by(`Spatial grain (Km²)`) %>% 
-    count(Trend) %>% 
-    pivot_wider(1:3, names_from = Trend, values_from = n) %>% 
-    mutate(n = sum(c(Decrease, Increase, Stable), na.rm = T)) %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), funs(./n)) %>% ungroup() %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2))) %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), as.numeric) %>% 
-  kable()
- 
-```
+The oldest study started in `r min(as.numeric(unlist(unique(tab$Years) %>% strsplit("-"))), na.rm = T)` and the median duration is `r round(median(as.numeric(unique(unlist(tab[,6]))), na.rm = TRUE))` years, with a minimum time span of `r min(as.numeric(unlist(tab[,6])), na.rm = TRUE)` years and a maximum of `r max(as.numeric(unlist(tab[,6])), na.rm = TRUE)`.
 
-```{r, eval=F}
-tmp <- 
-  tab %>% 
-    select(Metric, `Spatial grain (Km²)`, Trend) %>% 
-    group_by(Metric, `Spatial grain (Km²)`) %>% 
-    count(Trend) %>% 
-    pivot_wider(1:4, names_from = Trend, values_from = n) %>% 
-    mutate(n = sum(c(Decrease, Increase, Stable), na.rm = T)) %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), funs(./n)) %>% ungroup() %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2))) %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), as.numeric)
-    
-  
-  knitr::kable(tmp %>% 
-                 filter(`Spatial grain (Km²)` == "Local") %>% 
-                 # ungroup() %>%
-                 select(-2),
-               caption = "Local") %>% 
-    column_spec(1:4, width = "6.5em") 
-  
-  knitr::kable(tmp %>% 
-                 filter(`Spatial grain (Km²)` == "Regional") %>% 
-                 # ungroup() %>%
-                 select(-2),
-               caption = "Regional") %>% 
-    column_spec(1:4, width = "6.5em")
-  
-  knitr::kable(tmp %>% 
-                 filter(`Spatial grain (Km²)` == "National") %>% 
-                 # ungroup() %>%
-                 select(-2),
-               caption = "National") %>% 
-    column_spec(1:4, width = "6.5em")
-  
-  knitr::kable(tmp %>% 
-                 filter(`Spatial grain (Km²)` == "Global") %>% 
-                 # ungroup() %>%
-                 select(-2),
-               caption = "Global") %>% 
-    column_spec(1:4, width = "6.5em")  
-```
-
-
-
-
-# Discusion
+# Discussion
 
 Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys [*e.g.* @sauer_north_2013; @kamp_population_2021] follow standardized sampling plan with spatial replications (*i.e.* census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (*i.e.* the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend [*e.g.* @jiguet_modeling_2005; @jiguet_french_2012; @eglington_disentangling_2012; @doxa_low-intensity_2010; @sauer_first_2017].
 
 3)  Future directions
--   Lack of data for other than western countries: important to harvest data in other countries. Here, out of the `r length(unique(tab$Reference))` papers, 5 were located in north america and 10 in Europe. 
+
+-   Lack of data for other than western countries: important to harvest data in other countries. Here, out of the `r length(unique(tab$Reference))` papers, 5 were located in north america and 10 in Europe.
 
 <!-- \renewcommand{\clearpage}{} -->
 
@@ -350,6 +302,62 @@ tab %>%
   column_spec(1:3, width = "6.5em") %>%
   column_spec(4, width = "40em") %>% 
   landscape()
+```
+
+```{r, eval=F}
+tab %>% 
+    select(Metric, `Spatial grain (Km²)`, Trend) %>% 
+    group_by(`Spatial grain (Km²)`) %>% 
+    count(Trend) %>% 
+    pivot_wider(1:3, names_from = Trend, values_from = n) %>% 
+    mutate(n = sum(c(Decrease, Increase, Stable), na.rm = T)) %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), funs(./n)) %>% ungroup() %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2))) %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), as.numeric) %>% 
+  kable()
+ 
+```
+
+```{r, eval=F}
+tmp <- 
+  tab %>% 
+    select(Metric, `Spatial grain (Km²)`, Trend) %>% 
+    group_by(Metric, `Spatial grain (Km²)`) %>% 
+    count(Trend) %>% 
+    pivot_wider(1:4, names_from = Trend, values_from = n) %>% 
+    mutate(n = sum(c(Decrease, Increase, Stable), na.rm = T)) %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), funs(./n)) %>% ungroup() %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2))) %>% 
+    mutate_at(c("Decrease", "Increase", "Stable"), as.numeric)
+    
+  
+  knitr::kable(tmp %>% 
+                 filter(`Spatial grain (Km²)` == "Local") %>% 
+                 # ungroup() %>%
+                 select(-2),
+               caption = "Local") %>% 
+    column_spec(1:4, width = "6.5em") 
+  
+  knitr::kable(tmp %>% 
+                 filter(`Spatial grain (Km²)` == "Regional") %>% 
+                 # ungroup() %>%
+                 select(-2),
+               caption = "Regional") %>% 
+    column_spec(1:4, width = "6.5em")
+  
+  knitr::kable(tmp %>% 
+                 filter(`Spatial grain (Km²)` == "National") %>% 
+                 # ungroup() %>%
+                 select(-2),
+               caption = "National") %>% 
+    column_spec(1:4, width = "6.5em")
+  
+  knitr::kable(tmp %>% 
+                 filter(`Spatial grain (Km²)` == "Global") %>% 
+                 # ungroup() %>%
+                 select(-2),
+               caption = "Global") %>% 
+    column_spec(1:4, width = "6.5em")  
 ```
 
 \singlespacing <!-- for the bibliography -->

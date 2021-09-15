@@ -9,4 +9,5 @@ bookdown::pdf_book:
     in_header: _assets/preamble.tex
   latex_engine: lualatex
   keep_tex: yes
-  citation_package: natbib
+#  citation_package: natbib
+  citation_package: biblatex
