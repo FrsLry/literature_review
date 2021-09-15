@@ -136,12 +136,15 @@
 
 % To make the table caption full page width
 \usepackage{caption}
+
+% Make the figure float
+\usepackage{float}
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{wrapfig}
-\usepackage{float}
 \usepackage{colortbl}
 \usepackage{pdflscape}
 \usepackage{tabu}
@@ -157,7 +160,7 @@
 \bibliographystyle{apa}
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-09-14}
+\date{2021-09-15}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -275,7 +278,7 @@ Here, I propose to review articles assessing the temporal trends of different av
 \hypertarget{materials-and-methods}{%
 \chapter{Materials and Methods}\label{materials-and-methods}}
 
-For this review, articles of interest were the ones assessing temporal trends of the most common indicators (\emph{i.e.} metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the \emph{\enquote{advanced search}} tool of the ISI Web of Science Core collection database with these four following queries:
+For this review, articles of interest were the ones assessing temporal trends of the most common indicators (\emph{i.e.} metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the \emph{``advanced search''} tool of the ISI Web of Science Core collection database with these four following queries:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -302,9 +305,10 @@ I have found 27 references in which authors were both determining the temporal t
 \hypertarget{results}{%
 \chapter{Results}\label{results}}
 
-Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys \citep[\emph{e.g.}][]{sauer_north_2013, kamp_population_2021} follow standardized sampling plan with spatial replications (\emph{i.e.} census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (\emph{i.e.} the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend \citep[\emph{e.g.}][]{jiguet_modeling_2005, jiguet_french_2012, eglington_disentangling_2012, doxa_low-intensity_2010, sauer_first_2017}.
+\hypertarget{on-the-spatial-scale}{%
+\section{On the spatial scale}\label{on-the-spatial-scale}}
 
-Overall, there were 9 \emph{Decrease}, 31 \emph{Increase} and 14 \emph{Stable} reliable trends across the literature, without consideration of any metric or spatial scales. Figure \ref{fig:barmetrics} shows the distribution of these trends for each metric. We can see that the species richness and abundance are highly represented.
+Out of 15 papers, 5 were located in north america and 10 in Europe. Overall, there were 9 \emph{Decrease}, 31 \emph{Increase} and 14 \emph{Stable} reliable trends across the literature, without consideration of any metric or spatial scales. Figure \ref{fig:barmetrics} shows the distribution of these trends for each metric. We can see that the species richness and abundance are highly represented.
 
 \begin{figure}
 \centering
@@ -320,7 +324,7 @@ Figure \ref{fig:barspatscale} shows that local scales are more represented than 
 \caption{\label{fig:barspatscale}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each spatial scale}
 \end{figure}
 
-Add comment on Figure \ref{fig:barmetricsperspatscale}
+\textbf{At local scales}, we can see that species richness experiences mostly increases (Figure \ref{fig:barmetricsperspatscale}). Taxonomic and functional diversity indexes are exclusively increasing. Evenness indexes, \emph{i.e.} taxonomic and functional evenness, mainly increase over time. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, \textbf{at regional scale}, abundance metrics always decrease, whilst temporal \(\beta\)-diversity always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning \textbf{national and regional scales}, for birds, one have to keep in mind that spatial replicates are less frequent and that general trends are less reliable. However, no clear decrease seems observed in the scientific literature. For instance, \citet{bowler_geographic_2021} showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale.
 
 \begin{figure}
 \centering
@@ -328,8 +332,13 @@ Add comment on Figure \ref{fig:barmetricsperspatscale}
 \caption{\label{fig:barmetricsperspatscale}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each metric. Each panel represent one spatial scale}
 \end{figure}
 
+\hypertarget{on-the-temporal-scale}{%
+\section{On the temporal scale}\label{on-the-temporal-scale}}
+
 \hypertarget{discusion}{%
 \chapter{Discusion}\label{discusion}}
+
+Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys \citep[\emph{e.g.}][]{sauer_north_2013, kamp_population_2021} follow standardized sampling plan with spatial replications (\emph{i.e.} census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (\emph{i.e.} the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend \citep[\emph{e.g.}][]{jiguet_modeling_2005, jiguet_french_2012, eglington_disentangling_2012, doxa_low-intensity_2010, sauer_first_2017}.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
@@ -519,7 +528,7 @@ Reference & Spatial grain (Km²) & Trend & Note\\
 \endgroup{}
 \end{landscape}
 
-\singlespacing
+\singlespacing 
 
 
 \renewcommand\bibname{References}

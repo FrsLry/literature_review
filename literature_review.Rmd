@@ -4,7 +4,7 @@ coverpage: true
 toc: true
 author: "François Leroy, PhD student at CZU"
 date: "`r Sys.Date()`"
-output: pdf_document
+#output: see _output.yml
 documentclass: report
 classoption: oneside
 fontsize: 12pt
@@ -156,11 +156,11 @@ I have found 27 references in which authors were both determining the temporal t
 
 # Results
 
-Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys [*e.g.* @sauer_north_2013; @kamp_population_2021] follow standardized sampling plan with spatial replications (*i.e.* census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (*i.e.* the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend [*e.g.* @jiguet_modeling_2005; @jiguet_french_2012; @eglington_disentangling_2012; @doxa_low-intensity_2010; @sauer_first_2017].
+## On the spatial scale
 
-Overall, there were `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* reliable trends across the literature, without consideration of any metric or spatial scales. Figure \ref{fig:barmetrics} shows the distribution of these trends for each metric. We can see that the species richness and abundance are highly represented. 
+Out of `r length(unique(tab$Reference))` papers, 5 were located in north america and 10 in Europe. Overall, there were `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* reliable trends across the literature, without consideration of any metric or spatial scales. Figure \ref{fig:barmetrics} shows the distribution of these trends for each metric. We can see that the species richness and abundance are highly represented. 
 
-```{r barmetrics, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each of the metric"}
+```{r barmetrics, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each of the metric", fig.pos = "!H", }
 
 table(tab %>% select(Metric, Trend)) %>% 
   as.data.frame() %>% 
@@ -182,7 +182,7 @@ table(tab %>% select(Metric, Trend)) %>%
 
 Figure \ref{fig:barspatscale} shows that local scales are more represented than the others and that the number of papers decreases with the increasing spatial scale. This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. It is also clear that the *Increase* of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of *Decrease* is more important at regional scales than at local scales. At national scale, no *Decrease* is witnessed, with almost as *Increase* as *Stable* trends. At the global scale, no *Increase* were found.
 
-```{r barspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each spatial scale"}
+```{r barspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each spatial scale", fig.pos = "!H"}
 
 table(tab$`Spatial grain (Km²)`, tab$Trend) %>% 
   as.data.frame() %>% 
@@ -205,9 +205,9 @@ table(tab$`Spatial grain (Km²)`, tab$Trend) %>%
 #   column_spec(1, width = "20em")
 ```
 
-Add comment on Figure \ref{fig:barmetricsperspatscale}
+**At local scales**, we can see that species richness experiences mostly increases (Figure \ref{fig:barmetricsperspatscale}). Taxonomic and functional diversity indexes are exclusively increasing. Evenness indexes, *i.e.* taxonomic and functional evenness, mainly increase over time. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, **at regional scale**, abundance metrics always decrease, whilst temporal $\beta$-diversity  always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning **national and regional scales**, for birds, one have to keep in mind that spatial replicates are less frequent and that general trends are less reliable. However, no clear decrease seems observed in the scientific literature. For instance, @bowler_geographic_2021 showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale.  
 
-```{r barmetricsperspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each metric. Each panel represent one spatial scale"}
+```{r barmetricsperspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each metric. Each panel represent one spatial scale", fig.pos = "!H"}
 table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>% 
   as.data.frame() %>% 
   rename("Frequency" = Freq) %>% 
@@ -223,6 +223,8 @@ table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>%
   scale_fill_grey()
 
 ```
+
+## On the temporal scale
 
 ```{r, eval=F}
 tab %>% 
@@ -281,7 +283,11 @@ tmp <-
 ```
 
 
+
+
 # Discusion
+
+Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys [*e.g.* @sauer_north_2013; @kamp_population_2021] follow standardized sampling plan with spatial replications (*i.e.* census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (*i.e.* the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend [*e.g.* @jiguet_modeling_2005; @jiguet_french_2012; @eglington_disentangling_2012; @doxa_low-intensity_2010; @sauer_first_2017].
 
 3)  Future directions
 -   Lack of data for other than western countries: important to harvest data in other countries. Here, out of the `r length(unique(tab$Reference))` papers, 5 were located in north america and 10 in Europe. 
