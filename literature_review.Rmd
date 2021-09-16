@@ -39,33 +39,33 @@ library(tidyr)
 library(forcats)
 ```
 
-# Outline {.unnumbered}
+<!-- # Outline {.unnumbered} -->
 
-Literature review about the link between biodiversity facets trends and spatial/temporal scales.
+<!-- Literature review about the link between biodiversity facets trends and spatial/temporal scales. -->
 
-<!-- The idea is to take every paper that talk about biodiversity trends (so far using just the species richness seems already a lot of paper) and to list **1)** which biodiversity metric they use **2)** which taxon/taxa they use, **3)** the spatial scale, **4)** the temporal scale and **5)** what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time/unclear). -->
+<!-- <!-- The idea is to take every paper that talk about biodiversity trends (so far using just the species richness seems already a lot of paper) and to list **1)** which biodiversity metric they use **2)** which taxon/taxa they use, **3)** the spatial scale, **4)** the temporal scale and **5)** what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time/unclear). -->
 
-Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale | temporal_scale)`. Then see if for each taxa we can find a trend (a bit like in Chase *et al.* 2019 Oikos paper \| Jarzyna *et al.* 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: [Hill & Hamer 2004](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x)
+<!-- Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale | temporal_scale)`. Then see if for each taxa we can find a trend (a bit like in Chase *et al.* 2019 Oikos paper \| Jarzyna *et al.* 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: [Hill & Hamer 2004](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x) -->
 
-**Meeting with Petr**
+<!-- **Meeting with Petr** -->
 
-1)  How is the trend of biodiversity metrics linked to spatial grain/spatial extent and temporal grain/temporal extent.
+<!-- 1)  How is the trend of biodiversity metrics linked to spatial grain/spatial extent and temporal grain/temporal extent. -->
 
--   Talk about papers which does compare (Jarzyna Jetz)
--   The inconsistency of reporting scales (especially for models as in Jiguet et al.or Chiron et al., and for MSI metrics)
+<!-- -   Talk about papers which does compare (Jarzyna Jetz) -->
+<!-- -   The inconsistency of reporting scales (especially for models as in Jiguet et al.or Chiron et al., and for MSI metrics) -->
 
-2)  Data heterogeneity
+<!-- 2)  Data heterogeneity -->
 
--   Lack of spatial replication. That's why this review is important
--   The inconsistency of reporting scales (especially for models, and for MSI metrics)
--   Lack in other than western countries
--   Metric heterogeneity (Freixedas 2001 but they don't mention the macroecological ones as McGill, my struggle because of the time for space substitution as Hill & Hammer). Some metrics takes into account temporal dynamic but some papers don't look at the trend of these metrics (Jarzyna et al. 2015)
--   Can we use space for time substitution as an actual substitution (Hill & Hammer)
--   Pop trends are usually stronger (cf. all the abundance metrics)
+<!-- -   Lack of spatial replication. That's why this review is important -->
+<!-- -   The inconsistency of reporting scales (especially for models, and for MSI metrics) -->
+<!-- -   Lack in other than western countries -->
+<!-- -   Metric heterogeneity (Freixedas 2001 but they don't mention the macroecological ones as McGill, my struggle because of the time for space substitution as Hill & Hammer). Some metrics takes into account temporal dynamic but some papers don't look at the trend of these metrics (Jarzyna et al. 2015) -->
+<!-- -   Can we use space for time substitution as an actual substitution (Hill & Hammer) -->
+<!-- -   Pop trends are usually stronger (cf. all the abundance metrics) -->
 
-3)  Future directions
+<!-- 3)  Future directions -->
 
--   Lack of data for other thsn western cvountries: important to harvest data in other countries
+<!-- -   Lack of data for other thsn western cvountries: important to harvest data in other countries -->
 
 <!-- # Dashboard {.unnumbered} -->
 
@@ -89,7 +89,7 @@ Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale 
 
 <!-- -   20/08/2021: stopped at article 64 for research \#4 -->
 
-<!-- -   01/09/2021: verifying spatial scales --\> stopped at Dittrich 2019 -->
+<!-- -   01/09/2021: verifying spatial scales stopped at Dittrich 2019 -->
 
 <!-- -   02/09/2021: **Question 1:** for the FBI/WBI...\*BI indexes, usually they use a GLM/GAM to predict the abundance over the entire spatial extent and then compute the metric. Basically, those metrics are geometric means of predicted species abundances. Which spatial scale to use: the spatial unit of the prediction (i.e. the plot), or the entire area predicted? (Imo, the second option is correct). **Question 2:** same question for the Geometric mean but I am realizing while writing this question that \*BI are kind of similar to geometric means so answering the first question will answer this one. -->
 
@@ -161,7 +161,7 @@ I have found `r nrow(unique(read_sheet("https://docs.google.com/spreadsheets/d/1
 
 ## On the spatial scale
 
-Out of `r length(unique(tab$Reference))` papers, 5 were located in North America and 12 in Europe. The median spatial extent of the data is `r round(as.numeric(unlist(tab[,5])))` $Km^2$, with the smallest area of `r min(as.numeric(unlist(tab[,5])))` $Km^2$ and the greatest representing the global emerged surface (*i.e.* `r round(max(as.numeric(unlist(tab[,5]))))` $Km^2$). Overall, there were `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* reliable trends across the literature, without consideration of any metric or spatial scales. 
+Out of `r length(unique(tab$Reference))` papers, 5 were located in North America and 12 in Europe. The median spatial extent of the data is `r round(median(as.numeric(unlist(tab[,5]))))` $Km^2$, with the smallest area of `r min(as.numeric(unlist(tab[,5])))` $Km^2$ and the greatest representing the global emerged surface (*i.e.* `r round(max(as.numeric(unlist(tab[,5]))))` $Km^2$). Overall, there were `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* reliable trends (*i.e.* spatially replicated) across the literature, without consideration of any metric or spatial scales. 
 
 Local scales are more represented than the others and the number of papers decreases with the increasing spatial scale (Figure \ref{fig:barspatscale}). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The *Increase* of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of *Decrease* is more important at regional scales than at local scales. At the global scale, no *Increase* were found.
 
@@ -236,19 +236,16 @@ table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>%
 
 The oldest study started in `r min(as.numeric(unlist(unique(tab$Years) %>% strsplit("-"))), na.rm = T)` and the median duration is `r round(median(as.numeric(unlist(tab[,6])), na.rm = TRUE))` years, with a minimum time span of `r min(as.numeric(unlist(tab[,6])), na.rm = TRUE)` years and a maximum of `r max(as.numeric(unlist(tab[,6])), na.rm = TRUE)`.
 
+Determination of the temporal grain was way more complicated, as there is no consensus on the subject. Most of the time the temporal grain of the sampling was specified, but often with inaccuracies (*e.g.* "in the early morning"). However, the temporal grain of the sampling plan doesn't represent the final temporal grain. For instance, some metrics are summed over a certain spatial extent [e.g. summing the species richness over an atlas square, like in @van_turnhout_scale-dependent_2007]. In this case, the temporal grain should also be summed, but this was not specified. On an other hand, when the metric is averaged over a spatial grain, the sampling temporal grain can be considered.
+
+However, an other problem arises when the trend is computed. Usually, one compute the metric out of the data and considers the value to be representative of half a year or a year. In this case, there is no consensus on what should be the temporal grain: should one keep the grain of the sampling? Should one consider it to be the time-span covered by the sampling?  
+
+For the cases where the metric was determined out of model [e.g. @harrison_assessing_2014], the final temporal grain was sometimes explicitly given, with an order of length of the year. 
+
 # Discussion
 
 Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys [*e.g.* @sauer_north_2013; @kamp_population_2021] follow standardized sampling plan with spatial replications (*i.e.* census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (*i.e.* the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend [*e.g.* @jiguet_modeling_2005; @jiguet_french_2012; @eglington_disentangling_2012; @doxa_low-intensity_2010; @sauer_first_2017].
 
-**Concerning temporal grain:** Often, the temporal grain of the sampling is specified. However, the metric computed is often summed over a certain temporal extent (e.g. 6 months or 1 year) or make a model out of the data and in the end, the final temporal grain of the metric is not specified. Qnd there is no concensus on the final temporal grain of the metric. So they are hard to find because no convention or simply not cited or because the temporal replication is not sufficient (i.e. the time between the censuses varies too much).
-
-
-
-
-
-3)  Future directions
-
--   Lack of data for other than western countries: important to harvest data in other countries. Here, out of the `r length(unique(tab$Reference))` papers, 5 were located in north america and 10 in Europe.
 
 <!-- \renewcommand{\clearpage}{} -->
 
