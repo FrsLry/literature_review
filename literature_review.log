@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.9)  15 SEP 2021 20:24
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.9)  16 SEP 2021 10:57
  restricted system commands enabled.
 **literature_review.tex
 (./literature_review.tex
@@ -626,12 +626,12 @@ braces):
 >  {french/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {french/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for french
-(polyglossia)            patterns	hyph-fr.pat.txt
-(polyglossia)            righthyphenmin	2
-(polyglossia)            synonyms	patois,francais
-(polyglossia)            lefthyphenmin	2
 (polyglossia)            hyphenation	
-(polyglossia)            loader	loadhyph-fr.tex on input line 12
+(polyglossia)            righthyphenmin	2
+(polyglossia)            patterns	hyph-fr.pat.txt
+(polyglossia)            loader	loadhyph-fr.tex
+(polyglossia)            synonyms	patois,francais
+(polyglossia)            lefthyphenmin	2 on input line 12
 Module polyglossia Info: Language french was not yet loaded; created with id 2 o
 n input line 12
 Lua-only attribute polyglossia_punct = 5
@@ -2156,10 +2156,7 @@ e pdf)
 Package luatex.def Info: literature_review_files/figure-latex/barspatscale-1.pd
 f  used on input line 317.
 (luatex.def)             Requested size: 453.6939pt x 313.16922pt.
-[7
-
-<./literature_review_files/figure-latex/barspatscale-1.pdf>]
-<literature_review_files/figure-latex/barmetrics-1.pdf, id=239, 453.695pt x 312
+<literature_review_files/figure-latex/barmetrics-1.pdf, id=226, 453.695pt x 312
 .16624pt>
 File: literature_review_files/figure-latex/barmetrics-1.pdf Graphic file (type 
 pdf)
@@ -2167,7 +2164,10 @@ pdf)
 Package luatex.def Info: literature_review_files/figure-latex/barmetrics-1.pdf 
  used on input line 325.
 (luatex.def)             Requested size: 453.6939pt x 312.16548pt.
-<literature_review_files/figure-latex/barmetricsperspatscale-1.pdf, id=243, 453
+[7
+
+]
+<literature_review_files/figure-latex/barmetricsperspatscale-1.pdf, id=241, 453
 .695pt x 313.17pt>
 File: literature_review_files/figure-latex/barmetricsperspatscale-1.pdf Graphic
  file (type pdf)
@@ -2175,26 +2175,22 @@ File: literature_review_files/figure-latex/barmetricsperspatscale-1.pdf Graphic
 Package luatex.def Info: literature_review_files/figure-latex/barmetricsperspat
 scale-1.pdf  used on input line 333.
 (luatex.def)             Requested size: 453.6939pt x 313.16922pt.
-[8<./literature_review_files/figure-latex/barmetrics-1.pdf>] [9<./literature_rev
-iew_files/figure-latex/barmetricsperspatscale-1.pdf>] [10]
+[8<./literature_review_files/figure-latex/barspatscale-1.pdf>] [9<./literature_r
+eview_files/figure-latex/barmetrics-1.pdf>] [10<./literature_review_files/figure
+-latex/barmetricsperspatscale-1.pdf>]
 Chapter 4.
 [11
 
 ]
 LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 361.
+(Font)              scaled to size 10.0pt on input line 363.
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 363--368
+Overfull \hbox (11.84102pt too wide) in alignment at lines 365--370
  [][][][][][][][][] 
  []
 
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 368--373
- [][][][][][][][][] 
- []
-
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 373--375
+Overfull \hbox (11.84102pt too wide) in alignment at lines 370--375
  [][][][][][][][][] 
  []
 
@@ -2204,7 +2200,12 @@ Overfull \hbox (11.84102pt too wide) in alignment at lines 375--377
  []
 
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 377--442
+Overfull \hbox (11.84102pt too wide) in alignment at lines 377--379
+ [][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.84102pt too wide) in alignment at lines 379--447
  [][][][][][][][][] 
  []
 
@@ -2215,17 +2216,17 @@ Overfull \hbox (11.84102pt too wide) in alignment at lines 377--442
 
 ]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 486.
+(Font)              scaled to size 10.00107pt on input line 491.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 486.
+(Font)              scaled to size 7.00075pt on input line 491.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 486.
+(Font)              scaled to size 5.00053pt on input line 491.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 486.
+(Font)              scaled to size 9.99893pt on input line 491.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 486.
+(Font)              scaled to size 6.99925pt on input line 491.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 486.
+(Font)              scaled to size 4.99947pt on input line 491.
 (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msb.cfg
@@ -2233,6 +2234,65 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [17
 
 ] [18] [19] [20]
+LaTeX Font Info:    Font shape `TU/calibri(0)/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 544.
+[21
+
+
+]
+Underfull \hbox (badness 2119) in paragraph at lines 544--544
+[][]\TU/calibri(0)/m/n/12 Doxa, Agge-liki et al. (2010). “  Low-intensity agri
+-cul-ture in-creases farm-land bird abun-dances in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--544
+\TU/calibri(0)/m/n/12 France.” In: \TU/calibri(0)/m/it/12 Jour-nal of Ap-plied
+ Ecol-ogy \TU/calibri(0)/m/n/12 47.6. _eprint: https://besjour-nals.on-lineli-br
+ary.wi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--544
+\TU/calibri(0)/m/n/12 ley.com/doi/pdf/10.1111/j.1365-2664.2010.01869.x, pp. 1348
+–1356. \TU/calibri(0)/m/sc/12 issn\TU/calibri(0)/m/n/12 : 1365-2664. \TU/cali
+bri(0)/m/sc/12 doi\TU/calibri(0)/m/n/12 :
+ []
+
+
+Underfull \hbox (badness 4686) in paragraph at lines 544--544
+\TU/calibri(0)/m/n/12 ing birds.” In: \TU/calibri(0)/m/it/12 Jour-nal of Ap-pl
+ied Ecol-ogy \TU/calibri(0)/m/n/12 53.2. _eprint: https://besjour-nals.on-lineli
+-brary.wi-
+ []
+
+
+Underfull \hbox (badness 2707) in paragraph at lines 544--544
+[][]\TU/calibri(0)/m/n/12 In-ger, Richard et al. (2015). “  Com-mon Eu-ro-pean
+ birds are de-clin-ing rapidly while less abun-
+ []
+
+
+Underfull \hbox (badness 2932) in paragraph at lines 544--544
+\TU/calibri(0)/m/n/12 dant species’ num-bers are ris-ing.” In: \TU/calibri(
+0)/m/it/12 Ecol-ogy Let-ters \TU/calibri(0)/m/n/12 18.1. _eprint: https://on-lin
+eli-brary.wi-
+ []
+
+[22]
+Underfull \hbox (badness 1675) in paragraph at lines 544--544
+[][]\TU/calibri(0)/m/n/12 Keil, Petr et al. (2012). “  Pat-terns of beta di-ve
+r-sity in Eu-rope: the role of cli-mate, land cover
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--544
+\TU/calibri(0)/m/n/12 ley.com/doi/pdf/10.1111/j.1365-2699.2012.02701.x, pp. 1473
+–1486. \TU/calibri(0)/m/sc/12 issn\TU/calibri(0)/m/n/12 : 1365-2699. \TU/cali
+bri(0)/m/sc/12 doi\TU/calibri(0)/m/n/12 :
+ []
+
+[23] [24]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -2283,7 +2343,7 @@ braces):
 >  {french/babelname}  =>  {french}
 >  {french/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {french/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-(./literature_review.aux
+[25] (./literature_review.aux
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 LaTeX Info: Redefining \rmfamily on input line 25.
@@ -2301,166 +2361,25 @@ Package logreq Info: Writing requests to 'literature_review.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 44793 strings out of 478146
- 244328,1977958 words of node,token memory allocated
- 1359 words of node memory still in use:
-   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 59 attribute,
- 114 glue_spec, 59 attribute_list, 3 write, 1 user_defined, 16 pdf_literal, 16 p
-df_colorstack nodes
-   avail lists: 1:12,2:7659,3:2166,4:1058,5:2665,6:1012,7:14910,8:47,9:7842,10:2
-3,11:760
- 63298 multiletter control sequences out of 65536+600000
- 84 fonts using 47028819 bytes
+ 44945 strings out of 478146
+ 244334,1977958 words of node,token memory allocated
+ 1692 words of node memory still in use:
+   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 91 attribute,
+ 116 glue_spec, 91 attribute_list, 2 write, 1 user_defined, 16 pdf_literal, 33 p
+df_action, 16 pdf_colorstack nodes
+   avail lists: 1:13,2:7994,3:2254,4:1104,5:2756,6:1173,7:15577,8:110,9:8122,10:
+23,11:792
+ 63442 multiletter control sequences out of 65536+600000
+ 85 fonts using 48727555 bytes
  99i,17n,115p,2772b,2150s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@studeny_fine-
-tuning_2013'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@wretenberg_ch
-anges_2010'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@van_turnhout_
-scale-dependent_2007'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@sorte_changes
-_2005'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@schipper_cont
-rasting_2016'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@reif_changes_
-2013'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@ram_what_2017
-'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@pilotto_meta-
-analysis_2020'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@harrison_quan
-tifying_2016'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@harrison_asse
-ssing_2014'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@davey_rise_20
-12'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@chiron_foreca
-sting_2013'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@barnagaud_tem
-poral_2017'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@sauer_first_2
-017'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@doxa_low-inte
-nsity_2010'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@eglington_dis
-entangling_2012'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@jiguet_french
-_2012'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@jiguet_modeli
-ng_2005'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@jarzyna_taxon
-omic_2018'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@bowler_geogra
-phic_2021'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@normander_ind
-icator_2012'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@butchart_meas
-uring_2004'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@butchart_usin
-g_2005'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@butchart_impr
-ovements_2007'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@gregory_wild_
-2010'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@gregory_gener
-ation_1999'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@gregory_devel
-oping_2005'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@webb_phylogen
-ies_2002'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@mouquet_ecoph
-ylogenetics_2012'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@mcgill_rebuil
-ding_2006'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@keil_patterns
-_2012'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@jaccard_distr
-ibution_1912'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@sorensen_meth
-od_1948'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@whittaker_evo
-lution_1972'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@hill_diversit
-y_1973'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@simpson_measu
-rement_1949'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@shannon_mathe
-matical_1948'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@whittaker_veg
-etation_1960'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@kamp_populati
-on_2021'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@sauer_north_2
-013'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@bejcek_velke_
-2016'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@dornelas_quan
-tifying_2013'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@blowes_geogra
-phy_2019'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@chase_species
-_2019'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@secretariat_o
-f_the_convention_on_biological_diversity_global_2006'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@barnosky_has_
-2011'
-
-warning  (pdf backend): unreferenced destination with name 'cite.0@pereira_globa
-l_2012'
 <//?/c:/users/franc/appdata/local/programs/miktex/fonts/opentype/public/lm-math/
 latinmodern-math.otf><//?/c:/users/franc/appdata/local/programs/miktex/fonts/ope
 ntype/public/lm-math/latinmodern-math.otf><./fonts/calibrili.ttf><//?/c:/users/f
 ranc/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-regular.otf
 ><./fonts/calibrib.ttf><./fonts/calibri.ttf>
-Output written on literature_review.pdf (22 pages, 1499450 bytes).
+Output written on literature_review.pdf (27 pages, 1567300 bytes).
 
-PDF statistics: 454 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 131072)
+PDF statistics: 610 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 131072)
  240 words of extra memory for PDF output out of 10000 (max. 100000000)
 
