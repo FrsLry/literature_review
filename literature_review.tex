@@ -156,11 +156,11 @@
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\usepackage[style=authoryear,]{biblatex}
+\usepackage[style=apa,]{biblatex}
 \addbibresource{references.bib}
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-09-16}
+\date{2021-09-17}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -200,9 +200,9 @@ Human life quality is intrinsically linked to ecosystems state that he is living
 
 We now know that the loss of global biodiversity is unprecedented and political decisions has been stated in order to limit it \autocite[\emph{e.g.}][2010, 2002]{secretariat_of_the_convention_on_biological_diversity_global_2006}. However, current scientific literature has also shown that temporal trends in local changes of biodiversity can be opposite to trends at larger scales \autocite[\emph{e.g.}][]{chase_species_2019}. Thus, current changes in biodiversity is far more complex than a simple global decrease: most of the ecosystems undergo alterations of their communities with changes in species composition \autocite{blowes_geography_2019,dornelas_quantifying_2013}. Wonders persist about how the trend of these different metrics of biodiversity are link to the spatial and temporal scales used when measured.
 
-In order to investigate this link between spatio-temporal scales and biodiversity metrics, birds is a relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations \autocites{bejcek_velke_2016,sauer_north_2013,kamp_population_2021}. Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations.
+In order to investigate this link between spatio-temporal scales and biodiversity metrics, birds is a relevant taxon. Thanks to the many ornithological monitoring and surveys, we now have a large number of long, high-quality time series on bird populations \autocites{bejcek_velke_2016}{sauer_north_2013}{kamp_population_2021}. Birds are easy to observe, easy to identify and thus many volunteers are motivated to conduct standardized sampling. Given their ability to change quickly of locations, their presence is also a good indicator for ecosystem health and thus several standardized metrics have been created to assess their populations.
 
-However, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (\emph{e.g.} taxonomic, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or \(\alpha\) diversity \autocite[\emph{i.e.} number of species,][]{whittaker_vegetation_1960}, the Shannon index \autocite{shannon_mathematical_1948} ,the Simpson index \autocite{simpson_measurement_1949} or the Hill number \autocite{hill_diversity_1973}. The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the \emph{quality} of the biodiversity. On an other hand, the spatial and temporal \(\beta\) diversity will measure the species turnover and can be measured thanks to Whittaker's \autocite{whittaker_evolution_1972}, Sørensen's \autocite{sorensen_method_1948} or Jaccard's \autocite{jaccard_distribution_1912} dissimilarity indexes \autocite[\emph{e.g.}][]{keil_patterns_2012}. All these metrics assess the taxonomic diversity, \emph{i.e.} they use the species as unit. However, it has also been shown that functional and phylogenetic diversity can provide supplementary information on the community structure and its dynamic \autocites[\emph{e.g.}][]{mcgill_rebuilding_2006,mouquet_ecophylogenetics_2012,webb_phylogenies_2002}.
+However, studying biodiversity can be confusing, especially because several choices must be done. Firstly, the level at which you are looking at the biodiversity must be chosen (\emph{e.g.} taxonomic, functional, phylogenetic diversity). Secondly, one must decide which metric is the most appropriate for his study. There are many facets of biodiversity that can be measured by different metrics depending on the objective of your study. Measures of static biodiversity are commonly used such as species richness or \(\alpha\) diversity \autocite[\emph{i.e.} number of species,][]{whittaker_vegetation_1960}, the Shannon index \autocite{shannon_mathematical_1948} ,the Simpson index \autocite{simpson_measurement_1949} or the Hill number \autocite{hill_diversity_1973}. The later three biodiversity indexes take into account the relative abundances of the species and can be considered as the \emph{quality} of the biodiversity. On an other hand, the spatial and temporal \(\beta\) diversity will measure the species turnover and can be measured thanks to Whittaker's \autocite{whittaker_evolution_1972}, Sørensen's \autocite{sorensen_method_1948} or Jaccard's \autocite{jaccard_distribution_1912} dissimilarity indexes \autocite[\emph{e.g.}][]{keil_patterns_2012}. All these metrics assess the taxonomic diversity, \emph{i.e.} they use the species as unit. However, it has also been shown that functional and phylogenetic diversity can provide supplementary information on the community structure and its dynamic \autocites[\emph{e.g.}][]{mcgill_rebuilding_2006}{mouquet_ecophylogenetics_2012}{webb_phylogenies_2002}.
 
 An other measure of biodiversity of great interest is the abundance of the populations. As a matter of fact, as individuals react to disturbances of ecosystems by disappearing, the population trends are considered as resulting of the ecosystems health. Overall populations are impossible to assess, but determining the abundance of few indicator species can give a relevant summary on how is going the entire ecosystem \autocite{gregory_developing_2005}. These family of metrics are called the multi-species indicators (MSI) and we have seen the emergence of several of them according to the ecosystem considered. We can cite here the farmland bird indicator, woodland bird indicator or one of the most informative, which summarizes these two previous metrics: the Wildland Bird Indicator \autocite{gregory_generation_1999,gregory_wild_2010}. The main idea of these metrics is to compute the geometric mean of abundance of few key species over time.
 
@@ -215,7 +215,7 @@ Here, I propose to review articles assessing the temporal trends of different av
 \hypertarget{materials-and-methods}{%
 \chapter{Materials and Methods}\label{materials-and-methods}}
 
-For this review, articles of interest were the ones assessing temporal trends of the most common indicators (\emph{i.e.} metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the \emph{``advanced search''} tool of the ISI Web of Science Core collection database with these four following queries:
+For this review, articles of interest were the ones assessing temporal trends of the most common indicators (\emph{i.e.} metrics) of avian biodiversity and specifying spatial and temporal scales. For this, I used the \emph{\enquote{advanced search}} tool of the ISI Web of Science Core collection database with these four following queries:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -245,7 +245,7 @@ I have found 33 references in which authors were both determining the temporal t
 \hypertarget{on-the-spatial-scale}{%
 \section{On the spatial scale}\label{on-the-spatial-scale}}
 
-Out of 17 papers, 5 were located in North America and 12 in Europe. The median spatial extent of the data is \ensuremath{6.317\times 10^{6}} \(Km^2\), with the smallest area of 1800 \(Km^2\) and the greatest representing the global emerged surface (\emph{i.e.} \ensuremath{1.4894\times 10^{8}} \(Km^2\)). Overall, there were 11 \emph{Decrease}, 31 \emph{Increase} and 14 \emph{Stable} reliable trends (\emph{i.e.} spatially replicated) across the literature, without consideration of any metric or spatial scales.
+Out of 17 papers, 5 were located in North America and 12 in Europe. The median spatial extent of the data is \ensuremath{5.20475\times 10^{5}} \(Km^2\), with the smallest area of 1800 \(Km^2\) and the greatest representing the global emerged surface (\emph{i.e.} \ensuremath{1.4894\times 10^{8}} \(Km^2\)). Overall, there were 11 \emph{Decrease}, 31 \emph{Increase} and 14 \emph{Stable} reliable trends (\emph{i.e.} spatially replicated) across the literature, without consideration of any metric or spatial scales.
 
 Local scales are more represented than the others and the number of papers decreases with the increasing spatial scale (Figure \ref{fig:barspatscale}). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The \emph{Increase} of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of \emph{Decrease} is more important at regional scales than at local scales. At the global scale, no \emph{Increase} were found.
 
@@ -274,18 +274,17 @@ Species richness and abundance metrics are very represented in the scientific li
 \hypertarget{on-the-temporal-scale}{%
 \section{On the temporal scale}\label{on-the-temporal-scale}}
 
-The oldest study started in 1968 and the median duration is 30 years, with a minimum time span of 11 years and a maximum of 45.
+The oldest study started in 1968 and the median duration is 23 years, with a minimum time span of 11 years and a maximum of 45.
 
-Determination of the temporal grain was way more complicated, as there is no consensus on the subject. Most of the time the temporal grain of the sampling was specified, but often with inaccuracies (\emph{e.g.} ``in the early morning''). However, the temporal grain of the sampling plan doesn't represent the final temporal grain. For instance, some metrics are summed over a certain spatial extent \autocite[e.g.~summing the species richness over an atlas square, like in][]{van_turnhout_scale-dependent_2007}. In this case, the temporal grain should also be summed, but this was not specified. On an other hand, when the metric is averaged over a spatial grain, the sampling temporal grain can be considered.
+\textbf{Don't know if the following part should be put in the discussion}
+
+Determination of the temporal grain was way more complicated, as there is no consensus on the subject. Most of the time the temporal grain of the sampling was specified, but often with inaccuracies (\emph{e.g.} \enquote{in the early morning}). However, the temporal grain of the sampling plan doesn't represent the final temporal grain. For instance, some metrics are summed over a certain spatial extent \autocite[e.g.~summing the species richness over an atlas square, like in][]{van_turnhout_scale-dependent_2007}. In this case, the temporal grain should also be summed, but this was not specified. On an other hand, when the metric is averaged over a spatial grain, the sampling temporal grain can be considered.
 
 However, an other problem arises when the trend is computed. Usually, one compute the metric out of the data and considers the value to be representative of half a year or a year. In this case, there is no consensus on what should be the temporal grain: should one keep the grain of the sampling? Should one consider it to be the time-span covered by the sampling?
 
-For the cases where the metric was determined out of model \autocite[e.g.][]{harrison_assessing_2014}, the final temporal grain was sometimes explicitly given, with an order of length of the year.
+For the cases where the metric was determined out of model \autocite[e.g.~][]{harrison_assessing_2014}, the final temporal grain was most of the time explicitly given, with an order of length of the year.
 
-\hypertarget{discussion}{%
-\chapter{Discussion}\label{discussion}}
-
-Articles using spatial replicates to compute the trend of a metric were limited, either due to a lack of data or from an analysis focusing on the global trend of the data. For instance, the Breeding Bird Surveys \autocites[\emph{e.g.}][]{sauer_north_2013,kamp_population_2021} follow standardized sampling plan with spatial replications (\emph{i.e.} census plots) but not all the trend of the metrics reported are averaged or summarized at specific grain sizes. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (\emph{i.e.} the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model and at the dataset spatial extent, giving no spatial replicates of the trend \autocites[\emph{e.g.}][]{jiguet_modeling_2005,jiguet_french_2012,eglington_disentangling_2012,doxa_low-intensity_2010,sauer_first_2017}.
+In short, temporal grain has no clear definition as it is different according to the metric computed, how it is computed and if the temporal trend is assessed. Even though it is now clear that sampling plan temporal grain is important to explicit, there is no such consensus regarding the temporal grain of the trend.
 
 \begin{landscape}\begingroup\fontsize{10}{12}\selectfont
 
@@ -374,6 +373,22 @@ Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial exte
 \end{longtable}
 \endgroup{}
 \end{landscape}
+
+\hypertarget{discussion}{%
+\chapter{Discussion}\label{discussion}}
+
+\hypertarget{on-the-link-between-trends-and-grain-size}{%
+\section{On the link between trends and grain size}\label{on-the-link-between-trends-and-grain-size}}
+
+Articles computing the trend of a metric with spatial replicates were limited, either due to a lack of data or because the trend was assessed for the spatial extent of the data. For instance, the Breeding Bird Surveys \autocites[\emph{e.g.}][]{sauer_north_2013}{kamp_population_2021} follow standardized sampling plan with spatial replications (\emph{i.e.} census plots). However, not all the trend reported for the BBS are summarized at their specific grain sizes and were sometimes computed at their respective national scales, therefore without spatial replication. As a matter of fact, the common method encountered in the scientific literature is to learn a predictive model from the data, predict the target feature (\emph{i.e.} the variable of interest such as abundance or species richness) and then compute the metric and its trend from the output of the model at the dataset spatial extent \autocites[\emph{e.g.}][]{jiguet_modeling_2005}{jiguet_french_2012}{eglington_disentangling_2012}{doxa_low-intensity_2010}{sauer_first_2017}.
+
+Even less articles were computing repetitively the trend of metrics at various spatial grain. This was the case for only \textcite{chase_species_2019} and \textcite{jarzyna_taxonomic_2018}. It is also important to cite here \textcite{jarzyna_spatial_2015}, who did iteration computing of temporal change community metrics (\emph{i.e.} temporal dissimilarity, temporal turnover, extinction and colonization) at several spatial scales. However, the temporal trend of these metrics weren't considered and are not reported in Table \ref{tab:maintable}.
+
+\textbf{About the entanglement of spatial and temporal grain:} there is a relationship between spatial and temporal grain. As the spatial grain increases, the temporal grain is also expected to increase, as a greater spatial scale needs more time to be sampled (sampling for a very short period of time a large area would result in sampling a smaller area). However, the inverse is not true, one can definitely sample a small area for a very long time.
+
+\begin{singlespacing}
+\printbibliography[heading=bibintoc, title={References}]
+\end{singlespacing}
 
 \hypertarget{supplementary-materials}{%
 \chapter*{Supplementary materials}\label{supplementary-materials}}
@@ -467,9 +482,6 @@ Reference & Spatial grain (Km²) & Trend & Note\\
 \endgroup{}
 \end{landscape}
 
-\singlespacing 
-\printbibliography{}
-
 
 %%%%%%%%%%%%%%%% Here is the part that I am using for the bibliography to be displayed in the toc
 %%% First step: I define the name and label of the biblio part
@@ -478,7 +490,7 @@ Reference & Spatial grain (Km²) & Trend & Note\\
 %%% I temporarily redefine the clearpage in order for the bib to not be printed on a new page
 %%\renewcommand{\clearpage}{}
 %%\printbibliography[heading=none] % I delete the default name of the bib
-%%\printbibliography[title=References] 
+%%\printbibliography 
 %%}
 %
 \end{document}
