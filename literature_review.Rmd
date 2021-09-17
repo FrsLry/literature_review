@@ -154,9 +154,45 @@ I have found `r nrow(unique(read_sheet("https://docs.google.com/spreadsheets/d/1
 
 <!-- Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the [github repository](https://github.com/FrsLry/R-code) of their paper in order to compute the trends of these four metrics for the bird datasets. -->
 
-# Results
+```{r maintable, echo=F}
+# Function to collapse the reference column
+collapse_rows_df <- function(df, variable){
 
-## On the spatial scale
+  group_var <- enquo(variable)
+
+  df %>%
+    group_by(!! group_var) %>%
+    mutate(groupRow = 1:n()) %>%
+    ungroup() %>%
+    mutate(!!quo_name(group_var) := ifelse(groupRow == 1, as.character(!! group_var), "")) %>%
+    select(-c(groupRow))
+}
+
+
+tab %>%
+  # mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
+  mutate(
+         `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
+         `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
+         `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%
+  select(-Note) %>%
+  as_tibble() %>%
+  group_by(Reference) %>%
+  collapse_rows_df(Reference) %>%
+  ## escape = F is very important for the citation
+  kbl(booktabs = T, escape = F, format = "latex", longtable = T,
+      caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>%
+  kableExtra::kable_styling(
+   latex_options = c("hold_position", "repeat_header", "striped"),
+   font_size = 10,
+   full_width = FALSE
+   ) %>%
+  column_spec(1:9, width = "6.5em") %>%
+  landscape()
+```
+
+
+# On the spatial scale
 
 Out of `r length(unique(tab$Reference))` papers, 5 were located in North America and 12 in Europe. The median spatial extent of the data is `r round(median(as.numeric(unique(unlist(tab[,5])))))` $Km^2$, with the smallest area of `r min(as.numeric(unlist(tab[,5])))` $Km^2$ and the greatest representing the global emerged surface (*i.e.* `r round(max(as.numeric(unlist(tab[,5]))))` $Km^2$). Overall, there were `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* reliable trends (*i.e.* spatially replicated) across the literature, without consideration of any metric or spatial scales. 
 
@@ -229,57 +265,17 @@ table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>%
 
 ```
 
-## On the temporal scale
+# On the temporal scale
 
 The oldest study started in `r min(as.numeric(unlist(unique(tab$Years) %>% strsplit("-"))), na.rm = T)` and the median duration is `r round(median(as.numeric(unique(unlist(tab[,6]))), na.rm = TRUE))` years, with a minimum time span of `r min(as.numeric(unlist(tab[,6])), na.rm = TRUE)` years and a maximum of `r max(as.numeric(unlist(tab[,6])), na.rm = TRUE)`.
 
-**Don't know if the following part should be put in the discussion**
-
 Determination of the temporal grain was way more complicated, as there is no consensus on the subject. Most of the time the temporal grain of the sampling was specified, but often with inaccuracies (*e.g.* "in the early morning"). However, the temporal grain of the sampling plan doesn't represent the final temporal grain. For instance, some metrics are summed over a certain spatial extent [e.g. summing the species richness over an atlas square, like in @van_turnhout_scale-dependent_2007]. In this case, the temporal grain should also be summed, but this was not specified. On an other hand, when the metric is averaged over a spatial grain, the sampling temporal grain can be considered.
 
-However, an other problem arises when the trend is computed. Usually, one compute the metric out of the data and considers the value to be representative of half a year or a year. In this case, there is no consensus on what should be the temporal grain: should one keep the grain of the sampling? Should one consider it to be the time-span covered by the sampling?  
+However, an other problem arises when the trend is computed. Usually, one compute the metric out of the data and considers the value to be representative of half a year or a year. In this case, there is no consensus on what should be the temporal grain: should one keep the grain of the sampling? Should one consider it to be the time-span covered by the sampling? In Table \@ref(tab:maintable), the latter has been used. 
 
 For the cases where the metric was determined out of model [e.g. @harrison_assessing_2014], the final temporal grain was most of the time explicitly given, with an order of length of the year.
 
 In short, temporal grain has no clear definition as it is different according to the metric computed, how it is computed and if the temporal trend is assessed. Even though it is now clear that sampling plan temporal grain is important to explicit, there is no such consensus  regarding the temporal grain of the trend.
-
-```{r maintable, echo=F}
-# Function to collapse the reference column
-collapse_rows_df <- function(df, variable){
-
-  group_var <- enquo(variable)
-
-  df %>%
-    group_by(!! group_var) %>%
-    mutate(groupRow = 1:n()) %>%
-    ungroup() %>%
-    mutate(!!quo_name(group_var) := ifelse(groupRow == 1, as.character(!! group_var), "")) %>%
-    select(-c(groupRow))
-}
-
-
-tab %>%
-  # mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
-  mutate(
-         `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
-         `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
-         `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%
-  select(-Note) %>%
-  as_tibble() %>%
-  group_by(Reference) %>%
-  collapse_rows_df(Reference) %>%
-  ## escape = F is very important for the citation
-  kbl(booktabs = T, escape = F, format = "latex", longtable = T,
-      caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>%
-  kableExtra::kable_styling(
-   latex_options = c("hold_position", "repeat_header", "striped"),
-   font_size = 10,
-   full_width = FALSE
-   ) %>%
-  column_spec(1:9, width = "6.5em") %>%
-  landscape()
-```
-
 
 
 # Discussion
@@ -293,9 +289,13 @@ Even less articles were computing repetitively the trend of metrics at various s
 **About the entanglement of spatial and temporal grain:** there is a relationship between spatial and temporal grain. As the spatial grain increases, the temporal grain is also expected to increase, as a greater spatial scale needs more time to be sampled (sampling for a very short period of time a large area would result in sampling a smaller area). However, the inverse is not true, one can definitely sample a small area for a very long time. 
 
 <!-- for the bibliography -->
+\newpage
 \begin{singlespacing}
 \printbibliography[heading=bibintoc, title={References}]
 \end{singlespacing}
+
+
+\newpage
 
 # Supplementary materials {.unnumbered}
 
