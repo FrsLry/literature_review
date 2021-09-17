@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.8)  17 SEP 2021 11:49
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.8)  17 SEP 2021 15:30
  restricted system commands enabled.
 **literature_review.tex
 (./literature_review.tex
@@ -626,12 +626,12 @@ braces):
 >  {french/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {french/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for french
-(polyglossia)            patterns	hyph-fr.pat.txt
-(polyglossia)            lefthyphenmin	2
 (polyglossia)            righthyphenmin	2
+(polyglossia)            hyphenation	
 (polyglossia)            loader	loadhyph-fr.tex
 (polyglossia)            synonyms	patois,francais
-(polyglossia)            hyphenation	 on input line 12
+(polyglossia)            patterns	hyph-fr.pat.txt
+(polyglossia)            lefthyphenmin	2 on input line 12
 Module polyglossia Info: Language french was not yet loaded; created with id 2 o
 n input line 12
 Lua-only attribute polyglossia_punct = 5
@@ -1660,34 +1660,34 @@ LaTeX Warning: Label `tab:notetable' multiply defined.
 )
 \openout1 = literature_review.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 172.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 172.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 172.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 172.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 175.
 
 Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             'latinmodern-math.otf' with options
@@ -1740,16 +1740,16 @@ e=dflt;"
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 172.
+(Font)              `operators' in the math version `normal' on input line 175.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 172.
+ line 175.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 172.
+(Font)              `operators' in the math version `bold' on input line 175.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 172.
+t line 175.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1824,15 +1824,15 @@ th;language=dflt;"
 (fontspec)             21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 172.
+(Font)              `symbols' in the math version `normal' on input line 175.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 172.
+t line 175.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 172.
+(Font)              `symbols' in the math version `bold' on input line 175.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 172.
+t line 175.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1890,46 +1890,46 @@ th;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-72.
+75.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 172.
+t line 175.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 172
+(Font)              `largesymbols' in the math version `bold' on input line 175
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 172.
+t line 175.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 172.
+(Font)              scaled to size 12.00128pt on input line 175.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.40088pt on input line 172.
+(Font)              scaled to size 8.40088pt on input line 175.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 172.
+(Font)              scaled to size 6.00064pt on input line 175.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 172.
+(Font)              scaled to size 11.99872pt on input line 175.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.3991pt on input line 172.
+(Font)              scaled to size 8.3991pt on input line 175.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 172.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 172
+(Font)              scaled to size 5.99936pt on input line 175.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 175
 .
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 172
+LaTeX Font Info:    Trying to load font information for U+msb on input line 175
 .
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Info: Redefining \microtypecontext on input line 172.
+LaTeX Info: Redefining \microtypecontext on input line 175.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 172.
+LaTeX Info: Redefining \showhyphens on input line 175.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
@@ -1963,7 +1963,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 172.
+Package hyperref Info: Link coloring ON on input line 175.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty
@@ -1975,9 +1975,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count508
 )
-LaTeX Info: Redefining \ref on input line 172.
-LaTeX Info: Redefining \pageref on input line 172.
-LaTeX Info: Redefining \nameref on input line 172.
+LaTeX Info: Redefining \ref on input line 175.
+LaTeX Info: Redefining \pageref on input line 175.
+LaTeX Info: Redefining \nameref on input line 175.
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
 *geometry* verbose mode - [ preamble ] result:
@@ -2108,13 +2108,13 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'literature_review.bbl' found.
 (./literature_review.bbl)
-Package biblatex Info: Reference section=0 on input line 172.
-Package biblatex Info: Reference segment=0 on input line 172.
+Package biblatex Info: Reference section=0 on input line 175.
+Package biblatex Info: Reference segment=0 on input line 175.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 172.
-LaTeX Info: Redefining \sffamily on input line 172.
-LaTeX Info: Redefining \ttfamily on input line 172.
+LaTeX Info: Redefining \rmfamily on input line 175.
+LaTeX Info: Redefining \sffamily on input line 175.
+LaTeX Info: Redefining \ttfamily on input line 175.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 
@@ -2123,14 +2123,14 @@ version '1.6', but at most version '1.5' allowed
 <_assets/coverpage.pdf, id=30, 614.295pt x 794.97pt>
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf>
-Package luatex.def Info: _assets/coverpage.pdf  used on input line 174.
+Package luatex.def Info: _assets/coverpage.pdf  used on input line 177.
 (luatex.def)             Requested size: 500.49133pt x 647.69469pt.
 
 warning  (file _assets/coverpage.pdf) (pdf inclusion): PDF inclusion: found PDF 
 version '1.6', but at most version '1.5' allowed
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf>
-Package luatex.def Info: _assets/coverpage.pdf  used on input line 174.
+Package luatex.def Info: _assets/coverpage.pdf  used on input line 177.
 (luatex.def)             Requested size: 500.49133pt x 647.69469pt.
 
 warning  (file _assets/coverpage.pdf) (pdf inclusion): PDF inclusion: found PDF 
@@ -2141,29 +2141,29 @@ version '1.6', but at most version '1.5' allowed
 <_assets/coverpage.pdf, id=33, page=1, 614.295pt x 794.97pt>
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf, page 1>
-Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 174.
+Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 177.
 (luatex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf, page 1>
-Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 174.
+Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 177.
 (luatex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf, page 1>
-Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 174.
+Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 177.
 (luatex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf, page 1>
-Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 174.
+Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 177.
 (luatex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: _assets/coverpage.pdf Graphic file (type pdf)
 <use _assets/coverpage.pdf, page 1>
-Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 174.
+Package luatex.def Info: _assets/coverpage.pdf , page1 used on input line 177.
 (luatex.def)             Requested size: 614.58406pt x 795.3441pt.
 [1
 
 <./_assets/coverpage.pdf>]
 LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 183.
+(Font)              scaled to size 24.88pt on input line 186.
 (./literature_review.toc
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
@@ -2180,136 +2180,126 @@ LaTeX Font Info:    Font shape `TU/calibri(0)/b/n' will be
 \openout5 = literature_review.toc
 [1
 
-
 {C:/Users/leroy/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 Chapter 1.
 LaTeX Font Info:    Font shape `TU/calibri(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 201.
+(Font)              scaled to size 12.0pt on input line 204.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
-
-] [2] [3]
+] [2]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
 []\TU/lmtt/m/n/12 AB = ((biodiversity OR species richness OR diversity) AND (tem
 poral trend*
  []
 
-[4
-
-] [5]
-Chapter 3.
+[3] [4]
 LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 246.
-LaTeX Font Info:    Font shape `TU/calibri(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 246.
-<literature_review_files/figure-latex/barspatscale-1.pdf, id=216, 469.755pt x 3
+(Font)              scaled to size 10.0pt on input line 245.
+
+Overfull \hbox (11.84102pt too wide) in alignment at lines 247--252
+ [][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.84102pt too wide) in alignment at lines 252--257
+ [][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.84102pt too wide) in alignment at lines 257--259
+ [][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.84102pt too wide) in alignment at lines 259--261
+ [][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.84102pt too wide) in alignment at lines 261--329
+ [][][][][][][][][] 
+ []
+
+[5
+
+] [6] [7] [8]
+Chapter 3.
+<literature_review_files/figure-latex/barspatscale-1.pdf, id=259, 469.755pt x 3
 25.215pt>
 File: literature_review_files/figure-latex/barspatscale-1.pdf Graphic file (typ
 e pdf)
 <use literature_review_files/figure-latex/barspatscale-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/barspatscale-1.pd
-f  used on input line 254.
+f  used on input line 342.
 (luatex.def)             Requested size: 469.75386pt x 325.2142pt.
-<literature_review_files/figure-latex/barmetrics-1.pdf, id=218, 469.755pt x 325
+[9
+
+<./literature_review_files/figure-latex/barspatscale-1.pdf>]
+<literature_review_files/figure-latex/barmetrics-1.pdf, id=274, 469.755pt x 325
 .215pt>
 File: literature_review_files/figure-latex/barmetrics-1.pdf Graphic file (type 
 pdf)
 <use literature_review_files/figure-latex/barmetrics-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/barmetrics-1.pdf 
- used on input line 262.
+ used on input line 350.
 (luatex.def)             Requested size: 469.75386pt x 325.2142pt.
-[6
-
-] [7<./literature_review_files/figure-latex/barspatscale-1.pdf>] [8<./literature
-_review_files/figure-latex/barmetrics-1.pdf>]
-<literature_review_files/figure-latex/barmetricsperspatscale-1.pdf, id=251, 469
+[10<./literature_review_files/figure-latex/barmetrics-1.pdf>]
+<literature_review_files/figure-latex/barmetricsperspatscale-1.pdf, id=290, 469
 .755pt x 325.215pt>
 File: literature_review_files/figure-latex/barmetricsperspatscale-1.pdf Graphic
  file (type pdf)
 <use literature_review_files/figure-latex/barmetricsperspatscale-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/barmetricsperspat
-scale-1.pdf  used on input line 270.
+scale-1.pdf  used on input line 358.
 (luatex.def)             Requested size: 469.75386pt x 325.2142pt.
-[9<./literature_review_files/figure-latex/barmetricsperspatscale-1.pdf>] [10]
-LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 289.
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 291--296
- [][][][][][][][][] 
- []
-
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 296--301
- [][][][][][][][][] 
- []
-
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 301--303
- [][][][][][][][][] 
- []
-
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 303--305
- [][][][][][][][][] 
- []
-
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 305--373
- [][][][][][][][][] 
- []
-
-[11
-
-] [12] [13] [14]
 Chapter 4.
-[15
-
-
-] [16
-
-]
-Underfull \hbox (badness 1484) in paragraph at lines 390--390
+[11<./literature_review_files/figure-latex/barmetricsperspatscale-1.pdf>]
+Chapter 5.
+LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 379.
+LaTeX Font Info:    Font shape `TU/calibri(0)/b/n' will be
+(Font)              scaled to size 17.28pt on input line 379.
+[12] [13] [14]
+Underfull \hbox (badness 1484) in paragraph at lines 389--389
 [][]\TU/calibri(0)/m/n/12 Hill, M. O. (1973). Di-ver-sity and even-ness: A uni-f
 y-ing no-ta-tion and its con-se-quences [_eprint:
  []
 
-[17]
-Underfull \hbox (badness 1360) in paragraph at lines 390--390
+[15]
+Underfull \hbox (badness 1360) in paragraph at lines 389--389
 \TU/calibri(0)/m/n/12 T., Pavoine, S., Prinz-ing, A., Ro-drigues, A. S. L., 
 … Thuiller, W. (2012). Eco-phy-lo-ge-net-ics:
  []
 
-[18]
-Underfull \hbox (badness 2012) in paragraph at lines 390--390
+[16]
+Underfull \hbox (badness 2012) in paragraph at lines 389--389
 [][]\TU/calibri(0)/m/n/12 Whit-taker, R. H. (1960). Veg-etation of the siskiyou moun-tains, ore-gon and cal-i-for-nia [_eprint:
  []
 
-[19] [20
-
-]
+[17] [18]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 433.
+(Font)              scaled to size 10.00107pt on input line 434.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 433.
+(Font)              scaled to size 7.00075pt on input line 434.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 433.
+(Font)              scaled to size 5.00053pt on input line 434.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 433.
+(Font)              scaled to size 9.99893pt on input line 434.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 433.
+(Font)              scaled to size 6.99925pt on input line 434.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 433.
+(Font)              scaled to size 4.99947pt on input line 434.
 (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (C:/Users/leroy/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [21
+) [19
 
-] [22] [23] [24]
+] [20] [21] [22]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -2378,25 +2368,25 @@ Package logreq Info: Writing requests to 'literature_review.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45712 strings out of 478146
- 244336,1977958 words of node,token memory allocated
+ 45705 strings out of 478146
+ 244337,1977958 words of node,token memory allocated
  1539 words of node memory still in use:
    22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 76 attribute,
  116 glue_spec, 76 attribute_list, 3 write, 1 user_defined, 16 pdf_literal, 17 p
 df_action, 16 pdf_colorstack nodes
-   avail lists: 1:12,2:7971,3:2252,4:1102,5:2750,6:1041,7:15458,8:79,9:8120,10:2
-3,11:796
+   avail lists: 1:7,2:7977,3:2252,4:1102,5:2750,6:1041,7:15467,8:78,9:8120,10:23
+,11:796
  64149 multiletter control sequences out of 65536+600000
- 84 fonts using 47028743 bytes
+ 84 fonts using 47028591 bytes
  99i,17n,115p,2772b,5139s stack positions out of 5000i,500n,10000p,200000b,80000s
 <//?/c:/users/leroy/appdata/local/programs/miktex/fonts/opentype/public/lm-math/
 latinmodern-math.otf><//?/c:/users/leroy/appdata/local/programs/miktex/fonts/ope
 ntype/public/lm/lmmono12-regular.otf><//?/c:/users/leroy/appdata/local/programs/
 miktex/fonts/opentype/public/lm-math/latinmodern-math.otf><./fonts/calibrili.ttf
 ><./fonts/calibrib.ttf><./fonts/calibri.ttf>
-Output written on literature_review.pdf (26 pages, 1548162 bytes).
+Output written on literature_review.pdf (24 pages, 1545934 bytes).
 
-PDF statistics: 547 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 131072)
- 248 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 530 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 131072)
+ 240 words of extra memory for PDF output out of 10000 (max. 100000000)
 

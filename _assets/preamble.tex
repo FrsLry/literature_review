@@ -34,8 +34,8 @@
 \titleformat{\chapter}   
 {\Huge}{\thechapter{. }}{0pt}{\Huge}
 %{\thechapter{. }}
-\titlespacing*{\chapter}{0pt}{-50pt}{10pt}
-% -50 is to up the title and 10 is the space with the text below
+\titlespacing*{\chapter}{0pt}{0pt}{10pt}
+% second 0pt space is to up the title and 10 is the space with the text below
 
 
 % When using the natbib biblio package, includes "References" in the table of contents
@@ -46,3 +46,6 @@
 
 % Make the figure float
 \usepackage{float}
+
+% In order to make the new chapter to start on the same page
+\titleclass{\chapter}{straight}

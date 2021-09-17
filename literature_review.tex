@@ -127,8 +127,8 @@
 \titleformat{\chapter}   
 {\Huge}{\thechapter{. }}{0pt}{\Huge}
 %{\thechapter{. }}
-\titlespacing*{\chapter}{0pt}{-50pt}{10pt}
-% -50 is to up the title and 10 is the space with the text below
+\titlespacing*{\chapter}{0pt}{0pt}{10pt}
+% empty space is to up the title and 10 is the space with the text below
 
 
 % When using the natbib biblio package, includes "References" in the table of contents
@@ -139,6 +139,9 @@
 
 % Make the figure float
 \usepackage{float}
+
+% In order to make the new chapter to start on the same page
+\titleclass{\chapter}{straight}
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -239,53 +242,6 @@ Concerning the trend assessment, different papers contain the \emph{p-value} or 
 
 I have found 33 references in which authors were both determining the temporal trend of a metric of interest and explicitly defining the grain size. However, only 17 of them are using spatial replicates and are thus relevant for this study (Tab. \ref{tab:maintable}). The classes of metric are: \emph{Species richness, Evenness, Abundance, Diversity, Temporal beta-diversity, Spatial beta-diversity, Functional diversity, Functional evenness, Functional richness}. Some of this classes contain several different indexes. This is the case for instance for the class \emph{Diversity}, which can be defined by either the Shannon or the Simpson index, or for the class \emph{Abundance} which contains various multi-species indicators.
 
-\hypertarget{results}{%
-\chapter{Results}\label{results}}
-
-\hypertarget{on-the-spatial-scale}{%
-\section{On the spatial scale}\label{on-the-spatial-scale}}
-
-Out of 17 papers, 5 were located in North America and 12 in Europe. The median spatial extent of the data is \ensuremath{5.20475\times 10^{5}} \(Km^2\), with the smallest area of 1800 \(Km^2\) and the greatest representing the global emerged surface (\emph{i.e.} \ensuremath{1.4894\times 10^{8}} \(Km^2\)). Overall, there were 11 \emph{Decrease}, 31 \emph{Increase} and 14 \emph{Stable} reliable trends (\emph{i.e.} spatially replicated) across the literature, without consideration of any metric or spatial scales.
-
-Local scales are more represented than the others and the number of papers decreases with the increasing spatial scale (Figure \ref{fig:barspatscale}). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The \emph{Increase} of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of \emph{Decrease} is more important at regional scales than at local scales. At the global scale, no \emph{Increase} were found.
-
-\begin{figure}
-\centering
-\includegraphics{literature_review_files/figure-latex/barspatscale-1.pdf}
-\caption{\label{fig:barspatscale}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each spatial scale}
-\end{figure}
-
-Species richness and abundance metrics are very represented in the scientific literature (Figure \ref{fig:barmetrics}). The less common trend of abundance is \emph{Increase}, whilst \emph{Decrease} and \emph{Stability} are both as common. Diversity indexes (\emph{i.e.} Sørensen and Jaccard) were always found increasing and temporal \(\beta\)-diversity was found most of the time increasing and never decreasing. The small frequency of the other metrics doesn't allow one to discuss the trend proportions.
-
-\begin{figure}
-\centering
-\includegraphics{literature_review_files/figure-latex/barmetrics-1.pdf}
-\caption{\label{fig:barmetrics}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each of the metric}
-\end{figure}
-
-\textbf{At local scales}, species richness experiences dominantly increases (Figure \ref{fig:barmetricsperspatscale}). Evenness indexes, \emph{i.e.} taxonomic and functional evenness, are mainly found increasing. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, \textbf{at regional scale}, abundance metrics always decrease, whilst temporal \(\beta\)-diversity always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning \textbf{national and global scales}, one have to keep in mind that spatial replicates are less frequent and that most of the trends reported here for these two spatial scales are not replicated. Exceptions are made by \textcite{bowler_geographic_2021} and \textcite{donald_agricultural_2001}. The former showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale (here referred as \emph{Stable}). For \textcite{donald_agricultural_2001}, trends of mean populations were computed for 30 european countries and most of them were negatives. No positive trend seem dominant at these spatial scales. Global trends only come from \textcite{jarzyna_taxonomic_2018}.
-
-\begin{figure}
-\centering
-\includegraphics{literature_review_files/figure-latex/barmetricsperspatscale-1.pdf}
-\caption{\label{fig:barmetricsperspatscale}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each metric. Each panel represent one spatial scale}
-\end{figure}
-
-\hypertarget{on-the-temporal-scale}{%
-\section{On the temporal scale}\label{on-the-temporal-scale}}
-
-The oldest study started in 1968 and the median duration is 23 years, with a minimum time span of 11 years and a maximum of 45.
-
-\textbf{Don't know if the following part should be put in the discussion}
-
-Determination of the temporal grain was way more complicated, as there is no consensus on the subject. Most of the time the temporal grain of the sampling was specified, but often with inaccuracies (\emph{e.g.} \enquote{in the early morning}). However, the temporal grain of the sampling plan doesn't represent the final temporal grain. For instance, some metrics are summed over a certain spatial extent \autocite[e.g.~summing the species richness over an atlas square, like in][]{van_turnhout_scale-dependent_2007}. In this case, the temporal grain should also be summed, but this was not specified. On an other hand, when the metric is averaged over a spatial grain, the sampling temporal grain can be considered.
-
-However, an other problem arises when the trend is computed. Usually, one compute the metric out of the data and considers the value to be representative of half a year or a year. In this case, there is no consensus on what should be the temporal grain: should one keep the grain of the sampling? Should one consider it to be the time-span covered by the sampling?
-
-For the cases where the metric was determined out of model \autocite[e.g.~][]{harrison_assessing_2014}, the final temporal grain was most of the time explicitly given, with an order of length of the year.
-
-In short, temporal grain has no clear definition as it is different according to the metric computed, how it is computed and if the temporal trend is assessed. Even though it is now clear that sampling plan temporal grain is important to explicit, there is no such consensus regarding the temporal grain of the trend.
-
 \begin{landscape}\begingroup\fontsize{10}{12}\selectfont
 
 \begin{longtable}[t]{>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedleft\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}>{\raggedright\arraybackslash}p{6.5em}}
@@ -374,6 +330,48 @@ Reference & Metric & Spatial grain (Km²) & Temporal grain (year) & Spatial exte
 \endgroup{}
 \end{landscape}
 
+\hypertarget{on-the-spatial-scale}{%
+\chapter{On the spatial scale}\label{on-the-spatial-scale}}
+
+Out of 17 papers, 5 were located in North America and 12 in Europe. The median spatial extent of the data is \ensuremath{5.20475\times 10^{5}} \(Km^2\), with the smallest area of 1800 \(Km^2\) and the greatest representing the global emerged surface (\emph{i.e.} \ensuremath{1.4894\times 10^{8}} \(Km^2\)). Overall, there were 11 \emph{Decrease}, 31 \emph{Increase} and 14 \emph{Stable} reliable trends (\emph{i.e.} spatially replicated) across the literature, without consideration of any metric or spatial scales.
+
+Local scales are more represented than the others and the number of papers decreases with the increasing spatial scale (Figure \ref{fig:barspatscale}). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The \emph{Increase} of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of \emph{Decrease} is more important at regional scales than at local scales. At the global scale, no \emph{Increase} were found.
+
+\begin{figure}
+\centering
+\includegraphics{literature_review_files/figure-latex/barspatscale-1.pdf}
+\caption{\label{fig:barspatscale}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each spatial scale}
+\end{figure}
+
+Species richness and abundance metrics are very represented in the scientific literature (Figure \ref{fig:barmetrics}). The less common trend of abundance is \emph{Increase}, whilst \emph{Decrease} and \emph{Stability} are both as common. Diversity indexes (\emph{i.e.} Sørensen and Jaccard) were always found increasing and temporal \(\beta\)-diversity was found most of the time increasing and never decreasing. The small frequency of the other metrics doesn't allow one to discuss the trend proportions.
+
+\begin{figure}
+\centering
+\includegraphics{literature_review_files/figure-latex/barmetrics-1.pdf}
+\caption{\label{fig:barmetrics}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each of the metric}
+\end{figure}
+
+\textbf{At local scales}, species richness experiences dominantly increases (Figure \ref{fig:barmetricsperspatscale}). Evenness indexes, \emph{i.e.} taxonomic and functional evenness, are mainly found increasing. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, \textbf{at regional scale}, abundance metrics always decrease, whilst temporal \(\beta\)-diversity always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning \textbf{national and global scales}, one have to keep in mind that spatial replicates are less frequent and that most of the trends reported here for these two spatial scales are not replicated. Exceptions are made by \textcite{bowler_geographic_2021} and \textcite{donald_agricultural_2001}. The former showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale (here referred as \emph{Stable}). For \textcite{donald_agricultural_2001}, trends of mean populations were computed for 30 european countries and most of them were negatives. No positive trend seem dominant at these spatial scales. Global trends only come from \textcite{jarzyna_taxonomic_2018}.
+
+\begin{figure}
+\centering
+\includegraphics{literature_review_files/figure-latex/barmetricsperspatscale-1.pdf}
+\caption{\label{fig:barmetricsperspatscale}Proportion of \emph{Increase}, \emph{Decrease} or \emph{Stable} trends for each metric. Each panel represent one spatial scale}
+\end{figure}
+
+\hypertarget{on-the-temporal-scale}{%
+\chapter{On the temporal scale}\label{on-the-temporal-scale}}
+
+The oldest study started in 1968 and the median duration is 23 years, with a minimum time span of 11 years and a maximum of 45.
+
+Determination of the temporal grain was way more complicated, as there is no consensus on the subject. Most of the time the temporal grain of the sampling was specified, but often with inaccuracies (\emph{e.g.} \enquote{in the early morning}). However, the temporal grain of the sampling plan doesn't represent the final temporal grain. For instance, some metrics are summed over a certain spatial extent \autocite[e.g.~summing the species richness over an atlas square, like in][]{van_turnhout_scale-dependent_2007}. In this case, the temporal grain should also be summed, but this was not specified. On an other hand, when the metric is averaged over a spatial grain, the sampling temporal grain can be considered.
+
+However, an other problem arises when the trend is computed. Usually, one compute the metric out of the data and considers the value to be representative of half a year or a year. In this case, there is no consensus on what should be the temporal grain: should one keep the grain of the sampling? Should one consider it to be the time-span covered by the sampling? In Table \ref{tab:maintable}, the latter has been used.
+
+For the cases where the metric was determined out of model \autocite[e.g.~][]{harrison_assessing_2014}, the final temporal grain was most of the time explicitly given, with an order of length of the year.
+
+In short, temporal grain has no clear definition as it is different according to the metric computed, how it is computed and if the temporal trend is assessed. Even though it is now clear that sampling plan temporal grain is important to explicit, there is no such consensus regarding the temporal grain of the trend.
+
 \hypertarget{discussion}{%
 \chapter{Discussion}\label{discussion}}
 
@@ -386,9 +384,12 @@ Even less articles were computing repetitively the trend of metrics at various s
 
 \textbf{About the entanglement of spatial and temporal grain:} there is a relationship between spatial and temporal grain. As the spatial grain increases, the temporal grain is also expected to increase, as a greater spatial scale needs more time to be sampled (sampling for a very short period of time a large area would result in sampling a smaller area). However, the inverse is not true, one can definitely sample a small area for a very long time.
 
+\newpage
 \begin{singlespacing}
 \printbibliography[heading=bibintoc, title={References}]
 \end{singlespacing}
+
+\newpage
 
 \hypertarget{supplementary-materials}{%
 \chapter*{Supplementary materials}\label{supplementary-materials}}
