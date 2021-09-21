@@ -163,7 +163,7 @@
 \addbibresource{references.bib}
 
 \author{François Leroy, PhD student at CZU}
-\date{2021-09-20}
+\date{2021-09-21}
 
 % to include pdf
 \usepackage{pdfpages}
@@ -371,7 +371,7 @@ On an other hand, the decrease of abundances seem to appear mainly at regional o
 \hypertarget{spatial-replicates-is-not-a-standard}{%
 \section{Spatial replicates is not a standard}\label{spatial-replicates-is-not-a-standard}}
 
-Articles computing the trend of a metric with spatial replicates were limited, either due to a lack of data or because the trend was assessed for the spatial extent of the data. For instance, the Breeding Bird Surveys \autocites[\emph{e.g.}][]{sauer_north_2013,kamp_population_2021} follow standardized sampling plan with spatial replications (\emph{i.e.} census plots). However, not all the trend reported for the BBS are summarized at their specific grain sizes and were sometimes computed at their respective national scales, therefore without spatial replication. For instance, the common method encountered to assess population trends (\emph{i.e.} abundance indexes) is to learn a predictive model from the data, predict the target feature (\emph{i.e.} abundance) and then compute the metric and its trend from the output of the model at the national spatial extent \autocites[\emph{e.g.}][]{jiguet_modeling_2005,jiguet_french_2012,eglington_disentangling_2012,doxa_low-intensity_2010,sauer_first_2017}. These analysis are essential from a conservation point of view and are a majority \autocite{fraixedas_state_2020}: they give valuable information about ecosystem health at large spatial extent and are thus used as arguments by decision-makers. However, they represent just one trend amongst all the possible trends that can be found at this spatial scales and thus doesn't give information about the link between spatial grain and temporal trend.
+Articles computing the trend of a metric with spatial replicates were limited, either due to a lack of data or because the trend was assessed for the spatial extent of the data. For instance, the Breeding Bird Surveys \autocites[\emph{e.g.}][]{sauer_north_2013,kamp_population_2021} follow standardized sampling plan with spatial replications (\emph{i.e.} census plots). However, not all the trend reported for the BBS are summarized at their specific grain sizes and were sometimes computed at their respective national scales, therefore without spatial replication. For instance, the common method encountered to assess population trends (\emph{i.e.} abundance indexes) is to learn a predictive model from the data, predict the target feature (\emph{i.e.} abundance) and then compute the metric and its trend from the output of the model at the national spatial extent \autocites[\emph{e.g.}][]{jiguet_modeling_2005,jiguet_french_2012,eglington_disentangling_2012,doxa_low-intensity_2010,sauer_first_2017}. These analysis are essential from a conservation point of view and are a majority \autocite{fraixedas_state_2020}: they give valuable information about ecosystem health at large spatial extent and are thus used as arguments by decision-makers. However, they represent just one trend amongst all the possible trends that can be found at this spatial scales and thus doesn't give information about the link between spatial grain and temporal trend. An other common type of studies are the one using the space-for-time substitution \autocite{walker_use_2010} to assess the trend of a metric \autocite[one of the best example is][]{hill_determining_2004}. One could think that using this studies could increase significantly the spatial replicates. However, the space-for-time substitution is mainly used to assess the impact of a process (\emph{e.g.} before/after logging, before/after urbanization etc) meaning that the trend computed is higly biased, which we try to avoid for our topic.
 
 Even less articles were computing the trends of metrics with spatial replicates at various spatial grain. This was the case for only \textcite{chase_species_2019} and \textcite{jarzyna_taxonomic_2018}. It is also important to cite here \textcite{jarzyna_spatial_2015}, who did iteration computing of temporal change community metrics (\emph{i.e.} temporal dissimilarity, temporal turnover, extinction and colonization) at several spatial scales. However, the temporal trend of these metrics weren't considered and are therefore not reported in Table \ref{tab:maintable}.
 
@@ -393,14 +393,20 @@ For the cases where the metric was determined out of model \autocite[e.g.][]{har
 
 In short, temporal grain has no clear definition as it is different according to the metric computed, how it is computed and if the temporal trend is assessed. Even though it is now clear that the temporal grain of the sampling is important, there is no such consensus regarding the temporal grain of the trend.
 
-\includegraphics{literature_review_files/figure-latex/unnamed-chunk-4-1.pdf}
+Highest temporal grains are found with increasing spatial extent (Figure \ref{fig:spacetimegrain}). Data used in the selected article are mainly structured data, \emph{i.e.} data following a well established sampling plan. This type of survey need resources and organizations which makes them sparser. Increasing the total area to sample makes \emph{de facto} the time needed to sample the area to increase and eventually the temporal grain. However, this entanglement between spatial and temporal grain scales is only related to the constraints of the sampling. This limitation can be overcome thanks to citizen science data, which are nowadays more and more used \autocites[\emph{e.g.}][]{bowler_winners_2021,isaac_data_2020,isaac_statistics_2014}. The opportunistic feature of these data make the number of observations more important, even over a large area. These data, with high temporal grain resolution for large spatial scales, are yet to be used to explore in more detail the temporal scaling of biodiversity trend.
 
-\textbf{About the entanglement of spatial and temporal grain:} there is a relationship between spatial and temporal grain. As the spatial grain increases, the temporal grain is also expected to increase, as a greater spatial scale needs more time to be sampled (sampling for a very short period of time a large area would result in sampling a smaller area). However, the inverse is not true, one can definitely sample a small area for a very long time.
+\begin{figure}
+\centering
+\includegraphics{literature_review_files/figure-latex/spacetimegrain-1.pdf}
+\caption{\label{fig:spacetimegrain}Not sure about the relevance of this figure}
+\end{figure}
 
 \hypertarget{future-directions}{%
 \chapter{Future directions}\label{future-directions}}
 
-Out of 17 papers, 5 were located in North America and 12 in Europe. (talk about Fraixedas)
+In order to find general patterns and reliable results about spatio-temporal scaling of biodiversity trends, replications are needed. That is, iteratively computing trends of biodiveristy at certain scales across the globe. However, out of 17 papers, 5 were located in North America and 12 in Europe. This is a striking example of the well-known lack of studies outside Europe and, to a lesser degree, North America \autocite{fraixedas_state_2020}. Yet, biodiversity dynamic across scales in Europe is not representative of global dynamic, especially due to the lesser ecosystem representations, the variations in anthropization, conservation policies etc. Thus, studies replicating the computation of trends at several spatio-temporal scales are needed outside of Europe if one wants to understand the scaling of biodiverity dynamic. These non-european studies are even more needed when working at spatial grains the size or greater than Europe. In this case, spatial replication means having data about other continents.
+
+(toward a consistency in spatial grain report and about temporal grain)
 
 \hypertarget{conclusion}{%
 \chapter{Conclusion}\label{conclusion}}

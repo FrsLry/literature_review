@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.9)  20 SEP 2021 16:39
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.9)  21 SEP 2021 11:49
  restricted system commands enabled.
 **literature_review.tex
 (./literature_review.tex
@@ -580,12 +580,12 @@ braces):
 >  {french/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {french/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for french
-(polyglossia)            synonyms	patois,francais
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            patterns	hyph-fr.pat.txt
 (polyglossia)            righthyphenmin	2
+(polyglossia)            hyphenation	
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            loader	loadhyph-fr.tex
-(polyglossia)            hyphenation	 on input line 12
+(polyglossia)            patterns	hyph-fr.pat.txt
+(polyglossia)            synonyms	patois,francais on input line 12
 Module polyglossia Info: Language french was not yet loaded; created with id 2 o
 n input line 12
 Lua-only attribute polyglossia_punct = 5
@@ -2089,53 +2089,54 @@ LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/calibri(0)/b/n' will be
 (Font)              scaled to size 17.28pt on input line 372.
 [13] [14]
-<literature_review_files/figure-latex/unnamed-chunk-4-1.pdf, id=358, 469.755pt 
-x 325.215pt>
-File: literature_review_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (
-type pdf)
-<use literature_review_files/figure-latex/unnamed-chunk-4-1.pdf>
-Package luatex.def Info: literature_review_files/figure-latex/unnamed-chunk-4-1
-.pdf  used on input line 396.
+<literature_review_files/figure-latex/spacetimegrain-1.pdf, id=366, 469.755pt x
+ 325.215pt>
+File: literature_review_files/figure-latex/spacetimegrain-1.pdf Graphic file (t
+ype pdf)
+<use literature_review_files/figure-latex/spacetimegrain-1.pdf>
+Package luatex.def Info: literature_review_files/figure-latex/spacetimegrain-1.
+pdf  used on input line 400.
 (luatex.def)             Requested size: 469.75386pt x 325.2142pt.
 Chapter 5.
 Chapter 6.
-[15<./literature_review_files/figure-latex/unnamed-chunk-4-1.pdf>] [16] [17]
-Underfull \hbox (badness 1087) in paragraph at lines 412--412
+[15] [16<./literature_review_files/figure-latex/spacetimegrain-1.pdf>] [17] [18
+]
+Underfull \hbox (badness 1087) in paragraph at lines 418--418
 [][]\TU/calibri(0)/m/n/12 Hill, M. O. (1973). Di-ver-sity and Even-ness: A Uni-f
 y-ing No-ta-tion and Its Con-se-quences [_eprint:
  []
 
-[18]
-Underfull \hbox (badness 1360) in paragraph at lines 412--412
+[19]
+Underfull \hbox (badness 1360) in paragraph at lines 418--418
 \TU/calibri(0)/m/n/12 T., Pavoine, S., Prinz-ing, A., Ro-drigues, A. S. L., 
 … Thuiller, W. (2012). Eco-phy-lo-ge-net-ics:
  []
 
-[19] [20]
-Underfull \hbox (badness 1448) in paragraph at lines 412--412
+[20] [21]
+Underfull \hbox (badness 1448) in paragraph at lines 418--418
 [][]\TU/calibri(0)/m/n/12 Whit-taker, R. H. (1960). Veg-etation of the Siskiyou Moun-tains, Ore-gon and Cal-i-for-nia [_eprint:
  []
 
-[21] [22]
+[22] [23]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 457.
+(Font)              scaled to size 10.00107pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 457.
+(Font)              scaled to size 7.00075pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 457.
+(Font)              scaled to size 5.00053pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 457.
+(Font)              scaled to size 9.99893pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 457.
+(Font)              scaled to size 6.99925pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 457.
+(Font)              scaled to size 4.99947pt on input line 463.
 (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [23
+) [24
 
-] [24] [25] [26]
+] [25] [26] [27]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -2204,25 +2205,25 @@ Package logreq Info: Writing requests to 'literature_review.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45762 strings out of 478146
- 244339,2373549 words of node,token memory allocated
- 1574 words of node memory still in use:
-   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 80 attribute,
- 115 glue_spec, 80 attribute_list, 3 write, 1 user_defined, 16 pdf_literal, 21 p
+ 45814 strings out of 478146
+ 244341,2373549 words of node,token memory allocated
+ 1594 words of node memory still in use:
+   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 82 attribute,
+ 115 glue_spec, 82 attribute_list, 3 write, 1 user_defined, 16 pdf_literal, 23 p
 df_action, 16 pdf_colorstack nodes
-   avail lists: 1:11,2:7982,3:2252,4:1102,5:2751,6:1042,7:15470,8:79,9:8120,10:2
+   avail lists: 1:11,2:7989,3:2254,4:1102,5:2755,6:1042,7:15478,8:79,9:8120,10:2
 3,11:796
- 64185 multiletter control sequences out of 65536+600000
- 84 fonts using 47028819 bytes
+ 64230 multiletter control sequences out of 65536+600000
+ 84 fonts using 47028591 bytes
  99i,17n,115p,2880b,5139s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/leroy/AppData/Roaming/MiKTeX/fonts/opentype/public/lm-math/latinmodern
 -math.otf><//?/c:/program files/miktex/fonts/opentype/public/lm/lmmono12-regular
 .otf><C:/Users/leroy/AppData/Roaming/MiKTeX/fonts/opentype/public/lm-math/latinm
 odern-math.otf><./fonts/calibrili.ttf><./fonts/calibrib.ttf><./fonts/calibri.ttf
 >
-Output written on literature_review.pdf (28 pages, 1567989 bytes).
+Output written on literature_review.pdf (29 pages, 1577283 bytes).
 
-PDF statistics: 595 PDF objects out of 1000 (max. 8388607)
- 111 named destinations out of 1000 (max. 131072)
+PDF statistics: 620 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 131072)
  264 words of extra memory for PDF output out of 10000 (max. 100000000)
 
