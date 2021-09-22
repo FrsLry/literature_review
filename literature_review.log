@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.9)  21 SEP 2021 15:09
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.9)  22 SEP 2021 14:58
  restricted system commands enabled.
 **literature_review.tex
 (./literature_review.tex
@@ -580,11 +580,11 @@ braces):
 >  {french/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {french/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for french
-(polyglossia)            loader	loadhyph-fr.tex
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            righthyphenmin	2
-(polyglossia)            hyphenation	
 (polyglossia)            synonyms	patois,francais
+(polyglossia)            righthyphenmin	2
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            hyphenation	
+(polyglossia)            loader	loadhyph-fr.tex
 (polyglossia)            patterns	hyph-fr.pat.txt on input line 12
 Module polyglossia Info: Language french was not yet loaded; created with id 2 o
 n input line 12
@@ -2017,26 +2017,21 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 ] [2]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--228
+Underfull \hbox (badness 10000) in paragraph at lines 230--232
 []\TU/lmtt/m/n/12 AB = ((biodiversity OR species richness OR diversity) AND (tem
 poral trend*
  []
 
 [3] [4]
 LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 245.
+(Font)              scaled to size 10.0pt on input line 247.
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 247--252
+Overfull \hbox (11.84102pt too wide) in alignment at lines 249--254
  [][][][][][][][][] 
  []
 
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 252--257
- [][][][][][][][][] 
- []
-
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 257--259
+Overfull \hbox (11.84102pt too wide) in alignment at lines 254--259
  [][][][][][][][][] 
  []
 
@@ -2046,7 +2041,12 @@ Overfull \hbox (11.84102pt too wide) in alignment at lines 259--261
  []
 
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 261--329
+Overfull \hbox (11.84102pt too wide) in alignment at lines 261--263
+ [][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.84102pt too wide) in alignment at lines 263--331
  [][][][][][][][][] 
  []
 
@@ -2054,89 +2054,89 @@ Overfull \hbox (11.84102pt too wide) in alignment at lines 261--329
 
 ] [6] [7] [8]
 Chapter 3.
-<literature_review_files/figure-latex/barspatscale-1.pdf, id=269, 469.755pt x 3
+<literature_review_files/figure-latex/barspatscale-1.pdf, id=277, 469.755pt x 3
 25.215pt>
 File: literature_review_files/figure-latex/barspatscale-1.pdf Graphic file (typ
 e pdf)
 <use literature_review_files/figure-latex/barspatscale-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/barspatscale-1.pd
-f  used on input line 344.
+f  used on input line 346.
 (luatex.def)             Requested size: 469.75386pt x 325.2142pt.
-<literature_review_files/figure-latex/barmetrics-1.pdf, id=271, 469.755pt x 325
+<literature_review_files/figure-latex/barmetrics-1.pdf, id=279, 469.755pt x 325
 .215pt>
 File: literature_review_files/figure-latex/barmetrics-1.pdf Graphic file (type 
 pdf)
 <use literature_review_files/figure-latex/barmetrics-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/barmetrics-1.pdf 
- used on input line 352.
+ used on input line 354.
 (luatex.def)             Requested size: 469.75386pt x 325.2142pt.
 [9
 
 ] [10<./literature_review_files/figure-latex/barspatscale-1.pdf>] [11<./literatu
 re_review_files/figure-latex/barmetrics-1.pdf>]
-<literature_review_files/figure-latex/barmetricsperspatscale-1.pdf, id=304, 469
+<literature_review_files/figure-latex/barmetricsperspatscale-1.pdf, id=312, 469
 .755pt x 325.215pt>
 File: literature_review_files/figure-latex/barmetricsperspatscale-1.pdf Graphic
  file (type pdf)
 <use literature_review_files/figure-latex/barmetricsperspatscale-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/barmetricsperspat
-scale-1.pdf  used on input line 360.
+scale-1.pdf  used on input line 362.
 (luatex.def)             Requested size: 469.75386pt x 325.2142pt.
 [12<./literature_review_files/figure-latex/barmetricsperspatscale-1.pdf>]
 Chapter 4.
 LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 372.
+(Font)              scaled to size 17.28pt on input line 374.
 LaTeX Font Info:    Font shape `TU/calibri(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 372.
+(Font)              scaled to size 17.28pt on input line 374.
 [13] [14]
-<literature_review_files/figure-latex/spacetimegrain-1.pdf, id=366, 469.755pt x
+<literature_review_files/figure-latex/spacetimegrain-1.pdf, id=373, 469.755pt x
  325.215pt>
 File: literature_review_files/figure-latex/spacetimegrain-1.pdf Graphic file (t
 ype pdf)
 <use literature_review_files/figure-latex/spacetimegrain-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/spacetimegrain-1.
-pdf  used on input line 400.
+pdf  used on input line 402.
 (luatex.def)             Requested size: 469.75386pt x 325.2142pt.
 Chapter 5.
-[15] [16<./literature_review_files/figure-latex/spacetimegrain-1.pdf>]
+[15] [16<./literature_review_files/figure-latex/spacetimegrain-1.pdf>] [17]
 Chapter 6.
-[17] [18]
-Underfull \hbox (badness 1087) in paragraph at lines 424--424
+[18] [19] [20]
+Underfull \hbox (badness 1087) in paragraph at lines 428--428
 [][]\TU/calibri(0)/m/n/12 Hill, M. O. (1973). Di-ver-sity and Even-ness: A Uni-f
 y-ing No-ta-tion and Its Con-se-quences [_eprint:
  []
 
-[19]
-Underfull \hbox (badness 1360) in paragraph at lines 424--424
+
+Underfull \hbox (badness 1360) in paragraph at lines 428--428
 \TU/calibri(0)/m/n/12 T., Pavoine, S., Prinz-ing, A., Ro-drigues, A. S. L., 
 … Thuiller, W. (2012). Eco-phy-lo-ge-net-ics:
  []
 
-[20] [21]
-Underfull \hbox (badness 1448) in paragraph at lines 424--424
+[21] [22]
+Underfull \hbox (badness 1448) in paragraph at lines 428--428
 [][]\TU/calibri(0)/m/n/12 Whit-taker, R. H. (1960). Veg-etation of the Siskiyou Moun-tains, Ore-gon and Cal-i-for-nia [_eprint:
  []
 
-[22] [23]
+[23] [24]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 469.
+(Font)              scaled to size 10.00107pt on input line 473.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 469.
+(Font)              scaled to size 7.00075pt on input line 473.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 469.
+(Font)              scaled to size 5.00053pt on input line 473.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 469.
+(Font)              scaled to size 9.99893pt on input line 473.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 469.
+(Font)              scaled to size 6.99925pt on input line 473.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 469.
+(Font)              scaled to size 4.99947pt on input line 473.
 (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [24
+) [25
 
-] [25] [26] [27]
+] [26] [27] [28]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -2205,25 +2205,25 @@ Package logreq Info: Writing requests to 'literature_review.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45837 strings out of 478146
+ 45850 strings out of 478146
  305464,2373549 words of node,token memory allocated
- 1594 words of node memory still in use:
-   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 82 attribute,
- 115 glue_spec, 82 attribute_list, 3 write, 1 user_defined, 16 pdf_literal, 23 p
+ 1604 words of node memory still in use:
+   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 83 attribute,
+ 115 glue_spec, 83 attribute_list, 3 write, 1 user_defined, 16 pdf_literal, 24 p
 df_action, 16 pdf_colorstack nodes
-   avail lists: 1:8,2:7998,3:2255,4:1103,5:2755,6:1046,7:15480,8:86,9:8120,10:23
-,11:796
- 64250 multiletter control sequences out of 65536+600000
- 84 fonts using 47028743 bytes
+   avail lists: 1:12,2:7999,3:2254,4:1102,5:2756,6:1045,7:15480,8:90,9:8120,10:2
+3,11:796
+ 64260 multiletter control sequences out of 65536+600000
+ 84 fonts using 47028819 bytes
  99i,17n,115p,2880b,5139s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/leroy/AppData/Roaming/MiKTeX/fonts/opentype/public/lm-math/latinmodern
 -math.otf><//?/c:/program files/miktex/fonts/opentype/public/lm/lmmono12-regular
 .otf><C:/Users/leroy/AppData/Roaming/MiKTeX/fonts/opentype/public/lm-math/latinm
 odern-math.otf><./fonts/calibrili.ttf><./fonts/calibrib.ttf><./fonts/calibri.ttf
 >
-Output written on literature_review.pdf (29 pages, 1583508 bytes).
+Output written on literature_review.pdf (30 pages, 1589378 bytes).
 
-PDF statistics: 633 PDF objects out of 1000 (max. 8388607)
- 121 named destinations out of 1000 (max. 131072)
+PDF statistics: 646 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 131072)
  264 words of extra memory for PDF output out of 10000 (max. 100000000)
 
