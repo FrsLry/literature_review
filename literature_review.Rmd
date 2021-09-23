@@ -34,6 +34,7 @@ library(ggplot2)
 library(kableExtra)
 library(tidyr)
 library(forcats)
+library(flextable)
 ```
 
 <!-- # Outline {.unnumbered} -->
@@ -162,7 +163,8 @@ I have found `r nrow(unique(read_sheet("https://docs.google.com/spreadsheets/d/1
 
 <!-- Moreover, @pilotto_meta-analysis_2020 conducted a meta-analysis in which they computed and summarized the trend of four biodiversity metrics (namely, species richness, species diversity, abundance and temporal turnover). Some of them were concerning bird communities. For those latter, I used their code and data on the [github repository](https://github.com/FrsLry/R-code) of their paper in order to compute the trends of these four metrics for the bird datasets. -->
 
-```{r maintable, echo=F}
+
+```{r maintable, echo=F, tab.cap="Trends of different metrics of biodiversity at various spatial and temporal scales"}
 # Function to collapse the reference column
 collapse_rows_df <- function(df, variable){
 
@@ -187,16 +189,17 @@ tab %>%
   as_tibble() %>%
   group_by(Reference) %>%
   collapse_rows_df(Reference) %>%
+  flextable::flextable() %>% fontsize(size = 5, part = "all") 
   ## escape = F is very important for the citation
-  kbl(booktabs = T, escape = F, format = "latex", longtable = T,
-      caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>%
-  kableExtra::kable_styling(
-   latex_options = c("hold_position", "repeat_header", "striped"),
-   font_size = 10,
-   full_width = FALSE
-   ) %>%
-  column_spec(1:9, width = "6.5em") %>%
-  landscape()
+  # kbl(booktabs = T, escape = F, format = "latex", longtable = T,
+  #     caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>%
+  # kableExtra::kable_styling(
+  #  latex_options = c("hold_position", "repeat_header", "striped"),
+  #  font_size = 10,
+  #  full_width = FALSE
+  #  ) %>%
+  # column_spec(1:9, width = "6.5em") %>%
+  # landscape()
 ```
 
 # On the link between spatial grain and trends of biodiversity
@@ -205,7 +208,7 @@ The median spatial extent of the `r length(unique(tab$Reference))` articles is `
 
 One have to keep in mind that the proportions of the trends presented here is not representative of the overall trend usually found in the scientific literature. Taking only the articles with spatial replicates reduces the number of studies and thus doesn't reflect the overall dynamic of biodiversity, which is not the purpose of this review. As a matter of fact, meta-analysis by @fraixedas_state_2020 indicates that around half of bird related indicators are declining and that only $20\%$ of them are increasing.
 
-In our case, local scales are more represented than the others and the number of articles decreases with the increasing spatial scale (Figure \ref{fig:barspatscale}). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The *Increase* of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of *Decrease* is more important at regional scales than at local scales. At the global scale, no *Increase* were found.
+In our case, local scales are more represented than the others and the number of articles decreases with the increasing spatial scale (Figure \@ref(fig:barspatscale)). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The *Increase* of the metrics seems to be dominating at smaller scales. On an other hand, the proportion of *Decrease* is more important at regional scales than at local scales. At the global scale, no *Increase* were found.
 
 ```{r barspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each spatial scale", fig.pos = "!H"}
 
@@ -230,7 +233,7 @@ table(tab$`Spatial grain (Km²)`, tab$Trend) %>%
 #   column_spec(1, width = "20em")
 ```
 
-Replicated species richness and abundance metrics are very represented in the scientific literature (Figure \ref{fig:barmetrics}). The less common trend of abundance is *Increase*, whilst *Decrease* and *Stability* are both as common. Diversity indexes (*i.e.* Sørensen and Jaccard) were always found increasing and temporal $\beta$-diversity was found most of the time increasing and never decreasing. The small frequency of the other metrics doesn't allow one to discuss the trend proportions.
+Replicated species richness and abundance metrics are very represented in the scientific literature (Figure \@ref(fig:barmetrics)). The less common trend of abundance is *Increase*, whilst *Decrease* and *Stability* are both as common. Diversity indexes (*i.e.* Sørensen and Jaccard) were always found increasing and temporal $\beta$-diversity was found most of the time increasing and never decreasing. The small frequency of the other metrics doesn't allow one to discuss the trend proportions.
 
 ```{r barmetrics, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each of the metric", fig.pos = "!H", }
 
@@ -252,7 +255,7 @@ table(tab %>% select(Metric, Trend)) %>%
 #   column_spec(1, width = "20em")
 ```
 
-**At local scales**, species richness experiences dominantly increase (Figure \ref{fig:barmetricsperspatscale}). Evenness indexes, *i.e.* taxonomic and functional evenness, are mainly found increasing. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, **at regional scale**, abundance metrics always decrease, whilst temporal $\beta$-diversity always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning **national and global scales**, one have to keep in mind that spatial replicates are less frequent and that most of the trends reported here for these two spatial scales are not replicated. Exceptions are made by @bowler_geographic_2021 and @donald_agricultural_2001. The former showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale (here referred as *Stable*). However, for @donald_agricultural_2001, trends of mean populations were computed for 30 European countries and the majority was negative. No positive trend seem dominant at these spatial scales. Global trends only come from @jarzyna_taxonomic_2018.
+**At local scales**, species richness experiences dominantly increase (Figure \@ref(fig:barmetricsperspatscale)). Evenness indexes, *i.e.* taxonomic and functional evenness, are mainly found increasing. Concerning the abundance indexes, the stability dominates but the increase is also often witnessed. In contrast, **at regional scale**, abundance metrics always decrease, whilst temporal $\beta$-diversity always increase. Species richness experiments mainly increases, then stability but no decrease is reported. Concerning **national and global scales**, one have to keep in mind that spatial replicates are less frequent and that most of the trends reported here for these two spatial scales are not replicated. Exceptions are made by @bowler_geographic_2021 and @donald_agricultural_2001. The former showed negative trends in abundance indexes for Denmark and Germany and positive trends for Switzerland and Czech Republic, indicating that one can not conclude about general trend at national scale (here referred as *Stable*). However, for @donald_agricultural_2001, trends of mean populations were computed for 30 European countries and the majority was negative. No positive trend seem dominant at these spatial scales. Global trends only come from @jarzyna_taxonomic_2018.
 
 ```{r barmetricsperspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each metric. Each panel represent one spatial scale", fig.pos = "!H"}
 table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>% 
@@ -299,7 +302,7 @@ For the cases where the metric is determined out of model [e.g. @harrison_assess
 
 In short, temporal grain has no clear definition as it is different according to the metric computed, how it is computed and if the temporal trend is assessed. Even though it is now clear that the temporal grain of the sampling is important, there is no such consensus regarding the temporal grain of the trend.
 
-Highest temporal grains are found with increasing spatial extent (Figure \ref{fig:spacetimegrain}, \textcolor{red}{really not sure about this one}). It is due to the fact that data used in the selected article are mainly structured data, *i.e.* data following a well established sampling plan. This type of survey need resources and organizations which makes them sparser. Increasing the total area to be sampled makes *de facto* the time to increase and eventually the temporal grain. However, this entanglement between spatial extent and temporal grain is only related to the constraints of the sampling. This limitation can be overcome thanks to citizen science data, which are nowadays more and more used [*e.g.* @bowler_winners_2021; @isaac_data_2020; @isaac_statistics_2014]. The opportunistic nature of these data make the number of observations more important for very short census times, even over a large area. These data, with high temporal grain resolution for large spatial scales, could be used to explore in more details the temporal scaling of biodiversity trend.
+Highest temporal grains are found with increasing spatial extent (Figure \@ref(fig:spacetimegrain), \textcolor{red}{really not sure about this one}). It is due to the fact that data used in the selected article are mainly structured data, *i.e.* data following a well established sampling plan. This type of survey need resources and organizations which makes them sparser. Increasing the total area to be sampled makes *de facto* the time to increase and eventually the temporal grain. However, this entanglement between spatial extent and temporal grain is only related to the constraints of the sampling. This limitation can be overcome thanks to citizen science data, which are nowadays more and more used [*e.g.* @bowler_winners_2021; @isaac_data_2020; @isaac_statistics_2014]. The opportunistic nature of these data make the number of observations more important for very short census times, even over a large area. These data, with high temporal grain resolution for large spatial scales, could be used to explore in more details the temporal scaling of biodiversity trend.
 
 ```{r spacetimegrain, fig.cap = "Not sure about the relevance of this figure", fig.pos = "!H"}
 # lol <- 
@@ -355,7 +358,7 @@ Reviewing the scientific literature on this topic gives a glimpse of what still 
 \printbibliography[heading=bibintoc, title={References}]
 \end{singlespacing}
 ```
-\newpage
+<!-- \newpage -->
 
 # Supplementary materials {.unnumbered}
 
@@ -363,77 +366,28 @@ Reviewing the scientific literature on this topic gives a glimpse of what still 
 
 <!-- \vspace*{-1cm} -->
 
-```{r notetable, echo=FALSE}
+```{r notetable, echo=FALSE, tab.cap="Supplementary informations about each article"}
 tab %>%
   select(Reference, `Spatial grain (Km²)`, Trend, Note) %>%
   as_tibble() %>%
   group_by(Reference) %>%
   collapse_rows_df(Reference) %>%
+  flextable() %>% fontsize(size = 10, part = "all") %>% 
+  width(j = 4, width = 4)
   ## escape = F is very important for the citation
-  kbl(booktabs = T, escape = F, format = "latex", longtable = T,
-      caption = "Supplementary informations about each article") %>%
-  kableExtra::kable_styling(
-   latex_options = c("hold_position", "repeat_header", "striped"),
-   font_size = 10,
-   full_width = FALSE
-   ) %>%
-  column_spec(1:3, width = "6.5em") %>%
-  column_spec(4, width = "40em") %>% 
-  landscape()
+  # kbl(booktabs = T, escape = F, format = "latex", longtable = T,
+  #     caption = "Supplementary informations about each article") %>%
+  # kableExtra::kable_styling(
+  #  latex_options = c("hold_position", "repeat_header", "striped"),
+  #  font_size = 10,
+  #  full_width = FALSE
+  #  ) %>%
+  # column_spec(1:3, width = "6.5em") %>%
+  # column_spec(4, width = "40em") %>% 
+  # landscape()
 ```
 
-```{r, eval=F}
-tab %>% 
-    select(Metric, `Spatial grain (Km²)`, Trend) %>% 
-    group_by(`Spatial grain (Km²)`) %>% 
-    count(Trend) %>% 
-    pivot_wider(1:3, names_from = Trend, values_from = n) %>% 
-    mutate(n = sum(c(Decrease, Increase, Stable), na.rm = T)) %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), funs(./n)) %>% ungroup() %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2))) %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), as.numeric) %>% 
-  kable()
- 
-```
+\newpage
 
-```{r, eval=F}
-tmp <- 
-  tab %>% 
-    select(Metric, `Spatial grain (Km²)`, Trend) %>% 
-    group_by(Metric, `Spatial grain (Km²)`) %>% 
-    count(Trend) %>% 
-    pivot_wider(1:4, names_from = Trend, values_from = n) %>% 
-    mutate(n = sum(c(Decrease, Increase, Stable), na.rm = T)) %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), funs(./n)) %>% ungroup() %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), funs(format(round(., 2), nsmall = 2))) %>% 
-    mutate_at(c("Decrease", "Increase", "Stable"), as.numeric)
-    
-  
-  knitr::kable(tmp %>% 
-                 filter(`Spatial grain (Km²)` == "Local") %>% 
-                 # ungroup() %>%
-                 select(-2),
-               caption = "Local") %>% 
-    column_spec(1:4, width = "6.5em") 
-  
-  knitr::kable(tmp %>% 
-                 filter(`Spatial grain (Km²)` == "Regional") %>% 
-                 # ungroup() %>%
-                 select(-2),
-               caption = "Regional") %>% 
-    column_spec(1:4, width = "6.5em")
-  
-  knitr::kable(tmp %>% 
-                 filter(`Spatial grain (Km²)` == "National") %>% 
-                 # ungroup() %>%
-                 select(-2),
-               caption = "National") %>% 
-    column_spec(1:4, width = "6.5em")
-  
-  knitr::kable(tmp %>% 
-                 filter(`Spatial grain (Km²)` == "Global") %>% 
-                 # ungroup() %>%
-                 select(-2),
-               caption = "Global") %>% 
-    column_spec(1:4, width = "6.5em")  
-```
+# References
+
