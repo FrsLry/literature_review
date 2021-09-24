@@ -1,5 +1,7 @@
 ---
-# title: Literature review
+title: Scaling Biodiversity Trends
+output:
+  bookdown::word_document2
 coverpage: true
 toc: true
 author: "François Leroy, PhD student at CZU"
@@ -35,6 +37,7 @@ library(kableExtra)
 library(tidyr)
 library(forcats)
 library(flextable)
+library(ftExtra)
 ```
 
 <!-- # Outline {.unnumbered} -->
@@ -157,7 +160,7 @@ For each query, the title and abstract of the articles were reviewed. When the t
 
 Spatial grain sizes are discretized into four levels: *local* $<= 25$ $Km^2$, *regional* $> 25$ $Km²$, *national* when an entire country is considered and *global* at the worldwide scale.
 
-Concerning the trend assessment, different papers contain the *p-value* or directly specify the significant trend of the metric. However, a portion of papers gives only visual representations of the trend. For those, the standard error was used when displayed. For the very few only giving the trend, \textcolor{red}{the rule of thumb was applied}. Information can be found in the column *Note* of the Table \@ref(tab:notetable). Moreover, the final trend retained (*i.e.* either *Increase*, *Stable* or *Decrease*) doesn't reflect all the fluctuations of the metric through time but rather the difference between the starting and ending points.
+Concerning the trend assessment, different papers contain the *p-value* or directly specify the significant trend of the metric. However, a portion of papers gives only visual representations of the trend. For those, the standard error was used when displayed. For the very few only giving the trend, the rule of thumb was applied. Information can be found in the column *Note* of the Table \@ref(tab:notetable). Moreover, the final trend retained (*i.e.* either *Increase*, *Stable* or *Decrease*) doesn't reflect all the fluctuations of the metric through time but rather the difference between the starting and ending points.
 
 I have found `r nrow(unique(read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0", sheet = 2)[,1]))` references in which authors were both determining the temporal trend of a metric and explicitly defining the grain size. However, only `r length(unique(tab$Reference))` of them are using spatial replicates and are thus relevant for this study (Table \@ref(tab:maintable)). The classes of metric are: *Species richness, `r paste(as.vector(unique(tab$Metric)[-2]), collapse = ", ")`*. Some of this classes contain several different indexes. This is the case for instance for the class *Diversity*, which can be defined by either the Shannon or the Simpson index, or for the class *Abundance* which contains various multi-species indicators (for more information, see Table \@ref(tab:notetable)).
 
@@ -180,7 +183,6 @@ collapse_rows_df <- function(df, variable){
 
 
 tab %>%
-  # mutate(`Spatial grain (Km²)` = as.numeric(`Spatial grain (Km²)`),
   mutate(
          `Temporal grain (year)` = as.numeric(`Temporal grain (year)`),
          `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
@@ -189,17 +191,19 @@ tab %>%
   as_tibble() %>%
   group_by(Reference) %>%
   collapse_rows_df(Reference) %>%
-  flextable::flextable() %>% fontsize(size = 5, part = "all") 
-  ## escape = F is very important for the citation
-  # kbl(booktabs = T, escape = F, format = "latex", longtable = T,
-  #     caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>%
-  # kableExtra::kable_styling(
-  #  latex_options = c("hold_position", "repeat_header", "striped"),
-  #  font_size = 10,
-  #  full_width = FALSE
-  #  ) %>%
-  # column_spec(1:9, width = "6.5em") %>%
-  # landscape()
+  flextable::flextable() %>%
+  colformat_md(j = 1) %>%
+  fontsize(size = 5, part = "all")
+# escape = F is very important for the citation
+# kbl(booktabs = T, escape = F, format = "latex", longtable = T,
+#     caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>%
+# kableExtra::kable_styling(
+#  latex_options = c("hold_position", "repeat_header", "striped"),
+#  font_size = 10,
+#  full_width = FALSE
+#  ) %>%
+# column_spec(1:9, width = "6.5em") %>%
+# landscape()
 ```
 
 # On the link between spatial grain and trends of biodiversity
@@ -276,7 +280,7 @@ table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>%
 
 Number of studies assessing trends with spatial replicates is clearly limited. Thus, assessing robust rules about spatial scaling of trends of biodiversity is not possible with the current state of the scientific literature. However, concerning species richness, we can see that the decrease is global, but that this decrease is rare at lower spatial scales. In fact, increases are more often observed, confirming the high perturbations that biodiversity is undergoing [@dornelas_assemblage_2014; @vaidyanathan_worlds_2021]. This analysis goes along with the temporal $\beta$-diversity which is always observed either stable or increasing, sign of the disturbances of the ecosystems.
 
-On an other hand, the decrease of abundances seem to appear mainly at regional or national scales. \textcolor{red}{This may be due to the fact that local scale samplings are done usually outside of very anthropized  ecosystems, such as cities.Increasing the scale to regional and national increases the proportion of cities and farmland area, which can have negative impact on bird populations} [@reif_long-term_2013].
+On an other hand, the decrease of abundances seem to appear mainly at regional or national scales. This may be due to the fact that local scale samplings are done usually outside of very anthropized  ecosystems, such as cities.Increasing the scale to regional and national increases the proportion of cities and farmland area, which can have negative impact on bird populations [@reif_long-term_2013].
 
 # A lack of consistency
 
@@ -302,7 +306,7 @@ For the cases where the metric is determined out of model [e.g. @harrison_assess
 
 In short, temporal grain has no clear definition as it is different according to the metric computed, how it is computed and if the temporal trend is assessed. Even though it is now clear that the temporal grain of the sampling is important, there is no such consensus regarding the temporal grain of the trend.
 
-Highest temporal grains are found with increasing spatial extent (Figure \@ref(fig:spacetimegrain), \textcolor{red}{really not sure about this one}). It is due to the fact that data used in the selected article are mainly structured data, *i.e.* data following a well established sampling plan. This type of survey need resources and organizations which makes them sparser. Increasing the total area to be sampled makes *de facto* the time to increase and eventually the temporal grain. However, this entanglement between spatial extent and temporal grain is only related to the constraints of the sampling. This limitation can be overcome thanks to citizen science data, which are nowadays more and more used [*e.g.* @bowler_winners_2021; @isaac_data_2020; @isaac_statistics_2014]. The opportunistic nature of these data make the number of observations more important for very short census times, even over a large area. These data, with high temporal grain resolution for large spatial scales, could be used to explore in more details the temporal scaling of biodiversity trend.
+Highest temporal grains are found with increasing spatial extent (Figure \@ref(fig:spacetimegrain), really not sure about this one). It is due to the fact that data used in the selected article are mainly structured data, *i.e.* data following a well established sampling plan. This type of survey need resources and organizations which makes them sparser. Increasing the total area to be sampled makes *de facto* the time to increase and eventually the temporal grain. However, this entanglement between spatial extent and temporal grain is only related to the constraints of the sampling. This limitation can be overcome thanks to citizen science data, which are nowadays more and more used [*e.g.* @bowler_winners_2021; @isaac_data_2020; @isaac_statistics_2014]. The opportunistic nature of these data make the number of observations more important for very short census times, even over a large area. These data, with high temporal grain resolution for large spatial scales, could be used to explore in more details the temporal scaling of biodiversity trend.
 
 ```{r spacetimegrain, fig.cap = "Not sure about the relevance of this figure", fig.pos = "!H"}
 # lol <- 
@@ -372,8 +376,10 @@ tab %>%
   as_tibble() %>%
   group_by(Reference) %>%
   collapse_rows_df(Reference) %>%
-  flextable() %>% fontsize(size = 10, part = "all") %>% 
-  width(j = 4, width = 4)
+  flextable::flextable() %>%
+  colformat_md(j = 1) %>%
+  fontsize(size = 9, part = "all") %>% 
+  width(j = 4, width = 6)
   ## escape = F is very important for the citation
   # kbl(booktabs = T, escape = F, format = "latex", longtable = T,
   #     caption = "Supplementary informations about each article") %>%

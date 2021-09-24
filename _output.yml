@@ -10,4 +10,4 @@
 #  keep_tex: yes
 #  citation_package: biblatex # natbib
 
-bookdown::word_document2
+#bookdown::word_document2
