@@ -1,13 +1,13 @@
 
 ## Here to create the pdf
-bookdown::pdf_book:
-  extra_dependencies: ["float"]
-  template: _assets/template.tex
-  mainmatter: true
-  includes:
-    in_header: _assets/preamble.tex
-  latex_engine: lualatex
-  keep_tex: yes
-  citation_package: biblatex # natbib
+#bookdown::pdf_book:
+#  extra_dependencies: ["float"]
+#  template: _assets/template.tex
+#  mainmatter: true
+#  includes:
+#    in_header: _assets/preamble.tex
+#  latex_engine: lualatex
+#  keep_tex: yes
+#  citation_package: biblatex # natbib
 
 #bookdown::word_document2

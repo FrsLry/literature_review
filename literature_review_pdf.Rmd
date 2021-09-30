@@ -1,7 +1,7 @@
 ---
-title: Scaling Biodiversity Trends # if you indicate the tile, it'll create a new cover page
-output:
-  bookdown::word_document2
+# title: Scaling Biodiversity Trends # if you indicate the tile, it'll create a new cover page
+# output:
+#   bookdown::word_document2
 coverpage: true
 toc: true
 author: "François Leroy, PhD student at CZU"
@@ -186,19 +186,19 @@ tab %>%
   as_tibble() %>%
   group_by(Reference) %>%
   collapse_rows_df(Reference) %>%
-  flextable::flextable() %>%
-  colformat_md(j = 1) %>%
-  fontsize(size = 5, part = "all")
+  # flextable::flextable() %>%
+  # colformat_md(j = 1) %>%
+  # fontsize(size = 5, part = "all")
 # escape = F is very important for the citation
-# kbl(booktabs = T, escape = F, format = "latex", longtable = T,
-#     caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>%
-# kableExtra::kable_styling(
-#  latex_options = c("hold_position", "repeat_header", "striped"),
-#  font_size = 10,
-#  full_width = FALSE
-#  ) %>%
-# column_spec(1:9, width = "6.5em") %>%
-# landscape()
+kbl(booktabs = T, escape = F, format = "latex", longtable = T,
+    caption = "Trends of different metrics of biodiversity at various spatial and temporal scales") %>%
+kableExtra::kable_styling(
+ latex_options = c("hold_position", "repeat_header", "striped"),
+ font_size = 10,
+ full_width = FALSE
+ ) %>%
+column_spec(1:9, width = "6.5em") %>%
+landscape()
 ```
 
 # Spatial scale and temporal trends
@@ -355,24 +355,24 @@ tab %>%
   as_tibble() %>%
   group_by(Reference) %>%
   collapse_rows_df(Reference) %>%
-  flextable::flextable() %>%
-  colformat_md(j = 1) %>%
-  fontsize(size = 9, part = "all") %>%
-  width(j = 4, width = 6)
+  # flextable::flextable() %>%
+  # colformat_md(j = 1) %>%
+  # fontsize(size = 9, part = "all") %>% 
+  # width(j = 4, width = 6)
   # escape = F is very important for the citation
-  # kbl(booktabs = T, escape = F, format = "latex", longtable = T,
-  #     caption = "Supplementary informations about each article") %>%
-  # kableExtra::kable_styling(
-  #  latex_options = c("hold_position", "repeat_header", "striped"),
-  #  font_size = 10,
-  #  full_width = FALSE
-  #  ) %>%
-  # column_spec(1:3, width = "6.5em") %>%
-  # column_spec(4, width = "40em") %>%
-  # landscape()
+  kbl(booktabs = T, escape = F, format = "latex", longtable = T,
+      caption = "Supplementary informations about each article") %>%
+  kableExtra::kable_styling(
+   latex_options = c("hold_position", "repeat_header", "striped"),
+   font_size = 10,
+   full_width = FALSE
+   ) %>%
+  column_spec(1:3, width = "6.5em") %>%
+  column_spec(4, width = "40em") %>%
+  landscape()
 ```
 
-\newpage
+<!-- \newpage -->
 
-# References
+<!-- # References -->
 
