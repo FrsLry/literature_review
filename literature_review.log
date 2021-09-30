@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.9)  29 SEP 2021 21:36
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.9.9)  30 SEP 2021 10:23
  restricted system commands enabled.
 **literature_review.tex
 (./literature_review.tex
@@ -7,11 +7,11 @@ Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
 Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2021-05-20 2.74 ConTeXt Lua libraries -- extended c
 ollection.
-luaotfload | conf : Root cache directory is "C:/Users/franc/AppData/Local/MiKTeX
+luaotfload | conf : Root cache directory is "C:/Users/leroy/AppData/Local/MiKTeX
 /luatex-cache/generic/names".
 luaotfload | init : Loading fontloader "fontloader-2021-05-20.lua" from kpse-res
-olved path "C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/f
-ontloader-2021-05-20.lua".
+olved path "C:/Program Files/MiKTeX/tex/luatex/luaotfload/fontloader-2021-05-20.
+lua".
 Lua-only attribute luaotfload@noligature = 1
 Lua-only attribute luaotfload@syllabe = 2
 luaotfload | init : Context OpenType loader version 3.116
@@ -20,7 +20,7 @@ Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
 Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
 Inserting `luaotfload.define_font' at position 1 in `define_font'.
 Lua-only attribute luaotfload_color_attribute = 3
-luaotfload | conf : Root cache directory is "C:/Users/franc/AppData/Local/MiKTeX
+luaotfload | conf : Root cache directory is "C:/Users/leroy/AppData/Local/MiKTeX
 /luatex-cache/generic/names".
 Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
 Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
@@ -44,12 +44,12 @@ Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
 Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
 . L3 programming layer <2021-08-27>
-Inserting `tracingstacklevels' at position 1 in `input_level_string'. (C:/Users
-/franc/AppData/Local/Programs/MiKTeX/tex/latex/base/report.cls
+Inserting `tracingstacklevels' at position 1 in `input_level_string'. ("C:/Prog
+ram Files/MiKTeX/tex/latex/base/report.cls"
 Document Class: report 2021/02/12 v1.4n Standard LaTeX document class
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo
+("C:/Program Files/MiKTeX/tex/latex/base/size12.clo"
 File: size12.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from C:/Users/franc/AppData/Local/M
+luaotfload | db : Font names database loaded from C:/Users/leroy/AppData/Local/M
 iKTeX/luatex-cache/generic/names/luaotfload-names.luc)
 \c@part=\count179
 \c@chapter=\count180
@@ -63,11 +63,11 @@ iKTeX/luatex-cache/generic/names/luaotfload-names.luc)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty
+) ("C:/Program Files/MiKTeX/tex/latex/amsfonts/amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty
+("C:/Program Files/MiKTeX/tex/latex/amsfonts/amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks16
 \symAMSa=\mathgroup4
@@ -75,20 +75,20 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
+)) ("C:/Program Files/MiKTeX/tex/latex/amsmath/amsmath.sty"
 Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
+("C:/Program Files/MiKTeX/tex/latex/amsmath/amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty
+("C:/Program Files/MiKTeX/tex/latex/amsmath/amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen139
-)) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty
+)) ("C:/Program Files/MiKTeX/tex/latex/amsmath/amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen140
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty
+) ("C:/Program Files/MiKTeX/tex/latex/amsmath/amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count188
@@ -128,43 +128,34 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifxetex.sty
+) ("C:/Program Files/MiKTeX/tex/generic/iftex/ifxetex.sty"
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty
+("C:/Program Files/MiKTeX/tex/generic/iftex/iftex.sty"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
-)) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifluatex.sty
+)) ("C:/Program Files/MiKTeX/tex/generic/iftex/ifluatex.sty"
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-ma
-th.sty (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.s
-ty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/unicode-math/unicode-math.st
+y ("C:/Program Files/MiKTeX/tex/latex/l3kernel/expl3.sty"
 Package: expl3 2021-08-27 L3 programming layer (loader) 
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
-tex.def
+("C:/Program Files/MiKTeX/tex/latex/l3backend/l3backend-luatex.def"
 File: l3backend-luatex.def 2021-08-04 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count266
 \l__pdf_internal_box=\box52
 ))
 Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
 
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-ma
-th-luatex.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/unicode-math/unicode-math-luat
+ex.sty
 Package: unicode-math-luatex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaL
 aTeX
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
-e.sty
+("C:/Program Files/MiKTeX/tex/latex/l3packages/xparse/xparse.sty"
 Package: xparse 2021-08-27 L3 Experimental document command parser
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l3k
-eys2e.sty
+) ("C:/Program Files/MiKTeX/tex/latex/l3packages/l3keys2e/l3keys2e.sty"
 Package: l3keys2e 2021-08-27 LaTeX2e option processing using LaTeX3 keys
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
+) ("C:/Program Files/MiKTeX/tex/latex/fontspec/fontspec.sty"
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
-Lua module: fontspec 2020/02/21 2.7i Font selection for XeLaTeX and LuaLaTeX
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luate
-x.sty
+Lua module: fontspec 2020/02/21 2.7i Font selection for XeLaTeX and LuaLaTeX ("
+C:/Program Files/MiKTeX/tex/latex/fontspec/fontspec-luatex.sty"
 Package: fontspec-luatex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaT
 eX
 \l__fontspec_script_int=\count267
@@ -181,20 +172,20 @@ eX
 \l__fontspec_tmpa_dim=\dimen148
 \l__fontspec_tmpb_dim=\dimen149
 \l__fontspec_tmpc_dim=\dimen150
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty
+("C:/Program Files/MiKTeX/tex/latex/base/fontenc.sty"
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg
-))) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/base/fix-cm.sty
+) ("C:/Program Files/MiKTeX/tex/latex/fontspec/fontspec.cfg"))) ("C:/Program Fi
+les/MiKTeX/tex/latex/base/fix-cm.sty"
 Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1enc.def
+("C:/Program Files/MiKTeX/tex/latex/base/ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/lualatex/lualatex-math/lualat
-ex-math.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/lualatex/lualatex-math/lualatex-math
+.sty
 Package: lualatex-math 2021/07/05 v1.11 Patches for mathematics typesetting wit
 h LuaLaTeX
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
+("C:/Program Files/MiKTeX/tex/latex/etoolbox/etoolbox.sty"
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count278
 )
@@ -205,17 +196,15 @@ h LuaLaTeX)
 \l__um_primecount_int=\count281
 \g__um_primekern_muskip=\muskip17
 
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-ma
-th-table.tex))) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/upquote
-/upquote.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/unicode-math/unicode-math-tabl
+e.tex))) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty
+("C:/Program Files/MiKTeX/tex/latex/base/textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.sty
+)) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/microtype/microtype.sty
 Package: microtype 2021/03/14 v2.8c Micro-typographical refinements (RS)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
+("C:/Program Files/MiKTeX/tex/latex/graphics/keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
@@ -226,8 +215,7 @@ LaTeX Info: Redefining \textls on input line 790.
 LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
 \MT@listname@count=\count283
 
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype-lua
-tex.def
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/microtype/microtype-luatex.def
 File: microtype-luatex.def 2021/03/14 v2.8c Definitions specific to luatex (RS)
 
 Module microtype Info: overwriting function `keepligature' on input line 62
@@ -236,28 +224,23 @@ LaTeX Info: Redefining \lslig on input line 710.
 \MT@outer@space=\skip52
 )
 Package microtype Info: Loading configuration file microtype.cfg.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.cfg
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
-)) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/parskip/parskip.sty
+)) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/kvsetkeys/kvsetkeys.s
-ty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
+))) ("C:/Program Files/MiKTeX/tex/latex/xcolor/xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg
+("C:/Program Files/MiKTeX/tex/latex/graphics-cfg/color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: luatex.def on input line 225.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
+("C:/Program Files/MiKTeX/tex/latex/graphics-def/luatex.def"
 File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
@@ -269,30 +252,25 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/graphics/dvipsnam.def
+("C:/Program Files/MiKTeX/tex/latex/graphics/dvipsnam.def"
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/svgnam.def
+) ("C:/Program Files/MiKTeX/tex/latex/xcolor/svgnam.def"
 File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/x11nam.def
+) ("C:/Program Files/MiKTeX/tex/latex/xcolor/x11nam.def"
 File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
-)) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty
+)) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/xurl/xurl.sty
 Package: xurl 2020/12/30 v 0.09a modify URL breaks
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
+("C:/Program Files/MiKTeX/tex/latex/url/url.sty"
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bookmark.st
-y
+)) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
+("C:/Program Files/MiKTeX/tex/latex/hyperref/hyperref.sty"
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
-.sty
+("C:/Program Files/MiKTeX/tex/generic/pdftexcmds/pdftexcmds.sty"
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
-ty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -300,40 +278,33 @@ Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 \pdftexcmds@toks=\toks24
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
-keys.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/kvdefinekeys/kvdefinekeys.st
+y
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.s
-ty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/letltxmacro/letltxmacro
-.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/auxhook/auxhook.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen152
 \Hy@linkcounter=\count284
 \Hy@pagecounter=\count285
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
+("C:/Program Files/MiKTeX/tex/latex/hyperref/pd1enc.def"
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref-langp
-atches.def
+) ("C:/Program Files/MiKTeX/tex/latex/hyperref/hyperref-langpatches.def"
 File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
 nguages
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/etexcmds/etexcmds.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count286
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def
+("C:/Program Files/MiKTeX/tex/latex/hyperref/puenc.def"
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Option `unicode' set `true' on input line 4073.
@@ -347,11 +318,9 @@ Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count287
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen153
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc
-.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -367,7 +336,7 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6101.
 Package hyperref Info: PDF/A mode OFF on input line 6106.
 LaTeX Info: Redefining \ref on input line 6146.
 LaTeX Info: Redefining \pageref on input line 6150.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/base/atbegshi-ltx.sty
+("C:/Program Files/MiKTeX/tex/latex/base/atbegshi-ltx.sty"
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -376,15 +345,12 @@ package with kernel methods
 \c@Hfootnote=\count291
 )
 Package hyperref Info: Driver (autodetected): hluatex.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
+("C:/Program Files/MiKTeX/tex/latex/hyperref/hluatex.def"
 File: hluatex.def 2021-06-07 v7.00m Hyperref driver for luaTeX
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.s
-ty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/base/atveryend-ltx.st
-y
+) ("C:/Program Files/MiKTeX/tex/latex/base/atveryend-ltx.sty"
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
@@ -392,27 +358,26 @@ with kernel methods
 \Fld@listcount=\count292
 \c@bookmark@seq@number=\count293
 
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfil
-echeck.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.
+sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquec
-ounter.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/uniquecounter/uniquecounter.
+sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip53
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bkm-pdftex.def
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count294
 ))
 Package hyperref Info: Option `colorlinks' set `true' on input line 59.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
+("C:/Program Files/MiKTeX/tex/generic/iftex/ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count295
@@ -427,24 +392,22 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen162
 \Gm@layoutvoffset=\dimen163
 \Gm@dimlist=\toks25
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pdflscape/pdflscape.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/geometry/geometry.cfg)) (C:/Us
+ers/leroy/AppData/Roaming/MiKTeX/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/graphics/lscape.sty
+("C:/Program Files/MiKTeX/tex/latex/graphics/lscape.sty"
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
+("C:/Program Files/MiKTeX/tex/latex/graphics/graphics.sty"
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty
+("C:/Program Files/MiKTeX/tex/latex/graphics/trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
-fg
+) ("C:/Program Files/MiKTeX/tex/latex/graphics-cfg/graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: luatex.def on input line 107.
 ))
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen164
 \lightrulewidth=\dimen165
@@ -464,47 +427,41 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count301
 \@thisrulewidth=\dimen176
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/footnotehyper/footnoteh
-yper.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/footnotehyper/footnotehyper.st
+y
 Package: footnotehyper 2021/08/13 v1.1e hyperref aware footnote.sty (JFB)
 \FNH@notes=\box53
 \FNH@width=\dimen177
 \FNH@toks=\toks26
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
+) ("C:/Program Files/MiKTeX/tex/latex/graphics/graphicx.sty"
 Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen178
 \Gin@req@width=\dimen179
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/polyglossia
-.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/polyglossia/polyglossia.sty
 Package: polyglossia 2021/04/12 v1.53 Modern multilingual typesetting with XeLa
 TeX and LuaLaTeX
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/makecmds/makecmds.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/makecmds/makecmds.sty
 Package: makecmds 2009/09/03 v1.0a extra command making commands
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty
+) ("C:/Program Files/MiKTeX/tex/latex/xkeyval/xkeyval.sty"
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkeyval.tex (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkvutils.tex
+("C:/Program Files/MiKTeX/tex/generic/xkeyval/xkeyval.tex" ("C:/Program Files/M
+iKTeX/tex/generic/xkeyval/xkvutils.tex"
 \XKV@toks=\toks27
 \XKV@tempa@toks=\toks28
 )
 \XKV@depth=\count302
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbase.
-sty
+)) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/luatex/luatexbase/luatexbase.sty
 Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/luatex/ctablestack/ctablestac
-k.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/luatex/ctablestack/ctablestack.sty
 Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
 \@catcodetablestackcnt=\count303
 )
 \CatcodeTableOther=\catcodetable12
 \CatcodeTableExpl=\catcodetable13
 )
-Lua module: polyglossia 2013/05/11 1.3 Polyglossia
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-latex
-.ldf
+Lua module: polyglossia 2013/05/11 1.3 Polyglossia (C:/Users/leroy/AppData/Roam
+ing/MiKTeX/tex/latex/polyglossia/gloss-latex.ldf
 File: gloss-latex.ldf polyglossia: module for default language
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
@@ -527,9 +484,8 @@ braces):
 )
 Package polyglossia Info: Default language is latex.
 Package polyglossia Info: Setting LuaTeX font renderer to Harfbuzz.
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-engli
-sh.ldf
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/polyglossia/gloss-english.ld
+f
 File: gloss-english.ldf polyglossia: module for english
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
@@ -571,9 +527,7 @@ Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Default language is english.
 Package polyglossia Info: Option: English, variant=american.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-frenc
-h.ldf
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/polyglossia/gloss-french.ldf
 File: gloss-french.ldf polyglossia: module for french
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
@@ -626,17 +580,17 @@ braces):
 >  {french/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {french/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for french
-(polyglossia)            loader	loadhyph-fr.tex
+(polyglossia)            patterns	hyph-fr.pat.txt
 (polyglossia)            righthyphenmin	2
 (polyglossia)            synonyms	patois,francais
-(polyglossia)            lefthyphenmin	2
+(polyglossia)            loader	loadhyph-fr.tex
 (polyglossia)            hyphenation	
-(polyglossia)            patterns	hyph-fr.pat.txt on input line 12
+(polyglossia)            lefthyphenmin	2 on input line 12
 Module polyglossia Info: Language french was not yet loaded; created with id 2 o
 n input line 12
 Lua-only attribute polyglossia_punct = 5
 Package polyglossia Info: Option: French, variant=french.
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 \csq@reset=\count304
 \csq@gtype=\count305
@@ -645,62 +599,44 @@ Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 \csq@maxlvl=\count308
 \csq@tshold=\count309
 \csq@ltx@everypar=\toks29
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.def
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.cfg
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-)) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/bclogo/bclogo.sty
+)) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/bclogo/bclogo.sty
 Package: bclogo 2016/01/10 v3.1
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
+("C:/Program Files/MiKTeX/tex/latex/base/ifthen.sty"
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \bc@invboxh=\skip54
 \bc@invboxd=\skip55
 \bc@titleLength=\skip56
 \logowidth=\skip57
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/frontendlayer/tikz.
-sty (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgf.
-sty
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.st
-y
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
--common.tex
+("C:/Program Files/MiKTeX/tex/latex/pgf/frontendlayer/tikz.sty" ("C:/Program Fi
+les/MiKTeX/tex/latex/pgf/basiclayer/pgf.sty" ("C:/Program Files/MiKTeX/tex/late
+x/pgf/utilities/pgfrcs.sty" ("C:/Program Files/MiKTeX/tex/generic/pgf/utilities
+/pgfutil-common.tex"
 \pgfutil@everybye=\toks30
 \pgfutil@tempdima=\dimen180
 \pgfutil@tempdimb=\dimen181
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
--common-lists.tex))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
--latex.def
+("C:/Program Files/MiKTeX/tex/generic/pgf/utilities/pgfutil-common-lists.tex")) ("C:/Program Files/MiKTeX/tex/generic/pgf/utilities/pgfutil-latex.def"
 \pgfutil@abb=\box54
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfrcs.
-code.tex (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/pgf.revi
-sion.tex)
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/utilities/pgfrcs.code.tex" ("C:/Pro
+gram Files/MiKTeX/tex/generic/pgf/pgf.revision.tex")
 Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
 Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.
-sty
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsys.
-sty
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s.code.tex
+("C:/Program Files/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.sty" ("C:/Program Fi
+les/MiKTeX/tex/latex/pgf/systemlayer/pgfsys.sty" ("C:/Program Files/MiKTeX/tex/
+generic/pgf/systemlayer/pgfsys.code.tex"
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/utilities/pgfkeys.code.tex"
 \pgfkeys@pathtoks=\toks31
 \pgfkeys@temptoks=\toks32
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-filtered.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks33
 ))
 \pgf@x=\dimen182
@@ -723,76 +659,50 @@ filtered.code.tex
 \t@pgf@tokb=\toks35
 \t@pgf@tokc=\toks36
 \pgf@sys@id@count=\count314
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf.c
-fg
+("C:/Program Files/MiKTeX/tex/generic/pgf/systemlayer/pgf.cfg"
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
 Driver file for pgf: pgfsys-luatex.def
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s-luatex.def
+("C:/Program Files/MiKTeX/tex/generic/pgf/systemlayer/pgfsys-luatex.def"
 File: pgfsys-luatex.def 2021/05/15 v3.1.9a (3.1.9a)
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s-common-pdf.def
+("C:/Program Files/MiKTeX/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def"
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
-)))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-ssoftpath.code.tex
+))) ("C:/Program Files/MiKTeX/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.t
+ex"
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfsyssoftpath@smallbuffer@items=\count315
 \pgfsyssoftpath@bigbuffer@items=\count316
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-sprotocol.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+"
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-e.code.tex
+)) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcore.code.tex"
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
-.tex
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathcalc.
-code.tex
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathutil.
-code.tex)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathparse
-r.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmath.code.tex" ("C:/Program F
+iles/MiKTeX/tex/generic/pgf/math/pgfmathcalc.code.tex" ("C:/Program Files/MiKTe
+X/tex/generic/pgf/math/pgfmathutil.code.tex") ("C:/Program Files/MiKTeX/tex/gen
+eric/pgf/math/pgfmathparser.code.tex"
 \pgfmath@dimen=\dimen192
 \pgfmath@count=\count317
 \pgfmath@box=\box55
 \pgfmath@toks=\toks37
 \pgfmath@stack@operand=\toks38
 \pgfmath@stack@operation=\toks39
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.code.tex
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.basic.code.tex)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.trigonometric.code.tex)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.random.code.tex)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.comparison.code.tex)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.base.code.tex)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.round.code.tex)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.misc.code.tex)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.integerarithmetics.code.tex)))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfloat
-.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.code.tex" ("C
+:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex")
+("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.trigonometric.c
+ode.tex") ("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex")
+("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.comparison.code
+.tex") ("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.base.cod
+e.tex") ("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.round.c
+ode.tex") ("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex")
+("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.integerarithmet
+ics.code.tex"))) ("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmathfloat.co
+de.tex"
 \c@pgfmathroundto@lastzeros=\count318
-))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code.
-tex)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epoints.code.tex
+)) ("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfint.code.tex") ("C:/Progra
+m Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@picminx=\dimen193
 \pgf@picmaxx=\dimen194
@@ -809,132 +719,95 @@ File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@zx=\dimen261
 \pgf@zy=\dimen262
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathconstruct.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.
+tex"
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@path@lastx=\dimen263
 \pgf@path@lasty=\dimen264
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathusage.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x"
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@shorten@end@additional=\dimen265
 \pgf@shorten@start@additional=\dimen266
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-escopes.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box56
 \pgf@hbox=\box57
 \pgf@layerbox@main=\box58
 \pgf@picture@serial@count=\count319
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-egraphicstate.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.t
+ex"
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgflinewidth=\dimen267
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-etransformations.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransformations.cod
+e.tex"
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@pt@x=\dimen268
 \pgf@pt@y=\dimen269
 \pgf@pt@temp=\dimen270
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-equick.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eobjects.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex"
 File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathprocessing.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code
+.tex"
 File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-earrows.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfarrowsep=\dimen271
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eshade.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen272
 \pgf@sys@shading@range@num=\count320
 \pgf@shadingcount=\count321
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eimage.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eexternal.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfexternal@startupbox=\box59
-))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-elayers.code.tex
+)) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex"
 File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-etransparency.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransparency.code.t
+ex"
 File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epatterns.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+"
 File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-erdf.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex"
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-shapes.code.tex
+))) ("C:/Program Files/MiKTeX/tex/generic/pgf/modules/pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfnodeparttextbox=\box60
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-plot.code.tex
+) ("C:/Program Files/MiKTeX/tex/generic/pgf/modules/pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
-mp-version-0-65.sty
+) ("C:/Program Files/MiKTeX/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y"
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@nodesepstart=\dimen273
 \pgf@nodesepend=\dimen274
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
-mp-version-1-18.sty
+) ("C:/Program Files/MiKTeX/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y"
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
-))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.st
-y
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.s
-ty
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-.code.tex)) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pgf/math/pg
-fmath.sty
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
-.tex))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgffor.
-code.tex
+)) ("C:/Program Files/MiKTeX/tex/latex/pgf/utilities/pgffor.sty" ("C:/Program F
+iles/MiKTeX/tex/latex/pgf/utilities/pgfkeys.sty" ("C:/Program Files/MiKTeX/tex/
+generic/pgf/utilities/pgfkeys.code.tex")) ("C:/Program Files/MiKTeX/tex/latex/p
+gf/math/pgfmath.sty" ("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmath.cod
+e.tex")) ("C:/Program Files/MiKTeX/tex/generic/pgf/utilities/pgffor.code.tex"
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
-.tex)
+("C:/Program Files/MiKTeX/tex/generic/pgf/math/pgfmath.code.tex")
 \pgffor@iter=\dimen275
 \pgffor@skip=\dimen276
 \pgffor@stack=\toks40
 \pgffor@toks=\toks41
-))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/tikz.code.tex
+)) ("C:/Program Files/MiKTeX/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex"
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryplothandlers.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/libraries/pgflibraryplothandlers.code
+.tex"
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@plot@mark@count=\count322
 \pgfplotmarksize=\dimen277
@@ -955,9 +828,7 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikznumberofchildren=\count324
 \tikznumberofcurrentchild=\count325
 \tikz@fig@count=\count326
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-matrix.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/modules/pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfmatrixcurrentrow=\count327
 \pgfmatrixcurrentcolumn=\count328
@@ -965,15 +836,14 @@ File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 \tikz@expandcount=\count330
 
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarytopaths.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibr
+arytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/mdframed/mdframed.s
-ty
+))) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/mdframed/mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/zref/zref-base.sty
 Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
 Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
@@ -981,8 +851,7 @@ Package zref Info: New property: page on input line 766.
 )
 \c@abspage=\count331
 Package zref Info: New property: abspage on input line 66.
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/needspace/needspace.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip58
@@ -1026,8 +895,7 @@ Package: needspace 2010/09/12 v1.3d reserve vertical space
 \mdf@subsubtitlebelowskip@length=\skip95
 \mdf@subsubtitleinneraboveskip@length=\skip96
 \mdf@subsubtitleinnerbelowskip@length=\skip97
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/mdframed/md-frame-1.mdf
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/mdframed/md-frame-1.mdf
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 )
 \mdf@frametitlebox=\box65
@@ -1074,24 +942,21 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \c@mdf@zref@counter=\count337
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibraryshadows.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibr
+aryshadows.code.tex"
 File: tikzlibraryshadows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibraryfadings.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibr
+aryfadings.code.tex"
 File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryfadings.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/libraries/pgflibraryfadings.code.tex"
 File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.pathmorphing.code.tex
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.code.tex
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-decorations.code.tex
+("C:/Program Files/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibr
+arydecorations.pathmorphing.code.tex"
+("C:/Program Files/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibr
+arydecorations.code.tex" ("C:/Program Files/MiKTeX/tex/generic/pgf/modules/pgfm
+oduledecorations.code.tex"
 \pgfdecoratedcompleteddistance=\dimen286
 \pgfdecoratedremainingdistance=\dimen287
 \pgfdecoratedinputsegmentcompleteddistance=\dimen288
@@ -1103,9 +968,9 @@ decorations.code.tex
 )
 \tikz@lib@dec@box=\box70
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.pathmorphing.code.tex)) (C:/Users/franc/AppData/Loca
-l/Programs/MiKTeX/tex/generic/iftex/ifpdf.sty
+("C:/Program Files/MiKTeX/tex/generic/pgf/libraries/decorations/pgflibrarydecor
+ations.pathmorphing.code.tex")) ("C:/Program Files/MiKTeX/tex/generic/iftex/ifp
+df.sty"
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 )
 \c@bclogocompteur=\count339
@@ -1196,7 +1061,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/calibri(1)/b/n on input line 121.
 LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 121.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box72
 \beforetitleunit=\skip131
@@ -1207,16 +1072,15 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \titlewidth=\dimen295
 \titlewidthlast=\dimen296
 \titlewidthfirst=\dimen297
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/tocbibind/tocbibind.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen298
 \captionmargin@=\dimen299
@@ -1230,14 +1094,14 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count340
 \c@continuedfloat=\count341
 Package caption Info: hyperref package is loaded.
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count342
 \float@exts=\toks43
 \float@box=\box73
 \@float@everytoks=\toks44
 \@floatcapt=\box74
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty
+) ("C:/Program Files/MiKTeX/tex/latex/tools/longtable.sty"
 Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LTleft=\skip133
 \LTright=\skip134
@@ -1255,7 +1119,7 @@ Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \c@LT@tables=\count346
 \c@LT@chunks=\count347
 \LT@p@ftn=\toks45
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty
+) ("C:/Program Files/MiKTeX/tex/latex/tools/array.sty"
 Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \col@sep=\dimen306
 \ar@mcellbox=\box80
@@ -1264,26 +1128,26 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \extratabsurround=\skip137
 \backup@length=\skip138
 \ar@cellbox=\box81
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/multirow/multirow.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip139
 \multirow@cntb=\count348
 \multirow@dima=\skip140
 \bigstrutjot=\dimen308
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen309
 \WF@size=\dimen310
 \c@WF@wrappedlines=\count349
 \WF@box=\box82
 \WF@everypar=\toks47
 Package: wrapfig 2003/01/31  v 3.6
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/colortbl/colortbl.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks48
 \minrowclearance=\skip141
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/tabu/tabu.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/tabu/tabu.sty
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box83
 \sift@deathcycles=\count350
@@ -1313,23 +1177,21 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabu@vleads=\box87
 \tabu@cellskip=\skip142
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/threeparttable/threepar
-ttable.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/threeparttable/threeparttable.
+sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box88
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/threeparttablex/threepa
-rttablex.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/threeparttablex/threeparttable
+x.sty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/environ/environ.sty
+("C:/Program Files/MiKTeX/tex/latex/environ/environ.sty"
 Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.s
-ty
+("C:/Program Files/MiKTeX/tex/latex/trimspaces/trimspaces.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \TPTL@width=\skip143
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/ulem/ulem.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/ulem/ulem.sty
 \UL@box=\box89
 \UL@hyphenbox=\box90
 \UL@skip=\skip144
@@ -1340,23 +1202,21 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \ULC@box=\box91
 Package: ulem 2019/11/18
 \ULdepth=\dimen324
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/makecell/makecell.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen325
 \c@nlinenum=\count358
 \TeXr@lab=\toks52
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/lualatex/selnolig/selnolig.st
-y
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/lualatex/selnolig/selnolig.sty
 === Package selnolig, Version 0.302, Date 2015/10/26 ===
 Package: selnolig 2015/10/26
-Inserting `Suppress ligatures selectively' at position 1 in `ligaturing'.) (C:/
-Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
+Inserting `Suppress ligatures selectively' at position 1 in `ligaturing'.) ("C:
+/Program Files/MiKTeX/tex/latex/biblatex/biblatex.sty"
 Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count359
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
 \c@tabx@nest=\count360
@@ -1417,12 +1277,12 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \c@mincompwidth=\count404
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def
+("C:/Program Files/MiKTeX/tex/latex/biblatex/blx-dm.def"
 File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'apa.dbx' found.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-apa/apa.dbx
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/biblatex-apa/apa.dbx
 File: apa.dbx 2020/08/28 v9.14 APA biblatex style data model
 )
 Package biblatex Info: Trying to load biblatex custom data model...
@@ -1523,18 +1383,15 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip166
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.de
-f)
+("C:/Program Files/MiKTeX/tex/latex/biblatex/blx-unicode.def")
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def
+("C:/Program Files/MiKTeX/tex/latex/biblatex/blx-compat.def"
 File: blx-compat.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
+("C:/Program Files/MiKTeX/tex/latex/biblatex/biblatex.def"
 File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 \c@textcitecount=\count485
 \c@textcitetotal=\count486
@@ -1552,20 +1409,18 @@ File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load bibliography style 'apa'...
 Package biblatex Info: ... file 'apa.bbx' found.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-apa/apa.bbx
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/biblatex-apa/apa.bbx
 File: apa.bbx 2020/08/28 v9.14 APA biblatex references style
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.b
-bx
+("C:/Program Files/MiKTeX/tex/latex/biblatex/bbx/standard.bbx"
 File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count494
 \c@bbx:relatedtotal=\count495
 ))
 Package biblatex Info: Trying to load citation style 'apa'...
 Package biblatex Info: ... file 'apa.cbx' found.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-apa/apa.cbx
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/biblatex-apa/apa.cbx
 File: apa.cbx 2020/08/28 v9.14 APA biblatex citation style
 Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
  overwriting.
@@ -1591,12 +1446,11 @@ Package biblatex Info: Redefining '\textcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg
+("C:/Program Files/MiKTeX/tex/latex/biblatex/biblatex.cfg"
 File: biblatex.cfg 
-)) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pdfpages/pdfpages.st
-y
+)) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty
+("C:/Program Files/MiKTeX/tex/latex/tools/calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count496
 \calc@Bcount=\count497
@@ -1608,7 +1462,7 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count498
 \calc@Cskip=\skip169
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/eso-pic/eso-pic.sty
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 \ESO@tempdima=\dimen328
 \ESO@tempdimb=\dimen329
@@ -1616,7 +1470,7 @@ Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 \AM@pagewidth=\dimen330
 \AM@pageheight=\dimen331
 \AM@fboxrule=\dimen332
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/pdfpages/ppluatex.def
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/pdfpages/ppluatex.def
 File: ppluatex.def 2021/03/06 v0.5t Pdfpages driver for LuaTeX (AM)
 )
 \pdfpages@includegraphics@status=\count499
@@ -1914,12 +1768,12 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 5.99936pt on input line 175.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 175
 .
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
+("C:/Program Files/MiKTeX/tex/latex/amsfonts/umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 175
 .
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
+("C:/Program Files/MiKTeX/tex/latex/amsfonts/umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Info: Redefining \microtypecontext on input line 175.
@@ -1937,9 +1791,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `calibri' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
-ii
+("C:/Program Files/MiKTeX/tex/context/base/mkii/supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count502
 \scratchdimen=\dimen333
@@ -1952,25 +1804,21 @@ ii
 \MPnumerator=\count506
 \makeMPintoPDFobject=\count507
 \everyMPtoPDFconversion=\toks56
-)
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
-ase.sty
+) ("C:/Program Files/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
-fg
+("C:/Program Files/MiKTeX/tex/latex/00miktex/epstopdf-sys.cfg"
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring ON on input line 175.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
+("C:/Program Files/MiKTeX/tex/latex/hyperref/nameref.sty"
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettit
-lestring.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/generic/gettitlestring/gettitlestrin
+g.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count508
@@ -2015,7 +1863,7 @@ LaTeX Info: Redefining \nameref on input line 175.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/caption/ltcaption.sty
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: threeparttable package is loaded.
@@ -2023,70 +1871,50 @@ Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'french' -> 'french-apa'...
 Package biblatex Info: ... file 'french-apa.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-apa/french-apa
-.lbx
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/biblatex-apa/french-apa.lbx
 File: french-apa.lbx 2020/08/28 v9.14 APA biblatex localisation
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/french.lbx
+("C:/Program Files/MiKTeX/tex/latex/biblatex/lbx/french.lbx"
 File: french.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/french.lbx
+("C:/Program Files/MiKTeX/tex/latex/biblatex/lbx/french.lbx"
 File: french.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
 ))
 Package biblatex Info: Trying to load language 'american' -> 'american-apa'...
 Package biblatex Info: ... file 'american-apa.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-apa/american-a
-pa.lbx
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/biblatex-apa/american-apa.lbx
 File: american-apa.lbx 2020/08/28 v9.14 APA biblatex localisation
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/american.l
-bx
+("C:/Program Files/MiKTeX/tex/latex/biblatex/lbx/american.lbx"
 File: american.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
 Package biblatex Info: ... file 'english-apa.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-apa/english-ap
-a.lbx
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/biblatex-apa/english-apa.lbx
 File: english-apa.lbx 2020/08/28 v9.14 APA biblatex localisation
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lb
-x
+("C:/Program Files/MiKTeX/tex/latex/biblatex/lbx/english.lbx"
 File: english.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
 )))
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/american.l
-bx
+("C:/Program Files/MiKTeX/tex/latex/biblatex/lbx/american.lbx"
 File: american.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
 Package biblatex Info: ... file 'english-apa.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-apa/english-ap
-a.lbx
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/biblatex-apa/english-apa.lbx
 File: english-apa.lbx 2020/08/28 v9.14 APA biblatex localisation
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/american.l
-bx
+("C:/Program Files/MiKTeX/tex/latex/biblatex/lbx/american.lbx"
 File: american.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lb
-x
+("C:/Program Files/MiKTeX/tex/latex/biblatex/lbx/english.lbx"
 File: english.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
 )))))
 Package biblatex Info: LuaTeX detected.
@@ -2098,9 +1926,7 @@ Package biblatex Info: ... and expl3
 (biblatex)             2021-08-27 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
-
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3
-.sty
+("C:/Program Files/MiKTeX/tex/latex/biblatex/blx-case-expl3.sty"
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
 \openout4 = literature_review.bcf
@@ -2180,8 +2006,10 @@ LaTeX Font Info:    Font shape `TU/calibri(0)/b/n' will be
 \openout5 = literature_review.toc
 [1
 
-{C:/Users/franc/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+{C:/Users/leroy/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 Chapter 1.
+LaTeX Font Info:    Font shape `TU/calibri(0)/m/it' will be
+(Font)              scaled to size 12.0pt on input line 204.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
@@ -2190,8 +2018,6 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 Chapter 2.
 [2]
 Chapter 3.
-LaTeX Font Info:    Font shape `TU/calibri(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 224.
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 233--235
 []\TU/lmtt/m/n/12 AB = ((biodiversity OR species richness OR diversity) AND (tem
@@ -2200,14 +2026,19 @@ poral trend*
 
 [4] [5]
 LaTeX Font Info:    Font shape `TU/calibri(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 250.
+(Font)              scaled to size 10.0pt on input line 248.
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 252--257
+Overfull \hbox (11.84102pt too wide) in alignment at lines 250--255
  [][][][][][][][][] 
  []
 
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 257--262
+Overfull \hbox (11.84102pt too wide) in alignment at lines 255--260
+ [][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.84102pt too wide) in alignment at lines 260--262
  [][][][][][][][][] 
  []
 
@@ -2217,12 +2048,7 @@ Overfull \hbox (11.84102pt too wide) in alignment at lines 262--264
  []
 
 
-Overfull \hbox (11.84102pt too wide) in alignment at lines 264--266
- [][][][][][][][][] 
- []
-
-
-Overfull \hbox (11.84102pt too wide) in alignment at lines 266--334
+Overfull \hbox (11.84102pt too wide) in alignment at lines 264--332
  [][][][][][][][][] 
  []
 
@@ -2230,44 +2056,44 @@ Overfull \hbox (11.84102pt too wide) in alignment at lines 266--334
 
 ] [7] [8] [9]
 Chapter 4.
-<literature_review_files/figure-latex/barspatscale-1.pdf, id=215, 453.695pt x 3
-13.17pt>
+<literature_review_files/figure-latex/barspatscale-1.pdf, id=310, 469.755pt x 3
+25.215pt>
 File: literature_review_files/figure-latex/barspatscale-1.pdf Graphic file (typ
 e pdf)
 <use literature_review_files/figure-latex/barspatscale-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/barspatscale-1.pd
-f  used on input line 345.
-(luatex.def)             Requested size: 453.6939pt x 313.16922pt.
+f  used on input line 343.
+(luatex.def)             Requested size: 469.75386pt x 325.2142pt.
 [10
 
 <./literature_review_files/figure-latex/barspatscale-1.pdf>]
-<literature_review_files/figure-latex/barmetrics-1.pdf, id=228, 453.695pt x 312
-.16624pt>
+<literature_review_files/figure-latex/barmetrics-1.pdf, id=324, 469.755pt x 325
+.215pt>
 File: literature_review_files/figure-latex/barmetrics-1.pdf Graphic file (type 
 pdf)
 <use literature_review_files/figure-latex/barmetrics-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/barmetrics-1.pdf 
- used on input line 353.
-(luatex.def)             Requested size: 453.6939pt x 312.16548pt.
-<literature_review_files/figure-latex/barmetricsperspatscale-1.pdf, id=229, 453
-.695pt x 313.17pt>
+ used on input line 351.
+(luatex.def)             Requested size: 469.75386pt x 325.2142pt.
+<literature_review_files/figure-latex/barmetricsperspatscale-1.pdf, id=330, 469
+.755pt x 325.215pt>
 File: literature_review_files/figure-latex/barmetricsperspatscale-1.pdf Graphic
  file (type pdf)
 <use literature_review_files/figure-latex/barmetricsperspatscale-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/barmetricsperspat
-scale-1.pdf  used on input line 361.
-(luatex.def)             Requested size: 453.6939pt x 313.16922pt.
+scale-1.pdf  used on input line 359.
+(luatex.def)             Requested size: 469.75386pt x 325.2142pt.
 [11<./literature_review_files/figure-latex/barmetrics-1.pdf>] [12<./literature_r
 eview_files/figure-latex/barmetricsperspatscale-1.pdf>]
 Chapter 5.
-<literature_review_files/figure-latex/spacetimegrain-1.pdf, id=252, 462.72874pt
- x 316.18124pt>
+<literature_review_files/figure-latex/spacetimegrain-1.pdf, id=358, 469.755pt x
+ 325.215pt>
 File: literature_review_files/figure-latex/spacetimegrain-1.pdf Graphic file (t
 ype pdf)
 <use literature_review_files/figure-latex/spacetimegrain-1.pdf>
 Package luatex.def Info: literature_review_files/figure-latex/spacetimegrain-1.
-pdf  used on input line 380.
-(luatex.def)             Requested size: 462.73466pt x 316.18529pt.
+pdf  used on input line 378.
+(luatex.def)             Requested size: 469.75386pt x 325.2142pt.
 [13]
 Chapter 6.
 [14<./literature_review_files/figure-latex/spacetimegrain-1.pdf>]
@@ -2275,26 +2101,43 @@ Chapter 7.
 Chapter 8.
 [15]
 Chapter 9.
-[16] [17] [18] [19]
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 459.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 459.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 459.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 459.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 459.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 459.
-(C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-) (C:/Users/franc/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [20
+[16] [17] [18]
+Underfull \hbox (badness 1087) in paragraph at lines 412--412
+[][]\TU/calibri(0)/m/n/12 Hill, M. O. (1973). Di-ver-sity and Even-ness: A Uni-f
+y-ing No-ta-tion and Its Con-se-quences [_eprint:
+ []
 
-] [21] [22] [23]
+[19]
+Underfull \hbox (badness 1360) in paragraph at lines 412--412
+\TU/calibri(0)/m/n/12 T., Pavoine, S., Prinz-ing, A., Ro-drigues, A. S. L., 
+… Thuiller, W. (2012). Eco-phy-lo-ge-net-ics:
+ []
+
+[20] [21]
+Underfull \hbox (badness 1448) in paragraph at lines 412--412
+[][]\TU/calibri(0)/m/n/12 Whit-taker, R. H. (1960). Veg-etation of the Siskiyou Moun-tains, Ore-gon and Cal-i-for-nia [_eprint:
+ []
+
+[22] [23]
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00107pt on input line 457.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 457.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 457.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 457.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 457.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 457.
+(C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (C:/Users/leroy/AppData/Roaming/MiKTeX/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [24
+
+] [25] [26] [27]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -2363,25 +2206,25 @@ Package logreq Info: Writing requests to 'literature_review.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45494 strings out of 478146
- 244336,1977958 words of node,token memory allocated
- 1424 words of node memory still in use:
-   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 65 attribute,
- 115 glue_spec, 65 attribute_list, 3 write, 1 user_defined, 16 pdf_literal, 6 pd
-f_action, 16 pdf_colorstack nodes
-   avail lists: 1:9,2:7951,3:2252,4:1102,5:2749,6:1045,7:15455,8:71,9:8120,10:23
-,11:796
- 63956 multiletter control sequences out of 65536+600000
- 82 fonts using 43630815 bytes
- 99i,17n,115p,2552b,5139s stack positions out of 5000i,500n,10000p,200000b,80000s
-<//?/c:/users/franc/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmon
-o12-regular.otf><./fonts/calibrili.ttf><//?/c:/users/franc/appdata/local/program
-s/miktex/fonts/opentype/public/lm-math/latinmodern-math.otf><//?/c:/users/franc/
-appdata/local/programs/miktex/fonts/opentype/public/lm-math/latinmodern-math.otf
-><./fonts/calibrib.ttf><./fonts/calibri.ttf>
-Output written on literature_review.pdf (25 pages, 1528705 bytes).
+ 45898 strings out of 478146
+ 305451,2373549 words of node,token memory allocated
+ 1594 words of node memory still in use:
+   22 hlist, 2 vlist, 10 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 82 attribute,
+ 115 glue_spec, 82 attribute_list, 3 write, 1 user_defined, 16 pdf_literal, 23 p
+df_action, 16 pdf_colorstack nodes
+   avail lists: 1:12,2:8009,3:2252,4:1102,5:2753,6:1046,7:15475,8:84,9:8120,10:2
+3,11:796
+ 64301 multiletter control sequences out of 65536+600000
+ 82 fonts using 43631271 bytes
+ 99i,17n,115p,2880b,5139s stack positions out of 5000i,500n,10000p,200000b,80000s
+<//?/c:/program files/miktex/fonts/opentype/public/lm/lmmono12-regular.otf><C:/U
+sers/leroy/AppData/Roaming/MiKTeX/fonts/opentype/public/lm-math/latinmodern-math
+.otf><C:/Users/leroy/AppData/Roaming/MiKTeX/fonts/opentype/public/lm-math/latinm
+odern-math.otf><./fonts/calibrili.ttf><./fonts/calibrib.ttf><./fonts/calibri.ttf
+>
+Output written on literature_review.pdf (29 pages, 1594924 bytes).
 
-PDF statistics: 438 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 131072)
+PDF statistics: 677 PDF objects out of 1000 (max. 8388607)
+ 131 named destinations out of 1000 (max. 131072)
  264 words of extra memory for PDF output out of 10000 (max. 100000000)
 
