@@ -40,68 +40,6 @@ library(flextable)
 library(ftExtra)
 ```
 
-<!-- # Outline {.unnumbered} -->
-
-<!-- Literature review about the link between biodiversity facets trends and spatial/temporal scales. -->
-
-<!-- <!-- The idea is to take every paper that talk about biodiversity trends (so far using just the species richness seems already a lot of paper) and to list **1)** which biodiversity metric they use **2)** which taxon/taxa they use, **3)** the spatial scale, **4)** the temporal scale and **5)** what is the dynamic (does the biodiversity metric increase/decrease/doesn't change over time/unclear). -->
-
-<!-- Make a table of all these papers and `group_by(taxa) %>% order_by(spatial_scale | temporal_scale)`. Then see if for each taxa we can find a trend (a bit like in Chase *et al.* 2019 Oikos paper \| Jarzyna *et al.* 2015 but here I am not making the analysis, just taking the analysis from papers). Best example found so far: [Hill & Hamer 2004](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8901.2004.00926.x) -->
-
-<!-- **Meeting with Petr** -->
-
-<!-- 1)  How is the trend of biodiversity metrics linked to spatial grain/spatial extent and temporal grain/temporal extent. -->
-
-<!-- -   Talk about papers which does compare (Jarzyna Jetz) -->
-
-<!-- -   The inconsistency of reporting scales (especially for models as in Jiguet et al.or Chiron et al., and for MSI metrics) -->
-
-<!-- 2)  Data heterogeneity -->
-
-<!-- -   Lack of spatial replication. That's why this review is important -->
-
-<!-- -   The inconsistency of reporting scales (especially for models, and for MSI metrics) -->
-
-<!-- -   Lack in other than western countries -->
-
-<!-- -   Metric heterogeneity (Freixedas 2001 but they don't mention the macroecological ones as McGill, my struggle because of the time for space substitution as Hill & Hammer). Some metrics takes into account temporal dynamic but some papers don't look at the trend of these metrics (Jarzyna et al. 2015) -->
-
-<!-- -   Can we use space for time substitution as an actual substitution (Hill & Hammer) -->
-
-<!-- -   Pop trends are usually stronger (cf. all the abundance metrics) -->
-
-<!-- 3)  Future directions -->
-
-<!-- -   Lack of data for other thsn western cvountries: important to harvest data in other countries -->
-
-<!-- # Dashboard {.unnumbered} -->
-
-<!-- [Reference paper](https://www.sciencedirect.com/science/article/pii/S1470160X20306658?via%3Dihub) -->
-
-<!-- -   05/07/2021: research wos made with the literature review filter for the first query (stopped at \#13) and created the second query (stopped at \#2) -->
-
-<!-- -   07/07/2021: questions to Petr: **1)** can the geometric mean of relative abundance + the weighted goodness of fit be used as biodiversity trend index, **2)** can the Farmland Bird Indicator (FBI) be used as biodiversity trend (for me it is more biodiversity health, Chiron et al 2013) **3)** what about the Red List Index trend? **4)** what about Multispecies population indexes? -->
-
-<!-- -   08/07/2021: stopped at the article 41 for research \#2. -->
-
-<!-- -   12/08/2021: stopped at article 4 for research \#4 -->
-
-<!-- -   13/08/2021: stopped at article 8 for research \#4 -->
-
-<!-- -   17/08/2021: stopped at article 15 for research \#4 -->
-
-<!-- -   18/08/2021: stopped at article 30 for research \#4 -->
-
-<!-- -   19/08/2021: stopped at article 46 for research \#4 -->
-
-<!-- -   20/08/2021: stopped at article 64 for research \#4 -->
-
-<!-- -   01/09/2021: verifying spatial scales stopped at Dittrich 2019 -->
-
-<!-- -   02/09/2021: **Question 1:** for the FBI/WBI...\*BI indexes, usually they use a GLM/GAM to predict the abundance over the entire spatial extent and then compute the metric. Basically, those metrics are geometric means of predicted species abundances. Which spatial scale to use: the spatial unit of the prediction (i.e. the plot), or the entire area predicted? (Imo, the second option is correct). **Question 2:** same question for the Geometric mean but I am realizing while writing this question that \*BI are kind of similar to geometric means so answering the first question will answer this one. -->
-
-<!-- **Papers that are driving me mad:** @doxa_low-intensity_2010, @jiguet_french_2012, and @chiron_forecasting_2013, @eglington_disentangling_2012 -->
-
 # Introduction
 
 Our life quality is intrinsically linked to the state of ecosystems that we live in. Ecosystem services to humans [@diaz_assessing_2018], as well as their inner functioning, involve a spectrum of mechanisms including nutrient cycles or ecosystem stability [@pereira_global_2012]. Some of these functions, such as seed dispersal, control of pests, scavenging, or pollination, depend on birds and their diversity. Birds also have a significant esthetical value, with most countries having numerous iconic/charismatic species of conservation interest (https://www.iucnredlist.org/). Moreover, given their ability to quickly move between locations, their presence is also a good indicator for ecosystem health. Unfortunately, anthropogenic stressors like habitat loss, over-exploitation, pollution, or introduction of invasive species are a threat to birds and their biodiversity [@donald_agricultural_2001; @jiguet_population_2010], with concerns that they could face a sixth mass extinction [@barnosky_has_2011].
@@ -178,7 +116,7 @@ collapse_rows_df <- function(df, variable){
 
 
 tab %>%
-  mutate(
+  mutate(`Temporal grain (hour)` = as.numeric(`Temporal grain (hour)`),
          `Temporal lag (year)` = as.numeric(`Temporal lag (year)`),
          `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
          `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%
@@ -351,7 +289,7 @@ Reviewing the scientific literature on avian biodiversity trends give us a glimp
 
 ```{r notetable, echo=FALSE, tab.cap="Supplementary informations about each article"}
 tab %>%
-  select(Reference, `Spatial grain (Km²)`, Trend, Note) %>%
+  select(Reference, `Spatial grain (Km²)`, `Temporal grain (hour)`, Trend, Note) %>%
   as_tibble() %>%
   group_by(Reference) %>%
   collapse_rows_df(Reference) %>%
