@@ -76,22 +76,19 @@ tab <-
       (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") | (`Spatial grain (Km²)`== "Europe") ~ "National",
       TRUE ~ "Global"
     )) 
+
+# tab <- tab %>% filter(Metric != "Abundance")
 ```
 
 For this review, we focused on articles assessing temporal trends of the most common metrics of avian biodiversity and specifying spatial and temporal scales, which are at the same time consistent with broader macroecological scaling and theory [@storch_scaling_2007; @storch_untangling_2004], and thus can be compared across studies and scales. Namely, these were: *Species richness, `r paste(as.vector(unique(tab$Metric)[-2]), collapse = ", ")`*. Some of these classes contain several different indexes. For instance, the class *Diversity*, which contains either the Shannon or Simpson index, or the class *Abundance*, which contains various multi-species indicators (see Table \@ref(tab:notetable) for the notes).
 
 We only considered articles for which there were **spatial replicates**, *i.e.* where the trend of the metric was assessed at several locations at a given spatial grain. With these replications, the trend reported at one spatial grain is more reliable and general. However, at larger spatial grains (*i.e.* national, continental or global scales), spatial replicates are rare. Thus, we considered these trends from a single location only when based on a large set of observations from smaller spatial scales.
 
-We used the “advanced search” tool of the ISI Web of Science Core collection database with these four following queries:
+We used the “advanced search” tool of the ISI Web of Science Core collection database with these following queries:
 
+1.  `ALL=(birds AND species richness AND temporal trend)` which resulted in 88 references.
 
-1.  `AB = ((biodiversity OR species richness OR diversity) AND (temporal trend* OR dynamic*) AND (bird* OR avia*))` which resulted in 1346 references.
-
-2.  `AB = ((biodiversity change index)  AND (bird*  OR avia*)  AND trend*)` which resulted in 60 references.
-
-3.  `AB = ((species richness) AND (bird* OR avia*) AND trend*)` which resulted in 313 references.
-
-4.  `ALL=(birds AND species richness AND temporal trend)` which resulted in 88 references.
+2. `ALL=(birds AND diversity AND temporal trend)` which resulted in 156 references.
 
 For each query, the title and abstract of these articles were reviewed. In addition, we scanned the references of these articles for other potentially relevant literature. When the temporal trend was explicitly reported (either in a graph or text), we extracted from the material and methods the type of metric, the spatial grain of the trend (*i.e.* the area at which the metric trend is assessed), its temporal grain (*i.e.* the temporal unit of the sampling plan), the spatial extent (*i.e.* the entire area on which the study applies), the temporal extent and the beginning and ending years of the study as well as the general trend of the metric (Table \@ref(tab:maintable)). The temporal lag of the trend, *i.e.* the time-span between two time steps, was also reported [@dungan_balanced_2002]. We discretized spatial grain sizes discretized into four levels: local $<=25$ $Km^2$, regional $>25$ $Km²$, national when an entire country was considered, and global at the worldwide scale (grain = extent = the entire Earth’s mainland).
 
