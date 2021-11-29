@@ -75,9 +75,17 @@ tab <-
       (`Spatial grain (Km²)` > 25 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") ~ "Regional",
       (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") | (`Spatial grain (Km²)`== "Europe") ~ "National",
       TRUE ~ "Global"
-    )) 
+    )) %>% 
+  mutate(`Spatial extent (Km²)` = as.numeric(unlist(tab$`Spatial extent (Km²)`)),
+         `Temporal lag (year)`= as.numeric(unlist(tab$`Temporal lag (year)`)),
+         `Temporal extent (year)` = as.numeric(unlist(tab$`Temporal extent (year)`)))
 
-# tab <- tab %>% filter(Metric != "Abundance")
+tab <-
+  ## Take off the abundance metrics and the non replicated ones at national scales (except for America because it is a huge scale)
+  tab %>% filter(Metric != "Abundance") %>% 
+  filter(!(Reference == "@reif_changes_2013" & `Spatial grain (Km²)` == "National"),
+         !(Reference == "@van_turnhout_scale-dependent_2007" & `Spatial grain (Km²)` == "National"))
+  
 ```
 
 For this review, we focused on articles assessing temporal trends of the most common metrics of avian biodiversity and specifying spatial and temporal scales, which are at the same time consistent with broader macroecological scaling and theory [@storch_scaling_2007; @storch_untangling_2004], and thus can be compared across studies and scales. Namely, these were: *Species richness, `r paste(as.vector(unique(tab$Metric)[-2]), collapse = ", ")`*. Some of these classes contain several different indexes. For instance, the class *Diversity*, which contains either the Shannon or Simpson index, or the class *Abundance*, which contains various multi-species indicators (see Table \@ref(tab:notetable) for the notes).
@@ -218,11 +226,25 @@ For the cases where the metric of biodiversity is determined out of model [*e.g.
 In short, temporal grain of the sampling plan is sometimes specified. However, when the metric and its trend are computed, temporal grains are occasionally merged. In this case, the value wasn't specified. 
 <!-- , especially when the metric computed makes it different from the sampling plan, or when the trend of the biodiversity metric is computed. -->
 
+```{r temporalcoverage}
+tab %>% 
+  select(Reference, `Temporal extent (year)`, Years) %>% 
+  separate(Years, c("start", "end"), "-") %>% 
+  mutate_at(vars("start", "end"), as.numeric) %>% 
+  filter(!duplicated(Reference)) %>% 
+  ggplot(aes(x = Reference, xend = Reference, y = start, yend = end))+
+  geom_segment(size = 2)+
+  coord_flip()+
+  theme_classic()
+  # theme(axis.title = element_blank())
+  
+```
+
+
+
 ```{r spacetimegrain, fig.cap = "Relationship between temporal lag and spatial extent", fig.pos = "!H"}
 # lol <- 
 tab %>%
-  mutate(`Spatial extent (Km²)` = as.numeric(unlist(tab$`Spatial extent (Km²)`)),
-         `Temporal lag (year)`= as.numeric(unlist(tab$`Temporal lag (year)`))) %>% 
   select(`Spatial extent (Km²)`, `Temporal lag (year)`) %>%
   distinct() %>%
   ggplot(aes(`Spatial extent (Km²)`, `Temporal lag (year)`))+
