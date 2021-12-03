@@ -134,7 +134,7 @@ tab <-
     mutate(`Spatial grain (Km²)` = as.character(`Spatial grain (Km²)`)) %>% 
     mutate(`Spatial grain (Km²)` = case_when(
       `Spatial grain (Km²)` <= 25 | `Spatial grain (Km²)` == "Local" ~ "Local",
-      (`Spatial grain (Km²)` > 25 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") ~ "Regional",
+      (`Spatial grain (Km²)` > 25 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)`=="Regional") ~ "Regional",
       (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") | (`Spatial grain (Km²)`== "Europe") ~ "National",
       TRUE ~ "Global"
     )) 
