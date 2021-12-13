@@ -38,6 +38,7 @@ library(tidyr)
 library(forcats)
 library(flextable)
 library(ftExtra)
+library(cowplot)
 ```
 
 # Introduction
@@ -78,7 +79,8 @@ tab <-
     )) %>% 
   mutate(`Spatial extent (Km²)` = as.numeric(unlist(tab$`Spatial extent (Km²)`)),
          `Temporal lag (year)`= as.numeric(unlist(tab$`Temporal lag (year)`)),
-         `Temporal extent (year)` = as.numeric(unlist(tab$`Temporal extent (year)`)))
+         `Temporal extent (year)` = as.numeric(unlist(tab$`Temporal extent (year)`)),
+         Trend = factor(Trend, levels = c("Increase", "Stable", "Decrease")))
 
 tab <-
   ## Take off the abundance metrics and the non replicated ones at national scales (except for America because it is a huge scale)
@@ -150,6 +152,7 @@ tab %>%
 
 ```{r barspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each spatial scale", fig.pos = "!H"}
 
+Fig2a <- 
 table(tab$`Spatial grain (Km²)`, tab$Trend) %>% 
   as.data.frame() %>% 
   rename("Frequency" = Freq,
@@ -161,7 +164,10 @@ table(tab$`Spatial grain (Km²)`, tab$Trend) %>%
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank())+
-  scale_fill_grey()
+  scale_fill_viridis_d(option = "turbo",
+                       begin = .8, end = .5, direction = -1)+
+  theme(legend.position = "none")
+  # scale_fill_grey()
 
 # tmp <- cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% as_tibble(rownames = "rownames")
 # 
@@ -175,6 +181,7 @@ table(tab$`Spatial grain (Km²)`, tab$Trend) %>%
 
 ```{r barmetrics, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each of the metric", fig.pos = "!H", }
 
+Fig2b <- 
 table(tab %>% select(Metric, Trend)) %>% 
   as.data.frame() %>% 
   rename("Frequency" = Freq) %>% 
@@ -183,7 +190,10 @@ table(tab %>% select(Metric, Trend)) %>%
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank())+
-  scale_fill_grey()
+  scale_fill_viridis_d(option = "turbo",
+                       begin = .8, end = .5, direction = -1)+
+  theme(legend.position = "none")
+  # scale_fill_grey()
 
 # tmp <- cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% as_tibble(rownames = "rownames")
 # 
@@ -198,6 +208,8 @@ table(tab %>% select(Metric, Trend)) %>%
 Concerning species richness, we can see that the decrease is global, but that this decrease is rare at finer spatial scales. In fact, we observe more often increases, confirming the high perturbations that biodiversity is undergoing [@dornelas_assemblage_2014; @vaidyanathan_worlds_2021]. This analysis goes along with the temporal $\beta$-diversity which is always observed either stable or increasing. Indeed, increasing turnover through time is a sign of an increasing perturbation of the ecosystems. 
 
 ```{r barmetricsperspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each metric. Each panel represent one spatial scale", fig.pos = "!H"}
+
+Fig2c <- 
 table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>% 
   as.data.frame() %>% 
   rename("Frequency" = Freq) %>% 
@@ -208,11 +220,29 @@ table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>%
   geom_bar(position = "stack", stat = "identity")+
   facet_wrap(~ `Spatial grain (Km²)`, nrow = 1, scales = "free_x")+
   theme_light()+
-  theme(axis.text.x = element_text(angle = 45, hjust=1, size = 7),
+  theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank())+
-  scale_fill_grey()
+  scale_fill_viridis_d(option = "turbo",
+                       begin = .8, end = .5, direction = -1)
 
 ```
+
+```{r}
+pdf("data/fig2.pdf", 
+    # paper = "a4r",
+    width = 11,
+    height = 8.27)
+
+ggdraw()+
+  draw_plot(Fig2a, x = 0, y = .5, width = .3, height = .5)+
+  draw_plot(Fig2b, x = .3, y = .5, width = .7, height = .5)+
+  draw_plot(Fig2c,  x = 0, y = 0, width = 1, height = 0.5)+
+  draw_plot_label(label = c("a", "b", "c"), size = 13,
+                  x = c(0, 0.3, 0), y = c(1, 1, 0.5))
+
+dev.off()
+```
+
 
 # Temporal scale and temporal trends
 
@@ -228,14 +258,16 @@ In short, temporal grain of the sampling plan is sometimes specified. However, w
 
 ```{r temporalcoverage}
 tab %>% 
-  select(Reference, `Temporal extent (year)`, Years) %>% 
+  select(Reference_, `Temporal extent (year)`, Years) %>% 
   separate(Years, c("start", "end"), "-") %>% 
   mutate_at(vars("start", "end"), as.numeric) %>% 
-  filter(!duplicated(Reference)) %>% 
-  ggplot(aes(x = Reference, xend = Reference, y = start, yend = end))+
+  filter(!duplicated(Reference_)) %>% 
+  mutate(Reference_ = fct_reorder(Reference_, `Temporal extent (year)`)) %>% 
+  ggplot(aes(y = Reference_, yend = Reference_, x = start, xend = end))+
   geom_segment(size = 2)+
-  coord_flip()+
-  theme_classic()
+  theme_classic()+
+  ylab("")+
+  xlab("")
   # theme(axis.title = element_blank())
   
 ```
