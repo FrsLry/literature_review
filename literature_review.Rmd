@@ -280,6 +280,13 @@ In short, temporal grain of the sampling plan is sometimes specified. However, w
 <!-- , especially when the metric computed makes it different from the sampling plan, or when the trend of the biodiversity metric is computed. -->
 
 ```{r temporalcoverage}
+jpeg("data/Fig2a.jpg", 
+     units = "in",
+     res = 1000,
+    # paper = "a4r",
+    width = 11,
+    height = 8.27)
+
 tab %>% 
   select(Reference_, `Temporal extent (year)`, Years) %>% 
   separate(Years, c("start", "end"), "-") %>% 
@@ -288,11 +295,14 @@ tab %>%
   mutate(Reference_ = fct_reorder(Reference_, `Temporal extent (year)`)) %>% 
   ggplot(aes(y = Reference_, yend = Reference_, x = start, xend = end))+
   geom_segment(size = 2)+
-  theme_classic()+
+  theme_bw()+
+  # theme_classic()+
   ylab("")+
-  xlab("")
-  # theme(axis.title = element_blank())
+  xlab("")+
+  theme(axis.title = element_blank(),
+        axis.text = element_text(size = 15) )
   
+dev.off()
 ```
 
 
