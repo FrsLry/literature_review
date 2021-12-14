@@ -86,7 +86,21 @@ tab <-
   ## Take off the abundance metrics and the non replicated ones at national scales (except for America because it is a huge scale)
   tab %>% filter(Metric != "Abundance") %>% 
   filter(!(Reference == "@reif_changes_2013" & `Spatial grain (Km²)` == "National"),
-         !(Reference == "@van_turnhout_scale-dependent_2007" & `Spatial grain (Km²)` == "National"))
+         !(Reference == "@van_turnhout_scale-dependent_2007" & `Spatial grain (Km²)` == "National")) %>% 
+  filter(!(Reference_ == "Jarzyna and Jetz 2018" & `Spatial grain (Km²)` == "National")) %>% 
+  mutate(Metric = case_when(
+    Metric == "SR" ~ "sR",
+    Metric == "Functional richness" ~ "fR",
+    Metric == "Evenness" ~ "Eve",
+    Metric == "Functional evenness" ~ "fEve",
+    Metric == "Diversity" ~ "Div",
+    Metric == "Functional diversity" ~ "fD",
+    Metric == "Temporal beta-diversity" ~ "tBetaDiv",
+    Metric == "Spatial beta-diversity" ~ "sBetaDiv",
+    Metric == "Functional beta-diversity" ~ "fBetaDiv",
+    Metric == "Gamma-diversity" ~ "gammaDiv",
+    Metric == "Functional Gamma-diversity" ~ "fgammaDiv"
+  ))
   
 ```
 
@@ -127,7 +141,7 @@ tab %>%
          `Temporal lag (year)` = as.numeric(`Temporal lag (year)`),
          `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
          `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%
-  select(-Note) %>%
+  select(-Note, -Reference_) %>%
   as_tibble() %>%
   group_by(Reference) %>%
   collapse_rows_df(Reference) %>%
@@ -152,7 +166,7 @@ tab %>%
 
 ```{r barspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each spatial scale", fig.pos = "!H"}
 
-Fig2a <- 
+Fig3a <- 
 table(tab$`Spatial grain (Km²)`, tab$Trend) %>% 
   as.data.frame() %>% 
   rename("Frequency" = Freq,
@@ -161,6 +175,7 @@ table(tab$`Spatial grain (Km²)`, tab$Trend) %>%
   mutate("Spatial grain size" = fct_relevel(`Spatial grain size`,c("Local", "Regional", "National", "Global"))) %>% 
   ggplot(aes(fill = Trend, x = `Spatial grain size`, y = Frequency))+
   geom_bar(position = "stack", stat = "identity")+
+  ylab("Number of articles")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank())+
@@ -181,15 +196,17 @@ table(tab$`Spatial grain (Km²)`, tab$Trend) %>%
 
 ```{r barmetrics, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each of the metric", fig.pos = "!H", }
 
-Fig2b <- 
+Fig3b <-
 table(tab %>% select(Metric, Trend)) %>% 
   as.data.frame() %>% 
   rename("Frequency" = Freq) %>% 
   ggplot(aes(fill = Trend, y = `Frequency`, x = Metric))+
   geom_bar(position = "stack", stat = "identity")+
+  ylab("Number of articles")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
-        axis.title.x=element_blank())+
+        axis.title.x=element_blank(),
+        axis.title.y = element_blank())+
   scale_fill_viridis_d(option = "turbo",
                        begin = .8, end = .5, direction = -1)+
   theme(legend.position = "none")
@@ -209,7 +226,7 @@ Concerning species richness, we can see that the decrease is global, but that th
 
 ```{r barmetricsperspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each metric. Each panel represent one spatial scale", fig.pos = "!H"}
 
-Fig2c <- 
+Fig3c <-
 table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>% 
   as.data.frame() %>% 
   rename("Frequency" = Freq) %>% 
@@ -219,24 +236,30 @@ table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>%
   ggplot(aes(fill = Trend, y = `Frequency`, x = Metric))+
   geom_bar(position = "stack", stat = "identity")+
   facet_wrap(~ `Spatial grain (Km²)`, nrow = 1, scales = "free_x")+
+  ylab("Number of articles")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
-        axis.title.x=element_blank())+
+        axis.title.x=element_blank(),
+        strip.background = element_blank(),
+        strip.text.x = element_text(face = "bold", color = "black", size = 10))+
+  labs(fill = "Trend reported")+
   scale_fill_viridis_d(option = "turbo",
                        begin = .8, end = .5, direction = -1)
 
 ```
 
 ```{r}
-pdf("data/fig2.pdf", 
+jpeg("data/Fig3.jpg", 
+     units = "in",
+     res = 1000,
     # paper = "a4r",
     width = 11,
     height = 8.27)
 
 ggdraw()+
-  draw_plot(Fig2a, x = 0, y = .5, width = .3, height = .5)+
-  draw_plot(Fig2b, x = .3, y = .5, width = .7, height = .5)+
-  draw_plot(Fig2c,  x = 0, y = 0, width = 1, height = 0.5)+
+  draw_plot(Fig3a, x = 0, y = .5, width = .3, height = .5)+
+  draw_plot(Fig3b, x = .3, y = .5, width = .7, height = .5)+
+  draw_plot(Fig3c,  x = 0, y = 0, width = 1, height = 0.5)+
   draw_plot_label(label = c("a", "b", "c"), size = 13,
                   x = c(0, 0.3, 0), y = c(1, 1, 0.5))
 
