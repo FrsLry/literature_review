@@ -67,13 +67,34 @@ Studying biodiversity can be confusing as it exists many ways to measure it. The
 ## Load the table
 tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0")
 
+# tmp_tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0", sheet = 2)
+# 
+# 
+# tab %>% select(Reference) %>% rbind(tmp_tab %>% 
+#   filter(Metric == c("SR", 
+#                      "Functional richness",
+#                      "Evenness", 
+#                      "Functional evenness",
+#                      "Diversity", 
+#                      "Functional diversity",
+#                      "Temporal beta-diversity",
+#                      "Spatial beta-diversity",
+#                      "Functional spatial beta-diversity",
+#                      "Gamma-diversity",
+#                      "Functional Gamma-diversity")) %>% 
+#     select(Reference)) %>% distinct(Reference)
+
+
+
+
+
 ## Discretizing spatial scales
 tab <-
   tab %>%
-    mutate(`Spatial grain (Km²)` = as.character(`Spatial grain (Km²)`)) %>% 
+    # mutate(`Spatial grain (Km²)` = as.character(`Spatial grain (Km²)`)) %>% 
     mutate(`Spatial grain (Km²)` = case_when(
-      `Spatial grain (Km²)` <= 25 | `Spatial grain (Km²)` == "Local" ~ "Local",
-      (`Spatial grain (Km²)` > 25 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)`== "Regional")~ "Regional",
+      `Spatial grain (Km²)` <= 650 | `Spatial grain (Km²)` == "Local" ~ "Local",
+      (`Spatial grain (Km²)` > 650 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)`== "Regional")~ "Regional",
       (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") | (`Spatial grain (Km²)`== "Europe") ~ "National",
       TRUE ~ "Global"
     )) %>% 
@@ -97,7 +118,7 @@ tab <-
     Metric == "Functional diversity" ~ "fD",
     Metric == "Temporal beta-diversity" ~ "tBetaDiv",
     Metric == "Spatial beta-diversity" ~ "sBetaDiv",
-    Metric == "Functional beta-diversity" ~ "fBetaDiv",
+    Metric == "Functional spatial beta-diversity" ~ "fsBetaDiv",
     Metric == "Gamma-diversity" ~ "gammaDiv",
     Metric == "Functional Gamma-diversity" ~ "fgammaDiv"
   ))
@@ -175,7 +196,7 @@ table(tab$`Spatial grain (Km²)`, tab$Trend) %>%
   mutate("Spatial grain size" = fct_relevel(`Spatial grain size`,c("Local", "Regional", "National", "Global"))) %>% 
   ggplot(aes(fill = Trend, x = `Spatial grain size`, y = Frequency))+
   geom_bar(position = "stack", stat = "identity")+
-  ylab("Number of articles")+
+  ylab("Number of trends")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank())+
@@ -202,7 +223,7 @@ table(tab %>% select(Metric, Trend)) %>%
   rename("Frequency" = Freq) %>% 
   ggplot(aes(fill = Trend, y = `Frequency`, x = Metric))+
   geom_bar(position = "stack", stat = "identity")+
-  ylab("Number of articles")+
+  ylab("Number of trends")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank(),
@@ -236,7 +257,7 @@ table(tab %>% select(Metric, Trend, `Spatial grain (Km²)`)) %>%
   ggplot(aes(fill = Trend, y = `Frequency`, x = Metric))+
   geom_bar(position = "stack", stat = "identity")+
   facet_wrap(~ `Spatial grain (Km²)`, nrow = 1, scales = "free_x")+
-  ylab("Number of articles")+
+  ylab("Number of trends")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank(),
