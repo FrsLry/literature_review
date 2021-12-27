@@ -290,7 +290,7 @@ dev.off()
 
 # Temporal scale and temporal trends
 
-The oldest study started in `r min(as.numeric(unlist(unique(tab$Years) %>% strsplit("-"))), na.rm = T)` and the median duration is `r round(median(as.numeric(unique(unlist(tab$"Temporal extent (year)"))), na.rm = TRUE))` years, with a minimum time-span of `r min(as.numeric(unlist(tab$"Temporal extent (year)")), na.rm = TRUE)` years and a maximum of `r max(as.numeric(unlist(tab$"Temporal extent (year)")), na.rm = TRUE)`. As the studies use mainly the same datasets (generally from Breeding Bird Surveys), only three different temporal grains were found (`r na.omit(unique(as.numeric(tab$"Temporal grain (hour)")))` hours).
+The oldest study started in `r min(as.numeric(unlist(unique(tab$`Temporal coverage`) %>% strsplit("-"))), na.rm = T)` and the median duration is `r round(median(as.numeric(unique(unlist(tab$"Temporal extent (year)"))), na.rm = TRUE))` years, with a minimum time-span of `r min(as.numeric(unlist(tab$"Temporal extent (year)")), na.rm = TRUE)` years and a maximum of `r max(as.numeric(unlist(tab$"Temporal extent (year)")), na.rm = TRUE)`. As the studies use mainly the same datasets (generally from Breeding Bird Surveys), only three different temporal grains were found (`r na.omit(unique(as.numeric(tab$"Temporal grain (hour)")))` hours).
 
 We found longest temporal lags in studies with large spatial extent (Figure \@ref(fig:spacetimegrain)). This is because data used in the selected article are mainly structured data, *i.e.* data following a well established sampling plan. This type of survey is sparse since it needs resources and organization. Increasing the spatial extent thus increases both the temporal extent and the time to sample all the sampling units. This explains this positive correlation between spatial extent and temporal lag. This limitation can be overcome thanks to citizen science data, which have increasingly been used [*e.g.* @bowler_geographic_2021; @isaac_data_2020; @isaac_statistics_2014]. The opportunistic nature of these data allows for short census times, even over a large area. These data, with high temporal grain resolution for large spatial scales, could in future be used to explore in more details the temporal scaling of biodiversity trends, especially for low temporal lags.
 
@@ -309,11 +309,12 @@ jpeg("data/Fig2a.jpg",
     height = 8.27)
 
 tab %>% 
-  select(Reference_, `Temporal extent (year)`, Years) %>% 
-  separate(Years, c("start", "end"), "-") %>% 
+  select(Reference_, `Temporal extent (year)`, `Temporal coverage`) %>% 
+  separate(`Temporal coverage`, c("start", "end"), "-") %>% 
   mutate_at(vars("start", "end"), as.numeric) %>% 
   filter(!duplicated(Reference_)) %>% 
-  mutate(Reference_ = fct_reorder(Reference_, `Temporal extent (year)`)) %>% 
+  mutate(coverage = (end-start)+1) %>% 
+  mutate(Reference_ = fct_reorder(Reference_, coverage)) %>% 
   ggplot(aes(y = Reference_, yend = Reference_, x = start, xend = end))+
   geom_segment(size = 2)+
   theme_bw()+
@@ -330,16 +331,16 @@ dev.off()
 
 ```{r spacetimegrain, fig.cap = "Relationship between temporal lag and spatial extent", fig.pos = "!H"}
 # lol <- 
-tab %>%
-  select(`Spatial extent (Km²)`, `Temporal lag (year)`) %>%
-  distinct() %>%
-  ggplot(aes(`Spatial extent (Km²)`, `Temporal lag (year)`))+
-  geom_point()+
-  # geom_jitter()+
-  expand_limits(x = 0)+
-  # geom_smooth(method = "lm", se = F)+
-  scale_x_continuous(trans = "log10")+
-  theme_classic()
+# tab %>%
+#   select(`Spatial extent (Km²)`, `Temporal lag (year)`) %>%
+#   distinct() %>%
+#   ggplot(aes(`Spatial extent (Km²)`, `Temporal lag (year)`))+
+#   geom_point()+
+#   # geom_jitter()+
+#   expand_limits(x = 0)+
+#   # geom_smooth(method = "lm", se = F)+
+#   scale_x_continuous(trans = "log10")+
+#   theme_classic()
 
 # lm(`Temporal lag (year)`~`Spatial extent (Km²)`, data = lol)
 
