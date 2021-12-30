@@ -67,38 +67,18 @@ Studying biodiversity can be confusing as it exists many ways to measure it. The
 ## Load the table
 tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0")
 
-# tmp_tab <- read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0", sheet = 2)
-# 
-# 
-# tab %>% select(Reference) %>% rbind(tmp_tab %>% 
-#   filter(Metric == c("SR", 
-#                      "Functional richness",
-#                      "Evenness", 
-#                      "Functional evenness",
-#                      "Diversity", 
-#                      "Functional diversity",
-#                      "Temporal beta-diversity",
-#                      "Spatial beta-diversity",
-#                      "Functional spatial beta-diversity",
-#                      "Gamma-diversity",
-#                      "Functional Gamma-diversity")) %>% 
-#     select(Reference)) %>% distinct(Reference)
-
-
-
-
 
 ## Discretizing spatial scales
 tab <-
   tab %>%
     # mutate(`Spatial grain (Km²)` = as.character(`Spatial grain (Km²)`)) %>% 
     mutate(`Spatial grain (Km²)` = case_when(
-      `Spatial grain (Km²)` <= 100 | `Spatial grain (Km²)` == "Local" ~ "Local",
-      (`Spatial grain (Km²)` > 100 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)`== "Regional")~ "Regional",
+      `Spatial grain (Km²)` <= 2500 | `Spatial grain (Km²)` == "Local" ~ "Local",
+      (`Spatial grain (Km²)` > 2500 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)`== "Regional")~ "Regional",
       (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") | (`Spatial grain (Km²)`== "Europe") ~ "National",
       TRUE ~ "Global"
     )) %>% 
-  mutate(`Spatial extent (Km²)` = as.numeric(unlist(tab$`Spatial extent (Km²)`)),
+  mutate(`Spatial extent (Km²)` = unlist(tab$`Spatial extent (Km²)`),
          `Temporal lag (year)`= as.numeric(unlist(tab$`Temporal lag (year)`)),
          `Temporal extent (year)` = as.numeric(unlist(tab$`Temporal extent (year)`)),
          Trend = factor(Trend, levels = c("Increase", "Stable", "Decrease")))
@@ -121,8 +101,11 @@ tab <-
     Metric == "Functional spatial beta-diversity" ~ "fsBetaDiv",
     Metric == "Gamma-diversity" ~ "gammaDiv",
     Metric == "Functional Gamma-diversity" ~ "fgammaDiv"
-  ))
-  
+  )) %>% 
+  ## take off duplicated rows
+  select(-Note) %>% 
+  unique()
+
 ```
 
 For this review, we focused on articles assessing temporal trends of the most common metrics of avian biodiversity and specifying spatial and temporal scales, which are at the same time consistent with broader macroecological scaling and theory [@storch_scaling_2007; @storch_untangling_2004], and thus can be compared across studies and scales. Namely, these were: *Species richness, `r paste(as.vector(unique(tab$Metric)[-2]), collapse = ", ")`*. Some of these classes contain several different indexes. For instance, the class *Diversity*, which contains either the Shannon or Simpson index, or the class *Abundance*, which contains various multi-species indicators (see Table \@ref(tab:notetable) for the notes).
@@ -162,7 +145,7 @@ tab %>%
          `Temporal lag (year)` = as.numeric(`Temporal lag (year)`),
          `Spatial extent (Km²)` = as.numeric(`Spatial extent (Km²)`),
          `Temporal extent (year)` = as.numeric(`Temporal extent (year)`)) %>%
-  select(-Note, -Reference_) %>%
+  select(-Reference_) %>%
   as_tibble() %>%
   group_by(Reference) %>%
   collapse_rows_df(Reference) %>%
@@ -183,7 +166,7 @@ tab %>%
 
 # Spatial scale and temporal trends
 
-**Overall trends.** The median spatial extent of the `r length(unique(tab$Reference))` articles is `r round(median(as.numeric(unique(unlist(tab$"Spatial extent (Km²)")))))` $Km^2$, with the smallest area of `r min(as.numeric(unlist(tab$"Spatial extent (Km²)")))` $Km^2$ and the greatest representing the global emerged surface (*i.e.* `r round(max(as.numeric(unlist(tab$"Spatial extent (Km²)"))))` $Km^2$). These articles reported `r nrow(table(tab[,c(2,3)]) %>% as.data.frame %>% filter(Freq != 0))` combinations of scales and metrics. Overall, there were `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* reliable trends (*i.e.* spatially replicated) across the literature. In our case, local scales are more represented than the others and the number of articles decreases with the increasing spatial scale (Figure \@ref(fig:barspatscale)). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The *Increase* of the metrics seems to be dominating at smaller scales. On the other hand, the proportion of *Decrease* is larger at regional scales than at local scales. At the global scale, no *Increase* was found. 
+**Overall trends.** The median spatial extent of the `r length(unique(tab$Reference))` articles is `r round(median(as.numeric(unique(unlist(tab$"Spatial extent (Km²)"))), na.rm = TRUE))` $Km^2$, with the smallest area of `r min(as.numeric(unlist(tab$"Spatial extent (Km²)")))` $Km^2$ and the greatest representing the global emerged surface (*i.e.* `r round(max(as.numeric(unlist(tab$"Spatial extent (Km²)"))))` $Km^2$). These articles reported `r nrow(table(tab[,c(2,3)]) %>% as.data.frame %>% filter(Freq != 0))` combinations of scales and metrics. Overall, there were `r table(tab$Trend)[1]` *Decrease*, `r table(tab$Trend)[2]` *Increase* and `r table(tab$Trend)[3]` *Stable* reliable trends (*i.e.* spatially replicated) across the literature. In our case, local scales are more represented than the others and the number of articles decreases with the increasing spatial scale (Figure \@ref(fig:barspatscale)). This is expected, as the spatial replications get more demanding in organization and resources as the grain size enlarges. The *Increase* of the metrics seems to be dominating at smaller scales. On the other hand, the proportion of *Decrease* is larger at regional scales than at local scales. At the global scale, no *Increase* was found. 
 
 ```{r barspatscale, fig.cap="Proportion of *Increase*, *Decrease* or *Stable* trends for each spatial scale", fig.pos = "!H"}
 
@@ -287,10 +270,30 @@ ggdraw()+
 dev.off()
 ```
 
+**Trends without pseudo-replicates:**
+
+```{r}
+tab %>% 
+## Papers to take off:
+  filter(
+    !Reference_ == "Dornelas et al. 2014",
+    !Reference_ == "La Sorte 2006",
+    !Reference_ == "Jarzyna and Jetz 2017",
+    !(Reference_ == "La Sorte and Boecklen 2005" & Metric == "sR"),
+    !(Reference_ == "Jarzyna and Jetz 2018" & Metric == "sR" & `Spatial grain (Km²)` == "Local"),
+    !(Reference_ == "Jarzyna and Jetz 2018" & Metric == "sR" & `Spatial grain (Km²)` == "Regional"),
+    !(Reference_ == "Jarzyna and Jetz 2018" & Metric == "tBetaDiv" & `Spatial grain (Km²)` == "Local"),
+    !(Reference_ == "Schipper et al. 2016" & Metric == "sR" & `Spatial grain (Km²)` == "Local"),
+    !(Reference_ == "Barnagaud et al. 2017" & Metric == "sR" & `Spatial grain (Km²)` == "Local"),
+    !(Reference_ == "Chase et al. 2019" & Metric == "sR" & `Spatial grain (Km²)` == "Local")
+  )
+```
+
+
 
 # Temporal scale and temporal trends
 
-The oldest study started in `r min(as.numeric(unlist(unique(tab$`Temporal coverage`) %>% strsplit("-"))), na.rm = T)` and the median duration is `r round(median(as.numeric(unique(unlist(tab$"Temporal extent (year)"))), na.rm = TRUE))` years, with a minimum time-span of `r min(as.numeric(unlist(tab$"Temporal extent (year)")), na.rm = TRUE)` years and a maximum of `r max(as.numeric(unlist(tab$"Temporal extent (year)")), na.rm = TRUE)`. As the studies use mainly the same datasets (generally from Breeding Bird Surveys), only three different temporal grains were found (`r na.omit(unique(as.numeric(tab$"Temporal grain (hour)")))` hours).
+The oldest study started in `r print(min(as.numeric(unlist(unique(tab$"Temporal coverage") %>% strsplit("-"))), na.rm = T))` and the median duration is `r round(median(as.numeric(unique(unlist(tab$"Temporal extent (year)"))), na.rm = TRUE))` years, with a minimum time-span of `r min(as.numeric(unlist(tab$"Temporal extent (year)")), na.rm = TRUE)` years and a maximum of `r max(as.numeric(unlist(tab$"Temporal extent (year)")), na.rm = TRUE)`. As the studies use mainly the same datasets (generally from Breeding Bird Surveys), only three different temporal grains were found (`r na.omit(unique(as.numeric(tab$"Temporal grain (hour)")))` hours).
 
 We found longest temporal lags in studies with large spatial extent (Figure \@ref(fig:spacetimegrain)). This is because data used in the selected article are mainly structured data, *i.e.* data following a well established sampling plan. This type of survey is sparse since it needs resources and organization. Increasing the spatial extent thus increases both the temporal extent and the time to sample all the sampling units. This explains this positive correlation between spatial extent and temporal lag. This limitation can be overcome thanks to citizen science data, which have increasingly been used [*e.g.* @bowler_geographic_2021; @isaac_data_2020; @isaac_statistics_2014]. The opportunistic nature of these data allows for short census times, even over a large area. These data, with high temporal grain resolution for large spatial scales, could in future be used to explore in more details the temporal scaling of biodiversity trends, especially for low temporal lags.
 
@@ -396,26 +399,50 @@ Reviewing the scientific literature on avian biodiversity trends give us a glimp
 <!-- \vspace*{-1cm} -->
 
 ```{r notetable, echo=FALSE, tab.cap="Supplementary informations about each article"}
-tab %>%
-  select(Reference, `Spatial grain (Km²)`, `Temporal grain (hour)`, Trend, Note) %>%
+tab_notes <- 
+read_sheet("https://docs.google.com/spreadsheets/d/1SSvav_ISY1h0N7zr6xgxSyrQV8_XpdpsIUYEWzikaCA/edit#gid=0") 
+
+tab_notes <-
+  tab_notes %>% 
+      mutate(`Spatial grain (Km²)` = case_when(
+      `Spatial grain (Km²)` <= 2500 | `Spatial grain (Km²)` == "Local" ~ "Local",
+      (`Spatial grain (Km²)` > 2500 & `Spatial grain (Km²)` < 800000) | (`Spatial grain (Km²)`== "Admin. unit") | (`Spatial grain (Km²)`== "Regional")~ "Regional",
+      (`Spatial grain (Km²)` == "National") | (`Spatial grain (Km²)`== "National unit") | (`Spatial grain (Km²)`== "Europe") ~ "National",
+      TRUE ~ "Global"
+    )) %>% 
+  mutate(`Spatial extent (Km²)` = unlist(tab_notes$`Spatial extent (Km²)`),
+         `Temporal lag (year)`= as.numeric(unlist(tab_notes$`Temporal lag (year)`)),
+         `Temporal extent (year)` = as.numeric(unlist(tab_notes$`Temporal extent (year)`)),
+         Trend = factor(Trend, levels = c("Increase", "Stable", "Decrease")))
+
+tab_notes %>% 
+  filter(Metric != "Abundance") %>% 
+  filter(!(Reference == "@reif_changes_2013" & `Spatial grain (Km²)` == "National"),
+         !(Reference == "@van_turnhout_scale-dependent_2007" & `Spatial grain (Km²)` == "National")) %>% 
+  filter(!(Reference == "Jarzyna and Jetz 2018" & `Spatial grain (Km²)` == "National")) %>% 
+  mutate(Metric = case_when(
+    Metric == "SR" ~ "sR",
+    Metric == "Functional richness" ~ "fR",
+    Metric == "Evenness" ~ "Eve",
+    Metric == "Functional evenness" ~ "fEve",
+    Metric == "Diversity" ~ "Div",
+    Metric == "Functional diversity" ~ "fD",
+    Metric == "Temporal beta-diversity" ~ "tBetaDiv",
+    Metric == "Spatial beta-diversity" ~ "sBetaDiv",
+    Metric == "Functional spatial beta-diversity" ~ "fsBetaDiv",
+    Metric == "Gamma-diversity" ~ "gammaDiv",
+    Metric == "Functional Gamma-diversity" ~ "fgammaDiv"
+  )) %>% 
+  select(Reference_, `Spatial grain (Km²)`, `Temporal grain (hour)`, Trend, Note) %>%
   as_tibble() %>%
-  group_by(Reference) %>%
-  collapse_rows_df(Reference) %>%
+  group_by(Reference_) %>%
+  collapse_rows_df(Reference_) %>%
+  rename(Reference = "Reference_") %>% 
   flextable::flextable() %>%
   colformat_md(j = 1) %>%
   fontsize(size = 9, part = "all") %>%
   width(j = 5, width = 5)
-  # escape = F is very important for the citation
-  # kbl(booktabs = T, escape = F, format = "latex", longtable = T,
-  #     caption = "Supplementary informations about each article") %>%
-  # kableExtra::kable_styling(
-  #  latex_options = c("hold_position", "repeat_header", "striped"),
-  #  font_size = 10,
-  #  full_width = FALSE
-  #  ) %>%
-  # column_spec(1:3, width = "6.5em") %>%
-  # column_spec(4, width = "40em") %>%
-  # landscape()
+  
 ```
 
 \newpage

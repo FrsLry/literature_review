@@ -66,7 +66,7 @@ ggplot() + geom_sf(data = eu)+
 test <-
 ggplot()+
         geom_text(aes(0, 0),
-                  label = tab %>% filter(`Spatial grain (Km²)` == "Global") %>%
+                  label = tab %>% filter(`Spatial grain (KmÂ²)` == "Global") %>%
                     group_by(Metric) %>% count() %>% unite(Metric, c("n", "Metric"), sep = " ") %>%
                     pull(Metric) %>% str_flatten(., collapse = "\n"),
                   hjust = 0,
@@ -132,7 +132,7 @@ gridExtra::grid.table(tab[!grepl("USA", tab$Location) & !grepl("World", tab$Loca
 ggplot(data = us) +
   geom_sf() +
   # geom_sf(data = us2) +
-  coord_sf(c(-2240784, 2568901), ylim = c(-4077524, 4005105), expand = FALSE) +
+  coord_sf(c(-2240784, 2568901), ylim = c(-2177524, 1205105), expand = FALSE) +
   theme_classic() +  my_theme
 
 plot.new()
