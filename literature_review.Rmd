@@ -286,7 +286,25 @@ tab %>%
     !(Reference_ == "Schipper et al. 2016" & Metric == "sR" & `Spatial grain (Km²)` == "Local"),
     !(Reference_ == "Barnagaud et al. 2017" & Metric == "sR" & `Spatial grain (Km²)` == "Local"),
     !(Reference_ == "Chase et al. 2019" & Metric == "sR" & `Spatial grain (Km²)` == "Local")
-  )
+  ) %>% 
+  select(Metric, Trend, `Spatial grain (Km²)`) %>% 
+  table() %>% 
+  as.data.frame() %>% rename("Frequency" = Freq) %>% 
+  filter(Frequency != 0) %>% 
+  rename(`Spatial grain (Km²)` = `Spatial.grain..Km².`) %>% 
+  mutate(`Spatial grain (Km²)` = fct_relevel(`Spatial grain (Km²)`,c("Local", "Regional", "National", "Global"))) %>% 
+  ggplot(aes(fill = Trend, y = `Frequency`, x = Metric))+
+  geom_bar(position = "stack", stat = "identity")+
+  facet_wrap(~ `Spatial grain (Km²)`, nrow = 1, scales = "free_x")+
+  ylab("Number of trends")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 45, hjust=1),
+        axis.title.x=element_blank(),
+        strip.background = element_blank(),
+        strip.text.x = element_text(face = "bold", color = "black", size = 10))+
+  labs(fill = "Trend reported")+
+  scale_fill_viridis_d(option = "turbo",
+                       begin = .8, end = .5, direction = -1)
 ```
 
 

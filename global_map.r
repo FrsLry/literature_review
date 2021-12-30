@@ -132,7 +132,7 @@ gridExtra::grid.table(tab[!grepl("USA", tab$Location) & !grepl("World", tab$Loca
 ggplot(data = us) +
   geom_sf() +
   # geom_sf(data = us2) +
-  coord_sf(c(-2240784, 2568901), ylim = c(-2177524, 1205105), expand = FALSE) +
+  coord_sf(c(-2240784, 2568901), ylim = c(-2177524, 1505105), expand = FALSE) +
   theme_classic() +  my_theme
 
 plot.new()
