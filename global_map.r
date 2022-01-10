@@ -5,7 +5,7 @@ library(raster)
 library(tidyverse)
 library(rnaturalearth)
 library(rnaturalearthdata)
-library(rnaturalearthhires)
+# library(rnaturalearthhires)
 library(rgeos)
 library(tibble)
 
@@ -15,7 +15,7 @@ testproj <- CRS("+proj=aea +lon_0=-97.03125 +lat_1=24.8027719 +lat_2=62.8771189 
 # ---------------------------------------------------
 
 us2 <- readOGR(dsn="data/Data map/Boundaries", layer="cb_2015_us_state_500k")
-us2 <- st_transform(us2, crs=testproj)
+# us2 <- st_transform(us2, crs=testproj)
 us2 <- as(us2, "sf")
 
 us <- ne_countries(scale = "medium", returnclass = "sf")
@@ -119,7 +119,7 @@ ggplot()+
 
 ## Map for Europe ##########
 ggplot(data = eu) +
-  geom_sf() +
+  geom_sf(color = "#B2B2B2") +
   coord_sf(xlim = c(2426378, 6293974), ylim = c(1428101, 5446513), expand = FALSE) +
   theme_classic() +  my_theme
 
@@ -130,7 +130,7 @@ gridExtra::grid.table(tab[!grepl("USA", tab$Location) & !grepl("World", tab$Loca
 
 ## Map for North America #####
 ggplot(data = us) +
-  geom_sf() +
+  geom_sf(color = "#B2B2B2") +
   # geom_sf(data = us2) +
   coord_sf(c(-2240784, 2568901), ylim = c(-2177524, 1505105), expand = FALSE) +
   theme_classic() +  my_theme
