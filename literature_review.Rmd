@@ -286,7 +286,8 @@ tab %>%
     !(Reference_ == "Jarzyna and Jetz 2018" & Metric == "tBetaDiv" & `Spatial grain (Km²)` == "Local"),
     !(Reference_ == "Schipper et al. 2016" & Metric == "sR" & `Spatial grain (Km²)` == "Local"),
     !(Reference_ == "Barnagaud et al. 2017" & Metric == "sR" & `Spatial grain (Km²)` == "Local"),
-    !(Reference_ == "Chase et al. 2019" & Metric == "sR" & `Spatial grain (Km²)` == "Local")
+    !(Reference_ == "Chase et al. 2019" & Metric == "sR" & `Spatial grain (Km²)` == "Local"),
+    !(Reference_ == "McGill et al. 2015" & `Spatial grain (Km²)` == "Local")
   )
 
 Fig3a_noreplic <- 
