@@ -100,7 +100,8 @@ tab <-
     Metric == "Spatial beta-diversity" ~ "sBetaDiv",
     Metric == "Functional spatial beta-diversity" ~ "fsBetaDiv",
     Metric == "Gamma-diversity" ~ "gammaDiv",
-    Metric == "Functional Gamma-diversity" ~ "fgammaDiv"
+    Metric == "Functional Gamma-diversity" ~ "fgammaDiv",
+    Metric == "Phylogenetic diversity" ~ "pDiv"
   )) %>% 
   ## take off duplicated rows
   select(-Note) %>% 
