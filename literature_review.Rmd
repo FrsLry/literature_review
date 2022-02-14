@@ -88,7 +88,7 @@ tab <-
   tab %>% filter(Metric != "Abundance") %>% 
   filter(!(Reference == "@reif_changes_2013" & `Spatial grain (Km²)` == "National"),
          !(Reference == "@van_turnhout_scale-dependent_2007" & `Spatial grain (Km²)` == "National")) %>% 
-  filter(!(Reference_ == "Jarzyna and Jetz 2018" & `Spatial grain (Km²)` == "National")) %>% 
+  filter(!(Reference == "@jarzyna_taxonomic_2018" & `Spatial grain (Km²)` == "National")) %>% 
   mutate(Metric = case_when(
     Metric == "SR" ~ "sR",
     Metric == "Functional richness" ~ "fR",
@@ -181,12 +181,14 @@ table(tab$`Spatial grain (Km²)`, tab$Trend) %>%
   ggplot(aes(fill = Trend, x = `Spatial grain size`, y = Frequency))+
   geom_bar(position = "stack", stat = "identity")+
   ylab("Number of trends")+
+  ggtitle("Spatial grain")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank())+
   scale_fill_viridis_d(option = "turbo",
                        begin = .8, end = .5, direction = -1)+
-  theme(legend.position = "none")
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = .5))
   # scale_fill_grey()
 
 # tmp <- cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% as_tibble(rownames = "rownames")
@@ -208,13 +210,15 @@ table(tab %>% select(Metric, Trend)) %>%
   ggplot(aes(fill = Trend, y = `Frequency`, x = Metric))+
   geom_bar(position = "stack", stat = "identity")+
   ylab("Number of trends")+
+  ggtitle("Metric")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank(),
         axis.title.y = element_blank())+
   scale_fill_viridis_d(option = "turbo",
                        begin = .8, end = .5, direction = -1)+
-  theme(legend.position = "none")
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = .5))
   # scale_fill_grey()
 
 # tmp <- cbind(table(tab %>% select(Metric, Trend))/rowSums(table(tab %>% select(Metric, Trend))), n = rowSums(table(tab %>% select(Metric, Trend)))) %>% as_tibble(rownames = "rownames")
@@ -301,27 +305,31 @@ table(tab_nopseudoreplicates$`Spatial grain (Km²)`, tab_nopseudoreplicates$Tren
   ggplot(aes(fill = Trend, x = `Spatial grain size`, y = Frequency))+
   geom_bar(position = "stack", stat = "identity")+
   ylab("Number of trends")+
+  ggtitle("Spatial grain")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank())+
   scale_fill_viridis_d(option = "turbo",
                        begin = .8, end = .5, direction = -1)+
-  theme(legend.position = "none")
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = .5))
 
 Fig3b_noreplic <- 
-table(tab %>% select(Metric, Trend)) %>% 
+table(tab_nopseudoreplicates %>% select(Metric, Trend)) %>% 
   as.data.frame() %>% 
   rename("Frequency" = Freq) %>% 
   ggplot(aes(fill = Trend, y = `Frequency`, x = Metric))+
   geom_bar(position = "stack", stat = "identity")+
   ylab("Number of trends")+
+  ggtitle("Metric")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 45, hjust=1),
         axis.title.x=element_blank(),
         axis.title.y = element_blank())+
   scale_fill_viridis_d(option = "turbo",
                        begin = .8, end = .5, direction = -1)+
-  theme(legend.position = "none")
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = .5))
   
 
 Fig3c_noreplic <- 
