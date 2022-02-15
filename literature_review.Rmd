@@ -107,6 +107,8 @@ tab <-
   select(-Note) %>% 
   unique()
 
+# tab %>% select(-Reference) %>% relocate(Reference_) %>% rename(Reference = Reference_)
+
 ```
 
 For this review, we focused on articles assessing temporal trends of the most common metrics of avian biodiversity and specifying spatial and temporal scales, which are at the same time consistent with broader macroecological scaling and theory [@storch_scaling_2007; @storch_untangling_2004], and thus can be compared across studies and scales. Namely, these were: *Species richness, `r paste(as.vector(unique(tab$Metric)[-2]), collapse = ", ")`*. Some of these classes contain several different indexes. For instance, the class *Diversity*, which contains either the Shannon or Simpson index, or the class *Abundance*, which contains various multi-species indicators (see Table \@ref(tab:notetable) for the notes).
@@ -532,6 +534,8 @@ tab_notes %>%
   colformat_md(j = 1) %>%
   width(j = 4, width = 5) %>% 
   fontsize(size = 7, part = "all")
+
+# tab_notes <- tab_notes %>% select(-Reference) %>% relocate(Reference_) %>% rename(Reference = Reference_)
 ```
 
 \newpage
