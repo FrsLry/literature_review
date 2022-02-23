@@ -107,7 +107,7 @@ tab <-
   select(-Note) %>% 
   unique()
 
-# tab %>% select(-Reference) %>% relocate(Reference_) %>% rename(Reference = Reference_)
+# tab <- tab %>% select(-Reference) %>% relocate(Reference_) %>% rename(Reference = Reference_)
 
 ```
 
